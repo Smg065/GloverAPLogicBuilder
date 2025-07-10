@@ -1,0 +1,317 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=53 format=3 uid="uid://cc37t7e7tmap6"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_due33"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_3rfvh"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="2_adi3r"]
+[ext_resource type="Texture2D" uid="uid://dkx6l76uscao3" path="res://Images/Maps/Prehistoric2.png" id="2_g5uxi"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="3_3j0s5"]
+[ext_resource type="Texture2D" uid="uid://qmoo8gwqlop6" path="res://Images/Icons/Checks/Ph2LavaPlat1.png" id="3_6xpf7"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_l02kf"]
+[ext_resource type="Texture2D" uid="uid://fn101fesb4bp" path="res://Images/Icons/Checks/Ph2LavaPlat2.png" id="4_bhat5"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="4_pqok8"]
+[ext_resource type="Texture2D" uid="uid://dxlmcxqftwiwo" path="res://Images/Icons/Checks/BallSwitch.png" id="5_8mh4x"]
+[ext_resource type="Texture2D" uid="uid://bpc22r8jq8wym" path="res://Images/Icons/Checks/Ph2LowerBallswitch.png" id="5_w1pu0"]
+[ext_resource type="Texture2D" uid="uid://ck3i5niuagc2h" path="res://Images/Icons/Checks/GloverSwitch.png" id="6_dfnol"]
+[ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="7_rod86"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="8_6w7mk"]
+
+[sub_resource type="Resource" id="Resource_ntgpj"]
+script = ExtResource("1_due33")
+checkName = "Goal"
+checkSpot = Vector2(0.97, 0.464)
+checkImage = ExtResource("2_adi3r")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_hnukd"]
+script = ExtResource("1_due33")
+checkName = "Checkpoint 2"
+checkSpot = Vector2(0.219, 0.4)
+checkImage = ExtResource("3_3j0s5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_b0jo8"]
+script = ExtResource("1_due33")
+checkName = "Checkpoint 3"
+checkSpot = Vector2(0.437, 0.47)
+checkImage = ExtResource("3_3j0s5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_3p7h5"]
+script = ExtResource("1_due33")
+checkName = "Checkpoint 4"
+checkSpot = Vector2(0.769, 0.455)
+checkImage = ExtResource("3_3j0s5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_1exeq"]
+script = ExtResource("1_due33")
+checkName = "Goal Life"
+checkSpot = Vector2(0.946, 0.465)
+checkImage = ExtResource("4_pqok8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_eew37"]
+script = ExtResource("1_due33")
+checkName = "Top Valley Life"
+checkSpot = Vector2(0.85, 0.371)
+checkImage = ExtResource("4_pqok8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_obayj"]
+script = ExtResource("1_due33")
+checkName = "Bottom Valley Life"
+checkSpot = Vector2(0.852, 0.507)
+checkImage = ExtResource("4_pqok8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_hhi6u"]
+script = ExtResource("1_due33")
+checkName = "Switches Life"
+checkSpot = Vector2(0.232, 0.618)
+checkImage = ExtResource("4_pqok8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_uqdtl"]
+script = ExtResource("1_due33")
+checkName = "Pushwall Life"
+checkSpot = Vector2(0.086, 0.322)
+checkImage = ExtResource("4_pqok8")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_habwq"]
+script = ExtResource("1_due33")
+checkName = "Lavafall Ball Switch"
+checkSpot = Vector2(0.102, 0.464)
+checkImage = ExtResource("5_8mh4x")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_aqllq"]
+script = ExtResource("1_due33")
+checkName = "Switches Ball Switch"
+checkSpot = Vector2(0.24, 0.59)
+checkImage = ExtResource("5_8mh4x")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_by8mi"]
+script = ExtResource("1_due33")
+checkName = "Glover Switch"
+checkSpot = Vector2(0.223, 0.593)
+checkImage = ExtResource("6_dfnol")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_26uhs"]
+script = ExtResource("1_due33")
+checkName = "Slope Wind-Up"
+checkSpot = Vector2(0.142, 0.408)
+checkImage = ExtResource("7_rod86")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_if1dj"]
+script = ExtResource("1_due33")
+checkName = "Triceratops Wind-Up"
+checkSpot = Vector2(0.457, 0.446)
+checkImage = ExtResource("7_rod86")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_agyoj"]
+script = ExtResource("1_due33")
+checkName = "Valley Wind-Up"
+checkSpot = Vector2(0.813, 0.456)
+checkImage = ExtResource("7_rod86")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_c43bs"]
+script = ExtResource("1_due33")
+checkName = "Dino Garibs"
+checkSpot = Vector2(0.049, 0.615)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_21pse"]
+script = ExtResource("1_due33")
+checkName = "Spawn Garibs"
+checkSpot = Vector2(0.147, 0.601)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_7i5un"]
+script = ExtResource("1_due33")
+checkName = "Above Lavafall Garibs"
+checkSpot = Vector2(0.116, 0.631)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_kdpm4"]
+script = ExtResource("1_due33")
+checkName = "Dino Tree Garibs"
+checkSpot = Vector2(0.047, 0.553)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_rn5q5"]
+script = ExtResource("1_due33")
+checkName = "Nook Garibs"
+checkSpot = Vector2(0.047, 0.422)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_wr0pp"]
+script = ExtResource("1_due33")
+checkName = "Push Wall Garibs"
+checkSpot = Vector2(0.089, 0.233)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_mtuy4"]
+script = ExtResource("1_due33")
+checkName = "Ramp Garibs"
+checkSpot = Vector2(0.106, 0.405)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_4kir7"]
+script = ExtResource("1_due33")
+checkName = "Tilt Garibs"
+checkSpot = Vector2(0.188, 0.402)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_kcpc3"]
+script = ExtResource("1_due33")
+checkName = "Switches Garibs"
+checkSpot = Vector2(0.231, 0.538)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_wp7g3"]
+script = ExtResource("1_due33")
+checkName = "Lavafall Garib"
+checkSpot = Vector2(0.078, 0.45)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_sunmv"]
+script = ExtResource("1_due33")
+checkName = "Island Garibs"
+checkSpot = Vector2(0.315, 0.44)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_5sryv"]
+script = ExtResource("1_due33")
+checkName = "Sign Garibs"
+checkSpot = Vector2(0.249, 0.431)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_u2wxb"]
+script = ExtResource("1_due33")
+checkName = "Triceratops Garibs"
+checkSpot = Vector2(0.404, 0.48)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_d4oeo"]
+script = ExtResource("1_due33")
+checkName = "Skull Garib"
+checkSpot = Vector2(0.436, 0.556)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_fad32"]
+script = ExtResource("1_due33")
+checkName = "Trees Garib"
+checkSpot = Vector2(0.415, 0.408)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_ftjcs"]
+script = ExtResource("1_due33")
+checkName = "Bottom Avalanche Garibs"
+checkSpot = Vector2(0.553, 0.359)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_4k16v"]
+script = ExtResource("1_due33")
+checkName = "Middle Avalanche Garibs"
+checkSpot = Vector2(0.653, 0.357)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_l5evt"]
+script = ExtResource("1_due33")
+checkName = "Top Avalanche Garibs"
+checkSpot = Vector2(0.701, 0.446)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_i7erq"]
+script = ExtResource("1_due33")
+checkName = "Valley Garibs"
+checkSpot = Vector2(0.852, 0.439)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 11
+
+[sub_resource type="Resource" id="Resource_1d1fy"]
+script = ExtResource("1_due33")
+checkName = "Garibs"
+checkSpot = Vector2(0.89, 0.461)
+checkImage = ExtResource("8_6w7mk")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_7jstp"]
+script = ExtResource("2_3rfvh")
+checkName = "Platform 1"
+checkImage = ExtResource("3_6xpf7")
+
+[sub_resource type="Resource" id="Resource_v0e0n"]
+script = ExtResource("2_3rfvh")
+checkName = "Platform 2"
+checkImage = ExtResource("4_bhat5")
+
+[sub_resource type="Resource" id="Resource_o7j2f"]
+script = ExtResource("2_3rfvh")
+checkName = "Lower Ball Switch"
+checkImage = ExtResource("5_w1pu0")
+
+[resource]
+script = ExtResource("3_l02kf")
+mapImage = ExtResource("2_g5uxi")
+levelChecks = Array[ExtResource("1_due33")]([SubResource("Resource_ntgpj"), SubResource("Resource_hnukd"), SubResource("Resource_b0jo8"), SubResource("Resource_3p7h5"), SubResource("Resource_1exeq"), SubResource("Resource_eew37"), SubResource("Resource_obayj"), SubResource("Resource_hhi6u"), SubResource("Resource_uqdtl"), SubResource("Resource_habwq"), SubResource("Resource_aqllq"), SubResource("Resource_by8mi"), SubResource("Resource_26uhs"), SubResource("Resource_if1dj"), SubResource("Resource_agyoj"), SubResource("Resource_c43bs"), SubResource("Resource_21pse"), SubResource("Resource_7i5un"), SubResource("Resource_kdpm4"), SubResource("Resource_rn5q5"), SubResource("Resource_wr0pp"), SubResource("Resource_mtuy4"), SubResource("Resource_4kir7"), SubResource("Resource_kcpc3"), SubResource("Resource_wp7g3"), SubResource("Resource_sunmv"), SubResource("Resource_5sryv"), SubResource("Resource_u2wxb"), SubResource("Resource_d4oeo"), SubResource("Resource_fad32"), SubResource("Resource_ftjcs"), SubResource("Resource_4k16v"), SubResource("Resource_l5evt"), SubResource("Resource_i7erq"), SubResource("Resource_1d1fy")])
+levelPrerequisiteChecks = Array[ExtResource("2_3rfvh")]([SubResource("Resource_7jstp"), SubResource("Resource_v0e0n"), SubResource("Resource_o7j2f")])

@@ -1,0 +1,264 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=46 format=3 uid="uid://syrdeyqmfxd4"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_eu7vr"]
+[ext_resource type="Texture2D" uid="uid://cb87yy5ymgdfj" path="res://Images/Maps/Atlantis3.png" id="2_1gmfm"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="2_o5hr4"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_i2i46"]
+[ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="3_kvy7a"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="4_rupug"]
+[ext_resource type="Texture2D" uid="uid://dxlmcxqftwiwo" path="res://Images/Icons/Checks/BallSwitch.png" id="5_avwul"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="5_ee4sh"]
+[ext_resource type="Texture2D" uid="uid://b3hwwfg0r6bw1" path="res://Images/Icons/Speed.png" id="6_31edl"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="7_wt7b2"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="8_o0a0a"]
+[ext_resource type="Texture2D" uid="uid://crwgvt1h1rtqi" path="res://Images/Icons/Sticky.png" id="9_iswyv"]
+[ext_resource type="Texture2D" uid="uid://cjdoxqsum080m" path="res://Images/Icons/Checks/At3Waterwheel.png" id="11_28y12"]
+[ext_resource type="Texture2D" uid="uid://0cofnb6dtg8v" path="res://Images/Icons/Checks/A3Platforms.png" id="12_pc30v"]
+
+[sub_resource type="Resource" id="Resource_a3yiq"]
+script = ExtResource("1_eu7vr")
+checkName = "Island Garibs"
+checkSpot = Vector2(0.321, 0.711)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_ld4ba"]
+script = ExtResource("1_eu7vr")
+checkName = "Path Wind-Up"
+checkSpot = Vector2(0.408, 0.727)
+checkImage = ExtResource("3_kvy7a")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_a6leg"]
+script = ExtResource("1_eu7vr")
+checkName = "Path Garibs"
+checkSpot = Vector2(0.38, 0.783)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_ir5bj"]
+script = ExtResource("1_eu7vr")
+checkName = "Stair Garibs"
+checkSpot = Vector2(0.405, 0.644)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_kdug6"]
+script = ExtResource("1_eu7vr")
+checkName = "Slide Cliff Garibs"
+checkSpot = Vector2(0.452, 0.553)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_2wk1r"]
+script = ExtResource("1_eu7vr")
+checkName = "Alcove Garibs"
+checkSpot = Vector2(0.362, 0.897)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_kwiye"]
+script = ExtResource("1_eu7vr")
+checkName = "Under Waterfal Garibs"
+checkSpot = Vector2(0.386, 0.918)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_ya5uo"]
+script = ExtResource("1_eu7vr")
+checkName = "Under Waterfall Life"
+checkSpot = Vector2(0.386, 0.955)
+checkImage = ExtResource("4_rupug")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_cirgu"]
+script = ExtResource("1_eu7vr")
+checkName = "Wheel Ball Switch"
+checkSpot = Vector2(0.327, 0.891)
+checkImage = ExtResource("5_avwul")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_g8iip"]
+script = ExtResource("1_eu7vr")
+checkName = "Speed Potion"
+checkSpot = Vector2(0.264, 0.835)
+checkImage = ExtResource("6_31edl")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_vnc06"]
+script = ExtResource("1_eu7vr")
+checkName = "Speed Wind-Ups"
+checkSpot = Vector2(0.265, 0.782)
+checkImage = ExtResource("3_kvy7a")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_d3pv5"]
+script = ExtResource("1_eu7vr")
+checkName = "Checkpoint 2"
+checkSpot = Vector2(0.409, 0.593)
+checkImage = ExtResource("7_wt7b2")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_1eii8"]
+script = ExtResource("1_eu7vr")
+checkName = "Checkpoint 3"
+checkSpot = Vector2(0.409, 0.464)
+checkImage = ExtResource("7_wt7b2")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_8rujv"]
+script = ExtResource("1_eu7vr")
+checkName = "Cliff Slide Life"
+checkSpot = Vector2(0.461, 0.464)
+checkImage = ExtResource("4_rupug")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_5cpib"]
+script = ExtResource("1_eu7vr")
+checkName = "Pillar Garibs"
+checkSpot = Vector2(0.459, 0.822)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_wh7aa"]
+script = ExtResource("1_eu7vr")
+checkName = "Waterfall Wind-Ups"
+checkSpot = Vector2(0.408, 0.363)
+checkImage = ExtResource("3_kvy7a")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_k6jca"]
+script = ExtResource("1_eu7vr")
+checkName = "Waterfall Garibs"
+checkSpot = Vector2(0.41, 0.268)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_qfxt0"]
+script = ExtResource("1_eu7vr")
+checkName = "Pool Garibs"
+checkSpot = Vector2(0.524, 0.197)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 9
+
+[sub_resource type="Resource" id="Resource_bjypw"]
+script = ExtResource("1_eu7vr")
+checkName = "Cliff Ball Switch"
+checkSpot = Vector2(0.473, 0.268)
+checkImage = ExtResource("5_avwul")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_73ocj"]
+script = ExtResource("1_eu7vr")
+checkName = "Cliff Garibs"
+checkSpot = Vector2(0.57, 0.132)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_bhxt4"]
+script = ExtResource("1_eu7vr")
+checkName = "Cave Garibs"
+checkSpot = Vector2(0.513, 0.283)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_eu8hq"]
+script = ExtResource("1_eu7vr")
+checkName = "Cave Wind-Ups"
+checkSpot = Vector2(0.508, 0.339)
+checkImage = ExtResource("3_kvy7a")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_prbke"]
+script = ExtResource("1_eu7vr")
+checkName = "Cave Life"
+checkSpot = Vector2(0.56, 0.31)
+checkImage = ExtResource("4_rupug")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_cmcmu"]
+script = ExtResource("1_eu7vr")
+checkName = "Goal"
+checkSpot = Vector2(0.76, 0.1)
+checkImage = ExtResource("8_o0a0a")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_it540"]
+script = ExtResource("1_eu7vr")
+checkName = "Sticky Potion"
+checkSpot = Vector2(0.721, 0.782)
+checkImage = ExtResource("9_iswyv")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_5wkyb"]
+script = ExtResource("1_eu7vr")
+checkName = "Ceiling Garibs"
+checkSpot = Vector2(0.694, 0.804)
+checkImage = ExtResource("2_o5hr4")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_tbtte"]
+script = ExtResource("1_eu7vr")
+checkName = "Pit Life 1"
+checkSpot = Vector2(0.666, 0.89)
+checkImage = ExtResource("4_rupug")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_q4ads"]
+script = ExtResource("1_eu7vr")
+checkName = "Pit Life 2"
+checkSpot = Vector2(0.727, 0.878)
+checkImage = ExtResource("4_rupug")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_0ghto"]
+script = ExtResource("1_eu7vr")
+checkName = "Cliff Wind-Up"
+checkSpot = Vector2(0.47, 0.943)
+checkImage = ExtResource("3_kvy7a")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_a8gb0"]
+script = ExtResource("5_ee4sh")
+checkName = "Waterwheel"
+checkImage = ExtResource("11_28y12")
+
+[sub_resource type="Resource" id="Resource_w40ce"]
+script = ExtResource("5_ee4sh")
+checkName = "Cave Platforms"
+checkImage = ExtResource("12_pc30v")
+
+[resource]
+script = ExtResource("3_i2i46")
+mapImage = ExtResource("2_1gmfm")
+levelChecks = Array[ExtResource("1_eu7vr")]([SubResource("Resource_a3yiq"), SubResource("Resource_ld4ba"), SubResource("Resource_a6leg"), SubResource("Resource_ir5bj"), SubResource("Resource_kdug6"), SubResource("Resource_2wk1r"), SubResource("Resource_kwiye"), SubResource("Resource_ya5uo"), SubResource("Resource_cirgu"), SubResource("Resource_g8iip"), SubResource("Resource_vnc06"), SubResource("Resource_d3pv5"), SubResource("Resource_1eii8"), SubResource("Resource_8rujv"), SubResource("Resource_5cpib"), SubResource("Resource_wh7aa"), SubResource("Resource_k6jca"), SubResource("Resource_qfxt0"), SubResource("Resource_bjypw"), SubResource("Resource_73ocj"), SubResource("Resource_bhxt4"), SubResource("Resource_eu8hq"), SubResource("Resource_prbke"), SubResource("Resource_cmcmu"), SubResource("Resource_it540"), SubResource("Resource_5wkyb"), SubResource("Resource_tbtte"), SubResource("Resource_q4ads"), SubResource("Resource_0ghto")])
+levelPrerequisiteChecks = Array[ExtResource("5_ee4sh")]([SubResource("Resource_a8gb0"), SubResource("Resource_w40ce")])

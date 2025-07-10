@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=7 format=3 uid="uid://buxho1cwr187o"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_o1g5t"]
+[ext_resource type="Texture2D" uid="uid://e4r27m7t171o" path="res://Images/Maps/PiratesBoss.png" id="2_b60lv"]
+[ext_resource type="Texture2D" uid="uid://ulylk25eku6s" path="res://Images/Icons/Checks/BossPlatform.png" id="2_lm220"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_ibpro"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_obwrc"]
+
+[sub_resource type="Resource" id="Resource_rca4h"]
+script = ExtResource("1_o1g5t")
+checkName = "Boss"
+checkSpot = Vector2(0.652, 0.48)
+checkImage = ExtResource("2_lm220")
+checkType = 5
+totalSubchecks = 1
+
+[resource]
+script = ExtResource("3_ibpro")
+mapImage = ExtResource("2_b60lv")
+levelChecks = Array[ExtResource("1_o1g5t")]([SubResource("Resource_rca4h")])
+levelPrerequisiteChecks = Array[ExtResource("3_obwrc")]([])

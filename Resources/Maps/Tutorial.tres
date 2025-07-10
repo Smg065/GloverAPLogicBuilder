@@ -1,0 +1,188 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=36 format=3 uid="uid://b0jyu7gt70j42"]
+
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_84go3"]
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_raehk"]
+[ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="2_4xuek"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_j025m"]
+[ext_resource type="Texture2D" uid="uid://dkt747y6cojhu" path="res://Images/Maps/Training.png" id="2_ogie0"]
+[ext_resource type="Texture2D" uid="uid://bth40f3ko15wg" path="res://Images/Icons/Checks/HbSandpit.png" id="3_2cjnv"]
+[ext_resource type="Texture2D" uid="uid://00c0cyto41xj" path="res://Images/Icons/Checks/HbBox.png" id="3_xgq0s"]
+[ext_resource type="Texture2D" uid="uid://bfp1el55bc3sm" path="res://Images/Icons/Checks/HbLowerTarget.png" id="4_73ho5"]
+[ext_resource type="Texture2D" uid="uid://dxlmcxqftwiwo" path="res://Images/Icons/Checks/BallSwitch.png" id="4_udi1v"]
+[ext_resource type="Texture2D" uid="uid://uousu7gm7mff" path="res://Images/Icons/Checks/HbTarget.png" id="5_ew0fi"]
+[ext_resource type="Texture2D" uid="uid://dsg0em5ocpic" path="res://Images/Icons/Checks/HbStairs.png" id="5_qhbg5"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="6_7m6qd"]
+[ext_resource type="Texture2D" uid="uid://ck3i5niuagc2h" path="res://Images/Icons/Checks/GloverSwitch.png" id="7_jfj8r"]
+
+[sub_resource type="Resource" id="Resource_1muw6"]
+script = ExtResource("1_raehk")
+checkName = "Intro Tip"
+checkSpot = Vector2(0.077, 0.681)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_w82vu"]
+script = ExtResource("1_raehk")
+checkName = "Camera Tip"
+checkSpot = Vector2(0.084, 0.511)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_w3630"]
+script = ExtResource("1_raehk")
+checkName = "Balless Tip"
+checkSpot = Vector2(0.105, 0.44)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_o4erb"]
+script = ExtResource("1_raehk")
+checkName = "Dribble Tip"
+checkSpot = Vector2(0.184, 0.409)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_ettvi"]
+script = ExtResource("1_raehk")
+checkName = "Duck Tip"
+checkSpot = Vector2(0.182, 0.618)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_qf8fq"]
+script = ExtResource("1_raehk")
+checkName = "Toss Tip"
+checkSpot = Vector2(0.233, 0.514)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_u5nle"]
+script = ExtResource("1_raehk")
+checkName = "Z-Cancel Tip"
+checkSpot = Vector2(0.268, 0.458)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_6ug5n"]
+script = ExtResource("1_raehk")
+checkName = "Slap Tip"
+checkSpot = Vector2(0.361, 0.618)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_317sm"]
+script = ExtResource("1_raehk")
+checkName = "Ball Switch Tip"
+checkSpot = Vector2(0.458, 0.473)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_sv3h2"]
+script = ExtResource("1_raehk")
+checkName = "Shallow Pool Tip"
+checkSpot = Vector2(0.577, 0.618)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_6bkel"]
+script = ExtResource("1_raehk")
+checkName = "Deep Pool Tip"
+checkSpot = Vector2(0.692, 0.57)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_vvrgn"]
+script = ExtResource("1_raehk")
+checkName = "Fist Slam Tip"
+checkSpot = Vector2(0.818, 0.519)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_whu1s"]
+script = ExtResource("1_raehk")
+checkName = "Bounce Trhow Tip"
+checkSpot = Vector2(0.878, 0.47)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_yalhx"]
+script = ExtResource("1_raehk")
+checkName = "Crate Tip"
+checkSpot = Vector2(0.85, 0.425)
+checkImage = ExtResource("3_xgq0s")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_5vmj4"]
+script = ExtResource("1_raehk")
+checkName = "Glover Switch Tip"
+checkSpot = Vector2(0.822, 0.368)
+checkImage = ExtResource("2_4xuek")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_8skwq"]
+script = ExtResource("1_raehk")
+checkName = "Ball Switch"
+checkSpot = Vector2(0.466, 0.405)
+checkImage = ExtResource("4_udi1v")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_f7i18"]
+script = ExtResource("1_raehk")
+checkName = "Target"
+checkSpot = Vector2(0.954, 0.597)
+checkImage = ExtResource("5_ew0fi")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_gdxb2"]
+script = ExtResource("1_raehk")
+checkName = "Goal"
+checkSpot = Vector2(0.959, 0.511)
+checkImage = ExtResource("6_7m6qd")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_bs36k"]
+script = ExtResource("1_raehk")
+checkName = "Fist Slam"
+checkSpot = Vector2(0.821, 0.428)
+checkImage = ExtResource("7_jfj8r")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_uftjl"]
+script = ExtResource("2_j025m")
+checkName = "Sandpit"
+checkImage = ExtResource("3_2cjnv")
+
+[sub_resource type="Resource" id="Resource_wkhfl"]
+script = ExtResource("2_j025m")
+checkName = "Lower Target"
+checkImage = ExtResource("4_73ho5")
+
+[sub_resource type="Resource" id="Resource_qu1a5"]
+script = ExtResource("2_j025m")
+checkName = "Stairs"
+checkImage = ExtResource("5_qhbg5")
+
+[resource]
+script = ExtResource("1_84go3")
+mapImage = ExtResource("2_ogie0")
+levelChecks = Array[ExtResource("1_raehk")]([SubResource("Resource_1muw6"), SubResource("Resource_w82vu"), SubResource("Resource_w3630"), SubResource("Resource_o4erb"), SubResource("Resource_ettvi"), SubResource("Resource_qf8fq"), SubResource("Resource_u5nle"), SubResource("Resource_6ug5n"), SubResource("Resource_317sm"), SubResource("Resource_sv3h2"), SubResource("Resource_6bkel"), SubResource("Resource_vvrgn"), SubResource("Resource_whu1s"), SubResource("Resource_yalhx"), SubResource("Resource_5vmj4"), SubResource("Resource_8skwq"), SubResource("Resource_f7i18"), SubResource("Resource_gdxb2"), SubResource("Resource_bs36k")])
+levelPrerequisiteChecks = Array[ExtResource("2_j025m")]([SubResource("Resource_uftjl"), SubResource("Resource_wkhfl"), SubResource("Resource_qu1a5")])

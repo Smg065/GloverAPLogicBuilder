@@ -1,0 +1,1043 @@
+[gd_scene load_steps=53 format=3 uid="uid://dyium0e51imoj"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_aq625"]
+[ext_resource type="Texture2D" uid="uid://bud6wup5f03ik" path="res://Images/Icons/Rubber.png" id="1_dkf4x"]
+[ext_resource type="Texture2D" uid="uid://dfocrksvoiqlq" path="res://Images/Icons/Cartwheel.png" id="1_wlidf"]
+[ext_resource type="Resource" uid="uid://c5axgv2rl5bqu" path="res://Resources/Hubworld.tres" id="2_be0u1"]
+[ext_resource type="Script" path="res://Scripts/AbilityButton.gd" id="2_drss1"]
+[ext_resource type="Texture2D" uid="uid://c6icgk88oub3m" path="res://Images/Icons/Crawl.png" id="2_fh2su"]
+[ext_resource type="Script" path="res://Scripts/WorldInfo.gd" id="2_kffcu"]
+[ext_resource type="Texture2D" uid="uid://carwj61csy0lf" path="res://Images/Icons/Bowling.png" id="2_u8gel"]
+[ext_resource type="Texture2D" uid="uid://dda3s83fge4ju" path="res://Images/Icons/DoubleJump.png" id="3_bnkq5"]
+[ext_resource type="Texture2D" uid="uid://dat263ss86dyt" path="res://Images/Icons/Bearing.png" id="3_p7axj"]
+[ext_resource type="Resource" uid="uid://c1r70xh287vs5" path="res://Resources/Atlantis.tres" id="3_qx6qd"]
+[ext_resource type="Texture2D" uid="uid://bujujc32mlcc6" path="res://Images/Icons/GaribLocate.png" id="4_awoho"]
+[ext_resource type="Texture2D" uid="uid://chldiy8ku7gio" path="res://Images/Icons/Crystal.png" id="4_ba68n"]
+[ext_resource type="Resource" uid="uid://b5hw51kd0ofce" path="res://Resources/Carnival.tres" id="4_lg1pu"]
+[ext_resource type="Texture2D" uid="uid://lc4givvxidp4" path="res://Images/Icons/GroundPound.png" id="5_i4j4c"]
+[ext_resource type="Texture2D" uid="uid://brjc15mshcxid" path="res://Images/Icons/Beach.png" id="5_i748a"]
+[ext_resource type="Resource" uid="uid://j7swy68p3ain" path="res://Resources/Pirates.tres" id="5_wffy8"]
+[ext_resource type="Resource" uid="uid://ci5yfojtvtvii" path="res://Resources/Prehistoric.tres" id="6_gmfe4"]
+[ext_resource type="Texture2D" uid="uid://jdnmnbvp353v" path="res://Images/Icons/Ledgegrab.png" id="6_mvitj"]
+[ext_resource type="Texture2D" uid="uid://cjfqc1mibfvg7" path="res://Images/Icons/Death.png" id="6_ygdu7"]
+[ext_resource type="Resource" uid="uid://liuolenqmla2" path="res://Resources/Fortress.tres" id="7_2d2jt"]
+[ext_resource type="Texture2D" uid="uid://cixiw8lx0rrg4" path="res://Images/Icons/Push.png" id="7_xjjpy"]
+[ext_resource type="Texture2D" uid="uid://ctxshyk0gwead" path="res://Images/Icons/Fly.png" id="7_y4vx6"]
+[ext_resource type="Texture2D" uid="uid://dn3lfltfu7j6j" path="res://Images/Icons/Frog.png" id="8_26tnu"]
+[ext_resource type="Resource" uid="uid://bmibyiso3f77x" path="res://Resources/Space.tres" id="8_bv6bm"]
+[ext_resource type="Texture2D" uid="uid://cogoup7ahyfdb" path="res://Images/Icons/Dribble.png" id="8_g12ua"]
+[ext_resource type="Texture2D" uid="uid://dedapevob5ahd" path="res://Images/Icons/Quickstand.png" id="9_7bnu3"]
+[ext_resource type="Texture2D" uid="uid://cpdl0eggq45p2" path="res://Images/Icons/Return.png" id="9_uajt2"]
+[ext_resource type="Texture2D" uid="uid://b3hwwfg0r6bw1" path="res://Images/Icons/Speed.png" id="10_lekke"]
+[ext_resource type="Texture2D" uid="uid://bqqosm685j0hw" path="res://Images/Icons/Slap.png" id="10_wf05j"]
+[ext_resource type="PackedScene" uid="uid://ldxmx0gj1aev" path="res://Resources/CheckButton.tscn" id="10_wog1u"]
+[ext_resource type="Texture2D" uid="uid://crwgvt1h1rtqi" path="res://Images/Icons/Sticky.png" id="11_5xst2"]
+[ext_resource type="PackedScene" uid="uid://v7gjby5kpx75" path="res://Resources/PrereqCheckButton.tscn" id="11_hxc0p"]
+[ext_resource type="Texture2D" uid="uid://c058sdgm0q56i" path="res://Images/Icons/Toss.png" id="11_q0b2s"]
+[ext_resource type="Texture2D" uid="uid://rlrvan2fb8gl" path="res://Images/Icons/Upthrow.png" id="12_454dw"]
+[ext_resource type="Texture2D" uid="uid://47j7mb2x522" path="res://Images/Icons/Jump.png" id="12_e11pl"]
+[ext_resource type="Texture2D" uid="uid://dp6x7yxro70wq" path="res://Images/Icons/Strength.png" id="12_u2k8p"]
+[ext_resource type="Texture2D" uid="uid://byi3fxqvqt1" path="res://Images/Icons/BallLocate.png" id="13_sa1tx"]
+[ext_resource type="Texture2D" uid="uid://c5ec43xduowlv" path="res://Images/Icons/BallUp.png" id="27_dpe8e"]
+[ext_resource type="Script" path="res://Scripts/MethodSelector.gd" id="27_ip2fe"]
+[ext_resource type="Texture2D" uid="uid://bqnnyxxj178mc" path="res://Images/Icons/NotCrystal.png" id="31_c5qcp"]
+[ext_resource type="Texture2D" uid="uid://bd0vta56pmg3n" path="res://Images/Icons/NotBowling.png" id="32_2umrq"]
+[ext_resource type="Texture2D" uid="uid://btlihej5wupx6" path="res://Images/Icons/Sinks.png" id="33_8tj8y"]
+[ext_resource type="Texture2D" uid="uid://b5crs2lawem4b" path="res://Images/Icons/Floats.png" id="34_xy27w"]
+[ext_resource type="Texture2D" uid="uid://b2qhb2wmwphlm" path="res://Images/Icons/Grab.png" id="43_8q3bn"]
+
+[sub_resource type="Gradient" id="Gradient_0nihm"]
+offsets = PackedFloat32Array(0.20339, 0.59, 0.61, 0.937853)
+colors = PackedColorArray(0.0588235, 0.133333, 0.301961, 1, 0.0862745, 0.0588235, 0.188235, 1, 0.14902, 0.0156863, 0, 1, 0.12549, 0.0156863, 0.101961, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3ruru"]
+gradient = SubResource("Gradient_0nihm")
+fill = 1
+fill_from = Vector2(0.654472, 0.577236)
+fill_to = Vector2(0.565041, 0.463415)
+repeat = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_n38yc"]
+font_size = 48
+font_color = Color(0.956863, 0.301961, 0.27451, 1)
+outline_size = 5
+outline_color = Color(0.960784, 0.960784, 0.333333, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.407843)
+shadow_offset = Vector2(4, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_exnyi"]
+font_size = 32
+font_color = Color(0.956863, 0.301961, 0.27451, 1)
+outline_size = 4
+outline_color = Color(0.960784, 0.960784, 0.333333, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.407843)
+shadow_offset = Vector2(4, 5)
+
+[sub_resource type="Gradient" id="Gradient_1ivmh"]
+offsets = PackedFloat32Array(0.253333, 0.626667, 0.66, 0.806667)
+colors = PackedColorArray(0.00392157, 0.192157, 0.317647, 1, 0.00392157, 0.00392157, 0.0980392, 1, 0.00392157, 0.00392157, 0, 1, 0.0352941, 0.0352941, 0.254902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nly8e"]
+gradient = SubResource("Gradient_1ivmh")
+fill = 2
+fill_from = Vector2(0.504065, 0.5)
+fill_to = Vector2(0.650406, 0.308943)
+repeat = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_ey4w1"]
+font_size = 32
+font_color = Color(0.956863, 0.301961, 0.27451, 1)
+outline_size = 5
+outline_color = Color(0.960784, 0.960784, 0.333333, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.407843)
+shadow_offset = Vector2(4, 5)
+
+[node name="GloverAPBuilder" type="Control" node_paths=PackedStringArray("mapRender", "worldSelector", "levelsButtons", "overworldButtons", "checkPrereqToggles", "checkName", "methodSelector", "saveFile", "openFiles")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aq625")
+hubworld = ExtResource("2_be0u1")
+allWorlds = Array[ExtResource("2_kffcu")]([ExtResource("3_qx6qd"), ExtResource("4_lg1pu"), ExtResource("5_wffy8"), ExtResource("6_gmfe4"), ExtResource("7_2d2jt"), ExtResource("8_bv6bm")])
+mapRender = NodePath("CheckSelector/MapSlot/MapTexture")
+worldSelector = NodePath("CheckSelector/WorldSelector")
+levelsButtons = NodePath("CheckSelector/LevelButtons")
+overworldButtons = NodePath("CheckSelector/HubButtons")
+checkPrereqToggles = NodePath("CheckSelector/CheckPrerequisitesToggles")
+checkName = NodePath("CheckSelector/CheckName")
+checkButtonPrefab = ExtResource("10_wog1u")
+checkPrerequisiteButtonPrefab = ExtResource("11_hxc0p")
+methodSelector = NodePath("MoveToggles/MethodSelection")
+saveFile = NodePath("SaveFile")
+openFiles = NodePath("OpenFiles")
+
+[node name="MoveToggles" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 0.35
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="GloverBackdrop" type="TextureRect" parent="MoveToggles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_3ruru")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MoveToggles"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.115
+offset_right = -0.180023
+offset_bottom = -0.275002
+grow_horizontal = 2
+text = "Moves"
+label_settings = SubResource("LabelSettings_n38yc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoveButtons" type="Control" parent="MoveToggles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Glover" type="Control" parent="MoveToggles/MoveButtons"]
+layout_mode = 1
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Glover" type="Label" parent="MoveToggles/MoveButtons/Glover"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Glover"
+label_settings = SubResource("LabelSettings_exnyi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MoveToggles/MoveButtons/Glover"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Jump" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("12_e11pl")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 25
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Cartwheel" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("1_wlidf")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Crawl" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("2_fh2su")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 1
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Double Jump" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("3_bnkq5")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 2
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Fist Slam" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("5_i4j4c")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 3
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Ledgegrab" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("6_mvitj")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 4
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Push" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("7_xjjpy")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 5
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Locate Garib" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("4_awoho")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 6
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Locate Ball" type="Button" parent="MoveToggles/MoveButtons/Glover/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("13_sa1tx")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 7
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Ball" type="Control" parent="MoveToggles/MoveButtons"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Ball" type="Label" parent="MoveToggles/MoveButtons/Ball"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Ball"
+label_settings = SubResource("LabelSettings_exnyi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MoveToggles/MoveButtons/Ball"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Dribble" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("8_g12ua")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 8
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Quickswap" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("9_7bnu3")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 9
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Slap" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("10_wf05j")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 10
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Throw" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("11_q0b2s")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 11
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Toss" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("12_454dw")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 12
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Ball Up" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("27_dpe8e")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 31
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Transformations" type="Control" parent="MoveToggles/MoveButtons"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Transformations" type="Label" parent="MoveToggles/MoveButtons/Transformations"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Trans"
+label_settings = SubResource("LabelSettings_exnyi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MoveToggles/MoveButtons/Transformations"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Rubber Ball" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("1_dkf4x")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 13
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Bowling Ball" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("2_u8gel")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 14
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Ball Bearing" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("3_p7axj")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 15
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Crystal" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("4_ba68n")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 16
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Sinks" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("33_8tj8y")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 28
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Floats" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("34_xy27w")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 29
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Not Crystal" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("31_c5qcp")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 26
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Not Bowling" type="Button" parent="MoveToggles/MoveButtons/Transformations/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("32_2umrq")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 27
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Powerups" type="Control" parent="MoveToggles/MoveButtons"]
+layout_mode = 1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Powerups" type="Label" parent="MoveToggles/MoveButtons/Powerups"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Powerups"
+label_settings = SubResource("LabelSettings_exnyi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MoveToggles/MoveButtons/Powerups"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Beach" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("5_i748a")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 17
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Death" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("6_ygdu7")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 18
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Helicopter" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("7_y4vx6")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 19
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Frog" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("8_26tnu")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 20
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Return" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("9_uajt2")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 21
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Speed" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("10_lekke")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 22
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Sticky" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("11_5xst2")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 23
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Strength" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("12_u2k8p")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 24
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="Grab" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+icon = ExtResource("43_8q3bn")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_drss1")
+moveIndex = 30
+movePath = NodePath("../../../../MethodSelection")
+
+[node name="TrickDifficultySelector" type="OptionButton" parent="MoveToggles"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 222.0
+offset_bottom = 64.0
+grow_horizontal = 2
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "Intended"
+popup/item_1/text = "Easy Trick"
+popup/item_1/id = 1
+popup/item_2/text = "Hard Trick"
+popup/item_2/id = 2
+
+[node name="MethodSelection" type="OptionButton" parent="MoveToggles" node_paths=PackedStringArray("addMethodButton", "removeMethodButton", "trickDifficultyButton", "main")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 257.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("27_ip2fe")
+addMethodButton = NodePath("../MovesButtons/MethodAdd")
+removeMethodButton = NodePath("../MovesButtons/MethodRemove")
+trickDifficultyButton = NodePath("../TrickDifficultySelector")
+main = NodePath("../..")
+
+[node name="MovesButtons" type="HBoxContainer" parent="MoveToggles"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.890598
+anchor_right = 0.611667
+anchor_bottom = 0.996205
+offset_right = 0.0999985
+offset_bottom = 0.219997
+metadata/_edit_use_anchors_ = true
+
+[node name="SaveButton" type="Button" parent="MoveToggles/MovesButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "💾"
+
+[node name="LoadButton" type="Button" parent="MoveToggles/MovesButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "📁"
+
+[node name="MethodAdd" type="Button" parent="MoveToggles/MovesButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "+"
+
+[node name="MethodRemove" type="Button" parent="MoveToggles/MovesButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "-"
+
+[node name="CheckSelector" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.35
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ChecksBackdrop" type="TextureRect" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_nly8e")
+
+[node name="CheckLabel" type="Label" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.25
+anchor_bottom = 0.11453
+grow_horizontal = 2
+text = "Checks"
+label_settings = SubResource("LabelSettings_n38yc")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckName" type="Label" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.882051
+anchor_right = 0.294872
+anchor_bottom = 0.996581
+grow_horizontal = 2
+text = "Check Name"
+label_settings = SubResource("LabelSettings_ey4w1")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MapSlot" type="ColorRect" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.125
+anchor_right = 0.999718
+anchor_bottom = 0.875
+color = Color(0.0196078, 0.0196078, 0.12549, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MapTexture" type="TextureRect" parent="CheckSelector/MapSlot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelButtons" type="HBoxContainer" parent="CheckSelector"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_right = 1.0
+anchor_bottom = 0.124786
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonAspect1" type="AspectRatioContainer" parent="CheckSelector/LevelButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelButton" type="Button" parent="CheckSelector/LevelButtons/ButtonAspect1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "H"
+
+[node name="ButtonAspect6" type="AspectRatioContainer" parent="CheckSelector/LevelButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelButton" type="Button" parent="CheckSelector/LevelButtons/ButtonAspect6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "1"
+
+[node name="ButtonAspect2" type="AspectRatioContainer" parent="CheckSelector/LevelButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelButton" type="Button" parent="CheckSelector/LevelButtons/ButtonAspect2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "2"
+
+[node name="ButtonAspect3" type="AspectRatioContainer" parent="CheckSelector/LevelButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelButton" type="Button" parent="CheckSelector/LevelButtons/ButtonAspect3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "3"
+
+[node name="ButtonAspect4" type="AspectRatioContainer" parent="CheckSelector/LevelButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelButton" type="Button" parent="CheckSelector/LevelButtons/ButtonAspect4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "!"
+
+[node name="ButtonAspect5" type="AspectRatioContainer" parent="CheckSelector/LevelButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelButton" type="Button" parent="CheckSelector/LevelButtons/ButtonAspect5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "?"
+
+[node name="HubButtons" type="HBoxContainer" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_right = 1.0
+anchor_bottom = 0.124786
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelButton" type="Button" parent="CheckSelector/HubButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "Hub"
+
+[node name="LevelButton2" type="Button" parent="CheckSelector/HubButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "Cave"
+
+[node name="LevelButton3" type="Button" parent="CheckSelector/HubButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 38
+text = "Training"
+
+[node name="CheckPrerequisitesToggles" type="HBoxContainer" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.294872
+anchor_top = 0.882051
+anchor_right = 0.999718
+anchor_bottom = 0.996205
+offset_left = -1.52588e-05
+offset_right = 0.219971
+offset_bottom = 0.219971
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldSelector" type="OptionButton" parent="CheckSelector"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_right = 0.45
+anchor_bottom = 0.124786
+offset_top = 8.0
+offset_right = -4.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+selected = 8
+item_count = 9
+popup/item_0/text = "Worlds"
+popup/item_0/id = 9
+popup/item_0/separator = true
+popup/item_1/text = "Atlantis"
+popup/item_1/id = 1
+popup/item_2/text = "Carnival"
+popup/item_2/id = 2
+popup/item_3/text = "Pirates"
+popup/item_3/id = 3
+popup/item_4/text = "Prehistoric"
+popup/item_4/id = 4
+popup/item_5/text = "Fortress"
+popup/item_5/id = 5
+popup/item_6/text = "Space"
+popup/item_6/id = 6
+popup/item_7/text = "Misc"
+popup/item_7/id = 8
+popup/item_7/separator = true
+popup/item_8/text = "Hub"
+popup/item_8/id = 7
+metadata/_edit_use_anchors_ = true
+
+[node name="SaveFile" type="FileDialog" parent="."]
+auto_translate_mode = 1
+position = Vector2i(280, 135)
+size = Vector2i(683, 325)
+popup_window = true
+ok_button_text = "Save"
+dialog_hide_on_ok = true
+access = 2
+filters = PackedStringArray("*.glapl")
+use_native_dialog = true
+
+[node name="OpenFiles" type="FileDialog" parent="."]
+title = "Open File(s)"
+position = Vector2i(280, 135)
+size = Vector2i(683, 325)
+popup_window = true
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+file_mode = 1
+access = 2
+filters = PackedStringArray("*.glapl")
+use_native_dialog = true
+
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Jump" to="MoveToggles/MoveButtons/Glover/GridContainer/Jump" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Cartwheel" to="MoveToggles/MoveButtons/Glover/GridContainer/Cartwheel" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Crawl" to="MoveToggles/MoveButtons/Glover/GridContainer/Crawl" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Double Jump" to="MoveToggles/MoveButtons/Glover/GridContainer/Double Jump" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Fist Slam" to="MoveToggles/MoveButtons/Glover/GridContainer/Fist Slam" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Ledgegrab" to="MoveToggles/MoveButtons/Glover/GridContainer/Ledgegrab" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Push" to="MoveToggles/MoveButtons/Glover/GridContainer/Push" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Locate Garib" to="MoveToggles/MoveButtons/Glover/GridContainer/Locate Garib" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Locate Ball" to="MoveToggles/MoveButtons/Glover/GridContainer/Locate Ball" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Dribble" to="MoveToggles/MoveButtons/Ball/GridContainer/Dribble" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Quickswap" to="MoveToggles/MoveButtons/Ball/GridContainer/Quickswap" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Slap" to="MoveToggles/MoveButtons/Ball/GridContainer/Slap" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Throw" to="MoveToggles/MoveButtons/Ball/GridContainer/Throw" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Toss" to="MoveToggles/MoveButtons/Ball/GridContainer/Toss" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Ball Up" to="MoveToggles/MoveButtons/Ball/GridContainer/Ball Up" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Rubber Ball" to="MoveToggles/MoveButtons/Transformations/GridContainer/Rubber Ball" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Bowling Ball" to="MoveToggles/MoveButtons/Transformations/GridContainer/Bowling Ball" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Ball Bearing" to="MoveToggles/MoveButtons/Transformations/GridContainer/Ball Bearing" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Crystal" to="MoveToggles/MoveButtons/Transformations/GridContainer/Crystal" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Sinks" to="MoveToggles/MoveButtons/Transformations/GridContainer/Sinks" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Floats" to="MoveToggles/MoveButtons/Transformations/GridContainer/Floats" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Not Crystal" to="MoveToggles/MoveButtons/Transformations/GridContainer/Not Crystal" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Not Bowling" to="MoveToggles/MoveButtons/Transformations/GridContainer/Not Bowling" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Beach" to="MoveToggles/MoveButtons/Powerups/GridContainer/Beach" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Death" to="MoveToggles/MoveButtons/Powerups/GridContainer/Death" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Helicopter" to="MoveToggles/MoveButtons/Powerups/GridContainer/Helicopter" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Frog" to="MoveToggles/MoveButtons/Powerups/GridContainer/Frog" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Return" to="MoveToggles/MoveButtons/Powerups/GridContainer/Return" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Speed" to="MoveToggles/MoveButtons/Powerups/GridContainer/Speed" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Sticky" to="MoveToggles/MoveButtons/Powerups/GridContainer/Sticky" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Strength" to="MoveToggles/MoveButtons/Powerups/GridContainer/Strength" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Grab" to="MoveToggles/MoveButtons/Powerups/GridContainer/Grab" method="pressed"]
+[connection signal="item_selected" from="MoveToggles/TrickDifficultySelector" to="MoveToggles/MethodSelection" method="trick_difficulty_selected"]
+[connection signal="item_selected" from="MoveToggles/MethodSelection" to="MoveToggles/MethodSelection" method="method_selected"]
+[connection signal="pressed" from="MoveToggles/MovesButtons/SaveButton" to="." method="save_press"]
+[connection signal="pressed" from="MoveToggles/MovesButtons/LoadButton" to="." method="load_press"]
+[connection signal="pressed" from="MoveToggles/MovesButtons/MethodAdd" to="MoveToggles/MethodSelection" method="add_method"]
+[connection signal="pressed" from="MoveToggles/MovesButtons/MethodRemove" to="MoveToggles/MethodSelection" method="remove_method"]
+[connection signal="pressed" from="CheckSelector/LevelButtons/ButtonAspect1/LevelButton" to="." method="change_level" binds= [0]]
+[connection signal="pressed" from="CheckSelector/LevelButtons/ButtonAspect6/LevelButton" to="." method="change_level" binds= [1]]
+[connection signal="pressed" from="CheckSelector/LevelButtons/ButtonAspect2/LevelButton" to="." method="change_level" binds= [2]]
+[connection signal="pressed" from="CheckSelector/LevelButtons/ButtonAspect3/LevelButton" to="." method="change_level" binds= [3]]
+[connection signal="pressed" from="CheckSelector/LevelButtons/ButtonAspect4/LevelButton" to="." method="change_level" binds= [4]]
+[connection signal="pressed" from="CheckSelector/LevelButtons/ButtonAspect5/LevelButton" to="." method="change_level" binds= [5]]
+[connection signal="pressed" from="CheckSelector/HubButtons/LevelButton" to="." method="change_level" binds= [0]]
+[connection signal="pressed" from="CheckSelector/HubButtons/LevelButton2" to="." method="change_level" binds= [1]]
+[connection signal="pressed" from="CheckSelector/HubButtons/LevelButton3" to="." method="change_level" binds= [2]]
+[connection signal="item_selected" from="CheckSelector/WorldSelector" to="." method="change_world"]
+[connection signal="file_selected" from="SaveFile" to="." method="save_from_path"]
+[connection signal="files_selected" from="OpenFiles" to="." method="load_from_paths"]

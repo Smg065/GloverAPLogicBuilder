@@ -1,0 +1,120 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=33 format=3 uid="uid://djoftmhnsrxjv"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_8w5d8"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="2_45l0a"]
+[ext_resource type="Texture2D" uid="uid://cknmgfwq50pbs" path="res://Images/Icons/Checks/WellEntry.png" id="2_hi2a8"]
+[ext_resource type="Texture2D" uid="uid://d3udtec3ta4ue" path="res://Images/Maps/Hub8.png" id="2_ug4x3"]
+[ext_resource type="Texture2D" uid="uid://ce7xnaouva7ww" path="res://Images/Icons/Checks/AtlantisEntry.png" id="3_ytidk"]
+[ext_resource type="Texture2D" uid="uid://dn2fsvgesgv7p" path="res://Images/Icons/Checks/CarnivalEntry.png" id="4_0lv35"]
+[ext_resource type="Texture2D" uid="uid://bxcp8knqldp1h" path="res://Images/Icons/Checks/PiratesCoveEntry.png" id="5_cna54"]
+[ext_resource type="Texture2D" uid="uid://cekbh1g7via3p" path="res://Images/Icons/Checks/PrehistoricEntry.png" id="6_ce1pv"]
+[ext_resource type="Texture2D" uid="uid://bqikl3pu78yoa" path="res://Images/Icons/Checks/FortressEntry.png" id="7_qjg4e"]
+[ext_resource type="Texture2D" uid="uid://d21fddyg3kem1" path="res://Images/Icons/Checks/OutOfThisWorldEntry.png" id="8_5pbbw"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="9_1f58l"]
+[ext_resource type="Texture2D" uid="uid://bdggbxduob24b" path="res://Images/Icons/Checks/CastleCaveEntry.png" id="9_rnw6j"]
+[ext_resource type="Texture2D" uid="uid://dndi541kckx6" path="res://Images/Icons/Checks/HbAtlantisGate.png" id="10_igu2v"]
+[ext_resource type="Texture2D" uid="uid://cqd5jmg1kdutl" path="res://Images/Icons/Checks/HbCarnivalGate.png" id="11_xwifl"]
+[ext_resource type="Texture2D" uid="uid://38yo132rgxug" path="res://Images/Icons/Checks/HbPiratesCoveGate.png" id="12_8dcoj"]
+[ext_resource type="Texture2D" uid="uid://djk0f1nq4es7" path="res://Images/Icons/Checks/HbPrehistoricGate.png" id="13_4osm4"]
+[ext_resource type="Texture2D" uid="uid://b2vx5tiwgpxh4" path="res://Images/Icons/Checks/HbFortressGate.png" id="14_ed5og"]
+[ext_resource type="Texture2D" uid="uid://dalb3hhyl47wb" path="res://Images/Icons/Checks/HbOutOfThisWorldGate.png" id="15_8bo8m"]
+
+[sub_resource type="Resource" id="Resource_16s27"]
+script = ExtResource("1_8w5d8")
+checkName = "Well Entry"
+checkSpot = Vector2(0.539, 0.717)
+checkImage = ExtResource("2_hi2a8")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_i16oe"]
+script = ExtResource("1_8w5d8")
+checkName = "Atlantis Hub Entry"
+checkSpot = Vector2(0.5, 0.837)
+checkImage = ExtResource("3_ytidk")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_aincb"]
+script = ExtResource("1_8w5d8")
+checkName = "Carnival Hub Entry"
+checkSpot = Vector2(0.339, 0.665)
+checkImage = ExtResource("4_0lv35")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_s1du6"]
+script = ExtResource("1_8w5d8")
+checkName = "Pirates Hub Entry"
+checkSpot = Vector2(0.666, 0.671)
+checkImage = ExtResource("5_cna54")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_oorss"]
+script = ExtResource("1_8w5d8")
+checkName = "Prehistoric Hub Entry"
+checkSpot = Vector2(0.339, 0.332)
+checkImage = ExtResource("6_ce1pv")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_vvacp"]
+script = ExtResource("1_8w5d8")
+checkName = "Fear Hub Entry"
+checkSpot = Vector2(0.666, 0.328)
+checkImage = ExtResource("7_qjg4e")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_yelf4"]
+script = ExtResource("1_8w5d8")
+checkName = "OotW Hub Entry"
+checkSpot = Vector2(0.499, 0.165)
+checkImage = ExtResource("8_5pbbw")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_7cnex"]
+script = ExtResource("1_8w5d8")
+checkName = "Castle Cave Entry"
+checkSpot = Vector2(0.5, 0.606)
+checkImage = ExtResource("9_rnw6j")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_6b7as"]
+script = ExtResource("9_1f58l")
+checkName = "Atlantis Gate"
+checkImage = ExtResource("10_igu2v")
+
+[sub_resource type="Resource" id="Resource_aehy4"]
+script = ExtResource("9_1f58l")
+checkName = "Carnival Gate"
+checkImage = ExtResource("11_xwifl")
+
+[sub_resource type="Resource" id="Resource_ww3gg"]
+script = ExtResource("9_1f58l")
+checkName = "Pirate's Cove Gate"
+checkImage = ExtResource("12_8dcoj")
+
+[sub_resource type="Resource" id="Resource_tsn7w"]
+script = ExtResource("9_1f58l")
+checkName = "Prehistoric Gate"
+checkImage = ExtResource("13_4osm4")
+
+[sub_resource type="Resource" id="Resource_7vr57"]
+script = ExtResource("9_1f58l")
+checkName = "Fortress of Fear Gate"
+checkImage = ExtResource("14_ed5og")
+
+[sub_resource type="Resource" id="Resource_twh80"]
+script = ExtResource("9_1f58l")
+checkName = "Out of This World Gate"
+checkImage = ExtResource("15_8bo8m")
+
+[resource]
+script = ExtResource("2_45l0a")
+mapImage = ExtResource("2_ug4x3")
+levelChecks = Array[ExtResource("1_8w5d8")]([SubResource("Resource_16s27"), SubResource("Resource_i16oe"), SubResource("Resource_aincb"), SubResource("Resource_s1du6"), SubResource("Resource_oorss"), SubResource("Resource_vvacp"), SubResource("Resource_yelf4"), SubResource("Resource_7cnex")])
+levelPrerequisiteChecks = Array[ExtResource("9_1f58l")]([SubResource("Resource_6b7as"), SubResource("Resource_aehy4"), SubResource("Resource_ww3gg"), SubResource("Resource_tsn7w"), SubResource("Resource_7vr57"), SubResource("Resource_twh80")])

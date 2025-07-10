@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WorldInfo" load_steps=9 format=3 uid="uid://bmibyiso3f77x"]
+
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_arurr"]
+[ext_resource type="Resource" uid="uid://3qcnnkw7of0k" path="res://Resources/Maps/Hub.tres" id="2_wtetd"]
+[ext_resource type="Resource" uid="uid://cdn5rshl5dthh" path="res://Resources/Maps/Space1.tres" id="3_iyqi7"]
+[ext_resource type="Resource" uid="uid://se2ib83vepow" path="res://Resources/Maps/Space2.tres" id="4_b55vt"]
+[ext_resource type="Resource" uid="uid://bp3w3ufjtsh88" path="res://Resources/Maps/Space3.tres" id="5_labbc"]
+[ext_resource type="Resource" uid="uid://b6tjpfpkoq7ku" path="res://Resources/Maps/SpaceBonus.tres" id="6_inlqk"]
+[ext_resource type="Resource" uid="uid://bl7444gl1od71" path="res://Resources/Maps/SpaceBoss.tres" id="7_e88mh"]
+[ext_resource type="Script" path="res://Scripts/WorldInfo.gd" id="8_kbo81"]
+
+[resource]
+script = ExtResource("8_kbo81")
+worldName = "Out of This World"
+levels = Array[ExtResource("1_arurr")]([ExtResource("2_wtetd"), ExtResource("3_iyqi7"), ExtResource("4_b55vt"), ExtResource("5_labbc"), ExtResource("7_e88mh"), ExtResource("6_inlqk")])

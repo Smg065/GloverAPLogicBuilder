@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WorldInfo" load_steps=9 format=3 uid="uid://b5hw51kd0ofce"]
+
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_g0o3c"]
+[ext_resource type="Resource" uid="uid://3qcnnkw7of0k" path="res://Resources/Maps/Hub.tres" id="2_l2ou6"]
+[ext_resource type="Script" path="res://Scripts/WorldInfo.gd" id="2_sk0ab"]
+[ext_resource type="Resource" uid="uid://dluhj5am0m67u" path="res://Resources/Maps/Carnival1.tres" id="3_lx74x"]
+[ext_resource type="Resource" uid="uid://bsrhjqbkbhom6" path="res://Resources/Maps/Carnival2.tres" id="4_mr8ei"]
+[ext_resource type="Resource" uid="uid://d280khoi8kuw6" path="res://Resources/Maps/Carnival3.tres" id="5_stlin"]
+[ext_resource type="Resource" uid="uid://cdmjf0fw11sli" path="res://Resources/Maps/CarnivalBoss.tres" id="6_fra5x"]
+[ext_resource type="Resource" uid="uid://svvo2kkplxu1" path="res://Resources/Maps/CarnivalBonus.tres" id="7_fnku1"]
+
+[resource]
+script = ExtResource("2_sk0ab")
+worldName = "Carnival"
+levels = Array[ExtResource("1_g0o3c")]([ExtResource("2_l2ou6"), ExtResource("3_lx74x"), ExtResource("4_mr8ei"), ExtResource("5_stlin"), ExtResource("6_fra5x"), ExtResource("7_fnku1")])

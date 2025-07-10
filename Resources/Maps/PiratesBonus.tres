@@ -1,0 +1,183 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=29 format=3 uid="uid://b8rml5tm5slau"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_2h2o8"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="2_cosxq"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_nsgq7"]
+[ext_resource type="Texture2D" uid="uid://di7i2ng0oykkl" path="res://Images/Maps/PiratesBonus.png" id="2_y6f1h"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="3_1k3pq"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_1ndoe"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="4_34pny"]
+
+[sub_resource type="Resource" id="Resource_4t8ri"]
+script = ExtResource("1_2h2o8")
+checkName = "Goal"
+checkSpot = Vector2(0.499, 0.291)
+checkImage = ExtResource("3_1k3pq")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_yv1m7"]
+script = ExtResource("1_2h2o8")
+checkName = "Bottom Barrel Life"
+checkSpot = Vector2(0.523, 0.854)
+checkImage = ExtResource("2_cosxq")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_n562v"]
+script = ExtResource("1_2h2o8")
+checkName = "Middle Barrel Life"
+checkSpot = Vector2(0.481, 0.635)
+checkImage = ExtResource("2_cosxq")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_nbiky"]
+script = ExtResource("1_2h2o8")
+checkName = "Top Barrel Life"
+checkSpot = Vector2(0.481, 0.384)
+checkImage = ExtResource("2_cosxq")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_wa2in"]
+script = ExtResource("1_2h2o8")
+checkName = "Goal Life"
+checkSpot = Vector2(0.508, 0.236)
+checkImage = ExtResource("2_cosxq")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_5vq1q"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel A Garibs"
+checkSpot = Vector2(0.522, 0.788)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_4hwpd"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel B Garibs"
+checkSpot = Vector2(0.482, 0.718)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_s4isc"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel C Garibs"
+checkSpot = Vector2(0.525, 0.644)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_8p1rr"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel D Garibs"
+checkSpot = Vector2(0.485, 0.575)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_433yx"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel E Garibs"
+checkSpot = Vector2(0.522, 0.498)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_8o1j1"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel F Garibs"
+checkSpot = Vector2(0.478, 0.436)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_cpnqo"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel G Garibs"
+checkSpot = Vector2(0.522, 0.381)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_2n3vq"]
+script = ExtResource("1_2h2o8")
+checkName = "Barrel H Garibs"
+checkSpot = Vector2(0.482, 0.322)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_bpx31"]
+script = ExtResource("1_2h2o8")
+checkName = "Floating A Garibs"
+checkSpot = Vector2(0.491, 0.789)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_v3imr"]
+script = ExtResource("1_2h2o8")
+checkName = "Floating B Garibs"
+checkSpot = Vector2(0.504, 0.72)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_xln05"]
+script = ExtResource("1_2h2o8")
+checkName = "Floating C Garibs"
+checkSpot = Vector2(0.569, 0.637)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_7vio6"]
+script = ExtResource("1_2h2o8")
+checkName = "Floating D Garibs"
+checkSpot = Vector2(0.445, 0.564)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_qg0eb"]
+script = ExtResource("1_2h2o8")
+checkName = "Floating E Garibs"
+checkSpot = Vector2(0.554, 0.481)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_164bs"]
+script = ExtResource("1_2h2o8")
+checkName = "Floating F Garibs"
+checkSpot = Vector2(0.435, 0.421)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_jh425"]
+script = ExtResource("1_2h2o8")
+checkName = "Middle Garibs"
+checkSpot = Vector2(0.502, 0.921)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_tg3cc"]
+script = ExtResource("1_2h2o8")
+checkName = "Top Garibs"
+checkSpot = Vector2(0.546, 0.292)
+checkImage = ExtResource("4_34pny")
+checkType = 1
+totalSubchecks = 3
+
+[resource]
+script = ExtResource("3_1ndoe")
+mapImage = ExtResource("2_y6f1h")
+levelChecks = Array[ExtResource("1_2h2o8")]([SubResource("Resource_4t8ri"), SubResource("Resource_yv1m7"), SubResource("Resource_n562v"), SubResource("Resource_nbiky"), SubResource("Resource_wa2in"), SubResource("Resource_5vq1q"), SubResource("Resource_4hwpd"), SubResource("Resource_s4isc"), SubResource("Resource_8p1rr"), SubResource("Resource_433yx"), SubResource("Resource_8o1j1"), SubResource("Resource_cpnqo"), SubResource("Resource_2n3vq"), SubResource("Resource_bpx31"), SubResource("Resource_v3imr"), SubResource("Resource_xln05"), SubResource("Resource_7vio6"), SubResource("Resource_qg0eb"), SubResource("Resource_164bs"), SubResource("Resource_jh425"), SubResource("Resource_tg3cc")])
+levelPrerequisiteChecks = Array[ExtResource("2_nsgq7")]([])

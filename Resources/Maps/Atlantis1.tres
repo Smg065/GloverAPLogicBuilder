@@ -1,0 +1,219 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=40 format=3 uid="uid://d3ub84m13s4lj"]
+
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_8cy88"]
+[ext_resource type="Texture2D" uid="uid://can1dw2ojsn3c" path="res://Images/Maps/Atlantis1.png" id="1_mxv5n"]
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_ytcoe"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="3_38ulf"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_srxxq"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="4_7ti4p"]
+[ext_resource type="Texture2D" uid="uid://ck3i5niuagc2h" path="res://Images/Icons/Checks/GloverSwitch.png" id="5_uqo3m"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="6_yvf5f"]
+[ext_resource type="Texture2D" uid="uid://boxle8juwe3d1" path="res://Images/Icons/Checks/Atlantis1Pillar.png" id="7_uhbkw"]
+[ext_resource type="Texture2D" uid="uid://cxc0q1gnco0po" path="res://Images/Icons/Checks/Bull.png" id="8_28xb4"]
+[ext_resource type="Texture2D" uid="uid://cnbhq8hdjgxdr" path="res://Images/Icons/Checks/Atlantis1Blocks.png" id="9_mfuwg"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="10_2tvgf"]
+[ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="10_obgvk"]
+[ext_resource type="Texture2D" uid="uid://bvemgy3jskgt0" path="res://Images/Icons/Checks/At1Gate.png" id="12_jw6na"]
+
+[sub_resource type="Resource" id="Resource_fgyji"]
+script = ExtResource("1_ytcoe")
+checkName = "Checkpoint"
+checkSpot = Vector2(0.596, 0.499)
+checkImage = ExtResource("4_7ti4p")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_kasfe"]
+script = ExtResource("1_ytcoe")
+checkName = "Glover Switch"
+checkSpot = Vector2(0.803, 0.521)
+checkImage = ExtResource("5_uqo3m")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_bu0s6"]
+script = ExtResource("1_ytcoe")
+checkName = "Platform A Garibs"
+checkSpot = Vector2(0.392, 0.483)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_bkcnq"]
+script = ExtResource("1_ytcoe")
+checkName = "Platform B Garibs"
+checkSpot = Vector2(0.449, 0.49)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_eo8ok"]
+script = ExtResource("1_ytcoe")
+checkName = "Platform C Garibs"
+checkSpot = Vector2(0.644, 0.57)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_bvmo3"]
+script = ExtResource("1_ytcoe")
+checkName = "Platform D Garibs"
+checkSpot = Vector2(0.697, 0.514)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_nwul6"]
+script = ExtResource("1_ytcoe")
+checkName = "Platform E Garibs"
+checkSpot = Vector2(0.754, 0.457)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_4dohy"]
+script = ExtResource("1_ytcoe")
+checkName = "Pillar Life"
+checkSpot = Vector2(0.59, 0.357)
+checkImage = ExtResource("6_yvf5f")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_o5wmb"]
+script = ExtResource("1_ytcoe")
+checkName = "Pillar Garibs"
+checkSpot = Vector2(0.591, 0.426)
+checkImage = ExtResource("7_uhbkw")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_lomvp"]
+script = ExtResource("1_ytcoe")
+checkName = "Pool Edge Garibs"
+checkSpot = Vector2(0.422, 0.57)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_0gdhe"]
+script = ExtResource("1_ytcoe")
+checkName = "Bull"
+checkSpot = Vector2(0.522, 0.563)
+checkImage = ExtResource("8_28xb4")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_od4s7"]
+script = ExtResource("1_ytcoe")
+checkName = "Block Garibs"
+checkSpot = Vector2(0.537, 0.441)
+checkImage = ExtResource("9_mfuwg")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_qhxyg"]
+script = ExtResource("1_ytcoe")
+checkName = "Goal Life"
+checkSpot = Vector2(0.877, 0.521)
+checkImage = ExtResource("6_yvf5f")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_hf7g0"]
+script = ExtResource("1_ytcoe")
+checkName = "Goal"
+checkSpot = Vector2(0.842, 0.521)
+checkImage = ExtResource("10_2tvgf")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_r2w70"]
+script = ExtResource("1_ytcoe")
+checkName = "Arch Garibs"
+checkSpot = Vector2(0.827, 0.439)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_f6wl0"]
+script = ExtResource("1_ytcoe")
+checkName = "Shark Garibs"
+checkSpot = Vector2(0.266, 0.499)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 9
+
+[sub_resource type="Resource" id="Resource_iv26r"]
+script = ExtResource("1_ytcoe")
+checkName = "Cliff Life"
+checkSpot = Vector2(0.229, 0.894)
+checkImage = ExtResource("6_yvf5f")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_smscu"]
+script = ExtResource("1_ytcoe")
+checkName = "Shark Tip"
+checkSpot = Vector2(0.192, 0.493)
+checkImage = ExtResource("10_obgvk")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_ecfy4"]
+script = ExtResource("1_ytcoe")
+checkName = "Platforms Tip"
+checkSpot = Vector2(0.342, 0.459)
+checkImage = ExtResource("10_obgvk")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_18fi8"]
+script = ExtResource("1_ytcoe")
+checkName = "Bull Tip Left"
+checkSpot = Vector2(0.49, 0.41)
+checkImage = ExtResource("10_obgvk")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_40pbl"]
+script = ExtResource("1_ytcoe")
+checkName = "Bull Tip Right"
+checkSpot = Vector2(0.487, 0.569)
+checkImage = ExtResource("10_obgvk")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_qri27"]
+script = ExtResource("1_ytcoe")
+checkName = "Checkpoint Tip"
+checkSpot = Vector2(0.627, 0.434)
+checkImage = ExtResource("10_obgvk")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_nmalh"]
+script = ExtResource("1_ytcoe")
+checkName = "Edge Garibs"
+checkSpot = Vector2(0.808, 0.61)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_yesur"]
+script = ExtResource("1_ytcoe")
+checkName = "Checkers Garibs"
+checkSpot = Vector2(0.524, 0.501)
+checkImage = ExtResource("3_38ulf")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_8cdoo"]
+script = ExtResource("3_srxxq")
+checkName = "Gate"
+checkImage = ExtResource("12_jw6na")
+
+[resource]
+script = ExtResource("1_8cy88")
+mapImage = ExtResource("1_mxv5n")
+levelChecks = Array[ExtResource("1_ytcoe")]([SubResource("Resource_fgyji"), SubResource("Resource_kasfe"), SubResource("Resource_bu0s6"), SubResource("Resource_bkcnq"), SubResource("Resource_eo8ok"), SubResource("Resource_bvmo3"), SubResource("Resource_nwul6"), SubResource("Resource_4dohy"), SubResource("Resource_o5wmb"), SubResource("Resource_lomvp"), SubResource("Resource_0gdhe"), SubResource("Resource_od4s7"), SubResource("Resource_qhxyg"), SubResource("Resource_hf7g0"), SubResource("Resource_r2w70"), SubResource("Resource_f6wl0"), SubResource("Resource_iv26r"), SubResource("Resource_smscu"), SubResource("Resource_ecfy4"), SubResource("Resource_18fi8"), SubResource("Resource_40pbl"), SubResource("Resource_qri27"), SubResource("Resource_nmalh"), SubResource("Resource_yesur")])
+levelPrerequisiteChecks = Array[ExtResource("3_srxxq")]([SubResource("Resource_8cdoo")])

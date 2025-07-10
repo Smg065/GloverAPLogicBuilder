@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=18 format=3 uid="uid://8leqygxsskbx"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_0rxe8"]
+[ext_resource type="Texture2D" uid="uid://dhefke4w2wyk" path="res://Images/Maps/PrehistoricBonus.png" id="2_2388b"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="2_fic8w"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="3_fjubr"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_ra6oa"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="4_sfqp8"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="5_541ub"]
+
+[sub_resource type="Resource" id="Resource_ps2ue"]
+script = ExtResource("1_0rxe8")
+checkName = "Goal"
+checkSpot = Vector2(0.85, 0.501)
+checkImage = ExtResource("2_fic8w")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_0vkvg"]
+script = ExtResource("1_0rxe8")
+checkName = "Rock Life"
+checkSpot = Vector2(0.183, 0.477)
+checkImage = ExtResource("4_sfqp8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_wyqc2"]
+script = ExtResource("1_0rxe8")
+checkName = "Homestretch Life"
+checkSpot = Vector2(0.751, 0.539)
+checkImage = ExtResource("4_sfqp8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_700jl"]
+script = ExtResource("1_0rxe8")
+checkName = "Fossils Life"
+checkSpot = Vector2(0.47, 0.458)
+checkImage = ExtResource("4_sfqp8")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_geer0"]
+script = ExtResource("1_0rxe8")
+checkName = "Spawn Garibs"
+checkSpot = Vector2(0.3, 0.493)
+checkImage = ExtResource("3_fjubr")
+checkType = 1
+totalSubchecks = 10
+
+[sub_resource type="Resource" id="Resource_l5n62"]
+script = ExtResource("1_0rxe8")
+checkName = "Fossil Garibs"
+checkSpot = Vector2(0.475, 0.536)
+checkImage = ExtResource("3_fjubr")
+checkType = 1
+totalSubchecks = 10
+
+[sub_resource type="Resource" id="Resource_a6hn3"]
+script = ExtResource("1_0rxe8")
+checkName = "Archway Garibs"
+checkSpot = Vector2(0.376, 0.499)
+checkImage = ExtResource("3_fjubr")
+checkType = 1
+totalSubchecks = 10
+
+[sub_resource type="Resource" id="Resource_n6qlo"]
+script = ExtResource("1_0rxe8")
+checkName = "Lava Garibs"
+checkSpot = Vector2(0.62, 0.464)
+checkImage = ExtResource("3_fjubr")
+checkType = 1
+totalSubchecks = 10
+
+[sub_resource type="Resource" id="Resource_kicmt"]
+script = ExtResource("1_0rxe8")
+checkName = "Sharp Turn Garibs"
+checkSpot = Vector2(0.714, 0.461)
+checkImage = ExtResource("3_fjubr")
+checkType = 1
+totalSubchecks = 10
+
+[sub_resource type="Resource" id="Resource_w0v63"]
+script = ExtResource("1_0rxe8")
+checkName = "Goal Garibs"
+checkSpot = Vector2(0.773, 0.445)
+checkImage = ExtResource("3_fjubr")
+checkType = 1
+totalSubchecks = 10
+
+[resource]
+script = ExtResource("3_ra6oa")
+mapImage = ExtResource("2_2388b")
+levelChecks = Array[ExtResource("1_0rxe8")]([SubResource("Resource_ps2ue"), SubResource("Resource_0vkvg"), SubResource("Resource_wyqc2"), SubResource("Resource_700jl"), SubResource("Resource_geer0"), SubResource("Resource_l5n62"), SubResource("Resource_a6hn3"), SubResource("Resource_n6qlo"), SubResource("Resource_kicmt"), SubResource("Resource_w0v63")])
+levelPrerequisiteChecks = Array[ExtResource("5_541ub")]([])

@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=13 format=3 uid="uid://svvo2kkplxu1"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_ocxdj"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="2_fver1"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_lil5k"]
+[ext_resource type="Texture2D" uid="uid://cq1ctvurlkmkj" path="res://Images/Maps/CarnivalBonus.png" id="2_rcmcu"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_43t5x"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="3_o4tp2"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="4_55rkc"]
+
+[sub_resource type="Resource" id="Resource_v6aa4"]
+script = ExtResource("1_ocxdj")
+checkName = "Life 1"
+checkSpot = Vector2(0.587, 0.359)
+checkImage = ExtResource("2_fver1")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_pe3w6"]
+script = ExtResource("1_ocxdj")
+checkName = "Life 2"
+checkSpot = Vector2(0.392, 0.603)
+checkImage = ExtResource("2_fver1")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_akdur"]
+script = ExtResource("1_ocxdj")
+checkName = "Inner Garibs"
+checkSpot = Vector2(0.493, 0.329)
+checkImage = ExtResource("3_o4tp2")
+checkType = 1
+totalSubchecks = 12
+
+[sub_resource type="Resource" id="Resource_fhua3"]
+script = ExtResource("1_ocxdj")
+checkName = "Outer Garibs"
+checkSpot = Vector2(0.493, 0.252)
+checkImage = ExtResource("3_o4tp2")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_skr10"]
+script = ExtResource("1_ocxdj")
+checkName = "Goal"
+checkSpot = Vector2(0.49, 0.48)
+checkImage = ExtResource("4_55rkc")
+checkType = 5
+totalSubchecks = 1
+
+[resource]
+script = ExtResource("3_43t5x")
+mapImage = ExtResource("2_rcmcu")
+levelChecks = Array[ExtResource("1_ocxdj")]([SubResource("Resource_v6aa4"), SubResource("Resource_pe3w6"), SubResource("Resource_akdur"), SubResource("Resource_fhua3"), SubResource("Resource_skr10")])
+levelPrerequisiteChecks = Array[ExtResource("2_lil5k")]([])

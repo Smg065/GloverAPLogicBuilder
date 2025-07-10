@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=9 format=3 uid="uid://8nxvni6s5imx"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_84t78"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cfux2"]
+[ext_resource type="Texture2D" uid="uid://tjcen42fqcco" path="res://Images/Maps/CastleCave.png" id="2_h1dx4"]
+[ext_resource type="Texture2D" uid="uid://chldiy8ku7gio" path="res://Images/Icons/Crystal.png" id="2_mwcbr"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="2_wqwdq"]
+[ext_resource type="Texture2D" uid="uid://l0xqtppw0382" path="res://Images/Icons/Checks/CaveExit.png" id="3_504uq"]
+
+[sub_resource type="Resource" id="Resource_jutd0"]
+script = ExtResource("1_84t78")
+checkName = "Ball Turn-In"
+checkSpot = Vector2(0.645, 0.495)
+checkImage = ExtResource("2_mwcbr")
+checkType = 9
+totalSubchecks = 7
+
+[sub_resource type="Resource" id="Resource_eg8ci"]
+script = ExtResource("1_84t78")
+checkName = "Cave Exit"
+checkSpot = Vector2(0.369, 0.499)
+checkImage = ExtResource("3_504uq")
+checkType = 7
+totalSubchecks = 1
+
+[resource]
+script = ExtResource("2_wqwdq")
+mapImage = ExtResource("2_h1dx4")
+levelChecks = Array[ExtResource("1_84t78")]([SubResource("Resource_jutd0"), SubResource("Resource_eg8ci")])
+levelPrerequisiteChecks = Array[ExtResource("2_cfux2")]([])

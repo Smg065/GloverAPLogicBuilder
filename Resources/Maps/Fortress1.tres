@@ -1,0 +1,323 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=59 format=3 uid="uid://bytk75t3wslom"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_tkrmx"]
+[ext_resource type="Texture2D" uid="uid://c851h8vug25ty" path="res://Images/Maps/FortressOfFear1.png" id="2_00m8h"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_beywn"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="2_pkvwg"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_3d1cq"]
+[ext_resource type="Texture2D" uid="uid://b7g7xoejubqio" path="res://Images/Icons/Checks/Fe1Coffins.png" id="3_7e3pq"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="3_k1mt5"]
+[ext_resource type="Texture2D" uid="uid://vs330ldppvpg" path="res://Images/Icons/Checks/Fe1Doorway.png" id="4_1lgw2"]
+[ext_resource type="Texture2D" uid="uid://ck3i5niuagc2h" path="res://Images/Icons/Checks/GloverSwitch.png" id="4_rnoxu"]
+[ext_resource type="Texture2D" uid="uid://dcs5og6exktrb" path="res://Images/Icons/Checks/Fe1Drawbridge.png" id="5_4edo1"]
+[ext_resource type="Texture2D" uid="uid://cb8c2qr3mi00j" path="res://Images/Icons/Checks/Fe1LeftTarget.png" id="5_gxcav"]
+[ext_resource type="Texture2D" uid="uid://dkph7bydqww73" path="res://Images/Icons/Checks/Fe1RightTarget.png" id="6_w1f4u"]
+[ext_resource type="Texture2D" uid="uid://ceg7qchlfw2ry" path="res://Images/Icons/Checks/Fe1PushBlocks.png" id="7_8ojew"]
+[ext_resource type="Texture2D" uid="uid://dn3lfltfu7j6j" path="res://Images/Icons/Frog.png" id="8_6di67"]
+[ext_resource type="Texture2D" uid="uid://brjc15mshcxid" path="res://Images/Icons/Beach.png" id="9_rrlcl"]
+[ext_resource type="Texture2D" uid="uid://ctxshyk0gwead" path="res://Images/Icons/Fly.png" id="10_6ks4u"]
+[ext_resource type="Texture2D" uid="uid://cpdl0eggq45p2" path="res://Images/Icons/Return.png" id="11_xy8ch"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="12_1t2jr"]
+[ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="13_fhdbi"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="14_al7sl"]
+
+[sub_resource type="Resource" id="Resource_hqapk"]
+script = ExtResource("1_tkrmx")
+checkName = "Goal"
+checkSpot = Vector2(0.792, 0.955)
+checkImage = ExtResource("2_pkvwg")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_kwa6p"]
+script = ExtResource("1_tkrmx")
+checkName = "Checkpoint 2"
+checkSpot = Vector2(0.441, 0.215)
+checkImage = ExtResource("3_k1mt5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_bpeca"]
+script = ExtResource("1_tkrmx")
+checkName = "Checkpoint 3"
+checkSpot = Vector2(0.781, 0.322)
+checkImage = ExtResource("3_k1mt5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_4nmsh"]
+script = ExtResource("1_tkrmx")
+checkName = "Coffin Glover Switch"
+checkSpot = Vector2(0.836, 0.706)
+checkImage = ExtResource("4_rnoxu")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_sywhd"]
+script = ExtResource("1_tkrmx")
+checkName = "Tower Glover Switch"
+checkSpot = Vector2(0.322, 0.051)
+checkImage = ExtResource("4_rnoxu")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_mngex"]
+script = ExtResource("1_tkrmx")
+checkName = "Left Target"
+checkSpot = Vector2(0.706, 0.284)
+checkImage = ExtResource("5_gxcav")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_mxkar"]
+script = ExtResource("1_tkrmx")
+checkName = "Right Target"
+checkSpot = Vector2(0.708, 0.43)
+checkImage = ExtResource("6_w1f4u")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_3eau1"]
+script = ExtResource("1_tkrmx")
+checkName = "Push Blocks"
+checkSpot = Vector2(0.78, 0.714)
+checkImage = ExtResource("7_8ojew")
+checkType = 9
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_qrk6x"]
+script = ExtResource("1_tkrmx")
+checkName = "Frog Potion"
+checkSpot = Vector2(0.666, 0.351)
+checkImage = ExtResource("8_6di67")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_tyfbu"]
+script = ExtResource("1_tkrmx")
+checkName = "Beachball"
+checkSpot = Vector2(0.61, 0.197)
+checkImage = ExtResource("9_rrlcl")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_rydbb"]
+script = ExtResource("1_tkrmx")
+checkName = "Dirt Hill Helicopter Potion"
+checkSpot = Vector2(0.506, 0.199)
+checkImage = ExtResource("10_6ks4u")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_mvae8"]
+script = ExtResource("1_tkrmx")
+checkName = "Elevated Helicopter Potion"
+checkSpot = Vector2(0.525, 0.038)
+checkImage = ExtResource("10_6ks4u")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_6pr2j"]
+script = ExtResource("1_tkrmx")
+checkName = "Dropdown Return"
+checkSpot = Vector2(0.369, 0.316)
+checkImage = ExtResource("11_xy8ch")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_clo7c"]
+script = ExtResource("1_tkrmx")
+checkName = "Ramp Return"
+checkSpot = Vector2(0.323, 0.276)
+checkImage = ExtResource("11_xy8ch")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_7x0ng"]
+script = ExtResource("1_tkrmx")
+checkName = "Elevated Life 1"
+checkSpot = Vector2(0.488, 0.07)
+checkImage = ExtResource("12_1t2jr")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_e3tl1"]
+script = ExtResource("1_tkrmx")
+checkName = "Elevated Life 2"
+checkSpot = Vector2(0.562, 0.058)
+checkImage = ExtResource("12_1t2jr")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_so40y"]
+script = ExtResource("1_tkrmx")
+checkName = "Above Electric Life"
+checkSpot = Vector2(0.252, 0.234)
+checkImage = ExtResource("12_1t2jr")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_s0e7y"]
+script = ExtResource("1_tkrmx")
+checkName = "Behind Tower Life"
+checkSpot = Vector2(0.689, 0.715)
+checkImage = ExtResource("12_1t2jr")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_8xgae"]
+script = ExtResource("1_tkrmx")
+checkName = "Wind-Up"
+checkSpot = Vector2(0.708, 0.354)
+checkImage = ExtResource("13_fhdbi")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_316bn"]
+script = ExtResource("1_tkrmx")
+checkName = "Left Tower Garib"
+checkSpot = Vector2(0.712, 0.761)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_anpyg"]
+script = ExtResource("1_tkrmx")
+checkName = "Right Tower Garib"
+checkSpot = Vector2(0.712, 0.675)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_qc7nc"]
+script = ExtResource("1_tkrmx")
+checkName = "Plank Garibs"
+checkSpot = Vector2(0.778, 0.499)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_hvmy1"]
+script = ExtResource("1_tkrmx")
+checkName = "Right Ghost Garibs"
+checkSpot = Vector2(0.674, 0.468)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_2k41c"]
+script = ExtResource("1_tkrmx")
+checkName = "Left Garibs"
+checkSpot = Vector2(0.668, 0.26)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_oab8c"]
+script = ExtResource("1_tkrmx")
+checkName = "Ghost Garibs"
+checkSpot = Vector2(0.643, 0.405)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_bi6xn"]
+script = ExtResource("1_tkrmx")
+checkName = "Shoes Garibs"
+checkSpot = Vector2(0.549, 0.135)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_u1kxj"]
+script = ExtResource("1_tkrmx")
+checkName = "Beachball Garibs"
+checkSpot = Vector2(0.637, 0.191)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_xoi6e"]
+script = ExtResource("1_tkrmx")
+checkName = "Elevated Garibs"
+checkSpot = Vector2(0.526, 0.08)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_ik235"]
+script = ExtResource("1_tkrmx")
+checkName = "Coffin Garibs"
+checkSpot = Vector2(0.411, 0.225)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_bm3ue"]
+script = ExtResource("1_tkrmx")
+checkName = "Dropdown Garibs"
+checkSpot = Vector2(0.34, 0.304)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_q15s8"]
+script = ExtResource("1_tkrmx")
+checkName = "Glover Switch Garibs"
+checkSpot = Vector2(0.358, 0.048)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_lexog"]
+script = ExtResource("1_tkrmx")
+checkName = "Oddly Diagonal Garibs"
+checkSpot = Vector2(0.354, 0.143)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_8du0s"]
+script = ExtResource("1_tkrmx")
+checkName = "Above Electric Garib"
+checkSpot = Vector2(0.224, 0.231)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_3ug6s"]
+script = ExtResource("1_tkrmx")
+checkName = "Electric Garibs"
+checkSpot = Vector2(0.232, 0.16)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_lhlsh"]
+script = ExtResource("1_tkrmx")
+checkName = "Dirt Hill Garibs"
+checkSpot = Vector2(0.543, 0.242)
+checkImage = ExtResource("14_al7sl")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_45g64"]
+script = ExtResource("2_beywn")
+checkName = "Coffin"
+checkImage = ExtResource("3_7e3pq")
+
+[sub_resource type="Resource" id="Resource_6pbq6"]
+script = ExtResource("2_beywn")
+checkName = "Doorway"
+checkImage = ExtResource("4_1lgw2")
+
+[sub_resource type="Resource" id="Resource_cdssr"]
+script = ExtResource("2_beywn")
+checkName = "Drawbridge"
+checkImage = ExtResource("5_4edo1")
+
+[resource]
+script = ExtResource("3_3d1cq")
+mapImage = ExtResource("2_00m8h")
+levelChecks = Array[ExtResource("1_tkrmx")]([SubResource("Resource_hqapk"), SubResource("Resource_kwa6p"), SubResource("Resource_bpeca"), SubResource("Resource_4nmsh"), SubResource("Resource_sywhd"), SubResource("Resource_mngex"), SubResource("Resource_mxkar"), SubResource("Resource_3eau1"), SubResource("Resource_qrk6x"), SubResource("Resource_tyfbu"), SubResource("Resource_rydbb"), SubResource("Resource_mvae8"), SubResource("Resource_6pr2j"), SubResource("Resource_clo7c"), SubResource("Resource_7x0ng"), SubResource("Resource_e3tl1"), SubResource("Resource_so40y"), SubResource("Resource_s0e7y"), SubResource("Resource_8xgae"), SubResource("Resource_316bn"), SubResource("Resource_anpyg"), SubResource("Resource_qc7nc"), SubResource("Resource_hvmy1"), SubResource("Resource_2k41c"), SubResource("Resource_oab8c"), SubResource("Resource_bi6xn"), SubResource("Resource_u1kxj"), SubResource("Resource_xoi6e"), SubResource("Resource_ik235"), SubResource("Resource_bm3ue"), SubResource("Resource_q15s8"), SubResource("Resource_lexog"), SubResource("Resource_8du0s"), SubResource("Resource_3ug6s"), SubResource("Resource_lhlsh")])
+levelPrerequisiteChecks = Array[ExtResource("2_beywn")]([SubResource("Resource_45g64"), SubResource("Resource_6pbq6"), SubResource("Resource_cdssr")])

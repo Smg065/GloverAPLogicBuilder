@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WorldInfo" load_steps=9 format=3 uid="uid://j7swy68p3ain"]
+
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_fd4vu"]
+[ext_resource type="Resource" uid="uid://3qcnnkw7of0k" path="res://Resources/Maps/Hub.tres" id="2_mjqle"]
+[ext_resource type="Resource" uid="uid://wxkkcjxqrsr2" path="res://Resources/Maps/Pirates1.tres" id="3_urkq3"]
+[ext_resource type="Resource" uid="uid://bfhqiyo5t1uoy" path="res://Resources/Maps/Pirates2.tres" id="4_hfmnw"]
+[ext_resource type="Resource" uid="uid://syti1fpsy2av" path="res://Resources/Maps/Pirates3.tres" id="5_je7le"]
+[ext_resource type="Resource" uid="uid://buxho1cwr187o" path="res://Resources/Maps/PiratesBoss.tres" id="6_iprmg"]
+[ext_resource type="Resource" uid="uid://b8rml5tm5slau" path="res://Resources/Maps/PiratesBonus.tres" id="7_mve74"]
+[ext_resource type="Script" path="res://Scripts/WorldInfo.gd" id="8_5qqin"]
+
+[resource]
+script = ExtResource("8_5qqin")
+worldName = "Pirates"
+levels = Array[ExtResource("1_fd4vu")]([ExtResource("2_mjqle"), ExtResource("3_urkq3"), ExtResource("4_hfmnw"), ExtResource("5_je7le"), ExtResource("6_iprmg"), ExtResource("7_mve74")])

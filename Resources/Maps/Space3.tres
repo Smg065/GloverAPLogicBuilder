@@ -1,0 +1,235 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=47 format=3 uid="uid://bp3w3ufjtsh88"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_ecbe2"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_23paa"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="2_cq5l7"]
+[ext_resource type="Texture2D" uid="uid://d1qy5pe0mrm7y" path="res://Images/Maps/OutOfThisWorld3.png" id="2_wxf62"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_beger"]
+[ext_resource type="Texture2D" uid="uid://bt44elsp2qbvf" path="res://Images/Icons/Checks/Ootw3HazardGate.png" id="3_xi7m3"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="3_xpga5"]
+[ext_resource type="Texture2D" uid="uid://dsmoc3gevy4ok" path="res://Images/Icons/Checks/Ootw3LowerSign.png" id="4_vytv8"]
+[ext_resource type="Texture2D" uid="uid://ck3i5niuagc2h" path="res://Images/Icons/Checks/GloverSwitch.png" id="4_yujah"]
+[ext_resource type="Texture2D" uid="uid://c2qoeh5imaf4h" path="res://Images/Icons/Checks/Ootw3Fan.png" id="5_o2dfu"]
+[ext_resource type="Texture2D" uid="uid://che7tfc0tftah" path="res://Images/Icons/Checks/GloverSwitchRed.png" id="5_vp6q2"]
+[ext_resource type="Texture2D" uid="uid://dxlmcxqftwiwo" path="res://Images/Icons/Checks/BallSwitch.png" id="6_72sgr"]
+[ext_resource type="Texture2D" uid="uid://b72d17io3auql" path="res://Images/Icons/Checks/Ootw3Bridge.png" id="6_bdvvo"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="7_ie31f"]
+[ext_resource type="Texture2D" uid="uid://56oxrdcjhkx0" path="res://Images/Icons/Checks/Ootw3GlassGate.png" id="7_pq3tk"]
+[ext_resource type="Texture2D" uid="uid://cpdl0eggq45p2" path="res://Images/Icons/Return.png" id="8_f0oyc"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="9_qni5d"]
+[ext_resource type="Texture2D" uid="uid://yfre1ydetxbj" path="res://Images/Icons/Checks/Ootw3MagnetSwitch.png" id="10_hunxc"]
+
+[sub_resource type="Resource" id="Resource_np1b1"]
+script = ExtResource("1_ecbe2")
+checkName = "Goal"
+checkSpot = Vector2(0.877, 0.41)
+checkImage = ExtResource("2_cq5l7")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_0y177"]
+script = ExtResource("1_ecbe2")
+checkName = "Checkpoint 2"
+checkSpot = Vector2(0.276, 0.168)
+checkImage = ExtResource("3_xpga5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_v3c3i"]
+script = ExtResource("1_ecbe2")
+checkName = "Checkpoint 3"
+checkSpot = Vector2(0.401, 0.751)
+checkImage = ExtResource("3_xpga5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_1tk5x"]
+script = ExtResource("1_ecbe2")
+checkName = "Checkpoint 4"
+checkSpot = Vector2(0.673, 0.413)
+checkImage = ExtResource("3_xpga5")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_637hl"]
+script = ExtResource("1_ecbe2")
+checkName = "Conveyor Glover Switch"
+checkSpot = Vector2(0.439, 0.316)
+checkImage = ExtResource("4_yujah")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_57iwx"]
+script = ExtResource("1_ecbe2")
+checkName = "Above Fan Red Switch"
+checkSpot = Vector2(0.438, 0.88)
+checkImage = ExtResource("5_vp6q2")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_oa12t"]
+script = ExtResource("1_ecbe2")
+checkName = "Glass Ball Switch"
+checkSpot = Vector2(0.544, 0.382)
+checkImage = ExtResource("6_72sgr")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_eatte"]
+script = ExtResource("1_ecbe2")
+checkName = "Pinwheel Life"
+checkSpot = Vector2(0.357, 0.009)
+checkImage = ExtResource("7_ie31f")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_1dfxu"]
+script = ExtResource("1_ecbe2")
+checkName = "Ball Return"
+checkSpot = Vector2(0.377, 0.606)
+checkImage = ExtResource("8_f0oyc")
+checkType = 4
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_8ujpv"]
+script = ExtResource("1_ecbe2")
+checkName = "Ramp Garibs"
+checkSpot = Vector2(0.306, 0.169)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 7
+
+[sub_resource type="Resource" id="Resource_0ywrd"]
+script = ExtResource("1_ecbe2")
+checkName = "Left Guardrail Garibs"
+checkSpot = Vector2(0.37, 0.174)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_k7mel"]
+script = ExtResource("1_ecbe2")
+checkName = "Right Guardrail Garibs"
+checkSpot = Vector2(0.368, 0.22)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_5dc81"]
+script = ExtResource("1_ecbe2")
+checkName = "Pinwheel Garibs"
+checkSpot = Vector2(0.357, 0.057)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 12
+
+[sub_resource type="Resource" id="Resource_r405b"]
+script = ExtResource("1_ecbe2")
+checkName = "Red Dent Garibs"
+checkSpot = Vector2(0.39, 0.427)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_vv06r"]
+script = ExtResource("1_ecbe2")
+checkName = "Above Fan Garibs"
+checkSpot = Vector2(0.409, 0.812)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 9
+
+[sub_resource type="Resource" id="Resource_p4y7g"]
+script = ExtResource("1_ecbe2")
+checkName = "Walkway Corner Garibs"
+checkSpot = Vector2(0.379, 0.545)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_1imk7"]
+script = ExtResource("1_ecbe2")
+checkName = "Glass Pyramids Garibs"
+checkSpot = Vector2(0.626, 0.479)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_wm81g"]
+script = ExtResource("1_ecbe2")
+checkName = "Split Path Left Garibs"
+checkSpot = Vector2(0.629, 0.359)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 7
+
+[sub_resource type="Resource" id="Resource_lral0"]
+script = ExtResource("1_ecbe2")
+checkName = "Split Path Right Garibs"
+checkSpot = Vector2(0.629, 0.359)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_u23kr"]
+script = ExtResource("1_ecbe2")
+checkName = "First Conveyor Garibs"
+checkSpot = Vector2(0.716, 0.41)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_jtbij"]
+script = ExtResource("1_ecbe2")
+checkName = "Middle Conveyor Garibs"
+checkSpot = Vector2(0.742, 0.412)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_u3ids"]
+script = ExtResource("1_ecbe2")
+checkName = "Last Conveyor Garibs"
+checkSpot = Vector2(0.769, 0.413)
+checkImage = ExtResource("9_qni5d")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_ifae3"]
+script = ExtResource("1_ecbe2")
+checkName = "Magnet Switch"
+checkSpot = Vector2(0.51, 0.647)
+checkImage = ExtResource("10_hunxc")
+checkType = 0
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_7seok"]
+script = ExtResource("2_23paa")
+checkName = "Hazard Gate"
+checkImage = ExtResource("3_xi7m3")
+
+[sub_resource type="Resource" id="Resource_c1o86"]
+script = ExtResource("2_23paa")
+checkName = "Sign"
+checkImage = ExtResource("4_vytv8")
+
+[sub_resource type="Resource" id="Resource_xu5sr"]
+script = ExtResource("2_23paa")
+checkName = "Fan"
+checkImage = ExtResource("5_o2dfu")
+
+[sub_resource type="Resource" id="Resource_43bq0"]
+script = ExtResource("2_23paa")
+checkName = "Bridge"
+checkImage = ExtResource("6_bdvvo")
+
+[sub_resource type="Resource" id="Resource_6usqx"]
+script = ExtResource("2_23paa")
+checkName = "Glass Gate"
+checkImage = ExtResource("7_pq3tk")
+
+[resource]
+script = ExtResource("3_beger")
+mapImage = ExtResource("2_wxf62")
+levelChecks = Array[ExtResource("1_ecbe2")]([SubResource("Resource_np1b1"), SubResource("Resource_0y177"), SubResource("Resource_v3c3i"), SubResource("Resource_1tk5x"), SubResource("Resource_637hl"), SubResource("Resource_57iwx"), SubResource("Resource_oa12t"), SubResource("Resource_eatte"), SubResource("Resource_1dfxu"), SubResource("Resource_8ujpv"), SubResource("Resource_0ywrd"), SubResource("Resource_k7mel"), SubResource("Resource_5dc81"), SubResource("Resource_r405b"), SubResource("Resource_vv06r"), SubResource("Resource_p4y7g"), SubResource("Resource_1imk7"), SubResource("Resource_wm81g"), SubResource("Resource_lral0"), SubResource("Resource_u23kr"), SubResource("Resource_jtbij"), SubResource("Resource_u3ids"), SubResource("Resource_ifae3")])
+levelPrerequisiteChecks = Array[ExtResource("2_23paa")]([SubResource("Resource_7seok"), SubResource("Resource_c1o86"), SubResource("Resource_xu5sr"), SubResource("Resource_43bq0"), SubResource("Resource_6usqx")])

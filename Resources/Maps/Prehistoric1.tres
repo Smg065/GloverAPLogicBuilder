@@ -1,0 +1,231 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=38 format=3 uid="uid://daijp0evssotv"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_xvkcx"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cumx6"]
+[ext_resource type="Texture2D" uid="uid://b1bfo2g0qvm4x" path="res://Images/Maps/Prehistoric1.png" id="2_kjl5c"]
+[ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="2_yegxb"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="3_5fpjm"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_ko2x7"]
+[ext_resource type="Texture2D" uid="uid://bk825vce05jyf" path="res://Images/Icons/Checks/Ph1Iciciles.png" id="3_sxep1"]
+[ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="4_6y8h7"]
+[ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="5_cfct8"]
+[ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="6_8hn6t"]
+
+[sub_resource type="Resource" id="Resource_4h5sg"]
+script = ExtResource("1_xvkcx")
+checkName = "Wind-Up"
+checkSpot = Vector2(0.417, 0.255)
+checkImage = ExtResource("2_yegxb")
+checkType = 1
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_x4y6v"]
+script = ExtResource("1_xvkcx")
+checkName = "Checkpoint 2"
+checkSpot = Vector2(0.248, 0.862)
+checkImage = ExtResource("3_5fpjm")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_b5bu7"]
+script = ExtResource("1_xvkcx")
+checkName = "Checkpoint 3"
+checkSpot = Vector2(0.525, 0.863)
+checkImage = ExtResource("3_5fpjm")
+checkType = 3
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_3ts2b"]
+script = ExtResource("1_xvkcx")
+checkName = "Ice Face Life"
+checkSpot = Vector2(0.419, 0.314)
+checkImage = ExtResource("4_6y8h7")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_asinf"]
+script = ExtResource("1_xvkcx")
+checkName = "Ice Wall Life"
+checkSpot = Vector2(0.368, 0.943)
+checkImage = ExtResource("4_6y8h7")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_vu20c"]
+script = ExtResource("1_xvkcx")
+checkName = "Snow Wall Life 1"
+checkSpot = Vector2(0.719, 0.548)
+checkImage = ExtResource("4_6y8h7")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_jmsko"]
+script = ExtResource("1_xvkcx")
+checkName = "Snow Wall Life 2"
+checkSpot = Vector2(0.717, 0.481)
+checkImage = ExtResource("4_6y8h7")
+checkType = 2
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_qsnx6"]
+script = ExtResource("1_xvkcx")
+checkName = "Frozen Ball Garibs"
+checkSpot = Vector2(0.494, 0.26)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_h08bb"]
+script = ExtResource("1_xvkcx")
+checkName = "Ice Face Garibs"
+checkSpot = Vector2(0.451, 0.249)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_22338"]
+script = ExtResource("1_xvkcx")
+checkName = "Lake Path Garibs"
+checkSpot = Vector2(0.424, 0.397)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_mkm7j"]
+script = ExtResource("1_xvkcx")
+checkName = "Small Island Garibs"
+checkSpot = Vector2(0.392, 0.541)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 5
+
+[sub_resource type="Resource" id="Resource_tbcr5"]
+script = ExtResource("1_xvkcx")
+checkName = "Big Island Garibs"
+checkSpot = Vector2(0.341, 0.585)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_x8dpt"]
+script = ExtResource("1_xvkcx")
+checkName = "Right Below Ice Garibs"
+checkSpot = Vector2(0.358, 0.481)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_f57pq"]
+script = ExtResource("1_xvkcx")
+checkName = "Left Below Ice Garibs"
+checkSpot = Vector2(0.42, 0.625)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_o4k0y"]
+script = ExtResource("1_xvkcx")
+checkName = "Cliff Bottom Garibs"
+checkSpot = Vector2(0.335, 0.689)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_siftd"]
+script = ExtResource("1_xvkcx")
+checkName = "Lower Cliffside Garibs"
+checkSpot = Vector2(0.372, 0.714)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_dkw88"]
+script = ExtResource("1_xvkcx")
+checkName = "Upper Cliffside Garibs"
+checkSpot = Vector2(0.334, 0.738)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_3yn8d"]
+script = ExtResource("1_xvkcx")
+checkName = "Ice Wall Garibs"
+checkSpot = Vector2(0.327, 0.94)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_37ri1"]
+script = ExtResource("1_xvkcx")
+checkName = "Hanging Garibs"
+checkSpot = Vector2(0.25, 0.93)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 3
+
+[sub_resource type="Resource" id="Resource_sxt35"]
+script = ExtResource("1_xvkcx")
+checkName = "Snowball Hill Garibs"
+checkSpot = Vector2(0.525, 0.93)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 4
+
+[sub_resource type="Resource" id="Resource_peqet"]
+script = ExtResource("1_xvkcx")
+checkName = "Ice Bridge Garibs"
+checkSpot = Vector2(0.654, 0.828)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 8
+
+[sub_resource type="Resource" id="Resource_3cg77"]
+script = ExtResource("1_xvkcx")
+checkName = "Snow Wall Garibs"
+checkSpot = Vector2(0.719, 0.609)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 12
+
+[sub_resource type="Resource" id="Resource_eav70"]
+script = ExtResource("1_xvkcx")
+checkName = "Dino Garibs"
+checkSpot = Vector2(0.737, 0.687)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 6
+
+[sub_resource type="Resource" id="Resource_j8hgq"]
+script = ExtResource("1_xvkcx")
+checkName = "Sandwiched Garibs"
+checkSpot = Vector2(0.761, 0.754)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_10yeg"]
+script = ExtResource("1_xvkcx")
+checkName = "Goal Garibs"
+checkSpot = Vector2(0.795, 0.732)
+checkImage = ExtResource("5_cfct8")
+checkType = 1
+totalSubchecks = 2
+
+[sub_resource type="Resource" id="Resource_bpjxn"]
+script = ExtResource("1_xvkcx")
+checkName = "Goal"
+checkSpot = Vector2(0.833, 0.715)
+checkImage = ExtResource("6_8hn6t")
+checkType = 5
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_yolc8"]
+script = ExtResource("2_cumx6")
+checkName = "Life Drop"
+checkImage = ExtResource("3_sxep1")
+
+[resource]
+script = ExtResource("3_ko2x7")
+mapImage = ExtResource("2_kjl5c")
+levelChecks = Array[ExtResource("1_xvkcx")]([SubResource("Resource_4h5sg"), SubResource("Resource_x4y6v"), SubResource("Resource_b5bu7"), SubResource("Resource_3ts2b"), SubResource("Resource_asinf"), SubResource("Resource_vu20c"), SubResource("Resource_jmsko"), SubResource("Resource_qsnx6"), SubResource("Resource_h08bb"), SubResource("Resource_22338"), SubResource("Resource_mkm7j"), SubResource("Resource_tbcr5"), SubResource("Resource_x8dpt"), SubResource("Resource_f57pq"), SubResource("Resource_o4k0y"), SubResource("Resource_siftd"), SubResource("Resource_dkw88"), SubResource("Resource_3yn8d"), SubResource("Resource_37ri1"), SubResource("Resource_sxt35"), SubResource("Resource_peqet"), SubResource("Resource_3cg77"), SubResource("Resource_eav70"), SubResource("Resource_j8hgq"), SubResource("Resource_10yeg"), SubResource("Resource_bpjxn")])
+levelPrerequisiteChecks = Array[ExtResource("2_cumx6")]([SubResource("Resource_yolc8")])

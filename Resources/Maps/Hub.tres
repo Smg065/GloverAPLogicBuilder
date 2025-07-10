@@ -1,0 +1,121 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=29 format=3 uid="uid://3qcnnkw7of0k"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_b3bkg"]
+[ext_resource type="Texture2D" uid="uid://drs13wbyxcupq" path="res://Images/Icons/Checks/Hub1.png" id="2_6j8yy"]
+[ext_resource type="Texture2D" uid="uid://dd1jn4n356nxi" path="res://Images/Icons/Checks/Hub2.png" id="3_aisdj"]
+[ext_resource type="Texture2D" uid="uid://igcdw6bvd78o" path="res://Images/Icons/Checks/Hub3.png" id="4_qv2jm"]
+[ext_resource type="Texture2D" uid="uid://ch1p45y0u1wk4" path="res://Images/Icons/Checks/HubBoss.png" id="5_nhnxp"]
+[ext_resource type="Texture2D" uid="uid://ckq685mqaxf6s" path="res://Images/Icons/Checks/HubBonus.png" id="6_pvm80"]
+[ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="7_yfkf4"]
+[ext_resource type="Texture2D" uid="uid://ke2a5a3nr7tc" path="res://Images/Icons/Checks/HubExit.png" id="8_3qgqp"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="9_u26v7"]
+[ext_resource type="Texture2D" uid="uid://c4p2ph6b886ep" path="res://Images/Icons/Checks/AllGaribs.png" id="10_cmlpo"]
+[ext_resource type="Texture2D" uid="uid://dj7t1ib06k8ox" path="res://Images/Maps/Wayrooms.png" id="11_qcg4x"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="12_huanc"]
+
+[sub_resource type="Resource" id="Resource_2nw00"]
+script = ExtResource("1_b3bkg")
+checkName = "Entry 1"
+checkSpot = Vector2(0.325, 0.365)
+checkImage = ExtResource("2_6j8yy")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_dt37r"]
+script = ExtResource("1_b3bkg")
+checkName = "Entry 2"
+checkSpot = Vector2(0.395, 0.23)
+checkImage = ExtResource("3_aisdj")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_g4rv0"]
+script = ExtResource("1_b3bkg")
+checkName = "Entry 3"
+checkSpot = Vector2(0.5, 0.2)
+checkImage = ExtResource("4_qv2jm")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_r2lgg"]
+script = ExtResource("1_b3bkg")
+checkName = "Entry Boss"
+checkSpot = Vector2(0.605, 0.23)
+checkImage = ExtResource("5_nhnxp")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_n6vat"]
+script = ExtResource("1_b3bkg")
+checkName = "Entry Bonus"
+checkSpot = Vector2(0.675, 0.365)
+checkImage = ExtResource("6_pvm80")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_hbl0i"]
+script = ExtResource("1_b3bkg")
+checkName = "Tip"
+checkSpot = Vector2(0.665, 0.45)
+checkImage = ExtResource("7_yfkf4")
+checkType = 6
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_1pwqk"]
+script = ExtResource("1_b3bkg")
+checkName = "Exit"
+checkSpot = Vector2(0.499, 0.826)
+checkImage = ExtResource("8_3qgqp")
+checkType = 7
+totalSubchecks = 1
+
+[sub_resource type="Resource" id="Resource_0e8rx"]
+script = ExtResource("9_u26v7")
+checkName = "1 Star"
+checkImage = ExtResource("10_cmlpo")
+
+[sub_resource type="Resource" id="Resource_sw5fx"]
+script = ExtResource("9_u26v7")
+checkName = "2 Gate"
+checkImage = ExtResource("3_aisdj")
+
+[sub_resource type="Resource" id="Resource_wru5p"]
+script = ExtResource("9_u26v7")
+checkName = "2 Star"
+checkImage = ExtResource("10_cmlpo")
+
+[sub_resource type="Resource" id="Resource_8yml5"]
+script = ExtResource("9_u26v7")
+checkName = "3 Gate"
+checkImage = ExtResource("4_qv2jm")
+
+[sub_resource type="Resource" id="Resource_quoxl"]
+script = ExtResource("9_u26v7")
+checkName = "3 Star"
+checkImage = ExtResource("10_cmlpo")
+
+[sub_resource type="Resource" id="Resource_8ydlw"]
+script = ExtResource("9_u26v7")
+checkName = "Boss Gate"
+checkImage = ExtResource("5_nhnxp")
+
+[sub_resource type="Resource" id="Resource_f1ane"]
+script = ExtResource("9_u26v7")
+checkName = "Boss Star"
+checkImage = ExtResource("10_cmlpo")
+
+[sub_resource type="Resource" id="Resource_qhsbt"]
+script = ExtResource("9_u26v7")
+checkName = "Bonus Gate"
+checkImage = ExtResource("6_pvm80")
+
+[sub_resource type="Resource" id="Resource_bgqn6"]
+script = ExtResource("9_u26v7")
+checkName = "Bonus Star"
+checkImage = ExtResource("10_cmlpo")
+
+[resource]
+script = ExtResource("12_huanc")
+mapImage = ExtResource("11_qcg4x")
+levelChecks = Array[ExtResource("1_b3bkg")]([SubResource("Resource_2nw00"), SubResource("Resource_dt37r"), SubResource("Resource_g4rv0"), SubResource("Resource_r2lgg"), SubResource("Resource_n6vat"), SubResource("Resource_hbl0i"), SubResource("Resource_1pwqk")])
+levelPrerequisiteChecks = Array[ExtResource("9_u26v7")]([SubResource("Resource_0e8rx"), SubResource("Resource_sw5fx"), SubResource("Resource_wru5p"), SubResource("Resource_8yml5"), SubResource("Resource_quoxl"), SubResource("Resource_8ydlw"), SubResource("Resource_f1ane"), SubResource("Resource_qhsbt"), SubResource("Resource_bgqn6")])

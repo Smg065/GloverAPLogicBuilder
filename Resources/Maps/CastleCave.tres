@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=9 format=3 uid="uid://8nxvni6s5imx"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3 uid="uid://8nxvni6s5imx"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_84t78"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cfux2"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://chldiy8ku7gio" path="res://Images/Icons/Crystal.png" id="2_mwcbr"]
 [ext_resource type="Script" path="res://Scripts/LevelData.gd" id="2_wqwdq"]
 [ext_resource type="Texture2D" uid="uid://l0xqtppw0382" path="res://Images/Icons/Checks/CaveExit.png" id="3_504uq"]
+[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="5_kefdq"]
+[ext_resource type="Texture2D" uid="uid://b5xitf5aep5jq" path="res://Images/Regions/CastleCave.png" id="6_g7akg"]
 
 [sub_resource type="Resource" id="Resource_jutd0"]
 script = ExtResource("1_84t78")
@@ -14,6 +16,8 @@ checkSpot = Vector2(0.645, 0.495)
 checkImage = ExtResource("2_mwcbr")
 checkType = 9
 totalSubchecks = 7
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_eg8ci"]
 script = ExtResource("1_84t78")
@@ -22,9 +26,17 @@ checkSpot = Vector2(0.369, 0.499)
 checkImage = ExtResource("3_504uq")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_sawnc"]
+script = ExtResource("5_kefdq")
+regionName = "Main"
+regionImage = ExtResource("6_g7akg")
 
 [resource]
 script = ExtResource("2_wqwdq")
 mapImage = ExtResource("2_h1dx4")
 levelChecks = Array[ExtResource("1_84t78")]([SubResource("Resource_jutd0"), SubResource("Resource_eg8ci")])
 levelPrerequisiteChecks = Array[ExtResource("2_cfux2")]([])
+levelRegions = Array[ExtResource("5_kefdq")]([SubResource("Resource_sawnc")])

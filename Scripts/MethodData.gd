@@ -8,6 +8,8 @@ enum CompareInfo {KEEP_A, KEEP_B, KEEP_BOTH}
 var trickDifficulty : TrickDifficulty
 var requiredMoves : Array[int]
 var requiredChecks : Array[String]
+var regionIndex : int
+var ballRequirement : bool
 
 func hasMove(moveIndex : int):
 	return requiredMoves.has(moveIndex)
@@ -35,7 +37,9 @@ func setDifficulty(newDifficulty : int):
 
 func to_save() -> Dictionary:
 	var methodData : Dictionary = {
-		"trickDifficulty" : trickDifficulty
+		"trickDifficulty" : trickDifficulty,
+		"regionIndex" : regionIndex,
+		"ballRequirement" : ballRequirement
 	}
 	for eachMove in requiredMoves.size():
 		methodData["mv" + str(eachMove)] = requiredMoves[eachMove]
@@ -45,6 +49,8 @@ func to_save() -> Dictionary:
 
 func to_load(methodData : Dictionary) -> void:
 	trickDifficulty = methodData["trickDifficulty"]
+	regionIndex = methodData["regionIndex"]
+	ballRequirement = methodData["ballRequirement"]
 	requiredMoves.clear()
 	requiredChecks.clear()
 	requiredMoves.append_array(required_to_array(methodData, "mv"))

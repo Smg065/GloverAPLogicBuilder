@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=33 format=3 uid="uid://djoftmhnsrxjv"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=36 format=3 uid="uid://djoftmhnsrxjv"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_8w5d8"]
 [ext_resource type="Script" path="res://Scripts/LevelData.gd" id="2_45l0a"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://djk0f1nq4es7" path="res://Images/Icons/Checks/HbPrehistoricGate.png" id="13_4osm4"]
 [ext_resource type="Texture2D" uid="uid://b2vx5tiwgpxh4" path="res://Images/Icons/Checks/HbFortressGate.png" id="14_ed5og"]
 [ext_resource type="Texture2D" uid="uid://dalb3hhyl47wb" path="res://Images/Icons/Checks/HbOutOfThisWorldGate.png" id="15_8bo8m"]
+[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="17_qv3va"]
+[ext_resource type="Texture2D" uid="uid://dxu2ohlgxiosq" path="res://Images/Regions/Hub.png" id="18_i2ja7"]
 
 [sub_resource type="Resource" id="Resource_16s27"]
 script = ExtResource("1_8w5d8")
@@ -26,6 +28,8 @@ checkSpot = Vector2(0.539, 0.717)
 checkImage = ExtResource("2_hi2a8")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_i16oe"]
 script = ExtResource("1_8w5d8")
@@ -34,6 +38,8 @@ checkSpot = Vector2(0.5, 0.837)
 checkImage = ExtResource("3_ytidk")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_aincb"]
 script = ExtResource("1_8w5d8")
@@ -42,6 +48,8 @@ checkSpot = Vector2(0.339, 0.665)
 checkImage = ExtResource("4_0lv35")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_s1du6"]
 script = ExtResource("1_8w5d8")
@@ -50,6 +58,8 @@ checkSpot = Vector2(0.666, 0.671)
 checkImage = ExtResource("5_cna54")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_oorss"]
 script = ExtResource("1_8w5d8")
@@ -58,6 +68,8 @@ checkSpot = Vector2(0.339, 0.332)
 checkImage = ExtResource("6_ce1pv")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_vvacp"]
 script = ExtResource("1_8w5d8")
@@ -66,6 +78,8 @@ checkSpot = Vector2(0.666, 0.328)
 checkImage = ExtResource("7_qjg4e")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_yelf4"]
 script = ExtResource("1_8w5d8")
@@ -74,6 +88,8 @@ checkSpot = Vector2(0.499, 0.165)
 checkImage = ExtResource("8_5pbbw")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_7cnex"]
 script = ExtResource("1_8w5d8")
@@ -82,6 +98,8 @@ checkSpot = Vector2(0.5, 0.606)
 checkImage = ExtResource("9_rnw6j")
 checkType = 7
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_6b7as"]
 script = ExtResource("9_1f58l")
@@ -113,8 +131,14 @@ script = ExtResource("9_1f58l")
 checkName = "Out of This World Gate"
 checkImage = ExtResource("15_8bo8m")
 
+[sub_resource type="Resource" id="Resource_aavk3"]
+script = ExtResource("17_qv3va")
+regionName = "Main"
+regionImage = ExtResource("18_i2ja7")
+
 [resource]
 script = ExtResource("2_45l0a")
 mapImage = ExtResource("2_ug4x3")
 levelChecks = Array[ExtResource("1_8w5d8")]([SubResource("Resource_16s27"), SubResource("Resource_i16oe"), SubResource("Resource_aincb"), SubResource("Resource_s1du6"), SubResource("Resource_oorss"), SubResource("Resource_vvacp"), SubResource("Resource_yelf4"), SubResource("Resource_7cnex")])
 levelPrerequisiteChecks = Array[ExtResource("9_1f58l")]([SubResource("Resource_6b7as"), SubResource("Resource_aehy4"), SubResource("Resource_ww3gg"), SubResource("Resource_tsn7w"), SubResource("Resource_7vr57"), SubResource("Resource_twh80")])
+levelRegions = Array[ExtResource("17_qv3va")]([SubResource("Resource_aavk3")])

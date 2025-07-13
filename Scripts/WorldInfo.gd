@@ -4,6 +4,10 @@ class_name WorldInfo
 @export var worldName : String
 @export var levels : Array[LevelData]
 
+func setup() -> void:
+	for eachLevel in levels:
+		eachLevel.setup()
+
 func to_save() -> Dictionary:
 	var worldData : Dictionary
 	for eachLevel in levels.size():

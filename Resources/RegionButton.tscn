@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfgtnbga7phfb"]
+
+[ext_resource type="Script" path="res://Scripts/RegionButton.gd" id="1_3h2y0"]
+
+[node name="RegionButton" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_3h2y0")
+
+[connection signal="mouse_entered" from="." to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="mouse_exited"]
+[connection signal="pressed" from="." to="." method="pressed"]

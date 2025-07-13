@@ -6,6 +6,8 @@ var allAbilityButtons : Array[AbilityButton]
 @export var addMethodButton : Button
 @export var removeMethodButton : Button
 @export var trickDifficultyButton : OptionButton
+@export var regionSelector : OptionButton
+@export var regionBallToggle : CheckBox
 @export var main : Main
 
 func _ready() -> void:
@@ -17,6 +19,9 @@ func _ready() -> void:
 func change_check(newCheck : CheckInfo):
 	checkInfo = newCheck
 	construct_dropdowns_from_check()
+	if checkInfo != null:
+		regionBallToggle.button_pressed = checkInfo.checkBallRequirement
+		regionSelector.select(checkInfo.checkRegionIndex)
 	method_selected(get_selected_id())
 
 func construct_dropdowns_from_check():
@@ -45,10 +50,45 @@ func update_method_prereq(checkButton : PrerequisiteCheckButton, isAdd : bool):
 		return
 	checkInfo.allMethods[selId].setPrereq(checkButton.prereqName, isAdd)
 
-func add_method():
+func region_selected(index : int):
+	#Make sure there's a check and method
 	if !check_info_exists():
 		return
-	checkInfo.allMethods.append(MethodData.new())
+	var selId : int = get_selected_id()
+	if selId == -1:
+		return
+	#Get the method
+	var selectedMethod : MethodData = checkInfo.allMethods[selId]
+	#Set region index
+	selectedMethod.regionIndex = index
+
+func ball_toggled(toggle_on : bool):
+	#Make sure there's a check and method
+	if !check_info_exists():
+		return
+	var selId : int = get_selected_id()
+	if selId == -1:
+		return
+	#Get the method
+	var selectedMethod : MethodData = checkInfo.allMethods[selId]
+	#Set ball toggled state
+	selectedMethod.ballRequirement = toggle_on
+
+func add_method():
+	#Make sure there's a check to add the method to
+	if !check_info_exists():
+		return
+	#Add a new method to the chain
+	var newMethod : MethodData = MethodData.new()
+	checkInfo.allMethods.append(newMethod)
+	#Setup the region and ball in region data
+	var regionIndex : int = checkInfo.checkRegionIndex
+	var ballRequirement : bool = checkInfo.checkBallRequirement
+	newMethod.regionIndex = regionIndex
+	regionSelector.select(regionIndex)
+	newMethod.ballRequirement = ballRequirement
+	regionBallToggle.button_pressed = ballRequirement
+	#Construct data
 	construct_dropdowns_from_check()
 	_select_int(checkInfo.allMethods.size() - 1)
 	method_selected(get_selected_id())
@@ -80,7 +120,13 @@ func method_selected(index: int) -> void:
 			eachMove._toggled(checkInfo.allMethods[index].hasMove(eachMove.moveIndex))
 	if index == -1:
 		main.check_prereqs_from_method(null)
+		regionSelector.disabled = true
+		regionBallToggle.disabled = true
+		trickDifficultyButton.disabled = true
 		return
+	regionSelector.disabled = false
+	regionBallToggle.disabled = false
+	trickDifficultyButton.disabled = false
 	match checkInfo.allMethods[index].trickDifficulty:
 		MethodData.TrickDifficulty.INTENDED:
 			trickDifficultyButton.selected = 0
@@ -89,6 +135,8 @@ func method_selected(index: int) -> void:
 		MethodData.TrickDifficulty.HARD:
 			trickDifficultyButton.selected = 2
 	main.check_prereqs_from_method(checkInfo.allMethods[index])
+	regionSelector.select(checkInfo.allMethods[index].regionIndex)
+	regionBallToggle.button_pressed = checkInfo.allMethods[index].ballRequirement
 
 func trick_difficulty_selected(index: int) -> void:
 	var selId : int = get_selected_id()

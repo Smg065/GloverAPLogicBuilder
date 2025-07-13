@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=14 format=3 uid="uid://bq2fyqcgr1kp7"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=17 format=3 uid="uid://bq2fyqcgr1kp7"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_4ugm3"]
 [ext_resource type="Texture2D" uid="uid://cwnidt2s0ukaq" path="res://Images/Maps/FortressOfFearBonus.png" id="2_b2dje"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_olhc3"]
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="3_x1r78"]
 [ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="4_q15fj"]
+[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="6_ogjm1"]
+[ext_resource type="Texture2D" uid="uid://bh3gx2sw3ey0i" path="res://Images/Regions/FortressOfFearBonus.png" id="7_kjkcw"]
 
 [sub_resource type="Resource" id="Resource_f4per"]
 script = ExtResource("1_4ugm3")
@@ -15,6 +17,8 @@ checkSpot = Vector2(0.353, 0.264)
 checkImage = ExtResource("2_jctjm")
 checkType = 1
 totalSubchecks = 14
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_wp3e0"]
 script = ExtResource("1_4ugm3")
@@ -23,6 +27,8 @@ checkSpot = Vector2(0.631, 0.261)
 checkImage = ExtResource("2_jctjm")
 checkType = 1
 totalSubchecks = 14
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_dof65"]
 script = ExtResource("1_4ugm3")
@@ -31,6 +37,8 @@ checkSpot = Vector2(0.347, 0.738)
 checkImage = ExtResource("2_jctjm")
 checkType = 1
 totalSubchecks = 14
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_hobpb"]
 script = ExtResource("1_4ugm3")
@@ -39,6 +47,8 @@ checkSpot = Vector2(0.631, 0.743)
 checkImage = ExtResource("2_jctjm")
 checkType = 1
 totalSubchecks = 14
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_lpjap"]
 script = ExtResource("1_4ugm3")
@@ -47,6 +57,8 @@ checkSpot = Vector2(0.363, 0.495)
 checkImage = ExtResource("3_x1r78")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_77ofd"]
 script = ExtResource("1_4ugm3")
@@ -55,9 +67,17 @@ checkSpot = Vector2(0.611, 0.501)
 checkImage = ExtResource("4_q15fj")
 checkType = 5
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_hhfvt"]
+script = ExtResource("6_ogjm1")
+regionName = "Main"
+regionImage = ExtResource("7_kjkcw")
 
 [resource]
 script = ExtResource("3_olhc3")
 mapImage = ExtResource("2_b2dje")
 levelChecks = Array[ExtResource("1_4ugm3")]([SubResource("Resource_f4per"), SubResource("Resource_wp3e0"), SubResource("Resource_dof65"), SubResource("Resource_hobpb"), SubResource("Resource_lpjap"), SubResource("Resource_77ofd")])
 levelPrerequisiteChecks = Array[ExtResource("2_uitb1")]([])
+levelRegions = Array[ExtResource("6_ogjm1")]([SubResource("Resource_hhfvt")])

@@ -7,6 +7,9 @@ class_name Main
 
 @export_category("Render Info")
 @export var mapRender : TextureRect
+@export var checkRegionToggle : Button
+@export var checkContainer : Control
+@export var regionContainer : Control
 @export var worldSelector : OptionButton
 @export var levelsButtons : HBoxContainer
 @export var overworldButtons : HBoxContainer
@@ -16,11 +19,19 @@ class_name Main
 @export_category("Spawnables")
 @export var checkButtonPrefab : PackedScene
 @export var checkPrerequisiteButtonPrefab : PackedScene
+@export var regionButtonPrefab : PackedScene
 @export var allCheckButtons : Array[LevelCheckButton]
 @export var allCheckPrerequisiteButtons : Array[PrerequisiteCheckButton]
+@export var allRegionButtons : Array[RegionButton]
 
 @export_category("Method Selector")
 @export var methodSelector : MethodSelector
+
+@export_category("Region Info")
+@export var regionBallToggle : CheckBox
+@export var regionBallToggleMethod : CheckBox
+@export var regionMethodSelector : OptionButton
+var lastRegion : RegionInfo
 
 @export_category("File Info")
 @export var saveFile : FileDialog
@@ -30,6 +41,9 @@ var isMainWorld : bool
 var debugLevelData : LevelData
 
 func _ready() -> void:
+	for eachWorld in allWorlds:
+		eachWorld.setup()
+	hubworld.setup()
 	change_level(0)
 
 func _process(_delta: float) -> void:
@@ -221,7 +235,7 @@ func clear_prereq_check_buttons():
 
 func build_prereq_check_buttons(levelData : LevelData):
 	for eachCheck in levelData.levelPrerequisiteChecks:
-		var nextButton = checkPrerequisiteButtonPrefab.instantiate()
+		var nextButton : PrerequisiteCheckButton = checkPrerequisiteButtonPrefab.instantiate()
 		allCheckPrerequisiteButtons.append(nextButton)
 		checkPrereqToggles.add_child(nextButton)
 		nextButton.build_from(eachCheck, self)
@@ -234,25 +248,49 @@ func clear_check_buttons():
 
 func build_check_buttons(levelData : LevelData):
 	for eachCheck in levelData.levelChecks:
-		var nextButton = checkButtonPrefab.instantiate()
+		var nextButton : LevelCheckButton = checkButtonPrefab.instantiate()
 		allCheckButtons.append(nextButton)
-		mapRender.add_child(nextButton)
+		checkContainer.add_child(nextButton)
 		nextButton.build_from(eachCheck, self)
+
+func clear_region_buttons() -> void:
+	for eachRegionButton in  allRegionButtons:
+		eachRegionButton.queue_free()
+	allRegionButtons.clear()
+	select_check(null)
+
+func build_region_buttons(levelData : LevelData) -> void:
+	for regionIndex in levelData.levelRegions.size():
+		var hue : float = float(regionIndex) / float(levelData.levelRegions.size())
+		var nextButton : RegionButton = regionButtonPrefab.instantiate()
+		allRegionButtons.append(nextButton)
+		regionContainer.add_child(nextButton)
+		var eachRegion : RegionInfo = levelData.levelRegions[regionIndex]
+		nextButton.build_from(eachRegion, self, hue)
 
 func set_level(levelData : LevelData):
 	debugLevelData = levelData
 	clear_check_buttons()
 	clear_prereq_check_buttons()
+	clear_region_buttons()
+	regionMethodSelector.clear()
 	mapRender.texture = levelData.mapImage
 	build_check_buttons(levelData)
 	build_prereq_check_buttons(levelData)
+	build_region_buttons(levelData)
 	methodSelector.clear()
+	for eachRegion in levelData.levelRegions:
+		regionMethodSelector.add_item(eachRegion.regionName)
 
-func select_check(newCheck : CheckInfo):
+func select_check(newCheck : CheckInfo, regionInfo : RegionInfo = null):
+	#Change the last region
+	lastRegion = regionInfo
+	#Setup the check name
 	if newCheck != null:
 		checkName.text = newCheck.checkName
 	else:
 		checkName.text = "Select Check"
+	#Make the method selector recognize the new check
 	methodSelector.change_check(newCheck)
 
 func toggle_check_prerequisite(checkButton : PrerequisiteCheckButton):
@@ -271,6 +309,9 @@ func check_prereq(prereqName : String) -> bool:
 func save_press() -> void:
 	saveFile.show()
 
+func load_press() -> void:
+	openFiles.show()
+
 func save_from_path(savePath : String) -> void:
 	var gameData : Array[Dictionary]
 	for eachWorld in allWorlds:
@@ -279,9 +320,6 @@ func save_from_path(savePath : String) -> void:
 	var path = FileAccess.open(savePath,FileAccess.WRITE)
 	path.store_var(gameData, false)
 	path.close()
-
-func load_press() -> void:
-	openFiles.show()
 
 func combine_glapls(glaplA : Array[Dictionary], glaplB : Array[Dictionary]) -> Array[Dictionary]:
 	var outGlapl : Array[Dictionary]
@@ -349,3 +387,21 @@ func apply_glapl(gameData : Array[Dictionary]):
 	for eachWorld in allWorlds.size():
 		allWorlds[eachWorld].to_load(gameData[eachWorld])
 	hubworld.to_load(gameData[allWorlds.size()])
+
+func checks_to_regions_toggled(toggled_on: bool) -> void:
+	checkContainer.visible = !toggled_on
+	regionContainer.visible = toggled_on
+	var buttonText : String
+	if toggled_on:
+		buttonText = "Regions"
+	else:
+		buttonText = "Checks"
+	checkRegionToggle.text = buttonText
+
+
+func region_ball_toggled(toggledOn: bool) -> void:
+	if lastRegion != null:
+		if toggledOn:
+			select_check(lastRegion.ballCheck, lastRegion)
+		else:
+			select_check(lastRegion.defaultCheck, lastRegion)

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=63 format=3 uid="uid://syti1fpsy2av"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=64 format=3 uid="uid://syti1fpsy2av"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_oq1yt"]
 [ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="2_ek7wc"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://5c76yh544io2" path="res://Images/Icons/Checks/Lobster.png" id="11_1o877"]
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="12_j7r8h"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="13_1whci"]
+[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="19_jd8ox"]
 
 [sub_resource type="Resource" id="Resource_wv64m"]
 script = ExtResource("1_oq1yt")
@@ -28,6 +29,8 @@ checkSpot = Vector2(0.897, 0.607)
 checkImage = ExtResource("2_ek7wc")
 checkType = 5
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_mlqkj"]
 script = ExtResource("1_oq1yt")
@@ -36,6 +39,8 @@ checkSpot = Vector2(0.284, 0.495)
 checkImage = ExtResource("3_cujhi")
 checkType = 3
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_au57k"]
 script = ExtResource("1_oq1yt")
@@ -44,6 +49,8 @@ checkSpot = Vector2(0.479, 0.384)
 checkImage = ExtResource("3_cujhi")
 checkType = 3
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_7aaoq"]
 script = ExtResource("1_oq1yt")
@@ -52,6 +59,8 @@ checkSpot = Vector2(0.697, 0.408)
 checkImage = ExtResource("3_cujhi")
 checkType = 3
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_7khwg"]
 script = ExtResource("1_oq1yt")
@@ -60,6 +69,8 @@ checkSpot = Vector2(0.746, 0.575)
 checkImage = ExtResource("4_wuaqj")
 checkType = 0
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_tpxxc"]
 script = ExtResource("1_oq1yt")
@@ -68,6 +79,8 @@ checkSpot = Vector2(0.657, 0.345)
 checkImage = ExtResource("5_43t5k")
 checkType = 0
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_qtulx"]
 script = ExtResource("1_oq1yt")
@@ -76,6 +89,8 @@ checkSpot = Vector2(0.403, 0.41)
 checkImage = ExtResource("6_sktbp")
 checkType = 0
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_5jddn"]
 script = ExtResource("1_oq1yt")
@@ -84,6 +99,8 @@ checkSpot = Vector2(0.367, 0.484)
 checkImage = ExtResource("6_sktbp")
 checkType = 0
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_butbh"]
 script = ExtResource("1_oq1yt")
@@ -92,6 +109,8 @@ checkSpot = Vector2(0.156, 0.345)
 checkImage = ExtResource("7_jkbuw")
 checkType = 6
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_ljxyp"]
 script = ExtResource("1_oq1yt")
@@ -100,6 +119,8 @@ checkSpot = Vector2(0.184, 0.391)
 checkImage = ExtResource("8_o0xv8")
 checkType = 4
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_c15hb"]
 script = ExtResource("1_oq1yt")
@@ -108,6 +129,8 @@ checkSpot = Vector2(0.616, 0.371)
 checkImage = ExtResource("8_vom36")
 checkType = 4
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_wb1cg"]
 script = ExtResource("1_oq1yt")
@@ -116,6 +139,8 @@ checkSpot = Vector2(0.831, 0.606)
 checkImage = ExtResource("9_tnd5x")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_vikvu"]
 script = ExtResource("1_oq1yt")
@@ -124,6 +149,8 @@ checkSpot = Vector2(0.581, 0.44)
 checkImage = ExtResource("9_tnd5x")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_a7lo4"]
 script = ExtResource("1_oq1yt")
@@ -132,6 +159,8 @@ checkSpot = Vector2(0.283, 0.399)
 checkImage = ExtResource("9_tnd5x")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_esx2o"]
 script = ExtResource("1_oq1yt")
@@ -140,6 +169,8 @@ checkSpot = Vector2(0.243, 0.487)
 checkImage = ExtResource("9_tnd5x")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_xarn6"]
 script = ExtResource("1_oq1yt")
@@ -148,6 +179,8 @@ checkSpot = Vector2(0.188, 0.313)
 checkImage = ExtResource("9_tnd5x")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_bqnjt"]
 script = ExtResource("1_oq1yt")
@@ -156,6 +189,8 @@ checkSpot = Vector2(0.288, 0.545)
 checkImage = ExtResource("9_tnd5x")
 checkType = 2
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_sjlh8"]
 script = ExtResource("1_oq1yt")
@@ -164,6 +199,8 @@ checkSpot = Vector2(0.318, 0.402)
 checkImage = ExtResource("11_1o877")
 checkType = 1
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_rqvtg"]
 script = ExtResource("1_oq1yt")
@@ -172,6 +209,8 @@ checkSpot = Vector2(0.548, 0.425)
 checkImage = ExtResource("11_1o877")
 checkType = 1
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_b1awn"]
 script = ExtResource("1_oq1yt")
@@ -180,6 +219,8 @@ checkSpot = Vector2(0.781, 0.563)
 checkImage = ExtResource("12_j7r8h")
 checkType = 1
 totalSubchecks = 3
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_su4ol"]
 script = ExtResource("1_oq1yt")
@@ -188,6 +229,8 @@ checkSpot = Vector2(0.76, 0.359)
 checkImage = ExtResource("12_j7r8h")
 checkType = 1
 totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_vn5vd"]
 script = ExtResource("1_oq1yt")
@@ -196,6 +239,8 @@ checkSpot = Vector2(0.165, 0.481)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_10i3e"]
 script = ExtResource("1_oq1yt")
@@ -204,6 +249,8 @@ checkSpot = Vector2(0.242, 0.553)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 2
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_3mit3"]
 script = ExtResource("1_oq1yt")
@@ -212,6 +259,8 @@ checkSpot = Vector2(0.221, 0.347)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 8
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_406xu"]
 script = ExtResource("1_oq1yt")
@@ -220,6 +269,8 @@ checkSpot = Vector2(0.287, 0.618)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 2
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_e02u5"]
 script = ExtResource("1_oq1yt")
@@ -228,6 +279,8 @@ checkSpot = Vector2(0.286, 0.45)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 6
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_30vnl"]
 script = ExtResource("1_oq1yt")
@@ -236,6 +289,8 @@ checkSpot = Vector2(0.357, 0.4)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_vct7p"]
 script = ExtResource("1_oq1yt")
@@ -244,6 +299,8 @@ checkSpot = Vector2(0.347, 0.408)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 16
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_6hxkx"]
 script = ExtResource("1_oq1yt")
@@ -252,6 +309,8 @@ checkSpot = Vector2(0.44, 0.406)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_ow1p5"]
 script = ExtResource("1_oq1yt")
@@ -260,6 +319,8 @@ checkSpot = Vector2(0.548, 0.484)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 2
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_8vjct"]
 script = ExtResource("1_oq1yt")
@@ -268,6 +329,8 @@ checkSpot = Vector2(0.573, 0.39)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_hhrvf"]
 script = ExtResource("1_oq1yt")
@@ -276,6 +339,8 @@ checkSpot = Vector2(0.614, 0.431)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_tdoyk"]
 script = ExtResource("1_oq1yt")
@@ -284,6 +349,8 @@ checkSpot = Vector2(0.663, 0.409)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_14ejx"]
 script = ExtResource("1_oq1yt")
@@ -292,6 +359,8 @@ checkSpot = Vector2(0.738, 0.492)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 2
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_4isuo"]
 script = ExtResource("1_oq1yt")
@@ -300,6 +369,8 @@ checkSpot = Vector2(0.758, 0.283)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 4
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_ynccx"]
 script = ExtResource("1_oq1yt")
@@ -308,6 +379,8 @@ checkSpot = Vector2(0.775, 0.47)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 3
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_7ic75"]
 script = ExtResource("1_oq1yt")
@@ -316,6 +389,8 @@ checkSpot = Vector2(0.78, 0.609)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 3
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_5tt3h"]
 script = ExtResource("1_oq1yt")
@@ -324,6 +399,8 @@ checkSpot = Vector2(0.832, 0.553)
 checkImage = ExtResource("13_1whci")
 checkType = 1
 totalSubchecks = 2
+checkRegionIndex = 0
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_xfqja"]
 script = ExtResource("2_uoqtx")
@@ -350,3 +427,4 @@ script = ExtResource("3_sk31n")
 mapImage = ExtResource("2_rjgjl")
 levelChecks = Array[ExtResource("1_oq1yt")]([SubResource("Resource_wv64m"), SubResource("Resource_mlqkj"), SubResource("Resource_au57k"), SubResource("Resource_7aaoq"), SubResource("Resource_7khwg"), SubResource("Resource_tpxxc"), SubResource("Resource_qtulx"), SubResource("Resource_5jddn"), SubResource("Resource_butbh"), SubResource("Resource_ljxyp"), SubResource("Resource_c15hb"), SubResource("Resource_wb1cg"), SubResource("Resource_vikvu"), SubResource("Resource_a7lo4"), SubResource("Resource_esx2o"), SubResource("Resource_xarn6"), SubResource("Resource_bqnjt"), SubResource("Resource_sjlh8"), SubResource("Resource_rqvtg"), SubResource("Resource_b1awn"), SubResource("Resource_su4ol"), SubResource("Resource_vn5vd"), SubResource("Resource_10i3e"), SubResource("Resource_3mit3"), SubResource("Resource_406xu"), SubResource("Resource_e02u5"), SubResource("Resource_30vnl"), SubResource("Resource_vct7p"), SubResource("Resource_6hxkx"), SubResource("Resource_ow1p5"), SubResource("Resource_8vjct"), SubResource("Resource_hhrvf"), SubResource("Resource_tdoyk"), SubResource("Resource_14ejx"), SubResource("Resource_4isuo"), SubResource("Resource_ynccx"), SubResource("Resource_7ic75"), SubResource("Resource_5tt3h")])
 levelPrerequisiteChecks = Array[ExtResource("2_uoqtx")]([SubResource("Resource_xfqja"), SubResource("Resource_wwdij"), SubResource("Resource_bbtpw"), SubResource("Resource_v7fda")])
+levelRegions = Array[ExtResource("19_jd8ox")]([])

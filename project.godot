@@ -16,7 +16,7 @@ config/version="0.1.0"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0.0588235, 0.133333, 0.301961, 1)
-boot_splash/show_image=false
+boot_splash/image="res://Images/Coverart.png"
 config/icon="res://Images/GloverAPLogo.png"
 config/windows_native_icon="res://Images/GloverAPLogo.ico"
 

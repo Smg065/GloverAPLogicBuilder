@@ -16,7 +16,7 @@ checkImage = ExtResource("2_lm220")
 checkType = 5
 totalSubchecks = 1
 checkRegionIndex = 0
-checkBallRequirement = false
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_xxw6v"]
 script = ExtResource("4_jw6kn")

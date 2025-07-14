@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=55 format=3 uid="uid://d280khoi8kuw6"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=89 format=3 uid="uid://d280khoi8kuw6"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_25dye"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_4cpit"]
@@ -16,6 +16,23 @@
 [ext_resource type="Texture2D" uid="uid://dn3lfltfu7j6j" path="res://Images/Icons/Frog.png" id="9_5f1xo"]
 [ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="10_b01nd"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="14_vh54s"]
+[ext_resource type="Texture2D" uid="uid://g82gso65hn2s" path="res://Images/Regions/Carnival3/Spawn.png" id="15_oiso8"]
+[ext_resource type="Texture2D" uid="uid://dqbkdksx2nnk2" path="res://Images/Regions/Carnival3/Secret.png" id="16_o28pi"]
+[ext_resource type="Texture2D" uid="uid://bax60ymswdaqj" path="res://Images/Regions/Carnival3/Tents.png" id="17_ogx8m"]
+[ext_resource type="Texture2D" uid="uid://bt0bgsdic53d6" path="res://Images/Regions/Carnival3/Garden.png" id="18_qe7o4"]
+[ext_resource type="Texture2D" uid="uid://dueyjpnag4ib1" path="res://Images/Regions/Carnival3/Ramps.png" id="19_272cw"]
+[ext_resource type="Texture2D" uid="uid://co48gkh1gac0m" path="res://Images/Regions/Carnival3/Ramptop.png" id="20_18ats"]
+[ext_resource type="Texture2D" uid="uid://bipyx78ococg2" path="res://Images/Regions/Carnival3/Ships.png" id="21_l1s8m"]
+[ext_resource type="Texture2D" uid="uid://5sdbrv2tingc" path="res://Images/Regions/Carnival3/Slidetop.png" id="22_bsbn8"]
+[ext_resource type="Texture2D" uid="uid://dunyn2xwsgqtu" path="res://Images/Regions/Carnival3/Slide.png" id="23_wxc8w"]
+[ext_resource type="Texture2D" uid="uid://cidnh40fea3v8" path="res://Images/Regions/Carnival3/Pool.png" id="24_1dedn"]
+[ext_resource type="Texture2D" uid="uid://cnhp8q0oo5k2l" path="res://Images/Regions/Carnival3/Monkeyball.png" id="25_mmvcx"]
+[ext_resource type="Texture2D" uid="uid://codthe5kpdcq5" path="res://Images/Regions/Carnival3/Funnel.png" id="26_y64a4"]
+[ext_resource type="Texture2D" uid="uid://d176pn0mkhr75" path="res://Images/Regions/Carnival3/Triangles.png" id="27_4e0vt"]
+[ext_resource type="Texture2D" uid="uid://87vmnfafn72y" path="res://Images/Regions/Carnival3/Ring.png" id="28_6osas"]
+[ext_resource type="Texture2D" uid="uid://cl2dsx1dcsyko" path="res://Images/Regions/Carnival3/Spinning.png" id="29_bhkrk"]
+[ext_resource type="Texture2D" uid="uid://d0ifajj6pdjrb" path="res://Images/Regions/Carnival3/Stairs.png" id="30_c0uox"]
+[ext_resource type="Texture2D" uid="uid://du05ix2k5xoqy" path="res://Images/Regions/Carnival3/Tumble.png" id="31_xj3n2"]
 
 [sub_resource type="Resource" id="Resource_ca78j"]
 script = ExtResource("1_25dye")
@@ -387,9 +404,94 @@ script = ExtResource("2_4cpit")
 checkName = "Hands"
 checkImage = ExtResource("4_brqxu")
 
+[sub_resource type="Resource" id="Resource_4nc3y"]
+script = ExtResource("14_vh54s")
+regionName = "Spawn"
+regionImage = ExtResource("15_oiso8")
+
+[sub_resource type="Resource" id="Resource_dvvou"]
+script = ExtResource("14_vh54s")
+regionName = "Secret"
+regionImage = ExtResource("16_o28pi")
+
+[sub_resource type="Resource" id="Resource_70526"]
+script = ExtResource("14_vh54s")
+regionName = "Tents"
+regionImage = ExtResource("17_ogx8m")
+
+[sub_resource type="Resource" id="Resource_cdxka"]
+script = ExtResource("14_vh54s")
+regionName = "Garden"
+regionImage = ExtResource("18_qe7o4")
+
+[sub_resource type="Resource" id="Resource_h7hhd"]
+script = ExtResource("14_vh54s")
+regionName = "Ramps"
+regionImage = ExtResource("19_272cw")
+
+[sub_resource type="Resource" id="Resource_rmd06"]
+script = ExtResource("14_vh54s")
+regionName = "Ramp Top"
+regionImage = ExtResource("20_18ats")
+
+[sub_resource type="Resource" id="Resource_qqte1"]
+script = ExtResource("14_vh54s")
+regionName = "Ships"
+regionImage = ExtResource("21_l1s8m")
+
+[sub_resource type="Resource" id="Resource_kdi6n"]
+script = ExtResource("14_vh54s")
+regionName = "Slide Top"
+regionImage = ExtResource("22_bsbn8")
+
+[sub_resource type="Resource" id="Resource_14yrk"]
+script = ExtResource("14_vh54s")
+regionName = "Slide"
+regionImage = ExtResource("23_wxc8w")
+
+[sub_resource type="Resource" id="Resource_6hkvd"]
+script = ExtResource("14_vh54s")
+regionName = "Pool"
+regionImage = ExtResource("24_1dedn")
+
+[sub_resource type="Resource" id="Resource_1eb1w"]
+script = ExtResource("14_vh54s")
+regionName = "Monkeyball"
+regionImage = ExtResource("25_mmvcx")
+
+[sub_resource type="Resource" id="Resource_dls2q"]
+script = ExtResource("14_vh54s")
+regionName = "Funnel"
+regionImage = ExtResource("26_y64a4")
+
+[sub_resource type="Resource" id="Resource_0og7m"]
+script = ExtResource("14_vh54s")
+regionName = "Triangles"
+regionImage = ExtResource("27_4e0vt")
+
+[sub_resource type="Resource" id="Resource_rbktf"]
+script = ExtResource("14_vh54s")
+regionName = "Ring"
+regionImage = ExtResource("28_6osas")
+
+[sub_resource type="Resource" id="Resource_svxaf"]
+script = ExtResource("14_vh54s")
+regionName = "Spinning"
+regionImage = ExtResource("29_bhkrk")
+
+[sub_resource type="Resource" id="Resource_5sqdi"]
+script = ExtResource("14_vh54s")
+regionName = "Stairs"
+regionImage = ExtResource("30_c0uox")
+
+[sub_resource type="Resource" id="Resource_2dpi5"]
+script = ExtResource("14_vh54s")
+regionName = "Tumble"
+regionImage = ExtResource("31_xj3n2")
+
 [resource]
 script = ExtResource("3_7mffw")
 mapImage = ExtResource("2_pns6c")
 levelChecks = Array[ExtResource("1_25dye")]([SubResource("Resource_ca78j"), SubResource("Resource_57lso"), SubResource("Resource_gkvlg"), SubResource("Resource_txgfh"), SubResource("Resource_lc2ks"), SubResource("Resource_ljfkm"), SubResource("Resource_15wn5"), SubResource("Resource_e13s1"), SubResource("Resource_1n3j2"), SubResource("Resource_3mi1v"), SubResource("Resource_3qu60"), SubResource("Resource_tl22b"), SubResource("Resource_sotnf"), SubResource("Resource_2ioti"), SubResource("Resource_mndnb"), SubResource("Resource_eyvif"), SubResource("Resource_baoju"), SubResource("Resource_h462o"), SubResource("Resource_2he42"), SubResource("Resource_bhq8d"), SubResource("Resource_kwtm2"), SubResource("Resource_23hhn"), SubResource("Resource_gqltf"), SubResource("Resource_drteu"), SubResource("Resource_mkxu4"), SubResource("Resource_jcgpf"), SubResource("Resource_ayefy"), SubResource("Resource_usea2"), SubResource("Resource_we7j1"), SubResource("Resource_mnnqp"), SubResource("Resource_1aivp"), SubResource("Resource_dft1u"), SubResource("Resource_yna1p"), SubResource("Resource_r4l1s"), SubResource("Resource_56v5e"), SubResource("Resource_baahx")])
 levelPrerequisiteChecks = Array[ExtResource("2_4cpit")]([SubResource("Resource_nnxi1"), SubResource("Resource_rqj0t")])
-levelRegions = Array[ExtResource("14_vh54s")]([])
+levelRegions = Array[ExtResource("14_vh54s")]([SubResource("Resource_4nc3y"), SubResource("Resource_dvvou"), SubResource("Resource_70526"), SubResource("Resource_cdxka"), SubResource("Resource_h7hhd"), SubResource("Resource_rmd06"), SubResource("Resource_qqte1"), SubResource("Resource_kdi6n"), SubResource("Resource_14yrk"), SubResource("Resource_6hkvd"), SubResource("Resource_1eb1w"), SubResource("Resource_dls2q"), SubResource("Resource_0og7m"), SubResource("Resource_rbktf"), SubResource("Resource_svxaf"), SubResource("Resource_5sqdi"), SubResource("Resource_2dpi5")])

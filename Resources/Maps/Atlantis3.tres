@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=47 format=3 uid="uid://syrdeyqmfxd4"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=81 format=3 uid="uid://syrdeyqmfxd4"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_eu7vr"]
 [ext_resource type="Texture2D" uid="uid://cb87yy5ymgdfj" path="res://Images/Maps/Atlantis3.png" id="2_1gmfm"]
@@ -15,6 +15,23 @@
 [ext_resource type="Texture2D" uid="uid://cjdoxqsum080m" path="res://Images/Icons/Checks/At3Waterwheel.png" id="11_28y12"]
 [ext_resource type="Texture2D" uid="uid://0cofnb6dtg8v" path="res://Images/Icons/Checks/A3Platforms.png" id="12_pc30v"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="13_igbw3"]
+[ext_resource type="Texture2D" uid="uid://d2y3d4huihs7v" path="res://Images/Regions/Atlantis3/PoolCliffs.png" id="14_ccmj6"]
+[ext_resource type="Texture2D" uid="uid://qsrnuwvmrgxh" path="res://Images/Regions/Atlantis3/Stairs.png" id="15_gjt5o"]
+[ext_resource type="Texture2D" uid="uid://dxnhvtos81jre" path="res://Images/Regions/Atlantis3/Walkway.png" id="15_qlji0"]
+[ext_resource type="Texture2D" uid="uid://c26bdpo2c0mhu" path="res://Images/Regions/Atlantis3/Raceway.png" id="16_wngu6"]
+[ext_resource type="Texture2D" uid="uid://yabgqu5kk0d3" path="res://Images/Regions/Atlantis3/Jetstream.png" id="17_3p18l"]
+[ext_resource type="Texture2D" uid="uid://duoo7veiocm61" path="res://Images/Regions/Atlantis3/Overlook.png" id="18_yu1rl"]
+[ext_resource type="Texture2D" uid="uid://crnep35nwk1kc" path="res://Images/Regions/Atlantis3/Ledge.png" id="19_tl838"]
+[ext_resource type="Texture2D" uid="uid://c317eqxkd1bl5" path="res://Images/Regions/Atlantis3/Waterwheel.png" id="20_3edmw"]
+[ext_resource type="Texture2D" uid="uid://cj8pqcc2q1rt" path="res://Images/Regions/Atlantis3/BesidePyramid.png" id="21_1ib1m"]
+[ext_resource type="Texture2D" uid="uid://bu35auphnydjm" path="res://Images/Regions/Atlantis3/Stalagmite.png" id="21_w0dip"]
+[ext_resource type="Texture2D" uid="uid://dtryrwhxde7p0" path="res://Images/Regions/Atlantis3/Cave.png" id="23_oitwb"]
+[ext_resource type="Texture2D" uid="uid://brqn2444rhdxa" path="res://Images/Regions/Atlantis3/Waterfall.png" id="24_m4fnm"]
+[ext_resource type="Texture2D" uid="uid://5j05p2kelriy" path="res://Images/Regions/Atlantis3/Secret.png" id="24_n7oqv"]
+[ext_resource type="Texture2D" uid="uid://b1oxuocbi3ixw" path="res://Images/Regions/Atlantis3/Pool.png" id="25_3drkv"]
+[ext_resource type="Texture2D" uid="uid://dq25wfnn1wgas" path="res://Images/Regions/Atlantis3/Whale.png" id="25_q4imp"]
+[ext_resource type="Texture2D" uid="uid://b2hdpv6f602mx" path="res://Images/Regions/Atlantis3/Cliffs.png" id="26_v2g6x"]
+[ext_resource type="Texture2D" uid="uid://cphfvvruioeh0" path="res://Images/Regions/Atlantis3/AboveCave.png" id="27_7ebmu"]
 
 [sub_resource type="Resource" id="Resource_a3yiq"]
 script = ExtResource("1_eu7vr")
@@ -316,9 +333,94 @@ script = ExtResource("5_ee4sh")
 checkName = "Cave Platforms"
 checkImage = ExtResource("12_pc30v")
 
+[sub_resource type="Resource" id="Resource_h55gf"]
+script = ExtResource("13_igbw3")
+regionName = "Bottom"
+regionImage = ExtResource("14_ccmj6")
+
+[sub_resource type="Resource" id="Resource_yiykr"]
+script = ExtResource("13_igbw3")
+regionName = "Walkway"
+regionImage = ExtResource("15_qlji0")
+
+[sub_resource type="Resource" id="Resource_24bt0"]
+script = ExtResource("13_igbw3")
+regionName = "Stairs"
+regionImage = ExtResource("15_gjt5o")
+
+[sub_resource type="Resource" id="Resource_raibm"]
+script = ExtResource("13_igbw3")
+regionName = "Raceway"
+regionImage = ExtResource("16_wngu6")
+
+[sub_resource type="Resource" id="Resource_wf5q7"]
+script = ExtResource("13_igbw3")
+regionName = "Jetstream"
+regionImage = ExtResource("17_3p18l")
+
+[sub_resource type="Resource" id="Resource_17r00"]
+script = ExtResource("13_igbw3")
+regionName = "Overlook"
+regionImage = ExtResource("18_yu1rl")
+
+[sub_resource type="Resource" id="Resource_4pbot"]
+script = ExtResource("13_igbw3")
+regionName = "Ledge"
+regionImage = ExtResource("19_tl838")
+
+[sub_resource type="Resource" id="Resource_kdg5v"]
+script = ExtResource("13_igbw3")
+regionName = "Beside Pyramid"
+regionImage = ExtResource("21_1ib1m")
+
+[sub_resource type="Resource" id="Resource_uqbcp"]
+script = ExtResource("13_igbw3")
+regionName = "Waterwheel"
+regionImage = ExtResource("20_3edmw")
+
+[sub_resource type="Resource" id="Resource_07o1k"]
+script = ExtResource("13_igbw3")
+regionName = "Stalagmite"
+regionImage = ExtResource("21_w0dip")
+
+[sub_resource type="Resource" id="Resource_77t3h"]
+script = ExtResource("13_igbw3")
+regionName = "Waterfall"
+regionImage = ExtResource("24_m4fnm")
+
+[sub_resource type="Resource" id="Resource_ahltp"]
+script = ExtResource("13_igbw3")
+regionName = "Pool"
+regionImage = ExtResource("25_3drkv")
+
+[sub_resource type="Resource" id="Resource_s64gh"]
+script = ExtResource("13_igbw3")
+regionName = "Cliffs"
+regionImage = ExtResource("26_v2g6x")
+
+[sub_resource type="Resource" id="Resource_nw7vh"]
+script = ExtResource("13_igbw3")
+regionName = "Above Cave"
+regionImage = ExtResource("27_7ebmu")
+
+[sub_resource type="Resource" id="Resource_4nqeb"]
+script = ExtResource("13_igbw3")
+regionName = "Cave"
+regionImage = ExtResource("23_oitwb")
+
+[sub_resource type="Resource" id="Resource_2xp2f"]
+script = ExtResource("13_igbw3")
+regionName = "Secret"
+regionImage = ExtResource("24_n7oqv")
+
+[sub_resource type="Resource" id="Resource_2orbk"]
+script = ExtResource("13_igbw3")
+regionName = "Whale"
+regionImage = ExtResource("25_q4imp")
+
 [resource]
 script = ExtResource("3_i2i46")
 mapImage = ExtResource("2_1gmfm")
 levelChecks = Array[ExtResource("1_eu7vr")]([SubResource("Resource_a3yiq"), SubResource("Resource_ld4ba"), SubResource("Resource_a6leg"), SubResource("Resource_ir5bj"), SubResource("Resource_kdug6"), SubResource("Resource_2wk1r"), SubResource("Resource_kwiye"), SubResource("Resource_ya5uo"), SubResource("Resource_cirgu"), SubResource("Resource_g8iip"), SubResource("Resource_vnc06"), SubResource("Resource_d3pv5"), SubResource("Resource_1eii8"), SubResource("Resource_8rujv"), SubResource("Resource_5cpib"), SubResource("Resource_wh7aa"), SubResource("Resource_k6jca"), SubResource("Resource_qfxt0"), SubResource("Resource_bjypw"), SubResource("Resource_73ocj"), SubResource("Resource_bhxt4"), SubResource("Resource_eu8hq"), SubResource("Resource_prbke"), SubResource("Resource_cmcmu"), SubResource("Resource_it540"), SubResource("Resource_5wkyb"), SubResource("Resource_tbtte"), SubResource("Resource_q4ads"), SubResource("Resource_0ghto")])
 levelPrerequisiteChecks = Array[ExtResource("5_ee4sh")]([SubResource("Resource_a8gb0"), SubResource("Resource_w40ce")])
-levelRegions = Array[ExtResource("13_igbw3")]([])
+levelRegions = Array[ExtResource("13_igbw3")]([SubResource("Resource_h55gf"), SubResource("Resource_yiykr"), SubResource("Resource_24bt0"), SubResource("Resource_raibm"), SubResource("Resource_wf5q7"), SubResource("Resource_17r00"), SubResource("Resource_4pbot"), SubResource("Resource_kdg5v"), SubResource("Resource_uqbcp"), SubResource("Resource_07o1k"), SubResource("Resource_77t3h"), SubResource("Resource_ahltp"), SubResource("Resource_s64gh"), SubResource("Resource_nw7vh"), SubResource("Resource_4nqeb"), SubResource("Resource_2xp2f"), SubResource("Resource_2orbk")])

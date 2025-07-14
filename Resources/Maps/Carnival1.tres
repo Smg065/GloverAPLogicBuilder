@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=61 format=3 uid="uid://dluhj5am0m67u"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=85 format=3 uid="uid://dluhj5am0m67u"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_woj5h"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_3ccpr"]
@@ -21,6 +21,18 @@
 [ext_resource type="Texture2D" uid="uid://p4h552tau07a" path="res://Images/Icons/Checks/Cr1Target.png" id="10_j47lr"]
 [ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="11_jc4da"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="19_lgxut"]
+[ext_resource type="Texture2D" uid="uid://dhxt8axpi4v2n" path="res://Images/Regions/Carnival1/Spawn.png" id="20_4wbud"]
+[ext_resource type="Texture2D" uid="uid://ci48ns7dv31si" path="res://Images/Regions/Carnival1/PreGate.png" id="21_fu3jy"]
+[ext_resource type="Texture2D" uid="uid://crp8gur5nevgf" path="res://Images/Regions/Carnival1/Chicken.png" id="22_mcsgs"]
+[ext_resource type="Texture2D" uid="uid://cphcrgj5ewdp2" path="res://Images/Regions/Carnival1/Tower.png" id="23_5sqfj"]
+[ext_resource type="Texture2D" uid="uid://buacgoqsoy65u" path="res://Images/Regions/Carnival1/Trampoline.png" id="24_wbygr"]
+[ext_resource type="Texture2D" uid="uid://1t1lmummmgxo" path="res://Images/Regions/Carnival1/BallRamp.png" id="25_u4oha"]
+[ext_resource type="Texture2D" uid="uid://d2cwfaiojfeh" path="res://Images/Regions/Carnival1/IcecreamRamp.png" id="26_lt535"]
+[ext_resource type="Texture2D" uid="uid://ddoiemrio05p3" path="res://Images/Regions/Carnival1/SlideRamp.png" id="27_0seha"]
+[ext_resource type="Texture2D" uid="uid://d2huyerrhrhn7" path="res://Images/Regions/Carnival1/Slide.png" id="28_rvutm"]
+[ext_resource type="Texture2D" uid="uid://0txcxcbxc6ua" path="res://Images/Regions/Carnival1/Icecream.png" id="29_3x3qe"]
+[ext_resource type="Texture2D" uid="uid://chym6yesmg74e" path="res://Images/Regions/Carnival1/WhackAMole.png" id="30_hc2ki"]
+[ext_resource type="Texture2D" uid="uid://d0kc57ckag7iq" path="res://Images/Regions/Carnival1/Fairground.png" id="31_4l0q1"]
 
 [sub_resource type="Resource" id="Resource_joy8u"]
 script = ExtResource("1_woj5h")
@@ -372,9 +384,69 @@ script = ExtResource("2_3ccpr")
 checkName = "Rocket 3"
 checkImage = ExtResource("8_ie46g")
 
+[sub_resource type="Resource" id="Resource_pr8mt"]
+script = ExtResource("19_lgxut")
+regionName = "Spawn"
+regionImage = ExtResource("20_4wbud")
+
+[sub_resource type="Resource" id="Resource_gry5j"]
+script = ExtResource("19_lgxut")
+regionName = "Pre Gate"
+regionImage = ExtResource("21_fu3jy")
+
+[sub_resource type="Resource" id="Resource_rv2ha"]
+script = ExtResource("19_lgxut")
+regionName = "Chicken"
+regionImage = ExtResource("22_mcsgs")
+
+[sub_resource type="Resource" id="Resource_3bdcd"]
+script = ExtResource("19_lgxut")
+regionName = "Tower"
+regionImage = ExtResource("23_5sqfj")
+
+[sub_resource type="Resource" id="Resource_l11mq"]
+script = ExtResource("19_lgxut")
+regionName = "Trampoline"
+regionImage = ExtResource("24_wbygr")
+
+[sub_resource type="Resource" id="Resource_n5xly"]
+script = ExtResource("19_lgxut")
+regionName = "Ball Ramp"
+regionImage = ExtResource("25_u4oha")
+
+[sub_resource type="Resource" id="Resource_6v7tg"]
+script = ExtResource("19_lgxut")
+regionName = "Icecream Doorway"
+regionImage = ExtResource("26_lt535")
+
+[sub_resource type="Resource" id="Resource_4jlb7"]
+script = ExtResource("19_lgxut")
+regionName = "Slide Doorway"
+regionImage = ExtResource("27_0seha")
+
+[sub_resource type="Resource" id="Resource_tils5"]
+script = ExtResource("19_lgxut")
+regionName = "Slide"
+regionImage = ExtResource("28_rvutm")
+
+[sub_resource type="Resource" id="Resource_15jq5"]
+script = ExtResource("19_lgxut")
+regionName = "Icecream"
+regionImage = ExtResource("29_3x3qe")
+
+[sub_resource type="Resource" id="Resource_0mixg"]
+script = ExtResource("19_lgxut")
+regionName = "Whack-A-Mole"
+regionImage = ExtResource("30_hc2ki")
+
+[sub_resource type="Resource" id="Resource_f1316"]
+script = ExtResource("19_lgxut")
+regionName = "Fairground"
+regionImage = ExtResource("31_4l0q1")
+
 [resource]
 script = ExtResource("3_3v05q")
 mapImage = ExtResource("2_18uhg")
 levelChecks = Array[ExtResource("1_woj5h")]([SubResource("Resource_joy8u"), SubResource("Resource_bsl8w"), SubResource("Resource_flbdl"), SubResource("Resource_bypfx"), SubResource("Resource_n1htc"), SubResource("Resource_y7ccg"), SubResource("Resource_ispkm"), SubResource("Resource_w44dh"), SubResource("Resource_wni8o"), SubResource("Resource_qj160"), SubResource("Resource_qqqpe"), SubResource("Resource_i1v47"), SubResource("Resource_iuqto"), SubResource("Resource_wwgwh"), SubResource("Resource_geaq2"), SubResource("Resource_qwgkw"), SubResource("Resource_i4hoc"), SubResource("Resource_6uwd0"), SubResource("Resource_qi40u"), SubResource("Resource_ycet2"), SubResource("Resource_c85f1"), SubResource("Resource_p2c7q"), SubResource("Resource_eoghk"), SubResource("Resource_8vht3"), SubResource("Resource_uqstc"), SubResource("Resource_3p37w"), SubResource("Resource_0177v"), SubResource("Resource_nhmxv"), SubResource("Resource_b3syo"), SubResource("Resource_0hhk3"), SubResource("Resource_vh1js")])
 levelPrerequisiteChecks = Array[ExtResource("2_3ccpr")]([SubResource("Resource_jeu1t"), SubResource("Resource_im3n5"), SubResource("Resource_6knfc"), SubResource("Resource_f7uwi"), SubResource("Resource_6kh7r"), SubResource("Resource_5txq7"), SubResource("Resource_hcynp"), SubResource("Resource_y85kg")])
-levelRegions = Array[ExtResource("19_lgxut")]([])
+levelRegions = Array[ExtResource("19_lgxut")]([SubResource("Resource_pr8mt"), SubResource("Resource_gry5j"), SubResource("Resource_rv2ha"), SubResource("Resource_3bdcd"), SubResource("Resource_l11mq"), SubResource("Resource_n5xly"), SubResource("Resource_6v7tg"), SubResource("Resource_4jlb7"), SubResource("Resource_tils5"), SubResource("Resource_15jq5"), SubResource("Resource_0mixg"), SubResource("Resource_f1316")])

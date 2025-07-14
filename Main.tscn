@@ -658,7 +658,7 @@ script = ExtResource("2_drss1")
 moveIndex = 23
 movePath = NodePath("../../../../MethodSelection")
 
-[node name="Strength" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+[node name="Hercules" type="Button" parent="MoveToggles/MoveButtons/Powerups/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1119,7 +1119,7 @@ use_native_dialog = true
 [connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Return" to="MoveToggles/MoveButtons/Powerups/GridContainer/Return" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Speed" to="MoveToggles/MoveButtons/Powerups/GridContainer/Speed" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Sticky" to="MoveToggles/MoveButtons/Powerups/GridContainer/Sticky" method="pressed"]
-[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Strength" to="MoveToggles/MoveButtons/Powerups/GridContainer/Strength" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Hercules" to="MoveToggles/MoveButtons/Powerups/GridContainer/Hercules" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Powerups/GridContainer/Grab" to="MoveToggles/MoveButtons/Powerups/GridContainer/Grab" method="pressed"]
 [connection signal="item_selected" from="MoveToggles/TrickDifficultySelector" to="MoveToggles/MethodSelection" method="trick_difficulty_selected"]
 [connection signal="toggled" from="MoveToggles/RegionBallToggleMethod" to="MoveToggles/MethodSelection" method="ball_toggled"]

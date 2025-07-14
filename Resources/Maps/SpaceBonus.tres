@@ -19,7 +19,7 @@ checkImage = ExtResource("2_us68b")
 checkType = 5
 totalSubchecks = 1
 checkRegionIndex = 0
-checkBallRequirement = false
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_fbi5k"]
 script = ExtResource("1_dknps")

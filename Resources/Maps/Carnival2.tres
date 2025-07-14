@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=49 format=3 uid="uid://bsrhjqbkbhom6"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=85 format=3 uid="uid://bsrhjqbkbhom6"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_a3344"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_50pvn"]
@@ -17,6 +17,24 @@
 [ext_resource type="Texture2D" uid="uid://dn3lfltfu7j6j" path="res://Images/Icons/Frog.png" id="10_bqcwv"]
 [ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="11_iienu"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="15_0glm7"]
+[ext_resource type="Texture2D" uid="uid://bvmxlu8ts1n8j" path="res://Images/Regions/Carnival2/Spawn.png" id="16_5k6x0"]
+[ext_resource type="Texture2D" uid="uid://bm0uyy63aibo8" path="res://Images/Regions/Carnival2/Tent.png" id="17_equn3"]
+[ext_resource type="Texture2D" uid="uid://dqdefu6h0vcyi" path="res://Images/Regions/Carnival2/Coaster.png" id="18_gi058"]
+[ext_resource type="Texture2D" uid="uid://30ec386eme8w" path="res://Images/Regions/Carnival2/CoasterStop.png" id="19_6la1o"]
+[ext_resource type="Texture2D" uid="uid://bmq1j42mx6rhq" path="res://Images/Regions/Carnival2/Blades.png" id="20_pgwuo"]
+[ext_resource type="Texture2D" uid="uid://dc0gs2k7jgxul" path="res://Images/Regions/Carnival2/Halfpipe.png" id="21_i6baq"]
+[ext_resource type="Texture2D" uid="uid://cqxxvng3d4ka1" path="res://Images/Regions/Carnival2/Clown.png" id="22_4eqfm"]
+[ext_resource type="Texture2D" uid="uid://c7liqkoqa21ys" path="res://Images/Regions/Carnival2/PostClown.png" id="23_5tksk"]
+[ext_resource type="Texture2D" uid="uid://b65k7aa2wx8do" path="res://Images/Regions/Carnival2/Teacups.png" id="24_atpro"]
+[ext_resource type="Texture2D" uid="uid://cf6hbom8w5iy1" path="res://Images/Regions/Carnival2/Conveyor.png" id="25_1muv8"]
+[ext_resource type="Texture2D" uid="uid://dqsgkk2yvlqjy" path="res://Images/Regions/Carnival2/FirstDropdown.png" id="26_grsxk"]
+[ext_resource type="Texture2D" uid="uid://nrkqo04ciiyp" path="res://Images/Regions/Carnival2/Bigtop.png" id="27_oq11c"]
+[ext_resource type="Texture2D" uid="uid://b18ia33v3ku1e" path="res://Images/Regions/Carnival2/FerrisWheel.png" id="28_yy5l5"]
+[ext_resource type="Texture2D" uid="uid://cih48vjpf4x0l" path="res://Images/Regions/Carnival2/Chicken.png" id="29_yj7tj"]
+[ext_resource type="Texture2D" uid="uid://g1w835vbo2mh" path="res://Images/Regions/Carnival2/SecondDropdown.png" id="30_swimo"]
+[ext_resource type="Texture2D" uid="uid://cjexc4gnmcdok" path="res://Images/Regions/Carnival2/Fan.png" id="31_rey5f"]
+[ext_resource type="Texture2D" uid="uid://5a32o3ak806k" path="res://Images/Regions/Carnival2/Mug.png" id="32_aabsn"]
+[ext_resource type="Texture2D" uid="uid://bgttdx73tspkk" path="res://Images/Regions/Carnival2/Slide.png" id="33_0eqmr"]
 
 [sub_resource type="Resource" id="Resource_54p7m"]
 script = ExtResource("1_a3344")
@@ -318,9 +336,99 @@ script = ExtResource("2_50pvn")
 checkName = "Fan"
 checkImage = ExtResource("4_qmju4")
 
+[sub_resource type="Resource" id="Resource_qjfkl"]
+script = ExtResource("15_0glm7")
+regionName = "Spawn"
+regionImage = ExtResource("16_5k6x0")
+
+[sub_resource type="Resource" id="Resource_e7umd"]
+script = ExtResource("15_0glm7")
+regionName = "Tent"
+regionImage = ExtResource("17_equn3")
+
+[sub_resource type="Resource" id="Resource_ytesr"]
+script = ExtResource("15_0glm7")
+regionName = "Coaster"
+regionImage = ExtResource("18_gi058")
+
+[sub_resource type="Resource" id="Resource_khr5m"]
+script = ExtResource("15_0glm7")
+regionName = "Coaster Stop"
+regionImage = ExtResource("19_6la1o")
+
+[sub_resource type="Resource" id="Resource_gxfa6"]
+script = ExtResource("15_0glm7")
+regionName = "Blades"
+regionImage = ExtResource("20_pgwuo")
+
+[sub_resource type="Resource" id="Resource_8w5if"]
+script = ExtResource("15_0glm7")
+regionName = "Halfpipe"
+regionImage = ExtResource("21_i6baq")
+
+[sub_resource type="Resource" id="Resource_072i3"]
+script = ExtResource("15_0glm7")
+regionName = "Clown"
+regionImage = ExtResource("22_4eqfm")
+
+[sub_resource type="Resource" id="Resource_ht3xh"]
+script = ExtResource("15_0glm7")
+regionName = "Post Clown"
+regionImage = ExtResource("23_5tksk")
+
+[sub_resource type="Resource" id="Resource_6gp4q"]
+script = ExtResource("15_0glm7")
+regionName = "Teacups"
+regionImage = ExtResource("24_atpro")
+
+[sub_resource type="Resource" id="Resource_37320"]
+script = ExtResource("15_0glm7")
+regionName = "Conveyor"
+regionImage = ExtResource("25_1muv8")
+
+[sub_resource type="Resource" id="Resource_myg84"]
+script = ExtResource("15_0glm7")
+regionName = "First Dropdown"
+regionImage = ExtResource("26_grsxk")
+
+[sub_resource type="Resource" id="Resource_s3c23"]
+script = ExtResource("15_0glm7")
+regionName = "Bigtop"
+regionImage = ExtResource("27_oq11c")
+
+[sub_resource type="Resource" id="Resource_6ucx5"]
+script = ExtResource("15_0glm7")
+regionName = "Ferris Wheel"
+regionImage = ExtResource("28_yy5l5")
+
+[sub_resource type="Resource" id="Resource_aquik"]
+script = ExtResource("15_0glm7")
+regionName = "Chicken"
+regionImage = ExtResource("29_yj7tj")
+
+[sub_resource type="Resource" id="Resource_8cjcb"]
+script = ExtResource("15_0glm7")
+regionName = "Second Dropdown"
+regionImage = ExtResource("30_swimo")
+
+[sub_resource type="Resource" id="Resource_3prnx"]
+script = ExtResource("15_0glm7")
+regionName = "Fan"
+regionImage = ExtResource("31_rey5f")
+
+[sub_resource type="Resource" id="Resource_r5e30"]
+script = ExtResource("15_0glm7")
+regionName = "Mug"
+regionImage = ExtResource("32_aabsn")
+
+[sub_resource type="Resource" id="Resource_mbfe0"]
+script = ExtResource("15_0glm7")
+regionName = "Slide"
+regionImage = ExtResource("33_0eqmr")
+
 [resource]
 script = ExtResource("3_k4dts")
 mapImage = ExtResource("2_vw2dr")
 levelChecks = Array[ExtResource("1_a3344")]([SubResource("Resource_54p7m"), SubResource("Resource_jp82b"), SubResource("Resource_nmbhk"), SubResource("Resource_wnc87"), SubResource("Resource_o1lmn"), SubResource("Resource_603fa"), SubResource("Resource_gnc48"), SubResource("Resource_f2k8a"), SubResource("Resource_gbn8k"), SubResource("Resource_um3ye"), SubResource("Resource_8u5au"), SubResource("Resource_uqieg"), SubResource("Resource_at8jp"), SubResource("Resource_7kxh2"), SubResource("Resource_lc1w5"), SubResource("Resource_2a41a"), SubResource("Resource_2npp0"), SubResource("Resource_wf56b"), SubResource("Resource_hf2qh"), SubResource("Resource_wefso"), SubResource("Resource_cnhfb"), SubResource("Resource_me78e"), SubResource("Resource_rurmh"), SubResource("Resource_0iqk6"), SubResource("Resource_omjxf"), SubResource("Resource_pbgxt"), SubResource("Resource_ovcv5"), SubResource("Resource_1njyk"), SubResource("Resource_1c5af")])
 levelPrerequisiteChecks = Array[ExtResource("2_50pvn")]([SubResource("Resource_g4j7h"), SubResource("Resource_1ej7x")])
-levelRegions = Array[ExtResource("15_0glm7")]([])
+levelRegions = Array[ExtResource("15_0glm7")]([SubResource("Resource_qjfkl"), SubResource("Resource_e7umd"), SubResource("Resource_ytesr"), SubResource("Resource_khr5m"), SubResource("Resource_gxfa6"), SubResource("Resource_8w5if"), SubResource("Resource_072i3"), SubResource("Resource_ht3xh"), SubResource("Resource_6gp4q"), SubResource("Resource_37320"), SubResource("Resource_myg84"), SubResource("Resource_s3c23"), SubResource("Resource_6ucx5"), SubResource("Resource_aquik"), SubResource("Resource_8cjcb"), SubResource("Resource_3prnx"), SubResource("Resource_r5e30"), SubResource("Resource_mbfe0")])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dyium0e51imoj"]
+[gd_scene load_steps=57 format=3 uid="uid://dyium0e51imoj"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_aq625"]
 [ext_resource type="Texture2D" uid="uid://bud6wup5f03ik" path="res://Images/Icons/Rubber.png" id="1_dkf4x"]
@@ -47,6 +47,8 @@
 [ext_resource type="Texture2D" uid="uid://c6dmfglyq2j5k" path="res://Images/Icons/Powerball.png" id="37_ypatv"]
 [ext_resource type="Texture2D" uid="uid://b2qhb2wmwphlm" path="res://Images/Icons/Grab.png" id="43_8q3bn"]
 [ext_resource type="PackedScene" uid="uid://dfgtnbga7phfb" path="res://Resources/RegionButton.tscn" id="46_8wxrx"]
+[ext_resource type="Texture2D" uid="uid://bnkiq1k13l60o" path="res://Images/Save.png" id="48_viqdc"]
+[ext_resource type="Texture2D" uid="uid://iibwnarlosk3" path="res://Images/Load.png" id="49_qkncm"]
 
 [sub_resource type="Gradient" id="Gradient_0nihm"]
 offsets = PackedFloat32Array(0.20339, 0.59, 0.61, 0.937853)
@@ -691,6 +693,7 @@ anchor_bottom = 0.0525897
 offset_left = -0.180023
 offset_bottom = 0.234997
 grow_horizontal = 2
+tooltip_text = "Trick"
 disabled = true
 alignment = 1
 selected = 0
@@ -711,7 +714,7 @@ anchor_right = 0.661549
 anchor_bottom = 0.106174
 offset_right = 0.149551
 offset_bottom = -0.112003
-tooltip_text = "Toggle Region Ball"
+tooltip_text = "Region Has Ball"
 disabled = true
 icon = ExtResource("1_dkf4x")
 expand_icon = true
@@ -727,6 +730,7 @@ anchor_bottom = 0.105581
 offset_left = -0.180023
 offset_bottom = 0.234997
 grow_horizontal = 2
+tooltip_text = "Check's Region"
 disabled = true
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -741,6 +745,7 @@ offset_left = 257.0
 offset_top = -64.0
 grow_horizontal = 2
 grow_vertical = 0
+tooltip_text = "Method"
 alignment = 1
 script = ExtResource("27_ip2fe")
 addMethodButton = NodePath("../MovesButtons/MethodAdd")
@@ -763,24 +768,32 @@ metadata/_edit_use_anchors_ = true
 [node name="SaveButton" type="Button" parent="MoveToggles/MovesButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Save"
 theme_override_font_sizes/font_size = 32
-text = "💾"
+icon = ExtResource("48_viqdc")
+icon_alignment = 1
+expand_icon = true
 
 [node name="LoadButton" type="Button" parent="MoveToggles/MovesButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Load"
 theme_override_font_sizes/font_size = 32
-text = "📁"
+icon = ExtResource("49_qkncm")
+icon_alignment = 1
+expand_icon = true
 
 [node name="MethodAdd" type="Button" parent="MoveToggles/MovesButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Add Method"
 theme_override_font_sizes/font_size = 32
 text = "+"
 
 [node name="MethodRemove" type="Button" parent="MoveToggles/MovesButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Remove Method"
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "-"
@@ -814,6 +827,7 @@ offset_right = -590.0
 offset_bottom = -516.0
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "Toggle Check/Region"
 theme_override_colors/font_hover_pressed_color = Color(0.956863, 0.301961, 0.27451, 1)
 theme_override_colors/font_hover_color = Color(0.956863, 0.301961, 0.27451, 1)
 theme_override_colors/font_pressed_color = Color(0.956863, 0.301961, 0.27451, 1)
@@ -1040,6 +1054,7 @@ offset_right = -4.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "Worlds"
 alignment = 1
 selected = 8
 item_count = 9

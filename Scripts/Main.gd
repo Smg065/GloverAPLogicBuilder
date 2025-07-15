@@ -39,12 +39,21 @@ var lastRegion : RegionInfo
 
 var isMainWorld : bool
 var debugLevelData : LevelData
+var web_data_callback : JavaScriptObject = null
 
 func _ready() -> void:
+	web_setup()
 	for eachWorld in allWorlds:
 		eachWorld.setup()
 	hubworld.setup()
 	change_level(0)
+
+func web_setup():
+	if is_not_web():
+		return
+	web_data_callback = JavaScriptBridge.create_callback(web_data_loaded)
+	var gdcallbacks: JavaScriptObject = JavaScriptBridge.get_interface("gd_callbacks")
+	gdcallbacks.dataLoaded = web_data_callback
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Coord"):
@@ -65,9 +74,6 @@ func copy_mouse_info() -> void:
 	var eachPos = newCoord.split(',')
 	newCoord = eachPos[0] + eachPos[1]
 	DisplayServer.clipboard_set(str(newCoord))
-	#var newCheck : CheckInfo = CheckInfo.new()
-	#newCheck.checkSpot = Vector2(float(eachPos[0]), float(eachPos[1]))
-	#debugLevelData.levelChecks.append(newCheck)
 	print(newCoord)
 
 func print_level_data(levelData : LevelData) -> void:
@@ -307,18 +313,34 @@ func check_prereq(prereqName : String) -> bool:
 	return methodSelector.check_prereq(prereqName)
 
 func save_press() -> void:
-	saveFile.show()
+	if is_not_web():
+		saveFile.show()
+	else:
+		#Thank you to Kehom's Forge for making this work
+		JavaScriptBridge.download_buffer(var_to_bytes(save_data()),"logic.glapl","text/plain")
 
 func load_press() -> void:
-	openFiles.show()
+	if is_not_web():
+		openFiles.show()
+	else:
+		JavaScriptBridge.eval("loadData()")
+
+func is_not_web() -> bool:
+	return OS.get_name() != "Web"
+
+func save_data() -> Array[Dictionary]:
+	var saveData : Array[Dictionary]
+	for eachWorld in allWorlds:
+		saveData.append(eachWorld.to_save())
+	saveData.append(hubworld.to_save())
+	return saveData
 
 func save_from_path(savePath : String) -> void:
-	var gameData : Array[Dictionary]
-	for eachWorld in allWorlds:
-		gameData.append(eachWorld.to_save())
-	gameData.append(hubworld.to_save())
+	var gameData : Array[Dictionary] = save_data()
 	var path = FileAccess.open(savePath,FileAccess.WRITE)
-	path.store_var(gameData, false)
+	DisplayServer.clipboard_set(str(var_to_bytes(gameData)))
+	
+	path.store_buffer(var_to_bytes(gameData))
 	path.close()
 
 func combine_glapls(glaplA : Array[Dictionary], glaplB : Array[Dictionary]) -> Array[Dictionary]:
@@ -376,10 +398,23 @@ func load_from_paths(loadPaths : PackedStringArray) -> void:
 	for eachPath in range(1, loadPaths.size()):
 		gameData = combine_glapls(gameData, load_from_path(loadPaths[eachPath]))
 	apply_glapl(gameData)
+	var garbage : PackedByteArray
+
+func web_data_loaded(gameData : Array) -> void:
+	var fileString : String = gameData[0]
+	var fileBytes : PackedByteArray = decode_255_array(fileString)
+	apply_glapl(bytes_to_var(fileBytes))
+
+#Thank you NekoNoka
+func decode_255_array(inString : String) -> PackedByteArray:
+	var outBytes : PackedByteArray
+	for eachInt in inString.split(","):
+		outBytes.append(eachInt.to_int())
+	return outBytes
 
 func load_from_path(loadPath : String) -> Array[Dictionary]:
 	var path = FileAccess.open(loadPath, FileAccess.READ)
-	var gameData : Array[Dictionary] = path.get_var(false)
+	var gameData : Array[Dictionary] = bytes_to_var(path.get_buffer(path.get_length()))
 	path.close()
 	return gameData
 

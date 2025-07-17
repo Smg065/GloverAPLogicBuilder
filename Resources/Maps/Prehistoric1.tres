@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=39 format=3 uid="uid://daijp0evssotv"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=70 format=3 uid="uid://daijp0evssotv"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_xvkcx"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cumx6"]
@@ -11,6 +11,21 @@
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="5_cfct8"]
 [ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="6_8hn6t"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="9_ekl7e"]
+[ext_resource type="Texture2D" uid="uid://dxwdugvs1epy3" path="res://Images/Regions/Prehistoric1/Spawn.png" id="10_cqssx"]
+[ext_resource type="Texture2D" uid="uid://cagwnaxyhfcuq" path="res://Images/Regions/Prehistoric1/Ball Ledge.png" id="11_jvfvx"]
+[ext_resource type="Texture2D" uid="uid://csky7jfkml6ui" path="res://Images/Regions/Prehistoric1/Post Icicles.png" id="12_650vy"]
+[ext_resource type="Texture2D" uid="uid://by44625bqqqnu" path="res://Images/Regions/Prehistoric1/Ice Lake.png" id="13_aew73"]
+[ext_resource type="Texture2D" uid="uid://n03go7ny1cqq" path="res://Images/Regions/Prehistoric1/Island.png" id="14_fkjbe"]
+[ext_resource type="Texture2D" uid="uid://bucmq7vxxd5kj" path="res://Images/Regions/Prehistoric1/Under Ice.png" id="15_v0x00"]
+[ext_resource type="Texture2D" uid="uid://dxifhmp6qgv0i" path="res://Images/Regions/Prehistoric1/Ice Lakeside.png" id="16_p7mty"]
+[ext_resource type="Texture2D" uid="uid://d4jkwycxuk2jp" path="res://Images/Regions/Prehistoric1/Cliff Platforms.png" id="17_445gv"]
+[ext_resource type="Texture2D" uid="uid://byb4bkmnex4k0" path="res://Images/Regions/Prehistoric1/Dragonfly.png" id="18_3je5j"]
+[ext_resource type="Texture2D" uid="uid://ba8lqmpf86ac0" path="res://Images/Regions/Prehistoric1/Ice Hole.png" id="19_rq0nl"]
+[ext_resource type="Texture2D" uid="uid://qenxku3ho8h1" path="res://Images/Regions/Prehistoric1/Snow Edge.png" id="19_x2a7i"]
+[ext_resource type="Texture2D" uid="uid://do11qlq65ngi0" path="res://Images/Regions/Prehistoric1/Avalanche.png" id="20_gvk0p"]
+[ext_resource type="Texture2D" uid="uid://denjqgp0v4igd" path="res://Images/Regions/Prehistoric1/Ice Path.png" id="21_iuu3c"]
+[ext_resource type="Texture2D" uid="uid://y46t3dljwv4o" path="res://Images/Regions/Prehistoric1/Secret Wall.png" id="22_xnuqe"]
+[ext_resource type="Texture2D" uid="uid://43i1a1kmpc8b" path="res://Images/Regions/Prehistoric1/Ending Walls.png" id="23_n1oiw"]
 
 [sub_resource type="Resource" id="Resource_4h5sg"]
 script = ExtResource("1_xvkcx")
@@ -54,7 +69,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_asinf"]
 script = ExtResource("1_xvkcx")
-checkName = "Ice Wall Life"
+checkName = "Ice Cave Life"
 checkSpot = Vector2(0.368, 0.943)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
@@ -64,7 +79,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_vu20c"]
 script = ExtResource("1_xvkcx")
-checkName = "Snow Wall Life 1"
+checkName = "Alcove Life 1"
 checkSpot = Vector2(0.719, 0.548)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
@@ -74,7 +89,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_jmsko"]
 script = ExtResource("1_xvkcx")
-checkName = "Snow Wall Life 2"
+checkName = "Alcove Life 2"
 checkSpot = Vector2(0.717, 0.481)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
@@ -184,7 +199,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_3yn8d"]
 script = ExtResource("1_xvkcx")
-checkName = "Ice Wall Garibs"
+checkName = "Ice Cave Garibs"
 checkSpot = Vector2(0.327, 0.94)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
@@ -224,7 +239,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_3cg77"]
 script = ExtResource("1_xvkcx")
-checkName = "Snow Wall Garibs"
+checkName = "Alcove Garibs"
 checkSpot = Vector2(0.719, 0.609)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
@@ -244,7 +259,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_j8hgq"]
 script = ExtResource("1_xvkcx")
-checkName = "Sandwiched Garibs"
+checkName = "Double Ice Wall Garibs"
 checkSpot = Vector2(0.761, 0.754)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
@@ -272,14 +287,99 @@ totalSubchecks = 1
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_64wnq"]
+script = ExtResource("1_xvkcx")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.453, 0.112)
+checkImage = ExtResource("3_5fpjm")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_yolc8"]
 script = ExtResource("2_cumx6")
 checkName = "Life Drop"
 checkImage = ExtResource("3_sxep1")
 
+[sub_resource type="Resource" id="Resource_0b5q1"]
+script = ExtResource("9_ekl7e")
+regionName = "Spawn"
+regionImage = ExtResource("10_cqssx")
+
+[sub_resource type="Resource" id="Resource_3xhts"]
+script = ExtResource("9_ekl7e")
+regionName = "Ball Ledge"
+regionImage = ExtResource("11_jvfvx")
+
+[sub_resource type="Resource" id="Resource_hwue0"]
+script = ExtResource("9_ekl7e")
+regionName = "Post Icicles"
+regionImage = ExtResource("12_650vy")
+
+[sub_resource type="Resource" id="Resource_vypvi"]
+script = ExtResource("9_ekl7e")
+regionName = "Ice Lake"
+regionImage = ExtResource("13_aew73")
+
+[sub_resource type="Resource" id="Resource_cheu0"]
+script = ExtResource("9_ekl7e")
+regionName = "Island"
+regionImage = ExtResource("14_fkjbe")
+
+[sub_resource type="Resource" id="Resource_kea5h"]
+script = ExtResource("9_ekl7e")
+regionName = "Under Ice"
+regionImage = ExtResource("15_v0x00")
+
+[sub_resource type="Resource" id="Resource_be2je"]
+script = ExtResource("9_ekl7e")
+regionName = "Ice Lakeside"
+regionImage = ExtResource("16_p7mty")
+
+[sub_resource type="Resource" id="Resource_3y40p"]
+script = ExtResource("9_ekl7e")
+regionName = "Cliff Platforms"
+regionImage = ExtResource("17_445gv")
+
+[sub_resource type="Resource" id="Resource_t1pyx"]
+script = ExtResource("9_ekl7e")
+regionName = "Dragonfly"
+regionImage = ExtResource("18_3je5j")
+
+[sub_resource type="Resource" id="Resource_bcian"]
+script = ExtResource("9_ekl7e")
+regionName = "Snow Edge"
+regionImage = ExtResource("19_x2a7i")
+
+[sub_resource type="Resource" id="Resource_k1bmq"]
+script = ExtResource("9_ekl7e")
+regionName = "Ice Cave"
+regionImage = ExtResource("19_rq0nl")
+
+[sub_resource type="Resource" id="Resource_11oqn"]
+script = ExtResource("9_ekl7e")
+regionName = "Avalanche"
+regionImage = ExtResource("20_gvk0p")
+
+[sub_resource type="Resource" id="Resource_yvv04"]
+script = ExtResource("9_ekl7e")
+regionName = "Ice Path"
+regionImage = ExtResource("21_iuu3c")
+
+[sub_resource type="Resource" id="Resource_6vqkr"]
+script = ExtResource("9_ekl7e")
+regionName = "Secret"
+regionImage = ExtResource("22_xnuqe")
+
+[sub_resource type="Resource" id="Resource_8jkmp"]
+script = ExtResource("9_ekl7e")
+regionName = "End"
+regionImage = ExtResource("23_n1oiw")
+
 [resource]
 script = ExtResource("3_ko2x7")
 mapImage = ExtResource("2_kjl5c")
-levelChecks = Array[ExtResource("1_xvkcx")]([SubResource("Resource_4h5sg"), SubResource("Resource_x4y6v"), SubResource("Resource_b5bu7"), SubResource("Resource_3ts2b"), SubResource("Resource_asinf"), SubResource("Resource_vu20c"), SubResource("Resource_jmsko"), SubResource("Resource_qsnx6"), SubResource("Resource_h08bb"), SubResource("Resource_22338"), SubResource("Resource_mkm7j"), SubResource("Resource_tbcr5"), SubResource("Resource_x8dpt"), SubResource("Resource_f57pq"), SubResource("Resource_o4k0y"), SubResource("Resource_siftd"), SubResource("Resource_dkw88"), SubResource("Resource_3yn8d"), SubResource("Resource_37ri1"), SubResource("Resource_sxt35"), SubResource("Resource_peqet"), SubResource("Resource_3cg77"), SubResource("Resource_eav70"), SubResource("Resource_j8hgq"), SubResource("Resource_10yeg"), SubResource("Resource_bpjxn")])
+levelChecks = Array[ExtResource("1_xvkcx")]([SubResource("Resource_4h5sg"), SubResource("Resource_x4y6v"), SubResource("Resource_b5bu7"), SubResource("Resource_3ts2b"), SubResource("Resource_asinf"), SubResource("Resource_vu20c"), SubResource("Resource_jmsko"), SubResource("Resource_qsnx6"), SubResource("Resource_h08bb"), SubResource("Resource_22338"), SubResource("Resource_mkm7j"), SubResource("Resource_tbcr5"), SubResource("Resource_x8dpt"), SubResource("Resource_f57pq"), SubResource("Resource_o4k0y"), SubResource("Resource_siftd"), SubResource("Resource_dkw88"), SubResource("Resource_3yn8d"), SubResource("Resource_37ri1"), SubResource("Resource_sxt35"), SubResource("Resource_peqet"), SubResource("Resource_3cg77"), SubResource("Resource_eav70"), SubResource("Resource_j8hgq"), SubResource("Resource_10yeg"), SubResource("Resource_bpjxn"), SubResource("Resource_64wnq")])
 levelPrerequisiteChecks = Array[ExtResource("2_cumx6")]([SubResource("Resource_yolc8")])
-levelRegions = Array[ExtResource("9_ekl7e")]([])
+levelRegions = Array[ExtResource("9_ekl7e")]([SubResource("Resource_0b5q1"), SubResource("Resource_3xhts"), SubResource("Resource_hwue0"), SubResource("Resource_vypvi"), SubResource("Resource_cheu0"), SubResource("Resource_kea5h"), SubResource("Resource_be2je"), SubResource("Resource_3y40p"), SubResource("Resource_t1pyx"), SubResource("Resource_bcian"), SubResource("Resource_k1bmq"), SubResource("Resource_11oqn"), SubResource("Resource_yvv04"), SubResource("Resource_6vqkr"), SubResource("Resource_8jkmp")])

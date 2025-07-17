@@ -21,7 +21,8 @@ func change_check(newCheck : CheckInfo):
 	construct_dropdowns_from_check()
 	if checkInfo != null:
 		regionBallToggle.button_pressed = checkInfo.checkBallRequirement
-		regionSelector.select(checkInfo.checkRegionIndex)
+		if regionSelector.item_count > 0:
+			regionSelector.select(checkInfo.checkRegionIndex)
 	method_selected(get_selected_id())
 
 func construct_dropdowns_from_check():

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=64 format=3 uid="uid://wivnjxn58yx2"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=66 format=3 uid="uid://wivnjxn58yx2"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_6f1c0"]
 [ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="2_1tr3s"]
@@ -102,11 +102,11 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_f6aj4"]
 script = ExtResource("1_6f1c0")
-checkName = "Waterfall Arch Garibs"
+checkName = "Arch Garibs"
 checkSpot = Vector2(0.874, 0.325)
 checkImage = ExtResource("5_t6gy3")
 checkType = 1
-totalSubchecks = 7
+totalSubchecks = 5
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -250,6 +250,26 @@ totalSubchecks = 1
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_pppmo"]
+script = ExtResource("1_6f1c0")
+checkName = "Waterfall Garibs"
+checkSpot = Vector2(0.904, 0.289)
+checkImage = ExtResource("5_t6gy3")
+checkType = 0
+totalSubchecks = 2
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_yl4t3"]
+script = ExtResource("1_6f1c0")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.103, 0.373)
+checkImage = ExtResource("2_1tr3s")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_k5687"]
 script = ExtResource("8_efk0d")
 checkName = "Elevator"
@@ -313,6 +333,6 @@ regionImage = ExtResource("27_xltwi")
 [resource]
 script = ExtResource("3_w0rog")
 mapImage = ExtResource("2_6nwo7")
-levelChecks = Array[ExtResource("1_6f1c0")]([SubResource("Resource_0wnqa"), SubResource("Resource_akipn"), SubResource("Resource_4rmli"), SubResource("Resource_yrx45"), SubResource("Resource_exwgi"), SubResource("Resource_wfyjt"), SubResource("Resource_unvo0"), SubResource("Resource_f6aj4"), SubResource("Resource_w4cdg"), SubResource("Resource_lfnny"), SubResource("Resource_ld1ua"), SubResource("Resource_re72p"), SubResource("Resource_lk775"), SubResource("Resource_0up8t"), SubResource("Resource_kylj2"), SubResource("Resource_pn5l8"), SubResource("Resource_gni3h"), SubResource("Resource_im8w3"), SubResource("Resource_fk2b7"), SubResource("Resource_5ika3"), SubResource("Resource_qmpev"), SubResource("Resource_jiwtn")])
+levelChecks = Array[ExtResource("1_6f1c0")]([SubResource("Resource_0wnqa"), SubResource("Resource_akipn"), SubResource("Resource_4rmli"), SubResource("Resource_yrx45"), SubResource("Resource_exwgi"), SubResource("Resource_wfyjt"), SubResource("Resource_unvo0"), SubResource("Resource_f6aj4"), SubResource("Resource_w4cdg"), SubResource("Resource_lfnny"), SubResource("Resource_ld1ua"), SubResource("Resource_re72p"), SubResource("Resource_lk775"), SubResource("Resource_0up8t"), SubResource("Resource_kylj2"), SubResource("Resource_pn5l8"), SubResource("Resource_gni3h"), SubResource("Resource_im8w3"), SubResource("Resource_fk2b7"), SubResource("Resource_5ika3"), SubResource("Resource_qmpev"), SubResource("Resource_jiwtn"), SubResource("Resource_pppmo"), SubResource("Resource_yl4t3")])
 levelPrerequisiteChecks = Array[ExtResource("8_efk0d")]([SubResource("Resource_k5687"), SubResource("Resource_uedlw"), SubResource("Resource_4pmlh")])
 levelRegions = Array[ExtResource("18_ak60j")]([SubResource("Resource_p7e6n"), SubResource("Resource_y4tlg"), SubResource("Resource_o2gwg"), SubResource("Resource_8gqo8"), SubResource("Resource_hr10f"), SubResource("Resource_bp5k0"), SubResource("Resource_8xq7v"), SubResource("Resource_iajvg"), SubResource("Resource_8ehjk")])

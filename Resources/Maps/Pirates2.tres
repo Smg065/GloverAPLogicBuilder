@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=45 format=3 uid="uid://bfhqiyo5t1uoy"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=66 format=3 uid="uid://bfhqiyo5t1uoy"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_xlb5j"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_57rhw"]
@@ -16,6 +16,16 @@
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="8_pudm5"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="9_pxe4u"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="14_4qav2"]
+[ext_resource type="Texture2D" uid="uid://jfnn0xxqij88" path="res://Images/Regions/Pirates2/Spawn.png" id="15_4h0j1"]
+[ext_resource type="Texture2D" uid="uid://cpgvvv6ejutih" path="res://Images/Regions/Pirates2/Log Ramps.png" id="16_omqw4"]
+[ext_resource type="Texture2D" uid="uid://b5afy3fxqlmys" path="res://Images/Regions/Pirates2/Sword Runway.png" id="17_a0pci"]
+[ext_resource type="Texture2D" uid="uid://3pppis2kgl5b" path="res://Images/Regions/Pirates2/Midshack.png" id="18_oy56l"]
+[ext_resource type="Texture2D" uid="uid://v2ckjtvsuind" path="res://Images/Regions/Pirates2/Crumble Path.png" id="19_1o7mr"]
+[ext_resource type="Texture2D" uid="uid://cebfoshjivjvq" path="res://Images/Regions/Pirates2/Tree Spiral.png" id="20_621oh"]
+[ext_resource type="Texture2D" uid="uid://bhjhjq774ivjc" path="res://Images/Regions/Pirates2/Poolside.png" id="21_g6h4b"]
+[ext_resource type="Texture2D" uid="uid://dc82f0xmdfe0a" path="res://Images/Regions/Pirates2/Three Elevator.png" id="21_oae6x"]
+[ext_resource type="Texture2D" uid="uid://cm2ecaojlgf2c" path="res://Images/Regions/Pirates2/Glover Switch Platform.png" id="22_aq7v5"]
+[ext_resource type="Texture2D" uid="uid://dstmbiewdd36d" path="res://Images/Regions/Pirates2/End Platforms.png" id="23_3a7wx"]
 
 [sub_resource type="Resource" id="Resource_7fuaq"]
 script = ExtResource("1_xlb5j")
@@ -189,7 +199,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_f407p"]
 script = ExtResource("1_xlb5j")
-checkName = "Stair Garibs"
+checkName = "Stairs Garibs"
 checkSpot = Vector2(0.49, 0.421)
 checkImage = ExtResource("9_pxe4u")
 checkType = 1
@@ -267,6 +277,16 @@ totalSubchecks = 8
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_omp7o"]
+script = ExtResource("1_xlb5j")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.233, 0.64)
+checkImage = ExtResource("5_t01pt")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_d8wna"]
 script = ExtResource("2_57rhw")
 checkName = "Lower Water"
@@ -282,9 +302,59 @@ script = ExtResource("2_57rhw")
 checkName = "Gate"
 checkImage = ExtResource("5_4efhs")
 
+[sub_resource type="Resource" id="Resource_rosnh"]
+script = ExtResource("14_4qav2")
+regionName = "Spawn"
+regionImage = ExtResource("15_4h0j1")
+
+[sub_resource type="Resource" id="Resource_gadk1"]
+script = ExtResource("14_4qav2")
+regionName = "Log Ramps"
+regionImage = ExtResource("16_omqw4")
+
+[sub_resource type="Resource" id="Resource_a4a4j"]
+script = ExtResource("14_4qav2")
+regionName = "Sword Runway"
+regionImage = ExtResource("17_a0pci")
+
+[sub_resource type="Resource" id="Resource_28q3x"]
+script = ExtResource("14_4qav2")
+regionName = "Midshack"
+regionImage = ExtResource("18_oy56l")
+
+[sub_resource type="Resource" id="Resource_4hwll"]
+script = ExtResource("14_4qav2")
+regionName = "Crumble Path"
+regionImage = ExtResource("19_1o7mr")
+
+[sub_resource type="Resource" id="Resource_60wt4"]
+script = ExtResource("14_4qav2")
+regionName = "Tree Spiral"
+regionImage = ExtResource("20_621oh")
+
+[sub_resource type="Resource" id="Resource_3gohj"]
+script = ExtResource("14_4qav2")
+regionName = "Three Elevators"
+regionImage = ExtResource("21_oae6x")
+
+[sub_resource type="Resource" id="Resource_48qaj"]
+script = ExtResource("14_4qav2")
+regionName = "Poolside"
+regionImage = ExtResource("21_g6h4b")
+
+[sub_resource type="Resource" id="Resource_076qh"]
+script = ExtResource("14_4qav2")
+regionName = "Glover Switch Platform"
+regionImage = ExtResource("22_aq7v5")
+
+[sub_resource type="Resource" id="Resource_gp61s"]
+script = ExtResource("14_4qav2")
+regionName = "End Platforms"
+regionImage = ExtResource("23_3a7wx")
+
 [resource]
 script = ExtResource("3_lwfs5")
 mapImage = ExtResource("2_uqlsu")
-levelChecks = Array[ExtResource("1_xlb5j")]([SubResource("Resource_7fuaq"), SubResource("Resource_m1g4b"), SubResource("Resource_qdmsk"), SubResource("Resource_gy64c"), SubResource("Resource_a4np2"), SubResource("Resource_kw08a"), SubResource("Resource_n4pdn"), SubResource("Resource_dw08f"), SubResource("Resource_8l3gv"), SubResource("Resource_f8ggm"), SubResource("Resource_b4qwq"), SubResource("Resource_t3g57"), SubResource("Resource_bom2y"), SubResource("Resource_ug4di"), SubResource("Resource_m0js3"), SubResource("Resource_as7c8"), SubResource("Resource_kn3ct"), SubResource("Resource_f407p"), SubResource("Resource_clqui"), SubResource("Resource_48tip"), SubResource("Resource_hui0f"), SubResource("Resource_kvr8f"), SubResource("Resource_jsjrv"), SubResource("Resource_whsy5"), SubResource("Resource_6yw5o")])
+levelChecks = Array[ExtResource("1_xlb5j")]([SubResource("Resource_7fuaq"), SubResource("Resource_m1g4b"), SubResource("Resource_qdmsk"), SubResource("Resource_gy64c"), SubResource("Resource_a4np2"), SubResource("Resource_kw08a"), SubResource("Resource_n4pdn"), SubResource("Resource_dw08f"), SubResource("Resource_8l3gv"), SubResource("Resource_f8ggm"), SubResource("Resource_b4qwq"), SubResource("Resource_t3g57"), SubResource("Resource_bom2y"), SubResource("Resource_ug4di"), SubResource("Resource_m0js3"), SubResource("Resource_as7c8"), SubResource("Resource_kn3ct"), SubResource("Resource_f407p"), SubResource("Resource_clqui"), SubResource("Resource_48tip"), SubResource("Resource_hui0f"), SubResource("Resource_kvr8f"), SubResource("Resource_jsjrv"), SubResource("Resource_whsy5"), SubResource("Resource_6yw5o"), SubResource("Resource_omp7o")])
 levelPrerequisiteChecks = Array[ExtResource("2_57rhw")]([SubResource("Resource_d8wna"), SubResource("Resource_bas8t"), SubResource("Resource_5qlns")])
-levelRegions = Array[ExtResource("14_4qav2")]([])
+levelRegions = Array[ExtResource("14_4qav2")]([SubResource("Resource_rosnh"), SubResource("Resource_gadk1"), SubResource("Resource_a4a4j"), SubResource("Resource_28q3x"), SubResource("Resource_4hwll"), SubResource("Resource_60wt4"), SubResource("Resource_3gohj"), SubResource("Resource_48qaj"), SubResource("Resource_076qh"), SubResource("Resource_gp61s")])

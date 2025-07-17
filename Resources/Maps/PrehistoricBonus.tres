@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=21 format=3 uid="uid://8leqygxsskbx"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=22 format=3 uid="uid://8leqygxsskbx"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_0rxe8"]
 [ext_resource type="Texture2D" uid="uid://dhefke4w2wyk" path="res://Images/Maps/PrehistoricBonus.png" id="2_2388b"]
@@ -110,6 +110,16 @@ totalSubchecks = 10
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_i6iyd"]
+script = ExtResource("1_0rxe8")
+checkName = "Archway Life"
+checkSpot = Vector2(0.349, 0.447)
+checkImage = ExtResource("4_sfqp8")
+checkType = 2
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_jd10t"]
 script = ExtResource("6_whkq0")
 regionName = "Main"
@@ -118,6 +128,6 @@ regionImage = ExtResource("7_p3hix")
 [resource]
 script = ExtResource("3_ra6oa")
 mapImage = ExtResource("2_2388b")
-levelChecks = Array[ExtResource("1_0rxe8")]([SubResource("Resource_ps2ue"), SubResource("Resource_0vkvg"), SubResource("Resource_wyqc2"), SubResource("Resource_700jl"), SubResource("Resource_geer0"), SubResource("Resource_l5n62"), SubResource("Resource_a6hn3"), SubResource("Resource_n6qlo"), SubResource("Resource_kicmt"), SubResource("Resource_w0v63")])
+levelChecks = Array[ExtResource("1_0rxe8")]([SubResource("Resource_ps2ue"), SubResource("Resource_0vkvg"), SubResource("Resource_wyqc2"), SubResource("Resource_700jl"), SubResource("Resource_geer0"), SubResource("Resource_l5n62"), SubResource("Resource_a6hn3"), SubResource("Resource_n6qlo"), SubResource("Resource_kicmt"), SubResource("Resource_w0v63"), SubResource("Resource_i6iyd")])
 levelPrerequisiteChecks = Array[ExtResource("5_541ub")]([])
 levelRegions = Array[ExtResource("6_whkq0")]([SubResource("Resource_jd10t")])

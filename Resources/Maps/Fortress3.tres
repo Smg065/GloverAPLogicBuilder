@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=50 format=3 uid="uid://rowbu2jafvgu"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=51 format=3 uid="uid://rowbu2jafvgu"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_gpte1"]
 [ext_resource type="Texture2D" uid="uid://b8ymxlibn4i4r" path="res://Images/Maps/FortressOfFear3.png" id="2_4duyp"]
@@ -336,6 +336,16 @@ totalSubchecks = 3
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_2hdmb"]
+script = ExtResource("1_gpte1")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.04, 0.558)
+checkImage = ExtResource("4_xwu0j")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_q3fbi"]
 script = ExtResource("2_12k5x")
 checkName = "Gate"
@@ -349,6 +359,6 @@ checkImage = ExtResource("4_qj34o")
 [resource]
 script = ExtResource("3_7caov")
 mapImage = ExtResource("2_4duyp")
-levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_idwv6"), SubResource("Resource_p4x1n"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_ufmhl"), SubResource("Resource_ilugb"), SubResource("Resource_sbpf6"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_wgh51"), SubResource("Resource_aedc8"), SubResource("Resource_mmvw6"), SubResource("Resource_xfqg3"), SubResource("Resource_t1irn"), SubResource("Resource_vaf7j"), SubResource("Resource_gflf4"), SubResource("Resource_bcbhs"), SubResource("Resource_5e8ue"), SubResource("Resource_8pci1"), SubResource("Resource_pn5tb"), SubResource("Resource_xokl3"), SubResource("Resource_hnuja"), SubResource("Resource_t84hq"), SubResource("Resource_rpo2i"), SubResource("Resource_eln2a"), SubResource("Resource_7wtf3")])
+levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_idwv6"), SubResource("Resource_p4x1n"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_ufmhl"), SubResource("Resource_ilugb"), SubResource("Resource_sbpf6"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_wgh51"), SubResource("Resource_aedc8"), SubResource("Resource_mmvw6"), SubResource("Resource_xfqg3"), SubResource("Resource_t1irn"), SubResource("Resource_vaf7j"), SubResource("Resource_gflf4"), SubResource("Resource_bcbhs"), SubResource("Resource_5e8ue"), SubResource("Resource_8pci1"), SubResource("Resource_pn5tb"), SubResource("Resource_xokl3"), SubResource("Resource_hnuja"), SubResource("Resource_t84hq"), SubResource("Resource_rpo2i"), SubResource("Resource_eln2a"), SubResource("Resource_7wtf3"), SubResource("Resource_2hdmb")])
 levelPrerequisiteChecks = Array[ExtResource("2_12k5x")]([SubResource("Resource_q3fbi"), SubResource("Resource_fvfsp")])
 levelRegions = Array[ExtResource("13_on0yf")]([])

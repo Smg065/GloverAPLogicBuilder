@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=48 format=3 uid="uid://bp3w3ufjtsh88"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=49 format=3 uid="uid://bp3w3ufjtsh88"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_ecbe2"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_23paa"]
@@ -122,7 +122,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_0ywrd"]
 script = ExtResource("1_ecbe2")
-checkName = "Left Guardrail Garibs"
+checkName = "Left Guard Rail Garibs"
 checkSpot = Vector2(0.37, 0.174)
 checkImage = ExtResource("9_qni5d")
 checkType = 1
@@ -132,7 +132,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_k7mel"]
 script = ExtResource("1_ecbe2")
-checkName = "Right Guardrail Garibs"
+checkName = "Right Guard Rail Garibs"
 checkSpot = Vector2(0.368, 0.22)
 checkImage = ExtResource("9_qni5d")
 checkType = 1
@@ -152,7 +152,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_r405b"]
 script = ExtResource("1_ecbe2")
-checkName = "Red Dent Garibs"
+checkName = "Conveyor Island Garibs"
 checkSpot = Vector2(0.39, 0.427)
 checkImage = ExtResource("9_qni5d")
 checkType = 1
@@ -193,7 +193,7 @@ checkBallRequirement = false
 [sub_resource type="Resource" id="Resource_wm81g"]
 script = ExtResource("1_ecbe2")
 checkName = "Split Path Left Garibs"
-checkSpot = Vector2(0.629, 0.359)
+checkSpot = Vector2(0.628, 0.431)
 checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 7
@@ -250,6 +250,16 @@ totalSubchecks = 1
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_s7q3r"]
+script = ExtResource("1_ecbe2")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.276, 0.442)
+checkImage = ExtResource("3_xpga5")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_7seok"]
 script = ExtResource("2_23paa")
 checkName = "Hazard Gate"
@@ -278,6 +288,6 @@ checkImage = ExtResource("7_pq3tk")
 [resource]
 script = ExtResource("3_beger")
 mapImage = ExtResource("2_wxf62")
-levelChecks = Array[ExtResource("1_ecbe2")]([SubResource("Resource_np1b1"), SubResource("Resource_0y177"), SubResource("Resource_v3c3i"), SubResource("Resource_1tk5x"), SubResource("Resource_637hl"), SubResource("Resource_57iwx"), SubResource("Resource_oa12t"), SubResource("Resource_eatte"), SubResource("Resource_1dfxu"), SubResource("Resource_8ujpv"), SubResource("Resource_0ywrd"), SubResource("Resource_k7mel"), SubResource("Resource_5dc81"), SubResource("Resource_r405b"), SubResource("Resource_vv06r"), SubResource("Resource_p4y7g"), SubResource("Resource_1imk7"), SubResource("Resource_wm81g"), SubResource("Resource_lral0"), SubResource("Resource_u23kr"), SubResource("Resource_jtbij"), SubResource("Resource_u3ids"), SubResource("Resource_ifae3")])
+levelChecks = Array[ExtResource("1_ecbe2")]([SubResource("Resource_np1b1"), SubResource("Resource_0y177"), SubResource("Resource_v3c3i"), SubResource("Resource_1tk5x"), SubResource("Resource_637hl"), SubResource("Resource_57iwx"), SubResource("Resource_oa12t"), SubResource("Resource_eatte"), SubResource("Resource_1dfxu"), SubResource("Resource_8ujpv"), SubResource("Resource_0ywrd"), SubResource("Resource_k7mel"), SubResource("Resource_5dc81"), SubResource("Resource_r405b"), SubResource("Resource_vv06r"), SubResource("Resource_p4y7g"), SubResource("Resource_1imk7"), SubResource("Resource_wm81g"), SubResource("Resource_lral0"), SubResource("Resource_u23kr"), SubResource("Resource_jtbij"), SubResource("Resource_u3ids"), SubResource("Resource_ifae3"), SubResource("Resource_s7q3r")])
 levelPrerequisiteChecks = Array[ExtResource("2_23paa")]([SubResource("Resource_7seok"), SubResource("Resource_c1o86"), SubResource("Resource_xu5sr"), SubResource("Resource_43bq0"), SubResource("Resource_6usqx")])
 levelRegions = Array[ExtResource("17_1gegb")]([])

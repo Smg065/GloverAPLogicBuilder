@@ -398,7 +398,6 @@ func load_from_paths(loadPaths : PackedStringArray) -> void:
 	for eachPath in range(1, loadPaths.size()):
 		gameData = combine_glapls(gameData, load_from_path(loadPaths[eachPath]))
 	apply_glapl(gameData)
-	var garbage : PackedByteArray
 
 func web_data_loaded(gameData : Array) -> void:
 	var fileString : String = gameData[0]

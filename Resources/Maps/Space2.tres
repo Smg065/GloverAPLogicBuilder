@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=32 format=3 uid="uid://se2ib83vepow"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=34 format=3 uid="uid://se2ib83vepow"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_acm8a"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_8n6jl"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="5_oapjs"]
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="6_6jhjy"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="7_nmson"]
+[ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="8_omp1i"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="11_1g2gi"]
 
 [sub_resource type="Resource" id="Resource_ydq3q"]
@@ -86,7 +87,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_3l03l"]
 script = ExtResource("1_acm8a")
-checkName = "Dead End Garibs"
+checkName = "Behind Spawn Garibs"
 checkSpot = Vector2(0.109, 0.564)
 checkImage = ExtResource("7_nmson")
 checkType = 1
@@ -96,7 +97,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_u8r3c"]
 script = ExtResource("1_acm8a")
-checkName = "Rock Bridge Garibs"
+checkName = "Race Bridge Garibs"
 checkSpot = Vector2(0.249, 0.745)
 checkImage = ExtResource("7_nmson")
 checkType = 1
@@ -146,7 +147,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_e3v32"]
 script = ExtResource("1_acm8a")
-checkName = "Arch Garibs"
+checkName = "Ramp Jump Arch Garibs"
 checkSpot = Vector2(0.74, 0.73)
 checkImage = ExtResource("7_nmson")
 checkType = 1
@@ -174,6 +175,16 @@ totalSubchecks = 2
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_cfvj2"]
+script = ExtResource("1_acm8a")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.149, 0.72)
+checkImage = ExtResource("8_omp1i")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_wq364"]
 script = ExtResource("2_8n6jl")
 checkName = "Mashers"
@@ -187,6 +198,6 @@ checkImage = ExtResource("4_51n21")
 [resource]
 script = ExtResource("3_36pfk")
 mapImage = ExtResource("2_q3tix")
-levelChecks = Array[ExtResource("1_acm8a")]([SubResource("Resource_ydq3q"), SubResource("Resource_df7bq"), SubResource("Resource_tnq55"), SubResource("Resource_1yhkq"), SubResource("Resource_6ym44"), SubResource("Resource_c6o1h"), SubResource("Resource_xkhl5"), SubResource("Resource_3l03l"), SubResource("Resource_u8r3c"), SubResource("Resource_qkhe1"), SubResource("Resource_r827r"), SubResource("Resource_t7suq"), SubResource("Resource_oj0i3"), SubResource("Resource_e3v32"), SubResource("Resource_k8rfi"), SubResource("Resource_g4qav")])
+levelChecks = Array[ExtResource("1_acm8a")]([SubResource("Resource_ydq3q"), SubResource("Resource_df7bq"), SubResource("Resource_tnq55"), SubResource("Resource_1yhkq"), SubResource("Resource_6ym44"), SubResource("Resource_c6o1h"), SubResource("Resource_xkhl5"), SubResource("Resource_3l03l"), SubResource("Resource_u8r3c"), SubResource("Resource_qkhe1"), SubResource("Resource_r827r"), SubResource("Resource_t7suq"), SubResource("Resource_oj0i3"), SubResource("Resource_e3v32"), SubResource("Resource_k8rfi"), SubResource("Resource_g4qav"), SubResource("Resource_cfvj2")])
 levelPrerequisiteChecks = Array[ExtResource("2_8n6jl")]([SubResource("Resource_wq364"), SubResource("Resource_nr3ah")])
 levelRegions = Array[ExtResource("11_1g2gi")]([])

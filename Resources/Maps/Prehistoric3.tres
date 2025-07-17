@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=59 format=3 uid="uid://b2tbh2fjfj0ly"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=60 format=3 uid="uid://b2tbh2fjfj0ly"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_8vhx3"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_4qra0"]
@@ -174,7 +174,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_87qh8"]
 script = ExtResource("1_8vhx3")
-checkName = "Tree Life"
+checkName = "Love Tree Life"
 checkSpot = Vector2(0.548, 0.86)
 checkImage = ExtResource("9_rfj6y")
 checkType = 2
@@ -274,7 +274,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_dfqiy"]
 script = ExtResource("1_8vhx3")
-checkName = "Turning Stone Garibs"
+checkName = "Turning Stones Garibs"
 checkSpot = Vector2(0.332, 0.829)
 checkImage = ExtResource("11_gevgl")
 checkType = 1
@@ -304,11 +304,21 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_1tqhp"]
 script = ExtResource("1_8vhx3")
-checkName = "Tree Garibs"
+checkName = "Love Tree Garibs"
 checkSpot = Vector2(0.549, 0.93)
 checkImage = ExtResource("11_gevgl")
 checkType = 1
 totalSubchecks = 8
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_wer3y"]
+script = ExtResource("1_8vhx3")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.51, 0.81)
+checkImage = ExtResource("7_emmpd")
+checkType = 3
+totalSubchecks = 1
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -355,6 +365,6 @@ checkImage = ExtResource("8_ygme5")
 [resource]
 script = ExtResource("3_ndeva")
 mapImage = ExtResource("2_mbjmw")
-levelChecks = Array[ExtResource("1_8vhx3")]([SubResource("Resource_g05f1"), SubResource("Resource_0fmia"), SubResource("Resource_mcugi"), SubResource("Resource_bxjpo"), SubResource("Resource_vg1gk"), SubResource("Resource_48y5v"), SubResource("Resource_sxd0c"), SubResource("Resource_4f3s7"), SubResource("Resource_628ss"), SubResource("Resource_8rika"), SubResource("Resource_8sler"), SubResource("Resource_llees"), SubResource("Resource_nphfr"), SubResource("Resource_qa13x"), SubResource("Resource_ltp2o"), SubResource("Resource_87qh8"), SubResource("Resource_iwqbh"), SubResource("Resource_rpc4w"), SubResource("Resource_ypg6v"), SubResource("Resource_i8ojp"), SubResource("Resource_5ma2e"), SubResource("Resource_iqcuy"), SubResource("Resource_0yq8t"), SubResource("Resource_aj6vm"), SubResource("Resource_sl1eo"), SubResource("Resource_dfqiy"), SubResource("Resource_t88mt"), SubResource("Resource_m35qs"), SubResource("Resource_1tqhp")])
+levelChecks = Array[ExtResource("1_8vhx3")]([SubResource("Resource_g05f1"), SubResource("Resource_0fmia"), SubResource("Resource_mcugi"), SubResource("Resource_bxjpo"), SubResource("Resource_vg1gk"), SubResource("Resource_48y5v"), SubResource("Resource_sxd0c"), SubResource("Resource_4f3s7"), SubResource("Resource_628ss"), SubResource("Resource_8rika"), SubResource("Resource_8sler"), SubResource("Resource_llees"), SubResource("Resource_nphfr"), SubResource("Resource_qa13x"), SubResource("Resource_ltp2o"), SubResource("Resource_87qh8"), SubResource("Resource_iwqbh"), SubResource("Resource_rpc4w"), SubResource("Resource_ypg6v"), SubResource("Resource_i8ojp"), SubResource("Resource_5ma2e"), SubResource("Resource_iqcuy"), SubResource("Resource_0yq8t"), SubResource("Resource_aj6vm"), SubResource("Resource_sl1eo"), SubResource("Resource_dfqiy"), SubResource("Resource_t88mt"), SubResource("Resource_m35qs"), SubResource("Resource_1tqhp"), SubResource("Resource_wer3y")])
 levelPrerequisiteChecks = Array[ExtResource("2_4qra0")]([SubResource("Resource_17jfr"), SubResource("Resource_oaehu"), SubResource("Resource_223wm"), SubResource("Resource_lmsa4"), SubResource("Resource_0j4jt"), SubResource("Resource_1l8n3"), SubResource("Resource_ytigv"), SubResource("Resource_8stby")])
 levelRegions = Array[ExtResource("19_e3xs0")]([])

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=65 format=3 uid="uid://wxkkcjxqrsr2"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=104 format=3 uid="uid://wxkkcjxqrsr2"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_ux8nm"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_k16bx"]
@@ -25,6 +25,25 @@
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="12_8lmmp"]
 [ext_resource type="Texture2D" uid="uid://dwi7dlafq335s" path="res://Images/Icons/Checks/Pc1Box.png" id="13_iwahx"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="23_5aavd"]
+[ext_resource type="Texture2D" uid="uid://b5gjcuk8aymlq" path="res://Images/Regions/Pirates1/Tower.png" id="24_k2yr3"]
+[ext_resource type="Texture2D" uid="uid://bhbh0xxowboqk" path="res://Images/Regions/Pirates1/Pool.png" id="25_mdtyv"]
+[ext_resource type="Texture2D" uid="uid://d2cwnruqmcf1f" path="res://Images/Regions/Pirates1/Floating.png" id="26_ugsts"]
+[ext_resource type="Texture2D" uid="uid://ej05x50laek2" path="res://Images/Regions/Pirates1/TowerSwitchside.png" id="27_asfwo"]
+[ext_resource type="Texture2D" uid="uid://bpc1vdocugh0h" path="res://Images/Regions/Pirates1/TowerElevatorSide.png" id="28_gd8ou"]
+[ext_resource type="Texture2D" uid="uid://etuk1g60o4b0" path="res://Images/Regions/Pirates1/SunkenShip.png" id="29_2u4oo"]
+[ext_resource type="Texture2D" uid="uid://brwpm2wkyf8id" path="res://Images/Regions/Pirates1/Beach.png" id="30_cnlop"]
+[ext_resource type="Texture2D" uid="uid://bu81cjtqmoe0" path="res://Images/Regions/Pirates1/Lake.png" id="31_5kptd"]
+[ext_resource type="Texture2D" uid="uid://bseqfpgroeul2" path="res://Images/Regions/Pirates1/Coastline.png" id="32_n2xsu"]
+[ext_resource type="Texture2D" uid="uid://btrrp6urtg2ku" path="res://Images/Regions/Pirates1/Chest.png" id="33_dvasc"]
+[ext_resource type="Texture2D" uid="uid://c06of7rc2bjr2" path="res://Images/Regions/Pirates1/Island.png" id="34_y2o3g"]
+[ext_resource type="Texture2D" uid="uid://duigvngeo3u2f" path="res://Images/Regions/Pirates1/Lighthouse.png" id="35_1ichr"]
+[ext_resource type="Texture2D" uid="uid://dfp6seopxh613" path="res://Images/Regions/Pirates1/Ledge.png" id="36_ax5if"]
+[ext_resource type="Texture2D" uid="uid://cn46owl47bgs7" path="res://Images/Regions/Pirates1/Raise Ship.png" id="37_j273i"]
+[ext_resource type="Texture2D" uid="uid://c1ysrpmlc5w8w" path="res://Images/Regions/Pirates1/Airship 2.png" id="38_4f6bp"]
+[ext_resource type="Texture2D" uid="uid://3pp3vq6jrtgt" path="res://Images/Regions/Pirates1/Walkway.png" id="39_2o775"]
+[ext_resource type="Texture2D" uid="uid://m65g4e4viide" path="res://Images/Regions/Pirates1/Crateyard.png" id="40_go5ml"]
+[ext_resource type="Texture2D" uid="uid://b3dictqbca1ow" path="res://Images/Regions/Pirates1/Ramp.png" id="41_o7x30"]
+[ext_resource type="Texture2D" uid="uid://8t5ti3e1xpul" path="res://Images/Regions/Pirates1/Goal.png" id="42_xtqo4"]
 
 [sub_resource type="Resource" id="Resource_i0vve"]
 script = ExtResource("1_ux8nm")
@@ -138,7 +157,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_cirhw"]
 script = ExtResource("1_ux8nm")
-checkName = "Door Life"
+checkName = "Lighthouse Door Life"
 checkSpot = Vector2(0.481, 0.655)
 checkImage = ExtResource("8_t2af7")
 checkType = 2
@@ -336,6 +355,16 @@ totalSubchecks = 7
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_fnini"]
+script = ExtResource("1_ux8nm")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.308, 0.131)
+checkImage = ExtResource("7_jn0dg")
+checkType = 3
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_psfmm"]
 script = ExtResource("2_k16bx")
 checkName = "Raise Beach"
@@ -376,9 +405,104 @@ script = ExtResource("2_k16bx")
 checkName = "Bridge"
 checkImage = ExtResource("10_g0o4t")
 
+[sub_resource type="Resource" id="Resource_7abau"]
+script = ExtResource("23_5aavd")
+regionName = "Tower"
+regionImage = ExtResource("24_k2yr3")
+
+[sub_resource type="Resource" id="Resource_c8eof"]
+script = ExtResource("23_5aavd")
+regionName = "Pool"
+regionImage = ExtResource("25_mdtyv")
+
+[sub_resource type="Resource" id="Resource_d8x28"]
+script = ExtResource("23_5aavd")
+regionName = "Floating"
+regionImage = ExtResource("26_ugsts")
+
+[sub_resource type="Resource" id="Resource_nw7di"]
+script = ExtResource("23_5aavd")
+regionName = "Tower Switch Side"
+regionImage = ExtResource("27_asfwo")
+
+[sub_resource type="Resource" id="Resource_c5hib"]
+script = ExtResource("23_5aavd")
+regionName = "Tower Elevator Side"
+regionImage = ExtResource("28_gd8ou")
+
+[sub_resource type="Resource" id="Resource_n8wjr"]
+script = ExtResource("23_5aavd")
+regionName = "Sunken"
+regionImage = ExtResource("29_2u4oo")
+
+[sub_resource type="Resource" id="Resource_4w4t1"]
+script = ExtResource("23_5aavd")
+regionName = "Beach"
+regionImage = ExtResource("30_cnlop")
+
+[sub_resource type="Resource" id="Resource_17e4c"]
+script = ExtResource("23_5aavd")
+regionName = "Lake"
+regionImage = ExtResource("31_5kptd")
+
+[sub_resource type="Resource" id="Resource_o2cl7"]
+script = ExtResource("23_5aavd")
+regionName = "Coast"
+regionImage = ExtResource("32_n2xsu")
+
+[sub_resource type="Resource" id="Resource_krbol"]
+script = ExtResource("23_5aavd")
+regionName = "Chest"
+regionImage = ExtResource("33_dvasc")
+
+[sub_resource type="Resource" id="Resource_gox75"]
+script = ExtResource("23_5aavd")
+regionName = "Island"
+regionImage = ExtResource("34_y2o3g")
+
+[sub_resource type="Resource" id="Resource_84jkq"]
+script = ExtResource("23_5aavd")
+regionName = "Lighthouse"
+regionImage = ExtResource("35_1ichr")
+
+[sub_resource type="Resource" id="Resource_3qhnj"]
+script = ExtResource("23_5aavd")
+regionName = "Ledge"
+regionImage = ExtResource("36_ax5if")
+
+[sub_resource type="Resource" id="Resource_ree82"]
+script = ExtResource("23_5aavd")
+regionName = "Raise Ship"
+regionImage = ExtResource("37_j273i")
+
+[sub_resource type="Resource" id="Resource_vj2ey"]
+script = ExtResource("23_5aavd")
+regionName = "Air Ship"
+regionImage = ExtResource("38_4f6bp")
+
+[sub_resource type="Resource" id="Resource_vm7nv"]
+script = ExtResource("23_5aavd")
+regionName = "Walkway"
+regionImage = ExtResource("39_2o775")
+
+[sub_resource type="Resource" id="Resource_erkoq"]
+script = ExtResource("23_5aavd")
+regionName = "Crateyard"
+regionImage = ExtResource("40_go5ml")
+
+[sub_resource type="Resource" id="Resource_0cf7b"]
+script = ExtResource("23_5aavd")
+regionName = "Ramp"
+regionImage = ExtResource("41_o7x30")
+
+[sub_resource type="Resource" id="Resource_4fng2"]
+script = ExtResource("23_5aavd")
+regionName = "Goal Ship"
+regionImage = ExtResource("42_xtqo4")
+
 [resource]
 script = ExtResource("3_xgsba")
 mapImage = ExtResource("2_yrf8n")
-levelChecks = Array[ExtResource("1_ux8nm")]([SubResource("Resource_i0vve"), SubResource("Resource_3ttv7"), SubResource("Resource_oucju"), SubResource("Resource_1aqou"), SubResource("Resource_3ybya"), SubResource("Resource_wio12"), SubResource("Resource_tj2ur"), SubResource("Resource_t5vgy"), SubResource("Resource_58ygo"), SubResource("Resource_l6uob"), SubResource("Resource_fyxkb"), SubResource("Resource_cirhw"), SubResource("Resource_bjmvb"), SubResource("Resource_x7jdg"), SubResource("Resource_kx0t0"), SubResource("Resource_4klog"), SubResource("Resource_kxokf"), SubResource("Resource_ps66u"), SubResource("Resource_jm02y"), SubResource("Resource_ml05j"), SubResource("Resource_l0ieu"), SubResource("Resource_44ge6"), SubResource("Resource_pcqrs"), SubResource("Resource_ujuxd"), SubResource("Resource_7wxgu"), SubResource("Resource_m5pnn"), SubResource("Resource_d57cm"), SubResource("Resource_d7nwy"), SubResource("Resource_iiut3"), SubResource("Resource_5e5hb"), SubResource("Resource_kw1h6")])
+levelChecks = Array[ExtResource("1_ux8nm")]([SubResource("Resource_i0vve"), SubResource("Resource_3ttv7"), SubResource("Resource_oucju"), SubResource("Resource_1aqou"), SubResource("Resource_3ybya"), SubResource("Resource_wio12"), SubResource("Resource_tj2ur"), SubResource("Resource_t5vgy"), SubResource("Resource_58ygo"), SubResource("Resource_l6uob"), SubResource("Resource_fyxkb"), SubResource("Resource_cirhw"), SubResource("Resource_bjmvb"), SubResource("Resource_x7jdg"), SubResource("Resource_kx0t0"), SubResource("Resource_4klog"), SubResource("Resource_kxokf"), SubResource("Resource_ps66u"), SubResource("Resource_jm02y"), SubResource("Resource_ml05j"), SubResource("Resource_l0ieu"), SubResource("Resource_44ge6"), SubResource("Resource_pcqrs"), SubResource("Resource_ujuxd"), SubResource("Resource_7wxgu"), SubResource("Resource_m5pnn"), SubResource("Resource_d57cm"), SubResource("Resource_d7nwy"), SubResource("Resource_iiut3"), SubResource("Resource_5e5hb"), SubResource("Resource_kw1h6"), SubResource("Resource_fnini")])
 levelPrerequisiteChecks = Array[ExtResource("2_k16bx")]([SubResource("Resource_psfmm"), SubResource("Resource_fsfpi"), SubResource("Resource_vp62c"), SubResource("Resource_5rw6s"), SubResource("Resource_r3gjv"), SubResource("Resource_s8xjy"), SubResource("Resource_nulhn"), SubResource("Resource_pwug1")])
-levelRegions = Array[ExtResource("23_5aavd")]([])
+levelRegions = Array[ExtResource("23_5aavd")]([SubResource("Resource_7abau"), SubResource("Resource_c8eof"), SubResource("Resource_d8x28"), SubResource("Resource_nw7di"), SubResource("Resource_c5hib"), SubResource("Resource_n8wjr"), SubResource("Resource_4w4t1"), SubResource("Resource_17e4c"), SubResource("Resource_o2cl7"), SubResource("Resource_krbol"), SubResource("Resource_gox75"), SubResource("Resource_84jkq"), SubResource("Resource_3qhnj"), SubResource("Resource_ree82"), SubResource("Resource_vj2ey"), SubResource("Resource_vm7nv"), SubResource("Resource_erkoq"), SubResource("Resource_0cf7b"), SubResource("Resource_4fng2")])

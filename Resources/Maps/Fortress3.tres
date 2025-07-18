@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=51 format=3 uid="uid://rowbu2jafvgu"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=95 format=3 uid="uid://rowbu2jafvgu"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_gpte1"]
 [ext_resource type="Texture2D" uid="uid://b8ymxlibn4i4r" path="res://Images/Maps/FortressOfFear3.png" id="2_4duyp"]
@@ -15,6 +15,28 @@
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="8_u11jm"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="9_gnvo7"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="13_on0yf"]
+[ext_resource type="Texture2D" uid="uid://o87ytr7tjqad" path="res://Images/Regions/FortressOfFear3/Spawn.png" id="14_wvygy"]
+[ext_resource type="Texture2D" uid="uid://nu7ors43hjl3" path="res://Images/Regions/FortressOfFear3/Guillotine.png" id="15_6ay6t"]
+[ext_resource type="Texture2D" uid="uid://bu3wy718aimvj" path="res://Images/Regions/FortressOfFear3/Electric Rotating.png" id="16_m77jx"]
+[ext_resource type="Texture2D" uid="uid://wuo0i55ji3va" path="res://Images/Regions/FortressOfFear3/Coffins.png" id="17_k42dk"]
+[ext_resource type="Texture2D" uid="uid://ca7h5chawcscm" path="res://Images/Regions/FortressOfFear3/Wood Bridge.png" id="18_ywsid"]
+[ext_resource type="Texture2D" uid="uid://sy0ks8rcaeli" path="res://Images/Regions/FortressOfFear3/Lower Rocking Platform.png" id="19_63uur"]
+[ext_resource type="Texture2D" uid="uid://tek2tw2ktwpd" path="res://Images/Regions/FortressOfFear3/Beachball Platform.png" id="20_f6raa"]
+[ext_resource type="Texture2D" uid="uid://cn3lrrnf2bar2" path="res://Images/Regions/FortressOfFear3/Pre-Gate.png" id="21_8412q"]
+[ext_resource type="Texture2D" uid="uid://dj4yjapt7guss" path="res://Images/Regions/FortressOfFear3/Post-Gate.png" id="22_rtarv"]
+[ext_resource type="Texture2D" uid="uid://fcbmiqskoi6l" path="res://Images/Regions/FortressOfFear3/Flying Crenels.png" id="23_djfj3"]
+[ext_resource type="Texture2D" uid="uid://bm38c7hdr27hj" path="res://Images/Regions/FortressOfFear3/Tower Spikes Warp.png" id="24_qrtji"]
+[ext_resource type="Texture2D" uid="uid://xdvb1hm3772s" path="res://Images/Regions/FortressOfFear3/Tower Exit.png" id="25_6cinn"]
+[ext_resource type="Texture2D" uid="uid://b31xbplgmloch" path="res://Images/Regions/FortressOfFear3/U Roof.png" id="26_y76jv"]
+[ext_resource type="Texture2D" uid="uid://6pb4bttvhwno" path="res://Images/Regions/FortressOfFear3/Wood Wheel.png" id="27_cyay1"]
+[ext_resource type="Texture2D" uid="uid://b3vrkg4utattl" path="res://Images/Regions/FortressOfFear3/Electric Roof.png" id="28_3j4pn"]
+[ext_resource type="Texture2D" uid="uid://cwf5720gn8iqw" path="res://Images/Regions/FortressOfFear3/L Roof.png" id="29_ob1ym"]
+[ext_resource type="Texture2D" uid="uid://dx22g2q27gyie" path="res://Images/Regions/FortressOfFear3/Barrels.png" id="30_7jqwd"]
+[ext_resource type="Texture2D" uid="uid://dxg7nxprpi78w" path="res://Images/Regions/FortressOfFear3/Checkpoint Slope.png" id="31_43gxe"]
+[ext_resource type="Texture2D" uid="uid://b5g6opy8tcvsm" path="res://Images/Regions/FortressOfFear3/Spike Runway.png" id="32_2oaxe"]
+[ext_resource type="Texture2D" uid="uid://bq3uqc64bky0s" path="res://Images/Regions/FortressOfFear3/End.png" id="33_k57g6"]
+[ext_resource type="Texture2D" uid="uid://c6m3l61v8l03t" path="res://Images/Regions/FortressOfFear3/Spike Wall Top.png" id="34_4pi7u"]
+[ext_resource type="Texture2D" uid="uid://dubkm0o1yixjy" path="res://Images/Regions/FortressOfFear3/Castle Top.png" id="35_o4no0"]
 
 [sub_resource type="Resource" id="Resource_idwv6"]
 script = ExtResource("1_gpte1")
@@ -356,9 +378,119 @@ script = ExtResource("2_12k5x")
 checkName = "Spikes"
 checkImage = ExtResource("4_qj34o")
 
+[sub_resource type="Resource" id="Resource_rx1ks"]
+script = ExtResource("13_on0yf")
+regionName = "Spawn"
+regionImage = ExtResource("14_wvygy")
+
+[sub_resource type="Resource" id="Resource_5ohju"]
+script = ExtResource("13_on0yf")
+regionName = "Guillotine"
+regionImage = ExtResource("15_6ay6t")
+
+[sub_resource type="Resource" id="Resource_30vis"]
+script = ExtResource("13_on0yf")
+regionName = "Electric Rotating"
+regionImage = ExtResource("16_m77jx")
+
+[sub_resource type="Resource" id="Resource_6dfhc"]
+script = ExtResource("13_on0yf")
+regionName = "Coffins"
+regionImage = ExtResource("17_k42dk")
+
+[sub_resource type="Resource" id="Resource_gu1bg"]
+script = ExtResource("13_on0yf")
+regionName = "Wood Bridge"
+regionImage = ExtResource("18_ywsid")
+
+[sub_resource type="Resource" id="Resource_v5p7b"]
+script = ExtResource("13_on0yf")
+regionName = "Lower Rocking Platform"
+regionImage = ExtResource("19_63uur")
+
+[sub_resource type="Resource" id="Resource_ilkp6"]
+script = ExtResource("13_on0yf")
+regionName = "Beachball Platform"
+regionImage = ExtResource("20_f6raa")
+
+[sub_resource type="Resource" id="Resource_f2h2f"]
+script = ExtResource("13_on0yf")
+regionName = "Pre-Gate"
+regionImage = ExtResource("21_8412q")
+
+[sub_resource type="Resource" id="Resource_arxrc"]
+script = ExtResource("13_on0yf")
+regionName = "Post-Gate"
+regionImage = ExtResource("22_rtarv")
+
+[sub_resource type="Resource" id="Resource_2xohn"]
+script = ExtResource("13_on0yf")
+regionName = "Flying Crenels"
+regionImage = ExtResource("23_djfj3")
+
+[sub_resource type="Resource" id="Resource_bhlnx"]
+script = ExtResource("13_on0yf")
+regionName = "Tower Spike Warp"
+regionImage = ExtResource("24_qrtji")
+
+[sub_resource type="Resource" id="Resource_koevu"]
+script = ExtResource("13_on0yf")
+regionName = "Tower Exit"
+regionImage = ExtResource("25_6cinn")
+
+[sub_resource type="Resource" id="Resource_ok607"]
+script = ExtResource("13_on0yf")
+regionName = "U Roof"
+regionImage = ExtResource("26_y76jv")
+
+[sub_resource type="Resource" id="Resource_gxg3r"]
+script = ExtResource("13_on0yf")
+regionName = "Wood Wheel"
+regionImage = ExtResource("27_cyay1")
+
+[sub_resource type="Resource" id="Resource_wn1wb"]
+script = ExtResource("13_on0yf")
+regionName = "Electric Roof"
+regionImage = ExtResource("28_3j4pn")
+
+[sub_resource type="Resource" id="Resource_h3f3j"]
+script = ExtResource("13_on0yf")
+regionName = "L Roof"
+regionImage = ExtResource("29_ob1ym")
+
+[sub_resource type="Resource" id="Resource_gm0nd"]
+script = ExtResource("13_on0yf")
+regionName = "Barrels"
+regionImage = ExtResource("30_7jqwd")
+
+[sub_resource type="Resource" id="Resource_e74kq"]
+script = ExtResource("13_on0yf")
+regionName = "Checkpoint Slope"
+regionImage = ExtResource("31_43gxe")
+
+[sub_resource type="Resource" id="Resource_8xt1x"]
+script = ExtResource("13_on0yf")
+regionName = "Spike Runway"
+regionImage = ExtResource("32_2oaxe")
+
+[sub_resource type="Resource" id="Resource_xw1sf"]
+script = ExtResource("13_on0yf")
+regionName = "End"
+regionImage = ExtResource("33_k57g6")
+
+[sub_resource type="Resource" id="Resource_xnm7d"]
+script = ExtResource("13_on0yf")
+regionName = "Spike Wall Top"
+regionImage = ExtResource("34_4pi7u")
+
+[sub_resource type="Resource" id="Resource_5nbar"]
+script = ExtResource("13_on0yf")
+regionName = "Castle Top"
+regionImage = ExtResource("35_o4no0")
+
 [resource]
 script = ExtResource("3_7caov")
 mapImage = ExtResource("2_4duyp")
 levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_idwv6"), SubResource("Resource_p4x1n"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_ufmhl"), SubResource("Resource_ilugb"), SubResource("Resource_sbpf6"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_wgh51"), SubResource("Resource_aedc8"), SubResource("Resource_mmvw6"), SubResource("Resource_xfqg3"), SubResource("Resource_t1irn"), SubResource("Resource_vaf7j"), SubResource("Resource_gflf4"), SubResource("Resource_bcbhs"), SubResource("Resource_5e8ue"), SubResource("Resource_8pci1"), SubResource("Resource_pn5tb"), SubResource("Resource_xokl3"), SubResource("Resource_hnuja"), SubResource("Resource_t84hq"), SubResource("Resource_rpo2i"), SubResource("Resource_eln2a"), SubResource("Resource_7wtf3"), SubResource("Resource_2hdmb")])
 levelPrerequisiteChecks = Array[ExtResource("2_12k5x")]([SubResource("Resource_q3fbi"), SubResource("Resource_fvfsp")])
-levelRegions = Array[ExtResource("13_on0yf")]([])
+levelRegions = Array[ExtResource("13_on0yf")]([SubResource("Resource_rx1ks"), SubResource("Resource_5ohju"), SubResource("Resource_30vis"), SubResource("Resource_6dfhc"), SubResource("Resource_gu1bg"), SubResource("Resource_v5p7b"), SubResource("Resource_ilkp6"), SubResource("Resource_f2h2f"), SubResource("Resource_arxrc"), SubResource("Resource_2xohn"), SubResource("Resource_bhlnx"), SubResource("Resource_koevu"), SubResource("Resource_ok607"), SubResource("Resource_gxg3r"), SubResource("Resource_wn1wb"), SubResource("Resource_h3f3j"), SubResource("Resource_gm0nd"), SubResource("Resource_e74kq"), SubResource("Resource_8xt1x"), SubResource("Resource_xw1sf"), SubResource("Resource_xnm7d"), SubResource("Resource_5nbar")])

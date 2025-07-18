@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=46 format=3 uid="uid://ceset0syauv8k"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=66 format=3 uid="uid://ceset0syauv8k"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_20k85"]
 [ext_resource type="Texture2D" uid="uid://cqisfcerxsqmv" path="res://Images/Maps/FortressOfFear2.png" id="2_gun0m"]
@@ -17,6 +17,16 @@
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="9_mh44c"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="10_dbqcw"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="15_g01qa"]
+[ext_resource type="Texture2D" uid="uid://ir52raor0urw" path="res://Images/Regions/FortressOfFear2/Spawn.png" id="16_b7m6h"]
+[ext_resource type="Texture2D" uid="uid://chjwrckbh6yl" path="res://Images/Regions/FortressOfFear2/Above Spawn.png" id="17_4ajt1"]
+[ext_resource type="Texture2D" uid="uid://dg07rkdfduaxu" path="res://Images/Regions/FortressOfFear2/Castle.png" id="18_4p7uy"]
+[ext_resource type="Texture2D" uid="uid://ihxya51dwody" path="res://Images/Regions/FortressOfFear2/Lowest Swinging Platform.png" id="19_hxr8t"]
+[ext_resource type="Texture2D" uid="uid://duf6ntllgbawe" path="res://Images/Regions/FortressOfFear2/Dynamite.png" id="20_h2t5h"]
+[ext_resource type="Texture2D" uid="uid://b10wflj4gmg7m" path="res://Images/Regions/FortressOfFear2/Above Dynamite.png" id="21_3i5cj"]
+[ext_resource type="Texture2D" uid="uid://bbckxw1gclh0l" path="res://Images/Regions/FortressOfFear2/Dynamite Pillar.png" id="22_qhpwu"]
+[ext_resource type="Texture2D" uid="uid://dxblhxd6sru7h" path="res://Images/Regions/FortressOfFear2/Switchroom.png" id="23_ns1pf"]
+[ext_resource type="Texture2D" uid="uid://bpvee53t03omj" path="res://Images/Regions/FortressOfFear2/Electric.png" id="24_35ype"]
+[ext_resource type="Texture2D" uid="uid://cjvp8b8x2hef7" path="res://Images/Regions/FortressOfFear2/End.png" id="25_eiyol"]
 
 [sub_resource type="Resource" id="Resource_l0g3l"]
 script = ExtResource("1_20k85")
@@ -283,9 +293,59 @@ script = ExtResource("2_niv2q")
 checkName = "Mummy Gate"
 checkImage = ExtResource("5_2sore")
 
+[sub_resource type="Resource" id="Resource_ci637"]
+script = ExtResource("15_g01qa")
+regionName = "Spawn"
+regionImage = ExtResource("16_b7m6h")
+
+[sub_resource type="Resource" id="Resource_kqn6n"]
+script = ExtResource("15_g01qa")
+regionName = "Above Spawn"
+regionImage = ExtResource("17_4ajt1")
+
+[sub_resource type="Resource" id="Resource_efg54"]
+script = ExtResource("15_g01qa")
+regionName = "Castle"
+regionImage = ExtResource("18_4p7uy")
+
+[sub_resource type="Resource" id="Resource_nc1ct"]
+script = ExtResource("15_g01qa")
+regionName = "Lowest Swinging Platform"
+regionImage = ExtResource("19_hxr8t")
+
+[sub_resource type="Resource" id="Resource_h5oi4"]
+script = ExtResource("15_g01qa")
+regionName = "Dynamite"
+regionImage = ExtResource("20_h2t5h")
+
+[sub_resource type="Resource" id="Resource_jm22t"]
+script = ExtResource("15_g01qa")
+regionName = "Above Dynamite"
+regionImage = ExtResource("21_3i5cj")
+
+[sub_resource type="Resource" id="Resource_whrhm"]
+script = ExtResource("15_g01qa")
+regionName = "Dynamite Pillar"
+regionImage = ExtResource("22_qhpwu")
+
+[sub_resource type="Resource" id="Resource_43awo"]
+script = ExtResource("15_g01qa")
+regionName = "Switchroom"
+regionImage = ExtResource("23_ns1pf")
+
+[sub_resource type="Resource" id="Resource_eluxg"]
+script = ExtResource("15_g01qa")
+regionName = "Electric"
+regionImage = ExtResource("24_35ype")
+
+[sub_resource type="Resource" id="Resource_3yyhc"]
+script = ExtResource("15_g01qa")
+regionName = "End"
+regionImage = ExtResource("25_eiyol")
+
 [resource]
 script = ExtResource("3_2bc1r")
 mapImage = ExtResource("2_gun0m")
 levelChecks = Array[ExtResource("1_20k85")]([SubResource("Resource_l0g3l"), SubResource("Resource_6wfd0"), SubResource("Resource_4k4lp"), SubResource("Resource_q4vus"), SubResource("Resource_5b3ra"), SubResource("Resource_ngmfw"), SubResource("Resource_k4c36"), SubResource("Resource_ydi8i"), SubResource("Resource_kavcs"), SubResource("Resource_6olrb"), SubResource("Resource_mh3h0"), SubResource("Resource_61h5s"), SubResource("Resource_6m7sn"), SubResource("Resource_4uhh2"), SubResource("Resource_an0j5"), SubResource("Resource_bc10e"), SubResource("Resource_o5sgo"), SubResource("Resource_jt6ip"), SubResource("Resource_a4cqy"), SubResource("Resource_ixcsm"), SubResource("Resource_askjc"), SubResource("Resource_2j6hy"), SubResource("Resource_caqtc"), SubResource("Resource_4ns7s"), SubResource("Resource_6upki")])
 levelPrerequisiteChecks = Array[ExtResource("2_niv2q")]([SubResource("Resource_dmd3e"), SubResource("Resource_24da8"), SubResource("Resource_t3etn")])
-levelRegions = Array[ExtResource("15_g01qa")]([])
+levelRegions = Array[ExtResource("15_g01qa")]([SubResource("Resource_ci637"), SubResource("Resource_kqn6n"), SubResource("Resource_efg54"), SubResource("Resource_nc1ct"), SubResource("Resource_h5oi4"), SubResource("Resource_jm22t"), SubResource("Resource_whrhm"), SubResource("Resource_43awo"), SubResource("Resource_eluxg"), SubResource("Resource_3yyhc")])

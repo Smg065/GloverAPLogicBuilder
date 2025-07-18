@@ -383,7 +383,7 @@ script = ExtResource("2_drss1")
 moveIndex = 11
 movePath = NodePath("../../../../MethodSelection")
 
-[node name="Toss" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
+[node name="Lob Ball" type="Button" parent="MoveToggles/MoveButtons/Ball/GridContainer" node_paths=PackedStringArray("movePath") groups=["AbilityButton"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -733,6 +733,7 @@ grow_horizontal = 2
 tooltip_text = "Check's Region"
 disabled = true
 alignment = 1
+text_overrun_behavior = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="MethodSelection" type="OptionButton" parent="MoveToggles" node_paths=PackedStringArray("addMethodButton", "removeMethodButton", "trickDifficultyButton", "regionSelector", "regionBallToggle", "main")]
@@ -1116,7 +1117,7 @@ use_native_dialog = true
 [connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Quickswap" to="MoveToggles/MoveButtons/Ball/GridContainer/Quickswap" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Slap" to="MoveToggles/MoveButtons/Ball/GridContainer/Slap" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Throw" to="MoveToggles/MoveButtons/Ball/GridContainer/Throw" method="pressed"]
-[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Toss" to="MoveToggles/MoveButtons/Ball/GridContainer/Toss" method="pressed"]
+[connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Lob Ball" to="MoveToggles/MoveButtons/Ball/GridContainer/Lob Ball" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Ball/GridContainer/Ball Up" to="MoveToggles/MoveButtons/Ball/GridContainer/Ball Up" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Rubber Ball" to="MoveToggles/MoveButtons/Transformations/GridContainer/Rubber Ball" method="pressed"]
 [connection signal="pressed" from="MoveToggles/MoveButtons/Transformations/GridContainer/Bowling Ball" to="MoveToggles/MoveButtons/Transformations/GridContainer/Bowling Ball" method="pressed"]

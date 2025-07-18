@@ -76,7 +76,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_lc2ks"]
 script = ExtResource("1_25dye")
-checkName = "Tent Life"
+checkName = "Goal Life"
 checkSpot = Vector2(0.719, 0.098)
 checkImage = ExtResource("3_t1dlw")
 checkType = 2

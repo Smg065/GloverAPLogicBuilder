@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=60 format=3 uid="uid://b2tbh2fjfj0ly"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=71 format=3 uid="uid://b2tbh2fjfj0ly"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_8vhx3"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_4qra0"]
@@ -21,6 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="10_4sjq2"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="11_gevgl"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="19_e3xs0"]
+[ext_resource type="Texture2D" uid="uid://d24senin8ek3a" path="res://Images/Regions/Prehistoric3/Spawn.png" id="20_8n68s"]
+[ext_resource type="Texture2D" uid="uid://0baitca7hgcs" path="res://Images/Regions/Prehistoric3/Lake.png" id="21_4pdi3"]
+[ext_resource type="Texture2D" uid="uid://cb6v11ut72voi" path="res://Images/Regions/Prehistoric3/Secret.png" id="22_qwhds"]
+[ext_resource type="Texture2D" uid="uid://cehfyab154k23" path="res://Images/Regions/Prehistoric3/Slope.png" id="23_k1k54"]
+[ext_resource type="Texture2D" uid="uid://ch51ha37yussa" path="res://Images/Regions/Prehistoric3/Turning Stones.png" id="24_iduea"]
 
 [sub_resource type="Resource" id="Resource_g05f1"]
 script = ExtResource("1_8vhx3")
@@ -55,7 +60,7 @@ checkBallRequirement = false
 [sub_resource type="Resource" id="Resource_bxjpo"]
 script = ExtResource("1_8vhx3")
 checkName = "Cave Speed Potion"
-checkSpot = Vector2(0.157, 0.825)
+checkSpot = Vector2(0.13, 0.825)
 checkImage = ExtResource("3_lwqc1")
 checkType = 4
 totalSubchecks = 1
@@ -322,6 +327,16 @@ totalSubchecks = 1
 checkRegionIndex = 0
 checkBallRequirement = false
 
+[sub_resource type="Resource" id="Resource_mcxh7"]
+script = ExtResource("1_8vhx3")
+checkName = "Monolith D"
+checkSpot = Vector2(0.156, 0.817)
+checkImage = ExtResource("5_o3edc")
+checkType = 0
+totalSubchecks = 1
+checkRegionIndex = 0
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_17jfr"]
 script = ExtResource("2_4qra0")
 checkName = "Drop Garibs"
@@ -362,9 +377,34 @@ script = ExtResource("2_4qra0")
 checkName = "Dirt Elevator"
 checkImage = ExtResource("8_ygme5")
 
+[sub_resource type="Resource" id="Resource_s31tp"]
+script = ExtResource("19_e3xs0")
+regionName = "Spawn"
+regionImage = ExtResource("20_8n68s")
+
+[sub_resource type="Resource" id="Resource_hpfyh"]
+script = ExtResource("19_e3xs0")
+regionName = "Lake"
+regionImage = ExtResource("21_4pdi3")
+
+[sub_resource type="Resource" id="Resource_v18ba"]
+script = ExtResource("19_e3xs0")
+regionName = "Cave"
+regionImage = ExtResource("22_qwhds")
+
+[sub_resource type="Resource" id="Resource_60am0"]
+script = ExtResource("19_e3xs0")
+regionName = "Slope"
+regionImage = ExtResource("23_k1k54")
+
+[sub_resource type="Resource" id="Resource_vcbcy"]
+script = ExtResource("19_e3xs0")
+regionName = "Turning Stones"
+regionImage = ExtResource("24_iduea")
+
 [resource]
 script = ExtResource("3_ndeva")
 mapImage = ExtResource("2_mbjmw")
-levelChecks = Array[ExtResource("1_8vhx3")]([SubResource("Resource_g05f1"), SubResource("Resource_0fmia"), SubResource("Resource_mcugi"), SubResource("Resource_bxjpo"), SubResource("Resource_vg1gk"), SubResource("Resource_48y5v"), SubResource("Resource_sxd0c"), SubResource("Resource_4f3s7"), SubResource("Resource_628ss"), SubResource("Resource_8rika"), SubResource("Resource_8sler"), SubResource("Resource_llees"), SubResource("Resource_nphfr"), SubResource("Resource_qa13x"), SubResource("Resource_ltp2o"), SubResource("Resource_87qh8"), SubResource("Resource_iwqbh"), SubResource("Resource_rpc4w"), SubResource("Resource_ypg6v"), SubResource("Resource_i8ojp"), SubResource("Resource_5ma2e"), SubResource("Resource_iqcuy"), SubResource("Resource_0yq8t"), SubResource("Resource_aj6vm"), SubResource("Resource_sl1eo"), SubResource("Resource_dfqiy"), SubResource("Resource_t88mt"), SubResource("Resource_m35qs"), SubResource("Resource_1tqhp"), SubResource("Resource_wer3y")])
+levelChecks = Array[ExtResource("1_8vhx3")]([SubResource("Resource_g05f1"), SubResource("Resource_0fmia"), SubResource("Resource_mcugi"), SubResource("Resource_bxjpo"), SubResource("Resource_vg1gk"), SubResource("Resource_48y5v"), SubResource("Resource_sxd0c"), SubResource("Resource_4f3s7"), SubResource("Resource_628ss"), SubResource("Resource_8rika"), SubResource("Resource_8sler"), SubResource("Resource_llees"), SubResource("Resource_nphfr"), SubResource("Resource_qa13x"), SubResource("Resource_ltp2o"), SubResource("Resource_87qh8"), SubResource("Resource_iwqbh"), SubResource("Resource_rpc4w"), SubResource("Resource_ypg6v"), SubResource("Resource_i8ojp"), SubResource("Resource_5ma2e"), SubResource("Resource_iqcuy"), SubResource("Resource_0yq8t"), SubResource("Resource_aj6vm"), SubResource("Resource_sl1eo"), SubResource("Resource_dfqiy"), SubResource("Resource_t88mt"), SubResource("Resource_m35qs"), SubResource("Resource_1tqhp"), SubResource("Resource_wer3y"), SubResource("Resource_mcxh7")])
 levelPrerequisiteChecks = Array[ExtResource("2_4qra0")]([SubResource("Resource_17jfr"), SubResource("Resource_oaehu"), SubResource("Resource_223wm"), SubResource("Resource_lmsa4"), SubResource("Resource_0j4jt"), SubResource("Resource_1l8n3"), SubResource("Resource_ytigv"), SubResource("Resource_8stby")])
-levelRegions = Array[ExtResource("19_e3xs0")]([])
+levelRegions = Array[ExtResource("19_e3xs0")]([SubResource("Resource_s31tp"), SubResource("Resource_hpfyh"), SubResource("Resource_v18ba"), SubResource("Resource_60am0"), SubResource("Resource_vcbcy")])

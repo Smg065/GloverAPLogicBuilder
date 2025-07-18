@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=49 format=3 uid="uid://cdn5rshl5dthh"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=81 format=3 uid="uid://cdn5rshl5dthh"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_dnb08"]
 [ext_resource type="Texture2D" uid="uid://gf2gnhg3eaml" path="res://Images/Maps/OutOfThisWorld1.png" id="2_py8ls"]
@@ -18,6 +18,22 @@
 [ext_resource type="Texture2D" uid="uid://q2rkqm2qwxr3" path="res://Images/Icons/Checks/Ootw1Missile.png" id="8_ll5c4"]
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="8_pyd0c"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="16_w60mi"]
+[ext_resource type="Texture2D" uid="uid://c4cxamxjts7dl" path="res://Images/Regions/OutOfThisWorld1/Craters.png" id="17_463ho"]
+[ext_resource type="Texture2D" uid="uid://328egv7wg5u7" path="res://Images/Regions/OutOfThisWorld1/Sloped Path.png" id="18_h323r"]
+[ext_resource type="Texture2D" uid="uid://c3h6exemwecmc" path="res://Images/Regions/OutOfThisWorld1/Cliff Walkway.png" id="19_kopo5"]
+[ext_resource type="Texture2D" uid="uid://ci808fwmlk5i7" path="res://Images/Regions/OutOfThisWorld1/Ancient Aliens.png" id="20_qmjgb"]
+[ext_resource type="Texture2D" uid="uid://yd1rx1rcu5g6" path="res://Images/Regions/OutOfThisWorld1/Rocketship Hill.png" id="21_ipiny"]
+[ext_resource type="Texture2D" uid="uid://huvuwutm6wh7" path="res://Images/Regions/OutOfThisWorld1/Rocketship.png" id="22_lrmp8"]
+[ext_resource type="Texture2D" uid="uid://bk6km46jsmlqj" path="res://Images/Regions/OutOfThisWorld1/Goo Platform.png" id="23_55led"]
+[ext_resource type="Texture2D" uid="uid://by40x5ciwfg2v" path="res://Images/Regions/OutOfThisWorld1/Goo Ramp.png" id="24_lqr3o"]
+[ext_resource type="Texture2D" uid="uid://dtlhmi0byyskc" path="res://Images/Regions/OutOfThisWorld1/Connector Ramp.png" id="25_4ntvn"]
+[ext_resource type="Texture2D" uid="uid://dqha46hccek1l" path="res://Images/Regions/OutOfThisWorld1/Ramptop.png" id="26_rnh3d"]
+[ext_resource type="Texture2D" uid="uid://duw2q3yohjany" path="res://Images/Regions/OutOfThisWorld1/Flying Platforms.png" id="27_80kd6"]
+[ext_resource type="Texture2D" uid="uid://u0odgt6cqjvk" path="res://Images/Regions/OutOfThisWorld1/Highest Platform.png" id="28_1yeta"]
+[ext_resource type="Texture2D" uid="uid://dpney4rax5kge" path="res://Images/Regions/OutOfThisWorld1/Goo Stairs.png" id="29_ioaxb"]
+[ext_resource type="Texture2D" uid="uid://c2jx25yn51qcu" path="res://Images/Regions/OutOfThisWorld1/UFO Top.png" id="30_c8d1v"]
+[ext_resource type="Texture2D" uid="uid://bqvuwsqhdpr62" path="res://Images/Regions/OutOfThisWorld1/Inside UFO.png" id="31_vfkpx"]
+[ext_resource type="Texture2D" uid="uid://b1do8mnxtadwu" path="res://Images/Regions/OutOfThisWorld1/End.png" id="32_eyaim"]
 
 [sub_resource type="Resource" id="Resource_jq3o6"]
 script = ExtResource("1_dnb08")
@@ -289,9 +305,89 @@ script = ExtResource("2_w8xrx")
 checkName = "Missile"
 checkImage = ExtResource("8_ll5c4")
 
+[sub_resource type="Resource" id="Resource_03slq"]
+script = ExtResource("16_w60mi")
+regionName = "Craters"
+regionImage = ExtResource("17_463ho")
+
+[sub_resource type="Resource" id="Resource_0l2af"]
+script = ExtResource("16_w60mi")
+regionName = "Sloped Path"
+regionImage = ExtResource("18_h323r")
+
+[sub_resource type="Resource" id="Resource_elfst"]
+script = ExtResource("16_w60mi")
+regionName = "Walkway"
+regionImage = ExtResource("19_kopo5")
+
+[sub_resource type="Resource" id="Resource_5rfrm"]
+script = ExtResource("16_w60mi")
+regionName = "Ancient Aliens"
+regionImage = ExtResource("20_qmjgb")
+
+[sub_resource type="Resource" id="Resource_5x0ef"]
+script = ExtResource("16_w60mi")
+regionName = "Rocketship Hill"
+regionImage = ExtResource("21_ipiny")
+
+[sub_resource type="Resource" id="Resource_hngir"]
+script = ExtResource("16_w60mi")
+regionName = "Rocketship"
+regionImage = ExtResource("22_lrmp8")
+
+[sub_resource type="Resource" id="Resource_f1ewd"]
+script = ExtResource("16_w60mi")
+regionName = "Goo Platform"
+regionImage = ExtResource("23_55led")
+
+[sub_resource type="Resource" id="Resource_qa4e6"]
+script = ExtResource("16_w60mi")
+regionName = "Goo Ramp"
+regionImage = ExtResource("24_lqr3o")
+
+[sub_resource type="Resource" id="Resource_pmxra"]
+script = ExtResource("16_w60mi")
+regionName = "Connector Ramp"
+regionImage = ExtResource("25_4ntvn")
+
+[sub_resource type="Resource" id="Resource_o4ein"]
+script = ExtResource("16_w60mi")
+regionName = "Ramptop"
+regionImage = ExtResource("26_rnh3d")
+
+[sub_resource type="Resource" id="Resource_anyvw"]
+script = ExtResource("16_w60mi")
+regionName = "Flying Platforms"
+regionImage = ExtResource("27_80kd6")
+
+[sub_resource type="Resource" id="Resource_nx1ag"]
+script = ExtResource("16_w60mi")
+regionName = "Highest Platform"
+regionImage = ExtResource("28_1yeta")
+
+[sub_resource type="Resource" id="Resource_40h22"]
+script = ExtResource("16_w60mi")
+regionName = "Goo Stairs"
+regionImage = ExtResource("29_ioaxb")
+
+[sub_resource type="Resource" id="Resource_indw1"]
+script = ExtResource("16_w60mi")
+regionName = "UFO Top"
+regionImage = ExtResource("30_c8d1v")
+
+[sub_resource type="Resource" id="Resource_30w4k"]
+script = ExtResource("16_w60mi")
+regionName = "UFO Inside"
+regionImage = ExtResource("31_vfkpx")
+
+[sub_resource type="Resource" id="Resource_rb5jy"]
+script = ExtResource("16_w60mi")
+regionName = "End"
+regionImage = ExtResource("32_eyaim")
+
 [resource]
 script = ExtResource("3_0fg73")
 mapImage = ExtResource("2_py8ls")
 levelChecks = Array[ExtResource("1_dnb08")]([SubResource("Resource_jq3o6"), SubResource("Resource_nu3ri"), SubResource("Resource_ekrfa"), SubResource("Resource_j1s1r"), SubResource("Resource_7kvwb"), SubResource("Resource_sald3"), SubResource("Resource_yj86l"), SubResource("Resource_52uhj"), SubResource("Resource_cvmus"), SubResource("Resource_w2sqb"), SubResource("Resource_m1003"), SubResource("Resource_m3anh"), SubResource("Resource_5uy83"), SubResource("Resource_nib8y"), SubResource("Resource_1rtru"), SubResource("Resource_fho5n"), SubResource("Resource_e5b0h"), SubResource("Resource_mav0i"), SubResource("Resource_v8v18"), SubResource("Resource_m4uir"), SubResource("Resource_gd0jr"), SubResource("Resource_5hxsc"), SubResource("Resource_twcuh"), SubResource("Resource_traql")])
 levelPrerequisiteChecks = Array[ExtResource("2_w8xrx")]([SubResource("Resource_f8xrl"), SubResource("Resource_g3pj7"), SubResource("Resource_whp3p"), SubResource("Resource_px7yd"), SubResource("Resource_5sgpm"), SubResource("Resource_yq2yr")])
-levelRegions = Array[ExtResource("16_w60mi")]([])
+levelRegions = Array[ExtResource("16_w60mi")]([SubResource("Resource_03slq"), SubResource("Resource_0l2af"), SubResource("Resource_elfst"), SubResource("Resource_5rfrm"), SubResource("Resource_5x0ef"), SubResource("Resource_hngir"), SubResource("Resource_f1ewd"), SubResource("Resource_qa4e6"), SubResource("Resource_pmxra"), SubResource("Resource_o4ein"), SubResource("Resource_anyvw"), SubResource("Resource_nx1ag"), SubResource("Resource_40h22"), SubResource("Resource_indw1"), SubResource("Resource_30w4k"), SubResource("Resource_rb5jy")])

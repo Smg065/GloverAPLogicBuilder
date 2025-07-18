@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=54 format=3 uid="uid://cc37t7e7tmap6"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=98 format=3 uid="uid://cc37t7e7tmap6"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_due33"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_3rfvh"]
@@ -15,6 +15,28 @@
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="7_rod86"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="8_6w7mk"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="13_0nqav"]
+[ext_resource type="Texture2D" uid="uid://c23f6p8oei7qa" path="res://Images/Regions/Prehistoric2/Spawn.png" id="14_6phhn"]
+[ext_resource type="Texture2D" uid="uid://cjku4rd22hqdn" path="res://Images/Regions/Prehistoric2/Lower Spawn.png" id="15_apr4p"]
+[ext_resource type="Texture2D" uid="uid://bmvcrj2hmcfud" path="res://Images/Regions/Prehistoric2/Lavafall Platform.png" id="16_gh8by"]
+[ext_resource type="Texture2D" uid="uid://dolpehrvci1y6" path="res://Images/Regions/Prehistoric2/Lower Tree Rex.png" id="17_lfrq7"]
+[ext_resource type="Texture2D" uid="uid://ejsrjuwhq7yd" path="res://Images/Regions/Prehistoric2/Upper Tree Rex.png" id="18_cmpp7"]
+[ext_resource type="Texture2D" uid="uid://dnolv3g0sg51" path="res://Images/Regions/Prehistoric2/Mini Lava Platform.png" id="19_8w7rf"]
+[ext_resource type="Texture2D" uid="uid://lid3mlkr7ny0" path="res://Images/Regions/Prehistoric2/Floor Before Slope.png" id="20_s42l7"]
+[ext_resource type="Texture2D" uid="uid://b13gm87vartc7" path="res://Images/Regions/Prehistoric2/Platform Before Slope.png" id="21_bujey"]
+[ext_resource type="Texture2D" uid="uid://b61pfm2txyidv" path="res://Images/Regions/Prehistoric2/Sign Hill.png" id="22_mtt3v"]
+[ext_resource type="Texture2D" uid="uid://b2r87j4o7frt1" path="res://Images/Regions/Prehistoric2/Hilltop.png" id="23_pk7km"]
+[ext_resource type="Texture2D" uid="uid://bqigt5r85sjxm" path="res://Images/Regions/Prehistoric2/Secret.png" id="24_rpxns"]
+[ext_resource type="Texture2D" uid="uid://dcjjjy6hahwt3" path="res://Images/Regions/Prehistoric2/Slope.png" id="25_4h8mx"]
+[ext_resource type="Texture2D" uid="uid://bds8sewometxl" path="res://Images/Regions/Prehistoric2/Teeter.png" id="26_4hp63"]
+[ext_resource type="Texture2D" uid="uid://c3ds1rv5bu52h" path="res://Images/Regions/Prehistoric2/Checkpoint Pillar.png" id="27_2qnbm"]
+[ext_resource type="Texture2D" uid="uid://dqehn3qv4pkt4" path="res://Images/Regions/Prehistoric2/Lava Shore.png" id="28_4vkas"]
+[ext_resource type="Texture2D" uid="uid://c0j4axh6lgnms" path="res://Images/Regions/Prehistoric2/Lower Island.png" id="29_dielq"]
+[ext_resource type="Texture2D" uid="uid://btcke8fv6xlff" path="res://Images/Regions/Prehistoric2/Lowering Platform.png" id="30_0axdl"]
+[ext_resource type="Texture2D" uid="uid://jlkqmtw85v07" path="res://Images/Regions/Prehistoric2/Midpoint.png" id="31_g4q5o"]
+[ext_resource type="Texture2D" uid="uid://yt2iftq88i0m" path="res://Images/Regions/Prehistoric2/Love Island.png" id="32_pbx8g"]
+[ext_resource type="Texture2D" uid="uid://d2rswqaqupoe0" path="res://Images/Regions/Prehistoric2/RockslideTop.png" id="33_ldxln"]
+[ext_resource type="Texture2D" uid="uid://bycp3tkqwgjvj" path="res://Images/Regions/Prehistoric2/Valley.png" id="34_l23of"]
+[ext_resource type="Texture2D" uid="uid://m6sonladss2r" path="res://Images/Regions/Prehistoric2/End.png" id="35_mk7w2"]
 
 [sub_resource type="Resource" id="Resource_ntgpj"]
 script = ExtResource("1_due33")
@@ -381,9 +403,119 @@ script = ExtResource("2_3rfvh")
 checkName = "Lower Ball Switch"
 checkImage = ExtResource("5_w1pu0")
 
+[sub_resource type="Resource" id="Resource_0ikgr"]
+script = ExtResource("13_0nqav")
+regionName = "Spawn"
+regionImage = ExtResource("14_6phhn")
+
+[sub_resource type="Resource" id="Resource_d4yig"]
+script = ExtResource("13_0nqav")
+regionName = "Lower Spawn"
+regionImage = ExtResource("15_apr4p")
+
+[sub_resource type="Resource" id="Resource_o8qcw"]
+script = ExtResource("13_0nqav")
+regionName = "Lavafall Platform"
+regionImage = ExtResource("16_gh8by")
+
+[sub_resource type="Resource" id="Resource_0w34n"]
+script = ExtResource("13_0nqav")
+regionName = "Lower Tree Rex"
+regionImage = ExtResource("17_lfrq7")
+
+[sub_resource type="Resource" id="Resource_s0cxw"]
+script = ExtResource("13_0nqav")
+regionName = "Upper Tree Rex"
+regionImage = ExtResource("18_cmpp7")
+
+[sub_resource type="Resource" id="Resource_011b1"]
+script = ExtResource("13_0nqav")
+regionName = "Mini Lava Platform"
+regionImage = ExtResource("19_8w7rf")
+
+[sub_resource type="Resource" id="Resource_cbx25"]
+script = ExtResource("13_0nqav")
+regionName = "Floor Before Slope"
+regionImage = ExtResource("20_s42l7")
+
+[sub_resource type="Resource" id="Resource_8nhgx"]
+script = ExtResource("13_0nqav")
+regionName = "Platform Before Slope"
+regionImage = ExtResource("21_bujey")
+
+[sub_resource type="Resource" id="Resource_6xo5y"]
+script = ExtResource("13_0nqav")
+regionName = "Sign Hill"
+regionImage = ExtResource("22_mtt3v")
+
+[sub_resource type="Resource" id="Resource_l40v8"]
+script = ExtResource("13_0nqav")
+regionName = "Hilltop"
+regionImage = ExtResource("23_pk7km")
+
+[sub_resource type="Resource" id="Resource_4x2kp"]
+script = ExtResource("13_0nqav")
+regionName = "Secret"
+regionImage = ExtResource("24_rpxns")
+
+[sub_resource type="Resource" id="Resource_101m2"]
+script = ExtResource("13_0nqav")
+regionName = "Slope"
+regionImage = ExtResource("25_4h8mx")
+
+[sub_resource type="Resource" id="Resource_cufmp"]
+script = ExtResource("13_0nqav")
+regionName = "Teeter"
+regionImage = ExtResource("26_4hp63")
+
+[sub_resource type="Resource" id="Resource_1ofay"]
+script = ExtResource("13_0nqav")
+regionName = "Checkpoint Pillar"
+regionImage = ExtResource("27_2qnbm")
+
+[sub_resource type="Resource" id="Resource_26hud"]
+script = ExtResource("13_0nqav")
+regionName = "Lava Shore"
+regionImage = ExtResource("28_4vkas")
+
+[sub_resource type="Resource" id="Resource_x5ui8"]
+script = ExtResource("13_0nqav")
+regionName = "Lowering Island"
+regionImage = ExtResource("29_dielq")
+
+[sub_resource type="Resource" id="Resource_4fe5n"]
+script = ExtResource("13_0nqav")
+regionName = "Lowering Platform"
+regionImage = ExtResource("30_0axdl")
+
+[sub_resource type="Resource" id="Resource_5c7dq"]
+script = ExtResource("13_0nqav")
+regionName = "Midpoint"
+regionImage = ExtResource("31_g4q5o")
+
+[sub_resource type="Resource" id="Resource_6fkc3"]
+script = ExtResource("13_0nqav")
+regionName = "Rockslide Bottom"
+regionImage = ExtResource("32_pbx8g")
+
+[sub_resource type="Resource" id="Resource_px460"]
+script = ExtResource("13_0nqav")
+regionName = "Rockslide Top"
+regionImage = ExtResource("33_ldxln")
+
+[sub_resource type="Resource" id="Resource_hq4nr"]
+script = ExtResource("13_0nqav")
+regionName = "Valley"
+regionImage = ExtResource("34_l23of")
+
+[sub_resource type="Resource" id="Resource_a70md"]
+script = ExtResource("13_0nqav")
+regionName = "End"
+regionImage = ExtResource("35_mk7w2")
+
 [resource]
 script = ExtResource("3_l02kf")
 mapImage = ExtResource("2_g5uxi")
 levelChecks = Array[ExtResource("1_due33")]([SubResource("Resource_ntgpj"), SubResource("Resource_hnukd"), SubResource("Resource_b0jo8"), SubResource("Resource_3p7h5"), SubResource("Resource_1exeq"), SubResource("Resource_eew37"), SubResource("Resource_obayj"), SubResource("Resource_hhi6u"), SubResource("Resource_uqdtl"), SubResource("Resource_habwq"), SubResource("Resource_aqllq"), SubResource("Resource_by8mi"), SubResource("Resource_26uhs"), SubResource("Resource_if1dj"), SubResource("Resource_agyoj"), SubResource("Resource_c43bs"), SubResource("Resource_21pse"), SubResource("Resource_kdpm4"), SubResource("Resource_rn5q5"), SubResource("Resource_wr0pp"), SubResource("Resource_mtuy4"), SubResource("Resource_4kir7"), SubResource("Resource_kcpc3"), SubResource("Resource_wp7g3"), SubResource("Resource_sunmv"), SubResource("Resource_5sryv"), SubResource("Resource_u2wxb"), SubResource("Resource_d4oeo"), SubResource("Resource_fad32"), SubResource("Resource_ftjcs"), SubResource("Resource_4k16v"), SubResource("Resource_l5evt"), SubResource("Resource_i7erq"), SubResource("Resource_1d1fy"), SubResource("Resource_y1eva")])
 levelPrerequisiteChecks = Array[ExtResource("2_3rfvh")]([SubResource("Resource_7jstp"), SubResource("Resource_v0e0n"), SubResource("Resource_o7j2f")])
-levelRegions = Array[ExtResource("13_0nqav")]([])
+levelRegions = Array[ExtResource("13_0nqav")]([SubResource("Resource_0ikgr"), SubResource("Resource_d4yig"), SubResource("Resource_o8qcw"), SubResource("Resource_0w34n"), SubResource("Resource_s0cxw"), SubResource("Resource_011b1"), SubResource("Resource_cbx25"), SubResource("Resource_8nhgx"), SubResource("Resource_6xo5y"), SubResource("Resource_l40v8"), SubResource("Resource_4x2kp"), SubResource("Resource_101m2"), SubResource("Resource_cufmp"), SubResource("Resource_1ofay"), SubResource("Resource_26hud"), SubResource("Resource_x5ui8"), SubResource("Resource_4fe5n"), SubResource("Resource_5c7dq"), SubResource("Resource_6fkc3"), SubResource("Resource_px460"), SubResource("Resource_hq4nr"), SubResource("Resource_a70md")])

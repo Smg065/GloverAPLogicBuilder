@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=34 format=3 uid="uid://se2ib83vepow"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=64 format=3 uid="uid://se2ib83vepow"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_acm8a"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_8n6jl"]
@@ -14,6 +14,21 @@
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="7_nmson"]
 [ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="8_omp1i"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="11_1g2gi"]
+[ext_resource type="Texture2D" uid="uid://mh4hjr54jypy" path="res://Images/Regions/OutOfThisWorld2/Spawn.png" id="13_x1ss1"]
+[ext_resource type="Texture2D" uid="uid://bmhqglrncgedj" path="res://Images/Regions/OutOfThisWorld2/Left Spawn Walkway.png" id="14_245qa"]
+[ext_resource type="Texture2D" uid="uid://cpoco43hxbshn" path="res://Images/Regions/OutOfThisWorld2/Before Mashers Platform.png" id="15_gaj3a"]
+[ext_resource type="Texture2D" uid="uid://cpm6kl6ryfa7v" path="res://Images/Regions/OutOfThisWorld2/Stone Bridge.png" id="16_2w85n"]
+[ext_resource type="Texture2D" uid="uid://b36ko16y3xyna" path="res://Images/Regions/OutOfThisWorld2/Secret.png" id="17_jhnxa"]
+[ext_resource type="Texture2D" uid="uid://dyhdkjjopscy5" path="res://Images/Regions/OutOfThisWorld2/Ramp To Pushers.png" id="18_6kb5c"]
+[ext_resource type="Texture2D" uid="uid://dswi4042kiyom" path="res://Images/Regions/OutOfThisWorld2/Pushers.png" id="19_1p82f"]
+[ext_resource type="Texture2D" uid="uid://ceswlduvmci3g" path="res://Images/Regions/OutOfThisWorld2/Above Pushers.png" id="20_0bqih"]
+[ext_resource type="Texture2D" uid="uid://dfsnpwi02qjki" path="res://Images/Regions/OutOfThisWorld2/Above Mashers.png" id="21_x76ad"]
+[ext_resource type="Texture2D" uid="uid://0mgn1ngja52m" path="res://Images/Regions/OutOfThisWorld2/Post Mashers.png" id="22_x532m"]
+[ext_resource type="Texture2D" uid="uid://g8l1m7b155st" path="res://Images/Regions/OutOfThisWorld2/Ball Archway.png" id="23_d6qdn"]
+[ext_resource type="Texture2D" uid="uid://ciukw0rjsaxpw" path="res://Images/Regions/OutOfThisWorld2/Post Crushers.png" id="24_fjkn8"]
+[ext_resource type="Texture2D" uid="uid://bd4rvhgnnlrm" path="res://Images/Regions/OutOfThisWorld2/Ramp Jump Archway.png" id="25_0aq3s"]
+[ext_resource type="Texture2D" uid="uid://di8l0twpc2iiv" path="res://Images/Regions/OutOfThisWorld2/Goo.png" id="26_7k5bw"]
+[ext_resource type="Texture2D" uid="uid://blrtqdppgitvj" path="res://Images/Regions/OutOfThisWorld2/End.png" id="26_clyoc"]
 
 [sub_resource type="Resource" id="Resource_ydq3q"]
 script = ExtResource("1_acm8a")
@@ -195,9 +210,84 @@ script = ExtResource("2_8n6jl")
 checkName = "Ramp"
 checkImage = ExtResource("4_51n21")
 
+[sub_resource type="Resource" id="Resource_ma62c"]
+script = ExtResource("11_1g2gi")
+regionName = "Spawn"
+regionImage = ExtResource("13_x1ss1")
+
+[sub_resource type="Resource" id="Resource_6erdi"]
+script = ExtResource("11_1g2gi")
+regionName = "Left Spawn Walkway"
+regionImage = ExtResource("14_245qa")
+
+[sub_resource type="Resource" id="Resource_pg656"]
+script = ExtResource("11_1g2gi")
+regionName = "Right Spawn Platform"
+regionImage = ExtResource("15_gaj3a")
+
+[sub_resource type="Resource" id="Resource_d8vgi"]
+script = ExtResource("11_1g2gi")
+regionName = "Stone Bridge"
+regionImage = ExtResource("16_2w85n")
+
+[sub_resource type="Resource" id="Resource_a6gg0"]
+script = ExtResource("11_1g2gi")
+regionName = "Secret"
+regionImage = ExtResource("17_jhnxa")
+
+[sub_resource type="Resource" id="Resource_kijt1"]
+script = ExtResource("11_1g2gi")
+regionName = "Pusher Ramp"
+regionImage = ExtResource("18_6kb5c")
+
+[sub_resource type="Resource" id="Resource_rvk4c"]
+script = ExtResource("11_1g2gi")
+regionName = "Pushers"
+regionImage = ExtResource("19_1p82f")
+
+[sub_resource type="Resource" id="Resource_rp6qt"]
+script = ExtResource("11_1g2gi")
+regionName = "Above Pushers"
+regionImage = ExtResource("20_0bqih")
+
+[sub_resource type="Resource" id="Resource_alpaf"]
+script = ExtResource("11_1g2gi")
+regionName = "Above Mashers"
+regionImage = ExtResource("21_x76ad")
+
+[sub_resource type="Resource" id="Resource_ygbu3"]
+script = ExtResource("11_1g2gi")
+regionName = "Post Mashers"
+regionImage = ExtResource("22_x532m")
+
+[sub_resource type="Resource" id="Resource_ywjyx"]
+script = ExtResource("11_1g2gi")
+regionName = "Ball Archway"
+regionImage = ExtResource("23_d6qdn")
+
+[sub_resource type="Resource" id="Resource_eh8t6"]
+script = ExtResource("11_1g2gi")
+regionName = "Post Crushers"
+regionImage = ExtResource("24_fjkn8")
+
+[sub_resource type="Resource" id="Resource_shn28"]
+script = ExtResource("11_1g2gi")
+regionName = "Ramp Jump Archway"
+regionImage = ExtResource("25_0aq3s")
+
+[sub_resource type="Resource" id="Resource_u0ngc"]
+script = ExtResource("11_1g2gi")
+regionName = "Goo"
+regionImage = ExtResource("26_7k5bw")
+
+[sub_resource type="Resource" id="Resource_low7q"]
+script = ExtResource("11_1g2gi")
+regionName = "End"
+regionImage = ExtResource("26_clyoc")
+
 [resource]
 script = ExtResource("3_36pfk")
 mapImage = ExtResource("2_q3tix")
 levelChecks = Array[ExtResource("1_acm8a")]([SubResource("Resource_ydq3q"), SubResource("Resource_df7bq"), SubResource("Resource_tnq55"), SubResource("Resource_1yhkq"), SubResource("Resource_6ym44"), SubResource("Resource_c6o1h"), SubResource("Resource_xkhl5"), SubResource("Resource_3l03l"), SubResource("Resource_u8r3c"), SubResource("Resource_qkhe1"), SubResource("Resource_r827r"), SubResource("Resource_t7suq"), SubResource("Resource_oj0i3"), SubResource("Resource_e3v32"), SubResource("Resource_k8rfi"), SubResource("Resource_g4qav"), SubResource("Resource_cfvj2")])
 levelPrerequisiteChecks = Array[ExtResource("2_8n6jl")]([SubResource("Resource_wq364"), SubResource("Resource_nr3ah")])
-levelRegions = Array[ExtResource("11_1g2gi")]([])
+levelRegions = Array[ExtResource("11_1g2gi")]([SubResource("Resource_ma62c"), SubResource("Resource_6erdi"), SubResource("Resource_pg656"), SubResource("Resource_d8vgi"), SubResource("Resource_a6gg0"), SubResource("Resource_kijt1"), SubResource("Resource_rvk4c"), SubResource("Resource_rp6qt"), SubResource("Resource_alpaf"), SubResource("Resource_ygbu3"), SubResource("Resource_ywjyx"), SubResource("Resource_eh8t6"), SubResource("Resource_shn28"), SubResource("Resource_u0ngc"), SubResource("Resource_low7q")])

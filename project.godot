@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Glover AP Logic Builder"
 config/description="A program built to help make an Archipelago apworld for Glover (N64)."
-config/version="0.1.1"
+config/version="0.2.0"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0.0588235, 0.133333, 0.301961, 1)

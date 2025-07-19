@@ -22,7 +22,7 @@ func to_save() -> Array[Dictionary]:
 		checkData.append(allMethods[eachMethod].to_save())
 	return checkData
 
-func to_load(checkData : Array[Dictionary]) -> void:
+func to_load(checkData : Array) -> void:
 	allMethods.clear()
 	for eachMethod in checkData.size():
 		var newMethod : MethodData = MethodData.new()

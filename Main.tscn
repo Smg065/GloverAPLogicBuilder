@@ -1089,7 +1089,7 @@ popup_window = true
 ok_button_text = "Save"
 dialog_hide_on_ok = true
 access = 2
-filters = PackedStringArray("*.glapl")
+filters = PackedStringArray("*.json")
 use_native_dialog = true
 
 [node name="OpenFiles" type="FileDialog" parent="."]
@@ -1101,7 +1101,7 @@ ok_button_text = "Open"
 dialog_hide_on_ok = true
 file_mode = 1
 access = 2
-filters = PackedStringArray("*.glapl")
+filters = PackedStringArray("*.json")
 use_native_dialog = true
 
 [connection signal="pressed" from="MoveToggles/MoveButtons/Glover/GridContainer/Jump" to="MoveToggles/MoveButtons/Glover/GridContainer/Jump" method="pressed"]

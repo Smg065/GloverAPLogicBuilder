@@ -88,6 +88,7 @@ func print_level_data(levelData : LevelData) -> void:
 	var totalGoals : int = 0
 	var totalLoadingZones : int = 0
 	var totalRegions : int = 0
+	var totalLevelEvents : int = 0
 	var totalMisc : int = 0
 	for eachCheck in levelData.levelChecks:
 		match eachCheck.checkType:
@@ -112,10 +113,12 @@ func print_level_data(levelData : LevelData) -> void:
 				totalGoals += eachCheck.totalSubchecks
 			CheckInfo.CheckType.LOADING_ZONE:
 				totalLoadingZones += eachCheck.totalSubchecks
-			CheckInfo.CheckType.REGION:
-				totalRegions += eachCheck.totalSubchecks
 			CheckInfo.CheckType.MISC:
 				totalMisc += eachCheck.totalSubchecks
+	for eachRegion in levelData.levelRegions:
+		totalRegions += 1
+	for eachPrereq in levelData.levelPrerequisiteChecks:
+		totalLevelEvents += 1
 	var levelName : String = levelData.resource_path.trim_prefix("res://Resources/Maps/").trim_suffix(".tres").capitalize()
 	print(levelName + " Info:")
 	print_if_not_0(totalGaribs, "Garibs")
@@ -131,6 +134,7 @@ func print_level_data(levelData : LevelData) -> void:
 	print_if_not_0(totalPotions, "Potions")
 	print_if_not_0(totalLoadingZones, "Loading Zones")
 	print_if_not_0(totalRegions, "Regions")
+	print_if_not_0(totalLevelEvents, "Level Events")
 	print_if_not_0(totalMisc, "Misc")
 	if totalGoals > 0:
 		if totalGoals > 1:
@@ -159,6 +163,7 @@ func print_total_data():
 	var totalGoals : int = 0
 	var totalLoadingZones : int = 0
 	var totalRegions : int = 0
+	var totalLevelEvents : int = 0
 	var totalMisc : int = 0
 	var allWorldsAndHub : Array[WorldInfo] = allWorlds.duplicate()
 	allWorldsAndHub.append(hubworld)
@@ -187,11 +192,12 @@ func print_total_data():
 						totalGoals += eachCheck.totalSubchecks
 					CheckInfo.CheckType.LOADING_ZONE:
 						totalLoadingZones += eachCheck.totalSubchecks
-					CheckInfo.CheckType.REGION:
-						totalRegions += eachCheck.totalSubchecks
 					CheckInfo.CheckType.MISC:
 						totalMisc += eachCheck.totalSubchecks
-		
+			for eachRegion in eachLevel.levelRegions:
+				totalRegions += 1
+			for eachPrereq in eachLevel.levelPrerequisiteChecks:
+				totalLevelEvents += 1
 	print("Totals: ")
 	print_if_not_0(totalGaribs, "Garibs")
 	print_if_not_0(totalGaribGroups, "Garib Groups")
@@ -205,8 +211,9 @@ func print_total_data():
 	print_if_not_0(totalSwitches, "Switches")
 	print_if_not_0(totalPotions, "Potions")
 	print_if_not_0(totalLoadingZones, "Loading Zones")
-	print_if_not_0(totalRegions, "Regions")
 	print_if_not_0(totalGoals, "Goals")
+	print_if_not_0(totalRegions, "Regions")
+	print_if_not_0(totalLevelEvents, "Level Events")
 	print_if_not_0(totalMisc, "Misc")
 	print("")
 
@@ -316,8 +323,13 @@ func save_press() -> void:
 	if is_not_web():
 		saveFile.show()
 	else:
-		#Thank you to Kehom's Forge for making this work
-		JavaScriptBridge.download_buffer(var_to_bytes(save_data()),"logic.glapl","text/plain")
+		web_save()
+
+func web_save() -> void:
+	var jsonString : String = JSON.stringify(save_data(), "\t")
+	var jsonBytes : PackedByteArray = jsonString.to_ascii_buffer()
+	#Thank you to Kehom's Forge for making this work
+	JavaScriptBridge.download_buffer(jsonBytes, "logic.json","text/plain")
 
 func load_press() -> void:
 	if is_not_web():
@@ -338,9 +350,7 @@ func save_data() -> Array[Dictionary]:
 func save_from_path(savePath : String) -> void:
 	var gameData : Array[Dictionary] = save_data()
 	var path = FileAccess.open(savePath,FileAccess.WRITE)
-	DisplayServer.clipboard_set(str(var_to_bytes(gameData)))
-	
-	path.store_buffer(var_to_bytes(gameData))
+	path.store_string(JSON.stringify(gameData, "\t"))
 	path.close()
 
 func combine_glapls(glaplA : Array[Dictionary], glaplB : Array[Dictionary]) -> Array[Dictionary]:
@@ -401,19 +411,18 @@ func load_from_paths(loadPaths : PackedStringArray) -> void:
 
 func web_data_loaded(gameData : Array) -> void:
 	var fileString : String = gameData[0]
-	var fileBytes : PackedByteArray = decode_255_array(fileString)
-	apply_glapl(bytes_to_var(fileBytes))
-
-#Thank you NekoNoka
-func decode_255_array(inString : String) -> PackedByteArray:
-	var outBytes : PackedByteArray
-	for eachInt in inString.split(","):
-		outBytes.append(eachInt.to_int())
-	return outBytes
+	var jsonOutput : Array = JSON.parse_string(gameData[0])
+	var glaplData : Array[Dictionary]
+	for eachDictionary in jsonOutput:
+		glaplData.append(eachDictionary)
+	apply_glapl(glaplData)
 
 func load_from_path(loadPath : String) -> Array[Dictionary]:
 	var path = FileAccess.open(loadPath, FileAccess.READ)
-	var gameData : Array[Dictionary] = bytes_to_var(path.get_buffer(path.get_length()))
+	var importArray : Array = JSON.parse_string(path.get_as_text())
+	var gameData : Array[Dictionary]
+	for eachDictionary in importArray:
+		gameData.append(eachDictionary)
 	path.close()
 	return gameData
 

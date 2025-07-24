@@ -2,6 +2,7 @@ extends Resource
 class_name WorldInfo
 
 @export var worldName : String
+@export var worldShorthand : String
 @export var levels : Array[LevelData]
 
 func setup() -> void:

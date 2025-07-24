@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("8_hp106")
 worldName = "Prehistoric"
+worldShorthand = "Pht"
 levels = Array[ExtResource("1_hsqqh")]([ExtResource("2_oa1yu"), ExtResource("3_6gc45"), ExtResource("4_xjb5e"), ExtResource("5_8i53i"), ExtResource("6_urc3i"), ExtResource("7_mno41")])

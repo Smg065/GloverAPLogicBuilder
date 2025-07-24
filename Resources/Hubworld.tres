@@ -9,4 +9,5 @@
 [resource]
 script = ExtResource("2_rt7nn")
 worldName = "Hubworld"
+worldShorthand = ""
 levels = Array[ExtResource("1_64x60")]([ExtResource("2_6mwj3"), ExtResource("3_mfmfq"), ExtResource("4_p5alk")])

@@ -22,6 +22,8 @@ checkSpot = Vector2(0.325, 0.365)
 checkImage = ExtResource("2_6j8yy")
 checkType = 7
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -32,6 +34,8 @@ checkSpot = Vector2(0.395, 0.23)
 checkImage = ExtResource("3_aisdj")
 checkType = 7
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -42,6 +46,8 @@ checkSpot = Vector2(0.5, 0.2)
 checkImage = ExtResource("4_qv2jm")
 checkType = 7
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -52,6 +58,8 @@ checkSpot = Vector2(0.605, 0.23)
 checkImage = ExtResource("5_nhnxp")
 checkType = 7
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -62,6 +70,8 @@ checkSpot = Vector2(0.675, 0.365)
 checkImage = ExtResource("6_pvm80")
 checkType = 7
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -72,6 +82,8 @@ checkSpot = Vector2(0.665, 0.45)
 checkImage = ExtResource("7_yfkf4")
 checkType = 6
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -82,6 +94,8 @@ checkSpot = Vector2(0.499, 0.826)
 checkImage = ExtResource("8_3qgqp")
 checkType = 7
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -137,6 +151,7 @@ regionImage = ExtResource("12_yhlum")
 
 [resource]
 script = ExtResource("12_huanc")
+levelSuffix = "H"
 mapImage = ExtResource("11_qcg4x")
 levelChecks = Array[ExtResource("1_b3bkg")]([SubResource("Resource_2nw00"), SubResource("Resource_dt37r"), SubResource("Resource_g4rv0"), SubResource("Resource_r2lgg"), SubResource("Resource_n6vat"), SubResource("Resource_hbl0i"), SubResource("Resource_1pwqk")])
 levelPrerequisiteChecks = Array[ExtResource("9_u26v7")]([SubResource("Resource_0e8rx"), SubResource("Resource_sw5fx"), SubResource("Resource_wru5p"), SubResource("Resource_8yml5"), SubResource("Resource_quoxl"), SubResource("Resource_8ydlw"), SubResource("Resource_f1ane"), SubResource("Resource_qhsbt"), SubResource("Resource_bgqn6")])

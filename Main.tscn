@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dyium0e51imoj"]
+[gd_scene load_steps=58 format=3 uid="uid://dyium0e51imoj"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_aq625"]
 [ext_resource type="Texture2D" uid="uid://bud6wup5f03ik" path="res://Images/Icons/Rubber.png" id="1_dkf4x"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://rlrvan2fb8gl" path="res://Images/Icons/Upthrow.png" id="12_454dw"]
 [ext_resource type="Texture2D" uid="uid://47j7mb2x522" path="res://Images/Icons/Jump.png" id="12_e11pl"]
 [ext_resource type="Texture2D" uid="uid://dp6x7yxro70wq" path="res://Images/Icons/Strength.png" id="12_u2k8p"]
+[ext_resource type="FontFile" uid="uid://dbwgg7q35f6f3" path="res://Fonts/glover64.ttf" id="13_d3q35"]
 [ext_resource type="Texture2D" uid="uid://byi3fxqvqt1" path="res://Images/Icons/BallLocate.png" id="13_sa1tx"]
 [ext_resource type="Texture2D" uid="uid://c5ec43xduowlv" path="res://Images/Icons/BallUp.png" id="27_dpe8e"]
 [ext_resource type="Script" path="res://Scripts/MethodSelector.gd" id="27_ip2fe"]
@@ -62,6 +63,7 @@ fill_to = Vector2(0.565041, 0.463415)
 repeat = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_n38yc"]
+font = ExtResource("13_d3q35")
 font_size = 48
 font_color = Color(0.956863, 0.301961, 0.27451, 1)
 outline_size = 5
@@ -71,6 +73,7 @@ shadow_color = Color(0, 0, 0, 0.407843)
 shadow_offset = Vector2(4, 5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_exnyi"]
+font = ExtResource("13_d3q35")
 font_size = 32
 font_color = Color(0.956863, 0.301961, 0.27451, 1)
 outline_size = 4
@@ -91,6 +94,7 @@ fill_to = Vector2(0.650406, 0.308943)
 repeat = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_govcy"]
+font = ExtResource("13_d3q35")
 font_size = 24
 outline_color = Color(0.960784, 0.960784, 0.333333, 1)
 shadow_size = 6
@@ -694,6 +698,7 @@ offset_left = -0.180023
 offset_bottom = 0.234997
 grow_horizontal = 2
 tooltip_text = "Trick"
+theme_override_fonts/font = ExtResource("13_d3q35")
 disabled = true
 alignment = 1
 selected = 0
@@ -731,6 +736,7 @@ offset_left = -0.180023
 offset_bottom = 0.234997
 grow_horizontal = 2
 tooltip_text = "Check's Region"
+theme_override_fonts/font = ExtResource("13_d3q35")
 disabled = true
 alignment = 1
 text_overrun_behavior = 3
@@ -747,6 +753,7 @@ offset_top = -64.0
 grow_horizontal = 2
 grow_vertical = 0
 tooltip_text = "Method"
+theme_override_fonts/font = ExtResource("13_d3q35")
 alignment = 1
 script = ExtResource("27_ip2fe")
 addMethodButton = NodePath("../MovesButtons/MethodAdd")
@@ -788,6 +795,7 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Add Method"
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 32
 text = "+"
 
@@ -795,6 +803,7 @@ text = "+"
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Remove Method"
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 32
 disabled = true
 text = "-"
@@ -836,6 +845,7 @@ theme_override_colors/font_focus_color = Color(0.956863, 0.301961, 0.27451, 1)
 theme_override_colors/font_color = Color(0.956863, 0.301961, 0.27451, 1)
 theme_override_colors/font_outline_color = Color(0.960784, 0.960784, 0.333333, 1)
 theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 32
 toggle_mode = true
 text = "Checks"
@@ -934,6 +944,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "H"
 
@@ -946,6 +957,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "1"
 
@@ -958,6 +970,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "2"
 
@@ -970,6 +983,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "3"
 
@@ -982,6 +996,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "!"
 
@@ -994,6 +1009,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "?"
 
@@ -1015,6 +1031,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "Hub"
 
@@ -1022,6 +1039,7 @@ text = "Hub"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "Cave"
 
@@ -1029,6 +1047,7 @@ text = "Cave"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_d3q35")
 theme_override_font_sizes/font_size = 38
 text = "Training"
 
@@ -1056,6 +1075,8 @@ offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 tooltip_text = "Worlds"
+theme_override_fonts/font = ExtResource("13_d3q35")
+theme_override_font_sizes/font_size = 16
 alignment = 1
 selected = 8
 item_count = 9

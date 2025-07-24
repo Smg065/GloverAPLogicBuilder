@@ -15,6 +15,8 @@ checkSpot = Vector2(0.5, 0.5)
 checkImage = ExtResource("2_f82yl")
 checkType = 5
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = true
 
@@ -25,6 +27,7 @@ regionImage = ExtResource("5_c13fa")
 
 [resource]
 script = ExtResource("3_ni1i7")
+levelSuffix = "!"
 mapImage = ExtResource("2_rdqwp")
 levelChecks = Array[ExtResource("1_43qnl")]([SubResource("Resource_7c2p2")])
 levelPrerequisiteChecks = Array[ExtResource("3_781sc")]([])

@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("2_sk0ab")
 worldName = "Carnival"
+worldShorthand = "Crn"
 levels = Array[ExtResource("1_g0o3c")]([ExtResource("2_l2ou6"), ExtResource("3_lx74x"), ExtResource("4_mr8ei"), ExtResource("5_stlin"), ExtResource("6_fra5x"), ExtResource("7_fnku1")])

@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("8_gminn")
 worldName = "Fortress"
+worldShorthand = "FoF"
 levels = Array[ExtResource("1_wsjji")]([ExtResource("2_aamwy"), ExtResource("3_qcc1e"), ExtResource("4_1exis"), ExtResource("5_tbrgi"), ExtResource("6_q2b7g"), ExtResource("7_wt0sp")])

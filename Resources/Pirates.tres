@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("8_5qqin")
 worldName = "Pirates"
+worldShorthand = "Prt"
 levels = Array[ExtResource("1_fd4vu")]([ExtResource("2_mjqle"), ExtResource("3_urkq3"), ExtResource("4_hfmnw"), ExtResource("5_je7le"), ExtResource("6_iprmg"), ExtResource("7_mve74")])

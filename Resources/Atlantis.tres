@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("2_uxdwb")
 worldName = "Atlantis"
+worldShorthand = "Atl"
 levels = Array[ExtResource("1_g0cjd")]([ExtResource("2_vc7on"), ExtResource("2_5yqwx"), ExtResource("4_gnp30"), ExtResource("5_j3p37"), ExtResource("6_nqapb"), ExtResource("7_15od6")])

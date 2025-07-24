@@ -34,6 +34,8 @@ checkSpot = Vector2(0.417, 0.255)
 checkImage = ExtResource("2_yegxb")
 checkType = 1
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -44,6 +46,8 @@ checkSpot = Vector2(0.248, 0.862)
 checkImage = ExtResource("3_5fpjm")
 checkType = 3
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -54,6 +58,8 @@ checkSpot = Vector2(0.525, 0.863)
 checkImage = ExtResource("3_5fpjm")
 checkType = 3
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -64,6 +70,8 @@ checkSpot = Vector2(0.419, 0.314)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -74,6 +82,8 @@ checkSpot = Vector2(0.368, 0.943)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -84,6 +94,8 @@ checkSpot = Vector2(0.719, 0.548)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -94,6 +106,8 @@ checkSpot = Vector2(0.717, 0.481)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -104,6 +118,8 @@ checkSpot = Vector2(0.494, 0.26)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -114,6 +130,8 @@ checkSpot = Vector2(0.451, 0.249)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -124,6 +142,8 @@ checkSpot = Vector2(0.424, 0.397)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -134,6 +154,8 @@ checkSpot = Vector2(0.392, 0.541)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 5
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -144,6 +166,8 @@ checkSpot = Vector2(0.341, 0.585)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 8
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -154,6 +178,8 @@ checkSpot = Vector2(0.358, 0.481)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -164,6 +190,8 @@ checkSpot = Vector2(0.42, 0.625)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -174,6 +202,8 @@ checkSpot = Vector2(0.335, 0.689)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -184,6 +214,8 @@ checkSpot = Vector2(0.372, 0.714)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -194,6 +226,8 @@ checkSpot = Vector2(0.334, 0.738)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -204,6 +238,8 @@ checkSpot = Vector2(0.327, 0.94)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 8
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -214,6 +250,8 @@ checkSpot = Vector2(0.25, 0.93)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -224,6 +262,8 @@ checkSpot = Vector2(0.525, 0.93)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 4
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -234,6 +274,8 @@ checkSpot = Vector2(0.654, 0.828)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 8
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -244,6 +286,8 @@ checkSpot = Vector2(0.719, 0.609)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 12
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -254,6 +298,8 @@ checkSpot = Vector2(0.737, 0.687)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 6
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -264,6 +310,8 @@ checkSpot = Vector2(0.761, 0.754)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -274,6 +322,8 @@ checkSpot = Vector2(0.795, 0.732)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -284,6 +334,8 @@ checkSpot = Vector2(0.833, 0.715)
 checkImage = ExtResource("6_8hn6t")
 checkType = 5
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -294,6 +346,8 @@ checkSpot = Vector2(0.453, 0.112)
 checkImage = ExtResource("3_5fpjm")
 checkType = 3
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -379,6 +433,7 @@ regionImage = ExtResource("23_n1oiw")
 
 [resource]
 script = ExtResource("3_ko2x7")
+levelSuffix = "1"
 mapImage = ExtResource("2_kjl5c")
 levelChecks = Array[ExtResource("1_xvkcx")]([SubResource("Resource_4h5sg"), SubResource("Resource_x4y6v"), SubResource("Resource_b5bu7"), SubResource("Resource_3ts2b"), SubResource("Resource_asinf"), SubResource("Resource_vu20c"), SubResource("Resource_jmsko"), SubResource("Resource_qsnx6"), SubResource("Resource_h08bb"), SubResource("Resource_22338"), SubResource("Resource_mkm7j"), SubResource("Resource_tbcr5"), SubResource("Resource_x8dpt"), SubResource("Resource_f57pq"), SubResource("Resource_o4k0y"), SubResource("Resource_siftd"), SubResource("Resource_dkw88"), SubResource("Resource_3yn8d"), SubResource("Resource_37ri1"), SubResource("Resource_sxt35"), SubResource("Resource_peqet"), SubResource("Resource_3cg77"), SubResource("Resource_eav70"), SubResource("Resource_j8hgq"), SubResource("Resource_10yeg"), SubResource("Resource_bpjxn"), SubResource("Resource_64wnq")])
 levelPrerequisiteChecks = Array[ExtResource("2_cumx6")]([SubResource("Resource_yolc8")])

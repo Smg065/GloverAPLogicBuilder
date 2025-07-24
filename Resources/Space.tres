@@ -12,4 +12,5 @@
 [resource]
 script = ExtResource("8_kbo81")
 worldName = "Out of This World"
+worldShorthand = "Otw"
 levels = Array[ExtResource("1_arurr")]([ExtResource("2_wtetd"), ExtResource("3_iyqi7"), ExtResource("4_b55vt"), ExtResource("5_labbc"), ExtResource("7_e88mh"), ExtResource("6_inlqk")])

@@ -63,10 +63,12 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("World Info"):
 		for eachLevel in hubworld.levels:
 			print_level_data(eachLevel)
-	if Input.is_action_just_pressed("Garib Info"):
-		print_garib_data(debugLevelData)
+	if Input.is_action_just_pressed("Check Info"):
+		print_check_data()
 	if Input.is_action_just_pressed("Total Info"):
 		print_total_data()
+	if Input.is_action_just_pressed("Item Pools"):
+		export_item_pools()
 
 func copy_mouse_info() -> void:
 	var newCoord : String = str(mouse_pos_to_map_spot())
@@ -145,11 +147,24 @@ func print_level_data(levelData : LevelData) -> void:
 		print("No Goal")
 	print("")
 
-func print_garib_data(levelData : LevelData):
-	for eachCheck in levelData.levelChecks:
-		if eachCheck.checkType != CheckInfo.CheckType.GARIB:
-			continue
-		
+func print_check_data():
+	var allAndHub : Array[WorldInfo]
+	allAndHub.append(hubworld)
+	allAndHub.append_array(allWorlds)
+	for worldIndex in allAndHub.size():
+		var eachWorld : WorldInfo = allAndHub[worldIndex]
+		for eachLevel in eachWorld.levels:
+			print("\n" + eachWorld.worldName + eachLevel.levelSuffix)
+			for eachPrereq in eachLevel.levelPrerequisiteChecks:
+				print(eachPrereq.checkName + ", Level Event")
+		#	for eachCheck in eachLevel.levelChecks:
+		#		if eachCheck.checkType == CheckInfo.CheckType.LOADING_ZONE:
+		#			continue
+		#		if eachCheck.totalSubchecks == 1:
+		#			print(eachCheck.checkName + ", " + CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize())
+		#		else:
+		#			for eachSubcheck in eachCheck.totalSubchecks:
+		#				print(eachCheck.checkName.trim_suffix('s') + " " + str(eachSubcheck + 1) + ", " + CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize())
 
 func print_total_data():
 	var totalGaribs : int = 0
@@ -410,7 +425,6 @@ func load_from_paths(loadPaths : PackedStringArray) -> void:
 	apply_glapl(gameData)
 
 func web_data_loaded(gameData : Array) -> void:
-	var fileString : String = gameData[0]
 	var jsonOutput : Array = JSON.parse_string(gameData[0])
 	var glaplData : Array[Dictionary]
 	for eachDictionary in jsonOutput:
@@ -448,3 +462,85 @@ func region_ball_toggled(toggledOn: bool) -> void:
 			select_check(lastRegion.ballCheck, lastRegion)
 		else:
 			select_check(lastRegion.defaultCheck, lastRegion)
+
+func export_item_pools():
+	var fillerItems = 0
+	var allWorldsPlusHub = allWorlds.duplicate()
+	var pythonLevelEventPrinout : String = ""
+	var pythonCheckpointPrinout : String = ""
+	var pythonGaribPrinout : String = ""
+	var pythonAbilityPrinout : String = ""
+	var pyPre : String = "[\""
+	var pySuffix : String = "\"],\n"
+	allWorldsPlusHub.append(hubworld)
+	for eachWorld in allWorldsPlusHub:
+		for eachLevel in eachWorld.levels:
+			var worldPrefix : String = eachWorld.worldShorthand + eachLevel.levelSuffix + " "
+			var garibGroupDict : Dictionary
+			for eachPrereq in eachLevel.levelPrerequisiteChecks:
+				pythonLevelEventPrinout += pyPre + to_python_enum(worldPrefix + eachPrereq.checkName + "\", \"1") + pySuffix
+			for eachCheck in eachLevel.levelChecks:
+				var checkHasItem : bool = false
+				var checkIsGarib : bool = false
+				match eachCheck.checkType:
+					CheckInfo.CheckType.CHECKPOINT:
+						checkHasItem = true
+					CheckInfo.CheckType.GARIB:
+						checkIsGarib = true
+				if checkHasItem:
+					var checkString = worldPrefix + eachCheck.checkName + "\", \"1"
+					pythonCheckpointPrinout += pyPre + to_python_enum(checkString) + pySuffix
+				elif checkIsGarib:
+					if garibGroupDict.has(eachCheck.totalSubchecks):
+						garibGroupDict[eachCheck.totalSubchecks] += 1
+					else:
+						garibGroupDict[eachCheck.totalSubchecks] = 1
+				else:
+					fillerItems += 1
+			var garibGroupKeys : Array = garibGroupDict.keys()
+			garibGroupKeys.sort()
+			for eachKey in garibGroupKeys:
+				var numberOfBundles : int = garibGroupDict[eachKey]
+				pythonGaribPrinout += pyPre + to_python_enum(worldPrefix + str(eachKey) + " Garibs\", \"") + str(numberOfBundles) + pySuffix
+	
+	var moveList : Array[String] = [
+		"Jump",
+		"Cartwheel",
+		"Crawl",
+		"Double Jump",
+		"Fist Slam",
+		"Ledge Grab",
+		"Push",
+		"Locate Garibs",
+		"Locate Ball",
+		"Dribble",
+		"L Piston",
+		"Slap",
+		"Throw",
+		"Ball Toss",
+		"Beachball",
+		"Death Potion",
+		"Helicopter Potion",
+		"Frog Potion",
+		"Boomerang Ball",
+		"Speed Potion",
+		"Sticky Potion",
+		"Hercules Potion",
+		"Grab",
+		"Rubber Ball",
+		"Bowling Ball",
+		"Ball Bearing",
+		"Crystal",
+		"Power Ball"]
+	
+	for eachMove in moveList:
+		pythonAbilityPrinout += pyPre + to_python_enum(eachMove) + "\", \"1" + pySuffix
+	print("level_event_table = [\n" + pythonLevelEventPrinout + "]")
+	print("checkpoint_table = [\n" + pythonCheckpointPrinout + "]")
+	print("garib_table = [\n" + pythonGaribPrinout + "]")
+	print("ability_table = [\n" + pythonAbilityPrinout + "]")
+	print("Filler, " + str(fillerItems - moveList.size()))
+
+func to_python_enum(inString : String) -> String:
+	#inString = inString.to_upper().replace(' ', '_')
+	return inString

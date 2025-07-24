@@ -1,6 +1,7 @@
 extends Resource
 class_name LevelData
 
+@export var levelSuffix : String
 @export var mapImage : Texture2D
 @export var levelChecks : Array[CheckInfo]
 @export var levelPrerequisiteChecks : Array[PrerequisiteCheckInfo]

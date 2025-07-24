@@ -17,6 +17,8 @@ checkSpot = Vector2(0.129, 0.458)
 checkImage = ExtResource("2_d7pgp")
 checkType = 1
 totalSubchecks = 5
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -27,6 +29,8 @@ checkSpot = Vector2(0.255, 0.524)
 checkImage = ExtResource("2_d7pgp")
 checkType = 1
 totalSubchecks = 5
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -37,6 +41,8 @@ checkSpot = Vector2(0.386, 0.452)
 checkImage = ExtResource("2_d7pgp")
 checkType = 1
 totalSubchecks = 5
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -47,6 +53,8 @@ checkSpot = Vector2(0.518, 0.548)
 checkImage = ExtResource("2_d7pgp")
 checkType = 1
 totalSubchecks = 5
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -57,6 +65,8 @@ checkSpot = Vector2(0.762, 0.477)
 checkImage = ExtResource("2_d7pgp")
 checkType = 1
 totalSubchecks = 5
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -67,6 +77,8 @@ checkSpot = Vector2(0.71, 0.579)
 checkImage = ExtResource("3_h082f")
 checkType = 5
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -77,6 +89,8 @@ checkSpot = Vector2(0.715, 0.473)
 checkImage = ExtResource("4_b52p8")
 checkType = 2
 totalSubchecks = 1
+ids = Array[String]([])
+ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -87,6 +101,7 @@ regionImage = ExtResource("7_8cv5t")
 
 [resource]
 script = ExtResource("3_7r0k5")
+levelSuffix = "?"
 mapImage = ExtResource("2_cmeig")
 levelChecks = Array[ExtResource("1_vdcud")]([SubResource("Resource_wqgwd"), SubResource("Resource_t7rwj"), SubResource("Resource_535jh"), SubResource("Resource_k4c71"), SubResource("Resource_qasfi"), SubResource("Resource_0f6ij"), SubResource("Resource_2djcq")])
 levelPrerequisiteChecks = Array[ExtResource("2_avae0")]([])

@@ -25,11 +25,13 @@ checkBallRequirement = true
 script = ExtResource("4_ktqd1")
 regionName = "Floor"
 regionImage = ExtResource("5_isosm")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_np3vc"]
 script = ExtResource("4_ktqd1")
 regionName = "Ledges"
 regionImage = ExtResource("6_wtul3")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_40j6r")

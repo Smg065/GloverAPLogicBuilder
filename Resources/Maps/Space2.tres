@@ -248,76 +248,91 @@ checkImage = ExtResource("4_51n21")
 script = ExtResource("11_1g2gi")
 regionName = "Spawn"
 regionImage = ExtResource("13_x1ss1")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_6erdi"]
 script = ExtResource("11_1g2gi")
 regionName = "Left Spawn Walkway"
 regionImage = ExtResource("14_245qa")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_pg656"]
 script = ExtResource("11_1g2gi")
 regionName = "Right Spawn Platform"
 regionImage = ExtResource("15_gaj3a")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_d8vgi"]
 script = ExtResource("11_1g2gi")
 regionName = "Stone Bridge"
 regionImage = ExtResource("16_2w85n")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_a6gg0"]
 script = ExtResource("11_1g2gi")
 regionName = "Secret"
 regionImage = ExtResource("17_jhnxa")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_kijt1"]
 script = ExtResource("11_1g2gi")
 regionName = "Pusher Ramp"
 regionImage = ExtResource("18_6kb5c")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_rvk4c"]
 script = ExtResource("11_1g2gi")
 regionName = "Pushers"
 regionImage = ExtResource("19_1p82f")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_rp6qt"]
 script = ExtResource("11_1g2gi")
 regionName = "Above Pushers"
 regionImage = ExtResource("20_0bqih")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_alpaf"]
 script = ExtResource("11_1g2gi")
 regionName = "Above Mashers"
 regionImage = ExtResource("21_x76ad")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_ygbu3"]
 script = ExtResource("11_1g2gi")
 regionName = "Post Mashers"
 regionImage = ExtResource("22_x532m")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_ywjyx"]
 script = ExtResource("11_1g2gi")
 regionName = "Ball Archway"
 regionImage = ExtResource("23_d6qdn")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_eh8t6"]
 script = ExtResource("11_1g2gi")
 regionName = "Post Crushers"
 regionImage = ExtResource("24_fjkn8")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_shn28"]
 script = ExtResource("11_1g2gi")
 regionName = "Ramp Jump Archway"
 regionImage = ExtResource("25_0aq3s")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_u0ngc"]
 script = ExtResource("11_1g2gi")
 regionName = "Goo"
 regionImage = ExtResource("26_7k5bw")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_low7q"]
 script = ExtResource("11_1g2gi")
 regionName = "End"
 regionImage = ExtResource("26_clyoc")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_36pfk")

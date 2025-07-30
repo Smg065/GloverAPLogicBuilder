@@ -347,51 +347,61 @@ checkImage = ExtResource("5_2sore")
 script = ExtResource("15_g01qa")
 regionName = "Spawn"
 regionImage = ExtResource("16_b7m6h")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_kqn6n"]
 script = ExtResource("15_g01qa")
 regionName = "Above Spawn"
 regionImage = ExtResource("17_4ajt1")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_efg54"]
 script = ExtResource("15_g01qa")
 regionName = "Castle"
 regionImage = ExtResource("18_4p7uy")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_nc1ct"]
 script = ExtResource("15_g01qa")
 regionName = "Lowest Swinging Platform"
 regionImage = ExtResource("19_hxr8t")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_h5oi4"]
 script = ExtResource("15_g01qa")
 regionName = "Dynamite"
 regionImage = ExtResource("20_h2t5h")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_jm22t"]
 script = ExtResource("15_g01qa")
 regionName = "Above Dynamite"
 regionImage = ExtResource("21_3i5cj")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_whrhm"]
 script = ExtResource("15_g01qa")
 regionName = "Dynamite Pillar"
 regionImage = ExtResource("22_qhpwu")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_43awo"]
 script = ExtResource("15_g01qa")
 regionName = "Switchroom"
 regionImage = ExtResource("23_ns1pf")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_eluxg"]
 script = ExtResource("15_g01qa")
 regionName = "Electric"
 regionImage = ExtResource("24_35ype")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_3yyhc"]
 script = ExtResource("15_g01qa")
 regionName = "End"
 regionImage = ExtResource("25_eiyol")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_2bc1r")

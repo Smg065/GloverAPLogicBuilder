@@ -24,6 +24,7 @@ checkBallRequirement = true
 script = ExtResource("4_ongg4")
 regionName = "Main"
 regionImage = ExtResource("5_c13fa")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_ni1i7")

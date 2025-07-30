@@ -541,136 +541,163 @@ checkImage = ExtResource("6_ewgqo")
 script = ExtResource("19_jd8ox")
 regionName = "Spawn"
 regionImage = ExtResource("20_67bls")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_05wl4"]
 script = ExtResource("19_jd8ox")
 regionName = "Barrel House"
 regionImage = ExtResource("21_ru246")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_otc0h"]
 script = ExtResource("19_jd8ox")
 regionName = "House Gap"
 regionImage = ExtResource("22_kdv36")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_qdnbn"]
 script = ExtResource("19_jd8ox")
 regionName = "Grassroof"
 regionImage = ExtResource("23_obiax")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_50fgv"]
 script = ExtResource("19_jd8ox")
 regionName = "Cave"
 regionImage = ExtResource("24_5jxa1")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_15xoe"]
 script = ExtResource("19_jd8ox")
 regionName = "Checkpoint House"
 regionImage = ExtResource("25_ec28j")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_amexc"]
 script = ExtResource("19_jd8ox")
 regionName = "Life Platforms"
 regionImage = ExtResource("26_nrufm")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_tgo54"]
 script = ExtResource("19_jd8ox")
 regionName = "Chipped Wall"
 regionImage = ExtResource("27_7grx0")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_srra2"]
 script = ExtResource("19_jd8ox")
 regionName = "Doorway Cliff"
 regionImage = ExtResource("28_c48ol")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_vul48"]
 script = ExtResource("19_jd8ox")
 regionName = "Warp House Ramp"
 regionImage = ExtResource("29_7c1vp")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_c2sp0"]
 script = ExtResource("19_jd8ox")
 regionName = "Warp House"
 regionImage = ExtResource("30_wbrwi")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_v1lp5"]
 script = ExtResource("19_jd8ox")
 regionName = "Bridge"
 regionImage = ExtResource("31_n3f08")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_mqvmt"]
 script = ExtResource("19_jd8ox")
 regionName = "Switch Dropdown"
 regionImage = ExtResource("32_ss4fk")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_f3x8r"]
 script = ExtResource("19_jd8ox")
 regionName = "Under Bridge Trampoline"
 regionImage = ExtResource("33_sh2vf")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_xxw0p"]
 script = ExtResource("19_jd8ox")
 regionName = "Turnbridge"
 regionImage = ExtResource("34_t1h2x")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_n0ap0"]
 script = ExtResource("19_jd8ox")
 regionName = "Crooked Rockpath"
 regionImage = ExtResource("35_hcy16")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_48av6"]
 script = ExtResource("19_jd8ox")
 regionName = "Under Town"
 regionImage = ExtResource("36_rkpn7")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_nhlm1"]
 script = ExtResource("19_jd8ox")
 regionName = "Hercules Trampoline"
 regionImage = ExtResource("37_qyake")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_5p1ep"]
 script = ExtResource("19_jd8ox")
 regionName = "Big House Stairs"
 regionImage = ExtResource("38_hyk3b")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_bf5xa"]
 script = ExtResource("19_jd8ox")
 regionName = "Crumbling Path"
 regionImage = ExtResource("39_xi7gd")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_qeosu"]
 script = ExtResource("19_jd8ox")
 regionName = "Megabarrel"
 regionImage = ExtResource("40_tc0x6")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_ws6wm"]
 script = ExtResource("19_jd8ox")
 regionName = "Plank Ledge"
 regionImage = ExtResource("41_ay7j4")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_a0uok"]
 script = ExtResource("19_jd8ox")
 regionName = "Ball Switch Ledge"
 regionImage = ExtResource("42_daonk")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_q0d7v"]
 script = ExtResource("19_jd8ox")
 regionName = "High House"
 regionImage = ExtResource("43_igfxp")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_a8g5a"]
 script = ExtResource("19_jd8ox")
 regionName = "Wind-Up Stairs"
 regionImage = ExtResource("44_uasg5")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_nwgis"]
 script = ExtResource("19_jd8ox")
 regionName = "End Walkway"
 regionImage = ExtResource("45_mr4xy")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8eex1"]
 script = ExtResource("19_jd8ox")
 regionName = "Arch"
 regionImage = ExtResource("46_uetmq")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_sk31n")

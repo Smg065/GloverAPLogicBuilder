@@ -337,46 +337,55 @@ checkImage = ExtResource("13_f60fp")
 script = ExtResource("18_ak60j")
 regionName = "Start"
 regionImage = ExtResource("19_lor3b")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_y4tlg"]
 script = ExtResource("18_ak60j")
 regionName = "Small Pool"
 regionImage = ExtResource("20_aq5kh")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_o2gwg"]
 script = ExtResource("18_ak60j")
 regionName = "Hidden Edge"
 regionImage = ExtResource("21_16r4c")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8gqo8"]
 script = ExtResource("18_ak60j")
 regionName = "Secret"
 regionImage = ExtResource("22_qd60t")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_hr10f"]
 script = ExtResource("18_ak60j")
 regionName = "Plateau"
 regionImage = ExtResource("23_63yvs")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_bp5k0"]
 script = ExtResource("18_ak60j")
 regionName = "Rooftop"
 regionImage = ExtResource("24_cdg6b")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8xq7v"]
 script = ExtResource("18_ak60j")
 regionName = "Under Roof"
 regionImage = ExtResource("25_xi7lf")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_iajvg"]
 script = ExtResource("18_ak60j")
 regionName = "Clifftop"
 regionImage = ExtResource("26_teya4")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8ehjk"]
 script = ExtResource("18_ak60j")
 regionName = "End"
 regionImage = ExtResource("27_xltwi")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_w0rog")

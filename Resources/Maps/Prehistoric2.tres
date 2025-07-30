@@ -477,111 +477,133 @@ checkImage = ExtResource("5_w1pu0")
 script = ExtResource("13_0nqav")
 regionName = "Spawn"
 regionImage = ExtResource("14_6phhn")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_d4yig"]
 script = ExtResource("13_0nqav")
 regionName = "Lower Spawn"
 regionImage = ExtResource("15_apr4p")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_o8qcw"]
 script = ExtResource("13_0nqav")
 regionName = "Lavafall Platform"
 regionImage = ExtResource("16_gh8by")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_0w34n"]
 script = ExtResource("13_0nqav")
 regionName = "Lower Tree Rex"
 regionImage = ExtResource("17_lfrq7")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_s0cxw"]
 script = ExtResource("13_0nqav")
 regionName = "Upper Tree Rex"
 regionImage = ExtResource("18_cmpp7")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_011b1"]
 script = ExtResource("13_0nqav")
 regionName = "Mini Lava Platform"
 regionImage = ExtResource("19_8w7rf")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_cbx25"]
 script = ExtResource("13_0nqav")
 regionName = "Floor Before Slope"
 regionImage = ExtResource("20_s42l7")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8nhgx"]
 script = ExtResource("13_0nqav")
 regionName = "Platform Before Slope"
 regionImage = ExtResource("21_bujey")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_6xo5y"]
 script = ExtResource("13_0nqav")
 regionName = "Sign Hill"
 regionImage = ExtResource("22_mtt3v")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_l40v8"]
 script = ExtResource("13_0nqav")
 regionName = "Hilltop"
 regionImage = ExtResource("23_pk7km")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_4x2kp"]
 script = ExtResource("13_0nqav")
 regionName = "Secret"
 regionImage = ExtResource("24_rpxns")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_101m2"]
 script = ExtResource("13_0nqav")
 regionName = "Slope"
 regionImage = ExtResource("25_4h8mx")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_cufmp"]
 script = ExtResource("13_0nqav")
 regionName = "Teeter"
 regionImage = ExtResource("26_4hp63")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_1ofay"]
 script = ExtResource("13_0nqav")
 regionName = "Checkpoint Pillar"
 regionImage = ExtResource("27_2qnbm")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_26hud"]
 script = ExtResource("13_0nqav")
 regionName = "Lava Shore"
 regionImage = ExtResource("28_4vkas")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_x5ui8"]
 script = ExtResource("13_0nqav")
 regionName = "Lowering Island"
 regionImage = ExtResource("29_dielq")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_4fe5n"]
 script = ExtResource("13_0nqav")
 regionName = "Lowering Platform"
 regionImage = ExtResource("30_0axdl")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_5c7dq"]
 script = ExtResource("13_0nqav")
 regionName = "Midpoint"
 regionImage = ExtResource("31_g4q5o")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_6fkc3"]
 script = ExtResource("13_0nqav")
 regionName = "Rockslide Bottom"
 regionImage = ExtResource("32_pbx8g")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_px460"]
 script = ExtResource("13_0nqav")
 regionName = "Rockslide Top"
 regionImage = ExtResource("33_ldxln")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_hq4nr"]
 script = ExtResource("13_0nqav")
 regionName = "Valley"
 regionImage = ExtResource("34_l23of")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_a70md"]
 script = ExtResource("13_0nqav")
 regionName = "End"
 regionImage = ExtResource("35_mk7w2")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_l02kf")

@@ -360,76 +360,91 @@ checkImage = ExtResource("3_sxep1")
 script = ExtResource("9_ekl7e")
 regionName = "Spawn"
 regionImage = ExtResource("10_cqssx")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_3xhts"]
 script = ExtResource("9_ekl7e")
 regionName = "Ball Ledge"
 regionImage = ExtResource("11_jvfvx")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_hwue0"]
 script = ExtResource("9_ekl7e")
 regionName = "Post Icicles"
 regionImage = ExtResource("12_650vy")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_vypvi"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Lake"
 regionImage = ExtResource("13_aew73")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_cheu0"]
 script = ExtResource("9_ekl7e")
 regionName = "Island"
 regionImage = ExtResource("14_fkjbe")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_kea5h"]
 script = ExtResource("9_ekl7e")
 regionName = "Under Ice"
 regionImage = ExtResource("15_v0x00")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_be2je"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Lakeside"
 regionImage = ExtResource("16_p7mty")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_3y40p"]
 script = ExtResource("9_ekl7e")
 regionName = "Cliff Platforms"
 regionImage = ExtResource("17_445gv")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_t1pyx"]
 script = ExtResource("9_ekl7e")
 regionName = "Dragonfly"
 regionImage = ExtResource("18_3je5j")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_bcian"]
 script = ExtResource("9_ekl7e")
 regionName = "Snow Edge"
 regionImage = ExtResource("19_x2a7i")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_k1bmq"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Cave"
 regionImage = ExtResource("19_rq0nl")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_11oqn"]
 script = ExtResource("9_ekl7e")
 regionName = "Avalanche"
 regionImage = ExtResource("20_gvk0p")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_yvv04"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Path"
 regionImage = ExtResource("21_iuu3c")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_6vqkr"]
 script = ExtResource("9_ekl7e")
 regionName = "Secret"
 regionImage = ExtResource("22_xnuqe")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8jkmp"]
 script = ExtResource("9_ekl7e")
 regionName = "End"
 regionImage = ExtResource("23_n1oiw")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_ko2x7")

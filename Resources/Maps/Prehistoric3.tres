@@ -448,26 +448,31 @@ checkImage = ExtResource("8_ygme5")
 script = ExtResource("19_e3xs0")
 regionName = "Spawn"
 regionImage = ExtResource("20_8n68s")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_hpfyh"]
 script = ExtResource("19_e3xs0")
 regionName = "Lake"
 regionImage = ExtResource("21_4pdi3")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_v18ba"]
 script = ExtResource("19_e3xs0")
 regionName = "Cave"
 regionImage = ExtResource("22_qwhds")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_60am0"]
 script = ExtResource("19_e3xs0")
 regionName = "Slope"
 regionImage = ExtResource("23_k1k54")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_vcbcy"]
 script = ExtResource("19_e3xs0")
 regionName = "Turning Stones"
 regionImage = ExtResource("24_iduea")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_ndeva")

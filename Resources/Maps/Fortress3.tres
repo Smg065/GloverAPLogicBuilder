@@ -448,111 +448,133 @@ checkImage = ExtResource("4_qj34o")
 script = ExtResource("13_on0yf")
 regionName = "Spawn"
 regionImage = ExtResource("14_wvygy")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_5ohju"]
 script = ExtResource("13_on0yf")
 regionName = "Guillotine"
 regionImage = ExtResource("15_6ay6t")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_30vis"]
 script = ExtResource("13_on0yf")
 regionName = "Electric Rotating"
 regionImage = ExtResource("16_m77jx")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_6dfhc"]
 script = ExtResource("13_on0yf")
 regionName = "Coffins"
 regionImage = ExtResource("17_k42dk")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_gu1bg"]
 script = ExtResource("13_on0yf")
 regionName = "Wood Bridge"
 regionImage = ExtResource("18_ywsid")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_v5p7b"]
 script = ExtResource("13_on0yf")
 regionName = "Lower Rocking Platform"
 regionImage = ExtResource("19_63uur")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_ilkp6"]
 script = ExtResource("13_on0yf")
 regionName = "Beachball Platform"
 regionImage = ExtResource("20_f6raa")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_f2h2f"]
 script = ExtResource("13_on0yf")
 regionName = "Pre-Gate"
 regionImage = ExtResource("21_8412q")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_arxrc"]
 script = ExtResource("13_on0yf")
 regionName = "Post-Gate"
 regionImage = ExtResource("22_rtarv")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_2xohn"]
 script = ExtResource("13_on0yf")
 regionName = "Flying Crenels"
 regionImage = ExtResource("23_djfj3")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_bhlnx"]
 script = ExtResource("13_on0yf")
 regionName = "Tower Spike Warp"
 regionImage = ExtResource("24_qrtji")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_koevu"]
 script = ExtResource("13_on0yf")
 regionName = "Tower Exit"
 regionImage = ExtResource("25_6cinn")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_ok607"]
 script = ExtResource("13_on0yf")
 regionName = "U Roof"
 regionImage = ExtResource("26_y76jv")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_gxg3r"]
 script = ExtResource("13_on0yf")
 regionName = "Wood Wheel"
 regionImage = ExtResource("27_cyay1")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_wn1wb"]
 script = ExtResource("13_on0yf")
 regionName = "Electric Roof"
 regionImage = ExtResource("28_3j4pn")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_h3f3j"]
 script = ExtResource("13_on0yf")
 regionName = "L Roof"
 regionImage = ExtResource("29_ob1ym")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_gm0nd"]
 script = ExtResource("13_on0yf")
 regionName = "Barrels"
 regionImage = ExtResource("30_7jqwd")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_e74kq"]
 script = ExtResource("13_on0yf")
 regionName = "Checkpoint Slope"
 regionImage = ExtResource("31_43gxe")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_8xt1x"]
 script = ExtResource("13_on0yf")
 regionName = "Spike Runway"
 regionImage = ExtResource("32_2oaxe")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_xw1sf"]
 script = ExtResource("13_on0yf")
 regionName = "End"
 regionImage = ExtResource("33_k57g6")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_xnm7d"]
 script = ExtResource("13_on0yf")
 regionName = "Spike Wall Top"
 regionImage = ExtResource("34_4pi7u")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_5nbar"]
 script = ExtResource("13_on0yf")
 regionName = "Castle Top"
 regionImage = ExtResource("35_o4no0")
+regionIndex = 0
 
 [resource]
 script = ExtResource("3_7caov")

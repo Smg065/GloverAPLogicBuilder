@@ -270,41 +270,49 @@ checkImage = ExtResource("5_qhbg5")
 script = ExtResource("12_jbay2")
 regionName = "Start"
 regionImage = ExtResource("13_1g160")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_njuu4"]
 script = ExtResource("12_jbay2")
 regionName = "Stairs"
 regionImage = ExtResource("14_tjog6")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_xbjs0"]
 script = ExtResource("12_jbay2")
 regionName = "Second Pit"
 regionImage = ExtResource("15_5w2vy")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_03csj"]
 script = ExtResource("12_jbay2")
 regionName = "Sandtrap"
 regionImage = ExtResource("16_rj7ie")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_xx8gg"]
 script = ExtResource("12_jbay2")
 regionName = "Pools"
 regionImage = ExtResource("17_x8ocb")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_ltq5c"]
 script = ExtResource("12_jbay2")
 regionName = "Boxes"
 regionImage = ExtResource("18_pys7o")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_arng7"]
 script = ExtResource("12_jbay2")
 regionName = "Highground"
 regionImage = ExtResource("19_6x4he")
+regionIndex = 0
 
 [sub_resource type="Resource" id="Resource_a077k"]
 script = ExtResource("12_jbay2")
 regionName = "End Stairs"
 regionImage = ExtResource("20_1lrgr")
+regionIndex = 0
 
 [resource]
 script = ExtResource("1_84go3")

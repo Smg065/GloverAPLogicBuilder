@@ -3,6 +3,7 @@ class_name RegionInfo
 
 @export var regionName : String
 @export var regionImage : Texture2D
+@export var regionIndex : int
 
 var defaultCheck : CheckInfo
 var ballCheck : CheckInfo
@@ -24,6 +25,7 @@ func to_save() -> Dictionary:
 	var regionData : Dictionary
 	regionData["D"] = defaultCheck.to_save()
 	regionData["B"] = ballCheck.to_save()
+	regionData["I"] = regionIndex
 	return regionData
 
 func to_load(regionData : Dictionary) -> void:

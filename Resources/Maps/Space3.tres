@@ -358,120 +358,140 @@ script = ExtResource("17_1gegb")
 regionName = "Spawn"
 regionImage = ExtResource("18_jccrl")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ner8n"]
 script = ExtResource("17_1gegb")
 regionName = "Throwbot"
 regionImage = ExtResource("19_evd7m")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_u67dw"]
 script = ExtResource("17_1gegb")
 regionName = "Checkpoint Ramp"
 regionImage = ExtResource("20_7io4l")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_p2mir"]
 script = ExtResource("17_1gegb")
 regionName = "Garib Bridge"
 regionImage = ExtResource("21_45dp2")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ary7e"]
 script = ExtResource("17_1gegb")
 regionName = "Lower Conveyor Start"
 regionImage = ExtResource("22_86hbp")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ie4bt"]
 script = ExtResource("17_1gegb")
 regionName = "Lower Conveyor"
 regionImage = ExtResource("23_qgmu6")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_hjetd"]
 script = ExtResource("17_1gegb")
 regionName = "Upper Conveyor"
 regionImage = ExtResource("24_6fwwp")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_r38bb"]
 script = ExtResource("17_1gegb")
 regionName = "Pinwheel Conveyor"
 regionImage = ExtResource("25_vjjv4")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_q00wq"]
 script = ExtResource("17_1gegb")
 regionName = "Pinwheel"
 regionImage = ExtResource("26_w6bgq")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_wod8m"]
 script = ExtResource("17_1gegb")
 regionName = "Teleport Entry"
 regionImage = ExtResource("27_3ouqw")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_njylv"]
 script = ExtResource("17_1gegb")
 regionName = "Teleport Exit"
 regionImage = ExtResource("28_oej8v")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_338yv"]
 script = ExtResource("17_1gegb")
 regionName = "Fan"
 regionImage = ExtResource("29_8k2d4")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_se8ee"]
 script = ExtResource("17_1gegb")
 regionName = "Magnet"
 regionImage = ExtResource("30_oytak")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_a8jls"]
 script = ExtResource("17_1gegb")
 regionName = "Post-Fan Ramp"
 regionImage = ExtResource("31_h2rob")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4ryot"]
 script = ExtResource("17_1gegb")
 regionName = "Red Vents"
 regionImage = ExtResource("31_7jgd0")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_m58r1"]
 script = ExtResource("17_1gegb")
 regionName = "L Turn"
 regionImage = ExtResource("32_ybf24")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_1aq1x"]
 script = ExtResource("17_1gegb")
 regionName = "Lights Gate"
 regionImage = ExtResource("33_5jap0")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_hwks7"]
 script = ExtResource("17_1gegb")
 regionName = "Final Walkway"
 regionImage = ExtResource("34_ir1r8")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_g5apl"]
 script = ExtResource("17_1gegb")
 regionName = "Glass"
 regionImage = ExtResource("35_es080")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_s7db7"]
 script = ExtResource("17_1gegb")
 regionName = "End"
 regionImage = ExtResource("36_gqdks")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_beger")

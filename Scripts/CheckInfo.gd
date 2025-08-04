@@ -22,7 +22,7 @@ var allMethods : Array[MethodData]
 
 func to_save() -> Array[Dictionary]:
 	var checkData : Array[Dictionary]
-	checkData.append({"IDS":ids,"AP_IDS":ap_ids})
+	checkData.append({"IDS":ids,"AP_IDS":ap_ids,"TYPE":checkType,"REGION":checkRegionIndex,"NEEDS_BALL":checkBallRequirement})
 	for eachMethod in allMethods.size():
 		checkData.append(allMethods[eachMethod].to_save())
 	return checkData

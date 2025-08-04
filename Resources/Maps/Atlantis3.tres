@@ -408,102 +408,119 @@ script = ExtResource("13_igbw3")
 regionName = "Bottom"
 regionImage = ExtResource("14_ccmj6")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_yiykr"]
 script = ExtResource("13_igbw3")
 regionName = "Walkway"
 regionImage = ExtResource("15_qlji0")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_24bt0"]
 script = ExtResource("13_igbw3")
 regionName = "Stairs"
 regionImage = ExtResource("15_gjt5o")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_raibm"]
 script = ExtResource("13_igbw3")
 regionName = "Raceway"
 regionImage = ExtResource("16_wngu6")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_wf5q7"]
 script = ExtResource("13_igbw3")
 regionName = "Jetstream"
 regionImage = ExtResource("17_3p18l")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_17r00"]
 script = ExtResource("13_igbw3")
 regionName = "Overlook"
 regionImage = ExtResource("18_yu1rl")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4pbot"]
 script = ExtResource("13_igbw3")
 regionName = "Ledge"
 regionImage = ExtResource("19_tl838")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_kdg5v"]
 script = ExtResource("13_igbw3")
 regionName = "Beside Pyramid"
 regionImage = ExtResource("21_1ib1m")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_uqbcp"]
 script = ExtResource("13_igbw3")
 regionName = "Waterwheel"
 regionImage = ExtResource("20_3edmw")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_07o1k"]
 script = ExtResource("13_igbw3")
 regionName = "Stalagmite"
 regionImage = ExtResource("21_w0dip")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_77t3h"]
 script = ExtResource("13_igbw3")
 regionName = "Waterfall"
 regionImage = ExtResource("24_m4fnm")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ahltp"]
 script = ExtResource("13_igbw3")
 regionName = "Pool"
 regionImage = ExtResource("25_3drkv")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_s64gh"]
 script = ExtResource("13_igbw3")
 regionName = "Cliffs"
 regionImage = ExtResource("26_v2g6x")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_nw7vh"]
 script = ExtResource("13_igbw3")
 regionName = "Above Cave"
 regionImage = ExtResource("27_7ebmu")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4nqeb"]
 script = ExtResource("13_igbw3")
 regionName = "Cave"
 regionImage = ExtResource("23_oitwb")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_2xp2f"]
 script = ExtResource("13_igbw3")
 regionName = "Secret"
 regionImage = ExtResource("24_n7oqv")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_2orbk"]
 script = ExtResource("13_igbw3")
 regionName = "Whale"
 regionImage = ExtResource("25_q4imp")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_i2i46")

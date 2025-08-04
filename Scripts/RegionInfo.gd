@@ -4,21 +4,24 @@ class_name RegionInfo
 @export var regionName : String
 @export var regionImage : Texture2D
 @export var regionIndex : int
+@export var defaultRegion : int
 
 var defaultCheck : CheckInfo
 var ballCheck : CheckInfo
 
 func generate_checks() -> void:
-	defaultCheck = build_check_info(regionName, regionImage)
-	ballCheck = build_check_info(regionName, regionImage, true)
+	defaultCheck = build_check_info(regionName, regionImage, defaultRegion)
+	ballCheck = build_check_info(regionName, regionImage, defaultRegion, true)
 
-static func build_check_info(newName : String, newImage : Texture2D, isBallCheck : bool = false) -> CheckInfo:
+static func build_check_info(newName : String, newImage : Texture2D, comesFromRegion : int, isBallCheck : bool = false) -> CheckInfo:
 	var newCheck : CheckInfo = CheckInfo.new()
 	newCheck.checkName = newName
 	if isBallCheck:
 		newCheck.checkName += " W/Ball"
 	newCheck.checkImage = newImage
 	newCheck.checkType = CheckInfo.CheckType.REGION
+	newCheck.checkRegionIndex = comesFromRegion
+	newCheck.checkBallRequirement = isBallCheck
 	return newCheck
 
 func to_save() -> Dictionary:

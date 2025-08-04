@@ -358,96 +358,112 @@ script = ExtResource("16_w60mi")
 regionName = "Craters"
 regionImage = ExtResource("17_463ho")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_0l2af"]
 script = ExtResource("16_w60mi")
 regionName = "Sloped Path"
 regionImage = ExtResource("18_h323r")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_elfst"]
 script = ExtResource("16_w60mi")
 regionName = "Walkway"
 regionImage = ExtResource("19_kopo5")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_5rfrm"]
 script = ExtResource("16_w60mi")
 regionName = "Ancient Aliens"
 regionImage = ExtResource("20_qmjgb")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_5x0ef"]
 script = ExtResource("16_w60mi")
 regionName = "Rocketship Hill"
 regionImage = ExtResource("21_ipiny")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_hngir"]
 script = ExtResource("16_w60mi")
 regionName = "Rocketship"
 regionImage = ExtResource("22_lrmp8")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_f1ewd"]
 script = ExtResource("16_w60mi")
 regionName = "Goo Platform"
 regionImage = ExtResource("23_55led")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_qa4e6"]
 script = ExtResource("16_w60mi")
 regionName = "Goo Ramp"
 regionImage = ExtResource("24_lqr3o")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_pmxra"]
 script = ExtResource("16_w60mi")
 regionName = "Connector Ramp"
 regionImage = ExtResource("25_4ntvn")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_o4ein"]
 script = ExtResource("16_w60mi")
 regionName = "Ramptop"
 regionImage = ExtResource("26_rnh3d")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_anyvw"]
 script = ExtResource("16_w60mi")
 regionName = "Flying Platforms"
 regionImage = ExtResource("27_80kd6")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_nx1ag"]
 script = ExtResource("16_w60mi")
 regionName = "Highest Platform"
 regionImage = ExtResource("28_1yeta")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_40h22"]
 script = ExtResource("16_w60mi")
 regionName = "Goo Stairs"
 regionImage = ExtResource("29_ioaxb")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_indw1"]
 script = ExtResource("16_w60mi")
 regionName = "UFO Top"
 regionImage = ExtResource("30_c8d1v")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_30w4k"]
 script = ExtResource("16_w60mi")
 regionName = "UFO Inside"
 regionImage = ExtResource("31_vfkpx")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_rb5jy"]
 script = ExtResource("16_w60mi")
 regionName = "End"
 regionImage = ExtResource("32_eyaim")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_0fg73")

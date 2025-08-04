@@ -60,7 +60,11 @@ static func required_to_array(methodData : Dictionary, prefix : String) -> Array
 	var outArray : Array
 	for eachKey in methodData.keys():
 		if eachKey.begins_with(prefix):
-			outArray.append(int(methodData[eachKey]))
+			var outVal = methodData[eachKey]
+			if outVal is float:
+				outArray.append(int(outVal))
+			else:
+				outArray.append(outVal)
 	return outArray
 
 static func compare_from_dictionary(methodA : Dictionary, methodB : Dictionary) -> CompareInfo:

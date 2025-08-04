@@ -359,60 +359,70 @@ script = ExtResource("14_4qav2")
 regionName = "Spawn"
 regionImage = ExtResource("15_4h0j1")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_gadk1"]
 script = ExtResource("14_4qav2")
 regionName = "Log Ramps"
 regionImage = ExtResource("16_omqw4")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_a4a4j"]
 script = ExtResource("14_4qav2")
 regionName = "Sword Runway"
 regionImage = ExtResource("17_a0pci")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_28q3x"]
 script = ExtResource("14_4qav2")
 regionName = "Midshack"
 regionImage = ExtResource("18_oy56l")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4hwll"]
 script = ExtResource("14_4qav2")
 regionName = "Crumble Path"
 regionImage = ExtResource("19_1o7mr")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_60wt4"]
 script = ExtResource("14_4qav2")
 regionName = "Tree Spiral"
 regionImage = ExtResource("20_621oh")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_3gohj"]
 script = ExtResource("14_4qav2")
 regionName = "Three Elevators"
 regionImage = ExtResource("21_oae6x")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_48qaj"]
 script = ExtResource("14_4qav2")
 regionName = "Poolside"
 regionImage = ExtResource("21_g6h4b")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_076qh"]
 script = ExtResource("14_4qav2")
 regionName = "Glover Switch Platform"
 regionImage = ExtResource("22_aq7v5")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_gp61s"]
 script = ExtResource("14_4qav2")
 regionName = "End Platforms"
 regionImage = ExtResource("23_3a7wx")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_lwfs5")

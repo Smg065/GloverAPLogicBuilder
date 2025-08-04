@@ -331,30 +331,35 @@ script = ExtResource("13_86sf1")
 regionName = "Floor"
 regionImage = ExtResource("13_bg18v")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_8m2lb"]
 script = ExtResource("13_86sf1")
 regionName = "Pillars"
 regionImage = ExtResource("14_vfcv8")
-regionIndex = 0
+regionIndex = 1
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4pq83"]
 script = ExtResource("13_86sf1")
 regionName = "Edge Platforms"
 regionImage = ExtResource("15_dbrw3")
-regionIndex = 0
+regionIndex = 2
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_t60sp"]
 script = ExtResource("13_86sf1")
 regionName = "Center Platform"
 regionImage = ExtResource("16_bg83k")
-regionIndex = 0
+regionIndex = 3
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_k23wl"]
 script = ExtResource("13_86sf1")
 regionName = "End"
 regionImage = ExtResource("17_udxuh")
-regionIndex = 0
+regionIndex = 4
+defaultRegion = 0
 
 [resource]
 script = ExtResource("1_8cy88")

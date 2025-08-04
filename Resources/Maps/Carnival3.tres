@@ -493,102 +493,119 @@ script = ExtResource("14_vh54s")
 regionName = "Spawn"
 regionImage = ExtResource("15_oiso8")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_dvvou"]
 script = ExtResource("14_vh54s")
 regionName = "Secret"
 regionImage = ExtResource("16_o28pi")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_70526"]
 script = ExtResource("14_vh54s")
 regionName = "Tents"
 regionImage = ExtResource("17_ogx8m")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_cdxka"]
 script = ExtResource("14_vh54s")
 regionName = "Garden"
 regionImage = ExtResource("18_qe7o4")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_h7hhd"]
 script = ExtResource("14_vh54s")
 regionName = "Ramps"
 regionImage = ExtResource("19_272cw")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_rmd06"]
 script = ExtResource("14_vh54s")
 regionName = "Ramp Top"
 regionImage = ExtResource("20_18ats")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_qqte1"]
 script = ExtResource("14_vh54s")
 regionName = "Ships"
 regionImage = ExtResource("21_l1s8m")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_kdi6n"]
 script = ExtResource("14_vh54s")
 regionName = "Slide Top"
 regionImage = ExtResource("22_bsbn8")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_14yrk"]
 script = ExtResource("14_vh54s")
 regionName = "Slide"
 regionImage = ExtResource("23_wxc8w")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_6hkvd"]
 script = ExtResource("14_vh54s")
 regionName = "Pool"
 regionImage = ExtResource("24_1dedn")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_1eb1w"]
 script = ExtResource("14_vh54s")
 regionName = "Monkeyball"
 regionImage = ExtResource("25_mmvcx")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_dls2q"]
 script = ExtResource("14_vh54s")
 regionName = "Funnel"
 regionImage = ExtResource("26_y64a4")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_0og7m"]
 script = ExtResource("14_vh54s")
 regionName = "Triangles"
 regionImage = ExtResource("27_4e0vt")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_rbktf"]
 script = ExtResource("14_vh54s")
 regionName = "Ring"
 regionImage = ExtResource("28_6osas")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_svxaf"]
 script = ExtResource("14_vh54s")
 regionName = "Spinning"
 regionImage = ExtResource("29_bhkrk")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_5sqdi"]
 script = ExtResource("14_vh54s")
 regionName = "Stairs"
 regionImage = ExtResource("30_c0uox")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_2dpi5"]
 script = ExtResource("14_vh54s")
 regionName = "Tumble"
 regionImage = ExtResource("31_xj3n2")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_7mffw")

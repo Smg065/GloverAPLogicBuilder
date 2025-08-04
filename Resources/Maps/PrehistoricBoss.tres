@@ -26,12 +26,14 @@ script = ExtResource("4_3sadd")
 regionName = "Main"
 regionImage = ExtResource("5_3qr4k")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_exjr2"]
 script = ExtResource("4_3sadd")
 regionName = "Swag"
 regionImage = ExtResource("6_w15xg")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_2hrxr")

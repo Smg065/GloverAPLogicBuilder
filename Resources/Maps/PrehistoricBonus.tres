@@ -147,6 +147,7 @@ script = ExtResource("6_whkq0")
 regionName = "Main"
 regionImage = ExtResource("7_p3hix")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_ra6oa")

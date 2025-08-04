@@ -25,6 +25,7 @@ script = ExtResource("4_6qqo6")
 regionName = "Main"
 regionImage = ExtResource("5_3efb5")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_i5ksl")

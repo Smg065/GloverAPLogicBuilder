@@ -269,18 +269,21 @@ script = ExtResource("6_mt2wo")
 regionName = "Bottom"
 regionImage = ExtResource("7_buqv5")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_t71fh"]
 script = ExtResource("6_mt2wo")
 regionName = "Second Barrel"
 regionImage = ExtResource("8_w8edx")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_bv5bx"]
 script = ExtResource("6_mt2wo")
 regionName = "Top"
 regionImage = ExtResource("9_bgd83")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_1ndoe")

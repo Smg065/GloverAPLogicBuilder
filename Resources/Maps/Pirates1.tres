@@ -474,114 +474,133 @@ script = ExtResource("23_5aavd")
 regionName = "Tower"
 regionImage = ExtResource("24_k2yr3")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_c8eof"]
 script = ExtResource("23_5aavd")
 regionName = "Pool"
 regionImage = ExtResource("25_mdtyv")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_d8x28"]
 script = ExtResource("23_5aavd")
 regionName = "Floating"
 regionImage = ExtResource("26_ugsts")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_nw7di"]
 script = ExtResource("23_5aavd")
 regionName = "Tower Switch Side"
 regionImage = ExtResource("27_asfwo")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_c5hib"]
 script = ExtResource("23_5aavd")
 regionName = "Tower Elevator Side"
 regionImage = ExtResource("28_gd8ou")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_n8wjr"]
 script = ExtResource("23_5aavd")
 regionName = "Sunken"
 regionImage = ExtResource("29_2u4oo")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4w4t1"]
 script = ExtResource("23_5aavd")
 regionName = "Beach"
 regionImage = ExtResource("30_cnlop")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_17e4c"]
 script = ExtResource("23_5aavd")
 regionName = "Lake"
 regionImage = ExtResource("31_5kptd")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_o2cl7"]
 script = ExtResource("23_5aavd")
 regionName = "Coast"
 regionImage = ExtResource("32_n2xsu")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_krbol"]
 script = ExtResource("23_5aavd")
 regionName = "Chest"
 regionImage = ExtResource("33_dvasc")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_gox75"]
 script = ExtResource("23_5aavd")
 regionName = "Island"
 regionImage = ExtResource("34_y2o3g")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_84jkq"]
 script = ExtResource("23_5aavd")
 regionName = "Lighthouse"
 regionImage = ExtResource("35_1ichr")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_3qhnj"]
 script = ExtResource("23_5aavd")
 regionName = "Ledge"
 regionImage = ExtResource("36_ax5if")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ree82"]
 script = ExtResource("23_5aavd")
 regionName = "Raise Ship"
 regionImage = ExtResource("37_j273i")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_vj2ey"]
 script = ExtResource("23_5aavd")
 regionName = "Air Ship"
 regionImage = ExtResource("38_4f6bp")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_vm7nv"]
 script = ExtResource("23_5aavd")
 regionName = "Walkway"
 regionImage = ExtResource("39_2o775")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_erkoq"]
 script = ExtResource("23_5aavd")
 regionName = "Crateyard"
 regionImage = ExtResource("40_go5ml")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_0cf7b"]
 script = ExtResource("23_5aavd")
 regionName = "Ramp"
 regionImage = ExtResource("41_o7x30")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_4fng2"]
 script = ExtResource("23_5aavd")
 regionName = "Goal Ship"
 regionImage = ExtResource("42_xtqo4")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_xgsba")

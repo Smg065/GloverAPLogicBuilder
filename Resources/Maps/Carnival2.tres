@@ -411,108 +411,126 @@ script = ExtResource("15_0glm7")
 regionName = "Spawn"
 regionImage = ExtResource("16_5k6x0")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_e7umd"]
 script = ExtResource("15_0glm7")
 regionName = "Tent"
 regionImage = ExtResource("17_equn3")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ytesr"]
 script = ExtResource("15_0glm7")
 regionName = "Coaster"
 regionImage = ExtResource("18_gi058")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_khr5m"]
 script = ExtResource("15_0glm7")
 regionName = "Coaster Stop"
 regionImage = ExtResource("19_6la1o")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_gxfa6"]
 script = ExtResource("15_0glm7")
 regionName = "Blades"
 regionImage = ExtResource("20_pgwuo")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_8w5if"]
 script = ExtResource("15_0glm7")
 regionName = "Halfpipe"
 regionImage = ExtResource("21_i6baq")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_072i3"]
 script = ExtResource("15_0glm7")
 regionName = "Clown"
 regionImage = ExtResource("22_4eqfm")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_ht3xh"]
 script = ExtResource("15_0glm7")
 regionName = "Post Clown"
 regionImage = ExtResource("23_5tksk")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_6gp4q"]
 script = ExtResource("15_0glm7")
 regionName = "Teacups"
 regionImage = ExtResource("24_atpro")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_37320"]
 script = ExtResource("15_0glm7")
 regionName = "Conveyor"
 regionImage = ExtResource("25_1muv8")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_myg84"]
 script = ExtResource("15_0glm7")
 regionName = "First Dropdown"
 regionImage = ExtResource("26_grsxk")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_s3c23"]
 script = ExtResource("15_0glm7")
 regionName = "Bigtop"
 regionImage = ExtResource("27_oq11c")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_6ucx5"]
 script = ExtResource("15_0glm7")
 regionName = "Ferris Wheel"
 regionImage = ExtResource("28_yy5l5")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_aquik"]
 script = ExtResource("15_0glm7")
 regionName = "Chicken"
 regionImage = ExtResource("29_yj7tj")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_8cjcb"]
 script = ExtResource("15_0glm7")
 regionName = "Second Dropdown"
 regionImage = ExtResource("30_swimo")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_3prnx"]
 script = ExtResource("15_0glm7")
 regionName = "Fan"
 regionImage = ExtResource("31_rey5f")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_r5e30"]
 script = ExtResource("15_0glm7")
 regionName = "Mug"
 regionImage = ExtResource("32_aabsn")
 regionIndex = 0
+defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_mbfe0"]
 script = ExtResource("15_0glm7")
 regionName = "Slide"
 regionImage = ExtResource("33_0eqmr")
 regionIndex = 0
+defaultRegion = 0
 
 [resource]
 script = ExtResource("3_k4dts")

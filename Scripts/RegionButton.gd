@@ -9,10 +9,11 @@ const FOCUSED_COLOR : Color = Color(1,1,1,.5)
 const UNFOCUSED_COLOR : Color = Color(.75,.75,.75,.3)
 
 func build_from(newInfo : RegionInfo, newMain : Main, hue : float):
-	main = newMain
 	regionInfo = newInfo
+	main = newMain
+	main.regionBallToggle.toggled.connect(ball_toggled)
 	#Basic setup
-	tooltip_text = regionInfo.regionName
+	ball_toggled(main.regionBallToggle.button_pressed)
 	color = Color.from_hsv(hue,1,1,1)
 	#Setup texture shape
 	texture_normal = regionInfo.regionImage
@@ -40,7 +41,8 @@ func modulate_fade(fadeTo : Color) -> void:
 	modulate = fadeTo.lerp(color, 0.5)
 
 func ball_toggled(ballOn : bool):
+	var suffix : String = " (" + str(regionInfo.regionIndex) + ")"
 	if ballOn:
-		tooltip_text = regionInfo.regionName + "W/Ball"
+		tooltip_text = regionInfo.regionName + " W/Ball" + suffix
 	else:
-		tooltip_text = regionInfo.regionName
+		tooltip_text = regionInfo.regionName + suffix

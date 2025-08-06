@@ -48,8 +48,8 @@ checkType = 3
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 9
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_b5bu7"]
 script = ExtResource("1_xvkcx")
@@ -60,8 +60,8 @@ checkType = 3
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 12
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_3ts2b"]
 script = ExtResource("1_xvkcx")
@@ -84,7 +84,7 @@ checkType = 2
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 10
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_vu20c"]
@@ -96,7 +96,7 @@ checkType = 2
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 13
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_jmsko"]
@@ -108,7 +108,7 @@ checkType = 2
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 13
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_qsnx6"]
@@ -120,7 +120,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 1
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_h08bb"]
@@ -132,7 +132,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 3
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_22338"]
@@ -144,7 +144,7 @@ checkType = 1
 totalSubchecks = 2
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 2
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_mkm7j"]
@@ -156,7 +156,7 @@ checkType = 1
 totalSubchecks = 5
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 2
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_tbcr5"]
@@ -168,7 +168,7 @@ checkType = 1
 totalSubchecks = 8
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 4
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_x8dpt"]
@@ -180,7 +180,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 5
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_f57pq"]
@@ -192,7 +192,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 5
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_o4k0y"]
@@ -204,7 +204,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 6
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_siftd"]
@@ -216,7 +216,7 @@ checkType = 1
 totalSubchecks = 2
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 7
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_dkw88"]
@@ -228,7 +228,7 @@ checkType = 1
 totalSubchecks = 2
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 7
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_3yn8d"]
@@ -240,7 +240,7 @@ checkType = 1
 totalSubchecks = 8
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 10
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_37ri1"]
@@ -252,7 +252,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 9
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_sxt35"]
@@ -264,7 +264,7 @@ checkType = 1
 totalSubchecks = 4
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 12
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_peqet"]
@@ -276,7 +276,7 @@ checkType = 1
 totalSubchecks = 8
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 12
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_3cg77"]
@@ -288,7 +288,7 @@ checkType = 1
 totalSubchecks = 12
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 13
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_eav70"]
@@ -300,7 +300,7 @@ checkType = 1
 totalSubchecks = 6
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 12
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_j8hgq"]
@@ -312,7 +312,7 @@ checkType = 1
 totalSubchecks = 2
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 14
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_10yeg"]
@@ -324,7 +324,7 @@ checkType = 1
 totalSubchecks = 2
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 14
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_bpjxn"]
@@ -336,8 +336,8 @@ checkType = 5
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 14
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_64wnq"]
 script = ExtResource("1_xvkcx")
@@ -349,7 +349,7 @@ totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
 checkRegionIndex = 0
-checkBallRequirement = false
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_yolc8"]
 script = ExtResource("2_cumx6")
@@ -367,99 +367,99 @@ defaultRegion = 0
 script = ExtResource("9_ekl7e")
 regionName = "Ball Ledge"
 regionImage = ExtResource("11_jvfvx")
-regionIndex = 0
+regionIndex = 1
 defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_hwue0"]
 script = ExtResource("9_ekl7e")
 regionName = "Post Icicles"
 regionImage = ExtResource("12_650vy")
-regionIndex = 0
+regionIndex = 2
 defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_vypvi"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Lake"
 regionImage = ExtResource("13_aew73")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 3
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_cheu0"]
 script = ExtResource("9_ekl7e")
 regionName = "Island"
 regionImage = ExtResource("14_fkjbe")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 4
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_kea5h"]
 script = ExtResource("9_ekl7e")
 regionName = "Under Ice"
 regionImage = ExtResource("15_v0x00")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 5
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_be2je"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Lakeside"
 regionImage = ExtResource("16_p7mty")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 6
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_3y40p"]
 script = ExtResource("9_ekl7e")
 regionName = "Cliff Platforms"
 regionImage = ExtResource("17_445gv")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 7
+defaultRegion = 6
 
 [sub_resource type="Resource" id="Resource_t1pyx"]
 script = ExtResource("9_ekl7e")
 regionName = "Dragonfly"
 regionImage = ExtResource("18_3je5j")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 8
+defaultRegion = 7
 
 [sub_resource type="Resource" id="Resource_bcian"]
 script = ExtResource("9_ekl7e")
 regionName = "Snow Edge"
 regionImage = ExtResource("19_x2a7i")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 9
+defaultRegion = 8
 
 [sub_resource type="Resource" id="Resource_k1bmq"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Cave"
 regionImage = ExtResource("19_rq0nl")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 10
+defaultRegion = 8
 
 [sub_resource type="Resource" id="Resource_11oqn"]
 script = ExtResource("9_ekl7e")
 regionName = "Avalanche"
 regionImage = ExtResource("20_gvk0p")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 11
+defaultRegion = 8
 
 [sub_resource type="Resource" id="Resource_yvv04"]
 script = ExtResource("9_ekl7e")
 regionName = "Ice Path"
 regionImage = ExtResource("21_iuu3c")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 12
+defaultRegion = 11
 
 [sub_resource type="Resource" id="Resource_6vqkr"]
 script = ExtResource("9_ekl7e")
 regionName = "Secret"
 regionImage = ExtResource("22_xnuqe")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 13
+defaultRegion = 12
 
 [sub_resource type="Resource" id="Resource_8jkmp"]
 script = ExtResource("9_ekl7e")
 regionName = "End"
 regionImage = ExtResource("23_n1oiw")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 14
+defaultRegion = 12
 
 [resource]
 script = ExtResource("3_ko2x7")

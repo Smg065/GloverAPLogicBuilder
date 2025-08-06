@@ -44,8 +44,8 @@ checkType = 5
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 15
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_nu3ri"]
 script = ExtResource("1_dnb08")
@@ -56,8 +56,8 @@ checkType = 3
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 9
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_ekrfa"]
 script = ExtResource("1_dnb08")
@@ -68,7 +68,7 @@ checkType = 0
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 11
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_j1s1r"]
@@ -92,7 +92,7 @@ checkType = 0
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 14
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_sald3"]
@@ -104,8 +104,8 @@ checkType = 0
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 12
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_yj86l"]
 script = ExtResource("1_dnb08")
@@ -116,8 +116,8 @@ checkType = 0
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
+checkRegionIndex = 9
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_52uhj"]
 script = ExtResource("1_dnb08")
@@ -128,7 +128,7 @@ checkType = 2
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 5
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_cvmus"]
@@ -140,7 +140,7 @@ checkType = 2
 totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 3
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_w2sqb"]
@@ -212,7 +212,7 @@ checkType = 1
 totalSubchecks = 16
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 14
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_fho5n"]
@@ -272,7 +272,7 @@ checkType = 1
 totalSubchecks = 2
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 8
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_gd0jr"]
@@ -284,7 +284,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 13
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_5hxsc"]
@@ -308,7 +308,7 @@ checkType = 1
 totalSubchecks = 4
 ids = Array[String]([])
 ap_ids = Array[String]([])
-checkRegionIndex = 0
+checkRegionIndex = 10
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_traql"]
@@ -321,7 +321,7 @@ totalSubchecks = 1
 ids = Array[String]([])
 ap_ids = Array[String]([])
 checkRegionIndex = 0
-checkBallRequirement = false
+checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_f8xrl"]
 script = ExtResource("2_w8xrx")
@@ -365,104 +365,104 @@ script = ExtResource("16_w60mi")
 regionName = "Sloped Path"
 regionImage = ExtResource("18_h323r")
 regionIndex = 0
-defaultRegion = 0
+defaultRegion = 1
 
 [sub_resource type="Resource" id="Resource_elfst"]
 script = ExtResource("16_w60mi")
 regionName = "Walkway"
 regionImage = ExtResource("19_kopo5")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 2
+defaultRegion = 1
 
 [sub_resource type="Resource" id="Resource_5rfrm"]
 script = ExtResource("16_w60mi")
 regionName = "Ancient Aliens"
 regionImage = ExtResource("20_qmjgb")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 3
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_5x0ef"]
 script = ExtResource("16_w60mi")
 regionName = "Rocketship Hill"
 regionImage = ExtResource("21_ipiny")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 4
+defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_hngir"]
 script = ExtResource("16_w60mi")
 regionName = "Rocketship"
 regionImage = ExtResource("22_lrmp8")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 5
+defaultRegion = 4
 
 [sub_resource type="Resource" id="Resource_f1ewd"]
 script = ExtResource("16_w60mi")
 regionName = "Goo Platform"
 regionImage = ExtResource("23_55led")
-regionIndex = 0
+regionIndex = 6
 defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_qa4e6"]
 script = ExtResource("16_w60mi")
 regionName = "Goo Ramp"
 regionImage = ExtResource("24_lqr3o")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 7
+defaultRegion = 6
 
 [sub_resource type="Resource" id="Resource_pmxra"]
 script = ExtResource("16_w60mi")
 regionName = "Connector Ramp"
 regionImage = ExtResource("25_4ntvn")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 8
+defaultRegion = 7
 
 [sub_resource type="Resource" id="Resource_o4ein"]
 script = ExtResource("16_w60mi")
 regionName = "Ramptop"
 regionImage = ExtResource("26_rnh3d")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 9
+defaultRegion = 8
 
 [sub_resource type="Resource" id="Resource_anyvw"]
 script = ExtResource("16_w60mi")
 regionName = "Flying Platforms"
 regionImage = ExtResource("27_80kd6")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 10
+defaultRegion = 9
 
 [sub_resource type="Resource" id="Resource_nx1ag"]
 script = ExtResource("16_w60mi")
 regionName = "Highest Platform"
 regionImage = ExtResource("28_1yeta")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 11
+defaultRegion = 10
 
 [sub_resource type="Resource" id="Resource_40h22"]
 script = ExtResource("16_w60mi")
 regionName = "Goo Stairs"
 regionImage = ExtResource("29_ioaxb")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 12
+defaultRegion = 6
 
 [sub_resource type="Resource" id="Resource_indw1"]
 script = ExtResource("16_w60mi")
 regionName = "UFO Top"
 regionImage = ExtResource("30_c8d1v")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 13
+defaultRegion = 12
 
 [sub_resource type="Resource" id="Resource_30w4k"]
 script = ExtResource("16_w60mi")
 regionName = "UFO Inside"
 regionImage = ExtResource("31_vfkpx")
-regionIndex = 0
-defaultRegion = 0
+regionIndex = 14
+defaultRegion = 13
 
 [sub_resource type="Resource" id="Resource_rb5jy"]
 script = ExtResource("16_w60mi")
 regionName = "End"
 regionImage = ExtResource("32_eyaim")
-regionIndex = 0
+regionIndex = 15
 defaultRegion = 0
 
 [resource]

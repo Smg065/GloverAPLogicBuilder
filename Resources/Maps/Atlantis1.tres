@@ -170,10 +170,10 @@ script = ExtResource("1_ytcoe")
 checkName = "Bull"
 checkSpot = Vector2(0.522, 0.563)
 checkImage = ExtResource("8_28xb4")
-checkType = 1
+checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String](["0x32"])
+ids = Array[String](["0xC7", "0x3E"])
+ap_ids = Array[String](["0x3E", "0x32"])
 checkRegionIndex = 0
 checkBallRequirement = false
 

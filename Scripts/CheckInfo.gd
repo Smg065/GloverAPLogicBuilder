@@ -1,7 +1,7 @@
 extends Resource
 class_name CheckInfo
 
-enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZONE, REGION, MISC}
+enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZONE, REGION, MISC, ENEMY}
 
 @export_category("Information")
 @export var checkName : String
@@ -22,7 +22,15 @@ var allMethods : Array[MethodData]
 
 func to_save() -> Array[Dictionary]:
 	var checkData : Array[Dictionary]
-	checkData.append({"IDS":ids,"AP_IDS":ap_ids,"TYPE":checkType,"REGION":checkRegionIndex,"NEEDS_BALL":checkBallRequirement})
+	var infoDict : Dictionary = {
+		"IDS":ids,
+		"AP_IDS":ap_ids,
+		"TYPE":checkType,
+		"REGION":checkRegionIndex,
+		"NEEDS_BALL":checkBallRequirement}
+	if checkType == CheckType.ENEMY:
+		infoDict["COUNT"] = totalSubchecks
+	checkData.append(infoDict)
 	for eachMethod in allMethods.size():
 		checkData.append(allMethods[eachMethod].to_save())
 	return checkData

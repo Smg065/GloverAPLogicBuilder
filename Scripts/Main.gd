@@ -69,6 +69,12 @@ func _process(_delta: float) -> void:
 		print_total_data()
 	if Input.is_action_just_pressed("Item Pools"):
 		export_item_pools()
+	if Input.is_action_just_pressed("Lua Table"):
+		generate_lua_table(debugLevelData)
+	if Input.is_action_just_pressed("Lua Garib Groups"):
+		generate_lua_garib_groups(debugLevelData)
+	if Input.is_action_just_pressed("Event Rules"):
+		generate_level_event_methods()
 
 func copy_mouse_info() -> void:
 	var newCoord : String = str(mouse_pos_to_map_spot())
@@ -92,6 +98,7 @@ func print_level_data(levelData : LevelData) -> void:
 	var totalRegions : int = 0
 	var totalLevelEvents : int = 0
 	var totalMisc : int = 0
+	var totalEnemies : int = 0
 	for eachCheck in levelData.levelChecks:
 		match eachCheck.checkType:
 			CheckInfo.CheckType.GARIB:
@@ -117,6 +124,17 @@ func print_level_data(levelData : LevelData) -> void:
 				totalLoadingZones += eachCheck.totalSubchecks
 			CheckInfo.CheckType.MISC:
 				totalMisc += eachCheck.totalSubchecks
+			CheckInfo.CheckType.ENEMY:
+				totalEnemies += eachCheck.totalSubchecks
+				var hasGaribs : bool = eachCheck.totalSubchecks > eachCheck.ap_ids.size()
+				hasGaribs = true
+				if hasGaribs:
+					totalGaribGroups += 1
+					totalGaribs += eachCheck.totalSubchecks
+					var groupsKey : int = eachCheck.totalSubchecks
+					if !garibGroupTypes.has(groupsKey):
+						garibGroupTypes[groupsKey] = 0
+					garibGroupTypes[groupsKey] += 1
 	for eachRegion in levelData.levelRegions:
 		totalRegions += 1
 	for eachPrereq in levelData.levelPrerequisiteChecks:
@@ -134,6 +152,7 @@ func print_level_data(levelData : LevelData) -> void:
 	print_if_not_0(totalTips, "Tips")
 	print_if_not_0(totalSwitches, "Switches")
 	print_if_not_0(totalPotions, "Potions")
+	print_if_not_0(totalEnemies, "Enemies")
 	print_if_not_0(totalLoadingZones, "Loading Zones")
 	print_if_not_0(totalRegions, "Regions")
 	print_if_not_0(totalLevelEvents, "Level Events")
@@ -180,6 +199,7 @@ func print_total_data():
 	var totalRegions : int = 0
 	var totalLevelEvents : int = 0
 	var totalMisc : int = 0
+	var totalEnemies : int = 0
 	var allWorldsAndHub : Array[WorldInfo] = allWorlds.duplicate()
 	allWorldsAndHub.append(hubworld)
 	for eachWorld in allWorldsAndHub:
@@ -209,6 +229,17 @@ func print_total_data():
 						totalLoadingZones += eachCheck.totalSubchecks
 					CheckInfo.CheckType.MISC:
 						totalMisc += eachCheck.totalSubchecks
+					CheckInfo.CheckType.ENEMY:
+						totalEnemies += eachCheck.totalSubchecks
+						var hasGaribs : bool = eachCheck.totalSubchecks > eachCheck.ap_ids.size()
+						hasGaribs = true
+						if hasGaribs:
+							totalGaribGroups += 1
+							totalGaribs += eachCheck.totalSubchecks
+							var groupsKey : int = eachCheck.totalSubchecks
+							if !garibGroupTypes.has(groupsKey):
+								garibGroupTypes[groupsKey] = 0
+							garibGroupTypes[groupsKey] += 1
 			for eachRegion in eachLevel.levelRegions:
 				totalRegions += 1
 			for eachPrereq in eachLevel.levelPrerequisiteChecks:
@@ -225,6 +256,7 @@ func print_total_data():
 	print_if_not_0(totalTips, "Tips")
 	print_if_not_0(totalSwitches, "Switches")
 	print_if_not_0(totalPotions, "Potions")
+	print_if_not_0(totalEnemies, "Enemies")
 	print_if_not_0(totalLoadingZones, "Loading Zones")
 	print_if_not_0(totalGoals, "Goals")
 	print_if_not_0(totalRegions, "Regions")
@@ -487,6 +519,8 @@ func export_item_pools():
 						checkHasItem = true
 					CheckInfo.CheckType.GARIB:
 						checkIsGarib = true
+					CheckInfo.CheckType.ENEMY:
+						checkIsGarib = true
 				if checkHasItem:
 					var checkString = worldPrefix + eachCheck.checkName + "\", \"1"
 					pythonCheckpointPrinout += pyPre + to_python_enum(checkString) + pySuffix
@@ -540,6 +574,167 @@ func export_item_pools():
 	print("garib_table = [\n" + pythonGaribPrinout + "]")
 	print("ability_table = [\n" + pythonAbilityPrinout + "]")
 	print("Filler, " + str(fillerItems - moveList.size()))
+
+func generate_lua_garib_groups(inputLevel : LevelData):
+	var garibGroups : Dictionary
+	for eachCheck in inputLevel.levelChecks:
+		match eachCheck.checkType:
+			CheckInfo.CheckType.GARIB:
+				garibGroups[eachCheck.checkName] = lua_garib_groups(eachCheck.ap_ids)
+			CheckInfo.CheckType.ENEMY:
+				if eachCheck.totalSubchecks < eachCheck.ap_ids.size():
+					var idsForUse : Array[String] = []
+					var key : String = eachCheck.checkName.trim_suffix("s") + " Garibs"
+					for eachApId in eachCheck.ap_ids.size():
+						#Ignore the enemies themselves
+						if eachApId < eachCheck.totalSubchecks:
+							continue
+						#Get the garibs the enemies have
+						idsForUse.append(eachCheck.ap_ids[eachApId])
+					garibGroups[key] = lua_garib_groups(idsForUse)
+	
+	var outputString : String = lua_level_name(inputLevel)
+	for groupKeys in garibGroups.keys():
+		var groupEntry : Dictionary = garibGroups[groupKeys]
+		outputString += "\t\t[\"" + groupKeys + "\"] = {\n"
+		outputString += "\t\t\t[\"id\"] = " + groupEntry["id"] + ",\n"
+		outputString += "\t\t\t[\"garibs\"] = " + "{\n"
+		for eachEntryGaribIndex in groupEntry["garibs"].size():
+			var suffix = "\"\n"
+			if eachEntryGaribIndex != groupEntry["garibs"].size() - 1:
+				suffix = "\",\n"
+			var apIdHex : String = groupEntry["garibs"][eachEntryGaribIndex]
+			outputString += "\t\t\t\t\"" + str(apIdHex.hex_to_int()) + suffix
+		outputString += "\t\t\t}\n"
+		outputString += "\t\t},\n"
+	outputString += "\t}"
+	print(outputString)
+	DisplayServer.clipboard_set(outputString)
+
+func lua_level_name(inputLevel : LevelData) -> String:
+	var levelName : String = inputLevel.resource_path.split("/")[inputLevel.resource_path.split("/").size() - 1]
+	levelName = levelName.trim_suffix(".tres")
+	levelName = levelName.left(-1)
+	levelName = levelName.to_upper()
+	return "\t[\"AP_" + levelName + "_L" + inputLevel.levelSuffix + "\"] = {\n"
+
+func lua_garib_groups(apIds : Array[String]) -> Dictionary:
+	var id : String = "\"" + str(apIds[0].hex_to_int() + 10000) + "\""
+	return {
+		"id":id,
+		"garibs":apIds
+	}
+	
+
+func generate_lua_table(inputLevel : LevelData):
+	var outString : String = lua_level_name(inputLevel)
+	var garibIds : Array[String]
+	var enemyGaribIds : Array[String]
+	var enemyIds : Array[String]
+	var lifeIds : Array[String]
+	var tipIds : Array[String]
+	var checkpointIds : Array[String]
+	var switchIds : Array[String]
+	for eachCheck in inputLevel.levelChecks:
+		match eachCheck.checkType:
+			#Garibs
+			CheckInfo.CheckType.GARIB:
+				for eachId in eachCheck.ap_ids:
+					garibIds.append(eachId)
+			#Enemy garibs act seperate
+			CheckInfo.CheckType.ENEMY:
+				#Only csare about enemies that have garibs
+				if eachCheck.ap_ids.size() != eachCheck.totalSubchecks * 2:
+					continue
+				for eachIdIndex in eachCheck.ap_ids.size():
+					#The first half of APIDs are always enemies
+					if eachIdIndex < eachCheck.totalSubchecks:
+						#If there's a fronthalf, it's the garibs
+						enemyIds.append(eachCheck.ap_ids[eachIdIndex])
+					else:
+						#If there's a backhalf, it's the garibs
+						enemyGaribIds.append(eachCheck.ap_ids[eachIdIndex])
+			#Lives
+			CheckInfo.CheckType.LIFE:
+				for eachId in eachCheck.ap_ids:
+					lifeIds.append(eachId)
+			#Tips
+			CheckInfo.CheckType.TIP:
+				for eachId in eachCheck.ap_ids:
+					tipIds.append(eachId)
+			#Checkpoints
+			CheckInfo.CheckType.CHECKPOINT:
+				for eachId in eachCheck.ap_ids:
+					checkpointIds.append(eachId)
+			#Switches
+			CheckInfo.CheckType.SWITCH:
+				for eachId in eachCheck.ap_ids:
+					switchIds.append(eachId)
+	
+	#Create the table
+	if garibIds.size() > 0:
+		outString += lua_table_subsection("\"GARIBS\"", garibIds)
+	if enemyGaribIds.size() > 0:
+		outString += lua_table_subsection("\"ENEMY_GARIBS\"", enemyGaribIds, enemyIds, garibIds.size())
+	if lifeIds.size() > 0:
+		outString += lua_table_subsection("\"LIFE\"", lifeIds)
+	if tipIds.size() > 0:
+		outString += lua_table_subsection("\"TIP\"", tipIds)
+	if checkpointIds.size() > 0:
+		outString += lua_table_subsection("\"CHECKPOINT\"", checkpointIds)
+	if checkpointIds.size() > 0:
+		outString += lua_table_subsection("\"SWITCH\"", switchIds)
+	if checkpointIds.size() > 0:
+		outString += lua_table_subsection("\"ENEMIES\"", enemyIds, [], 0, true)
+	outString += "\t}"
+	print(outString)
+	DisplayServer.clipboard_set(outString)
+
+func lua_table_subsection(sectionName : String, ids : Array[String], objectIds : Array[String] = [], garibOffset : int = 0, finalEntry : bool = false) -> String:
+	var outString : String = "\t\t[" + sectionName + "] = {\n"
+	ids.sort()
+	for eachIdIndex in ids.size():
+		outString += "\t\t\t[\"" + str(ids[eachIdIndex].hex_to_int())
+		outString += "\"] = {\n\t\t\t\t['id'] = " + ids[eachIdIndex]
+		var offset : int = eachIdIndex + garibOffset
+		outString += ",\n\t\t\t\t['offset'] = " + str(offset)
+		if objectIds.size() > 0:
+			outString += ",\n\t\t\t\t['object_id'] = " + objectIds[eachIdIndex]
+		outString += ",\n\t\t\t}"
+		if finalEntry && ids.size() - 1 == eachIdIndex:
+			outString += "\n"
+		else:
+			outString += ",\n"
+	outString += "\t\t}"
+	if finalEntry:
+		outString += "\n"
+	else:
+		outString += ",\n"
+	return outString
+
+func generate_level_event_methods():
+	var worldsAndHub : Array[WorldInfo]
+	worldsAndHub.append_array(allWorlds)
+	worldsAndHub.append(hubworld)
+	var rulesOutput : String = ""
+	var lookupOutput : String = ""
+	for eachWorld in worldsAndHub:
+		for eachLevel in eachWorld.levels:
+			for eachEventItem in eachLevel.levelPrerequisiteChecks:
+				var prefix : String = eachWorld.worldShorthand + eachLevel.levelSuffix
+				var itemName : String = "\"" + prefix + " " + eachEventItem.checkName + "\""
+				var ruleName : String = "rule_event_" + prefix.to_lower() + "_" + (eachEventItem.checkName).to_snake_case().replace("'", "")
+				var newRule : String = "def "
+				newRule += ruleName
+				newRule += "(self, state : CollectionState) -> bool:\n\treturn state.has("
+				newRule += itemName
+				newRule += ", self.player)\n"
+				rulesOutput += newRule
+				lookupOutput += "\t" + itemName + " : \t\t\t\t\t\t" + ruleName + ",\n"
+	var output : String = rulesOutput + "\n\n"
+	output += "event_lookup = {\n" + lookupOutput + "}"
+	print(output)
+	DisplayServer.clipboard_set(str(output))
 
 func to_python_enum(inString : String) -> String:
 	#inString = inString.to_upper().replace(' ', '_')

@@ -97,8 +97,8 @@ checkSpot = Vector2(0.286, 0.724)
 checkImage = ExtResource("6_6jhjy")
 checkType = 10
 totalSubchecks = 4
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", "", "", "", "", "", "", ""])
+ap_ids = Array[String](["", "", "", "", "", "", "", ""])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -109,8 +109,8 @@ checkSpot = Vector2(0.661, 0.727)
 checkImage = ExtResource("6_6jhjy")
 checkType = 10
 totalSubchecks = 2
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", "", "", ""])
+ap_ids = Array[String](["", "", "", ""])
 checkRegionIndex = 11
 checkBallRequirement = false
 

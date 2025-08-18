@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=95 format=3 uid="uid://rowbu2jafvgu"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=100 format=3 uid="uid://rowbu2jafvgu"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_gpte1"]
 [ext_resource type="Texture2D" uid="uid://b8ymxlibn4i4r" path="res://Images/Maps/FortressOfFear3.png" id="2_4duyp"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="7_47j5y"]
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="8_u11jm"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="9_gnvo7"]
+[ext_resource type="Texture2D" uid="uid://86ms1lp4fgnx" path="res://Images/Icons/Checks/Dynamite.png" id="10_hy6bm"]
+[ext_resource type="Texture2D" uid="uid://dp803jf1wkuy5" path="res://Images/Icons/Checks/Cannonball.png" id="11_0i1bi"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="13_on0yf"]
 [ext_resource type="Texture2D" uid="uid://o87ytr7tjqad" path="res://Images/Regions/FortressOfFear3/Spawn.png" id="14_wvygy"]
 [ext_resource type="Texture2D" uid="uid://nu7ors43hjl3" path="res://Images/Regions/FortressOfFear3/Guillotine.png" id="15_6ay6t"]
@@ -225,8 +227,8 @@ checkSpot = Vector2(0.192, 0.822)
 checkImage = ExtResource("8_u11jm")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 2
 checkBallRequirement = false
 
@@ -237,8 +239,8 @@ checkSpot = Vector2(0.318, 0.965)
 checkImage = ExtResource("8_u11jm")
 checkType = 10
 totalSubchecks = 2
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", "", "", ""])
+ap_ids = Array[String](["", "", "", ""])
 checkRegionIndex = 2
 checkBallRequirement = false
 
@@ -434,6 +436,42 @@ ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = true
 
+[sub_resource type="Resource" id="Resource_0yb37"]
+script = ExtResource("1_gpte1")
+checkName = "Samtex"
+checkSpot = Vector2(0.629, 0.122)
+checkImage = ExtResource("10_hy6bm")
+checkType = 10
+totalSubchecks = 1
+ids = Array[String]([""])
+ap_ids = Array[String]([""])
+checkRegionIndex = 15
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_ea5gq"]
+script = ExtResource("1_gpte1")
+checkName = "End Cannonballs"
+checkSpot = Vector2(0.931, 0.116)
+checkImage = ExtResource("11_0i1bi")
+checkType = 10
+totalSubchecks = 2
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
+checkRegionIndex = 19
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_s4018"]
+script = ExtResource("1_gpte1")
+checkName = "Crenels Cannonball"
+checkSpot = Vector2(0.243, 0.905)
+checkImage = ExtResource("11_0i1bi")
+checkType = 10
+totalSubchecks = 1
+ids = Array[String]([""])
+ap_ids = Array[String]([""])
+checkRegionIndex = 9
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_q3fbi"]
 script = ExtResource("2_12k5x")
 checkName = "Gate"
@@ -602,6 +640,6 @@ defaultRegion = 20
 script = ExtResource("3_7caov")
 levelSuffix = "3"
 mapImage = ExtResource("2_4duyp")
-levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_idwv6"), SubResource("Resource_p4x1n"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_ufmhl"), SubResource("Resource_ilugb"), SubResource("Resource_sbpf6"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_wgh51"), SubResource("Resource_aedc8"), SubResource("Resource_mmvw6"), SubResource("Resource_xfqg3"), SubResource("Resource_t1irn"), SubResource("Resource_vaf7j"), SubResource("Resource_gflf4"), SubResource("Resource_bcbhs"), SubResource("Resource_5e8ue"), SubResource("Resource_8pci1"), SubResource("Resource_pn5tb"), SubResource("Resource_xokl3"), SubResource("Resource_hnuja"), SubResource("Resource_t84hq"), SubResource("Resource_rpo2i"), SubResource("Resource_eln2a"), SubResource("Resource_7wtf3"), SubResource("Resource_2hdmb")])
+levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_idwv6"), SubResource("Resource_p4x1n"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_ufmhl"), SubResource("Resource_ilugb"), SubResource("Resource_sbpf6"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_wgh51"), SubResource("Resource_aedc8"), SubResource("Resource_mmvw6"), SubResource("Resource_xfqg3"), SubResource("Resource_t1irn"), SubResource("Resource_vaf7j"), SubResource("Resource_gflf4"), SubResource("Resource_bcbhs"), SubResource("Resource_5e8ue"), SubResource("Resource_8pci1"), SubResource("Resource_pn5tb"), SubResource("Resource_xokl3"), SubResource("Resource_hnuja"), SubResource("Resource_t84hq"), SubResource("Resource_rpo2i"), SubResource("Resource_eln2a"), SubResource("Resource_7wtf3"), SubResource("Resource_2hdmb"), SubResource("Resource_0yb37"), SubResource("Resource_ea5gq"), SubResource("Resource_s4018")])
 levelPrerequisiteChecks = Array[ExtResource("2_12k5x")]([SubResource("Resource_q3fbi"), SubResource("Resource_fvfsp")])
 levelRegions = Array[ExtResource("13_on0yf")]([SubResource("Resource_rx1ks"), SubResource("Resource_5ohju"), SubResource("Resource_30vis"), SubResource("Resource_6dfhc"), SubResource("Resource_gu1bg"), SubResource("Resource_v5p7b"), SubResource("Resource_ilkp6"), SubResource("Resource_f2h2f"), SubResource("Resource_arxrc"), SubResource("Resource_2xohn"), SubResource("Resource_bhlnx"), SubResource("Resource_koevu"), SubResource("Resource_ok607"), SubResource("Resource_gxg3r"), SubResource("Resource_wn1wb"), SubResource("Resource_h3f3j"), SubResource("Resource_gm0nd"), SubResource("Resource_e74kq"), SubResource("Resource_8xt1x"), SubResource("Resource_xw1sf"), SubResource("Resource_xnm7d"), SubResource("Resource_5nbar")])

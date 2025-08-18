@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=66 format=3 uid="uid://bfhqiyo5t1uoy"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=69 format=3 uid="uid://bfhqiyo5t1uoy"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_xlb5j"]
 [ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_57rhw"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="7_boylt"]
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="8_pudm5"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="9_pxe4u"]
+[ext_resource type="Texture2D" uid="uid://qugghuhcney4" path="res://Images/Icons/Checks/Chester.png" id="10_ygui2"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="14_4qav2"]
 [ext_resource type="Texture2D" uid="uid://jfnn0xxqij88" path="res://Images/Regions/Pirates2/Spawn.png" id="15_4h0j1"]
 [ext_resource type="Texture2D" uid="uid://cpgvvv6ejutih" path="res://Images/Regions/Pirates2/Log Ramps.png" id="16_omqw4"]
@@ -106,8 +107,8 @@ checkSpot = Vector2(0.56, 0.859)
 checkImage = ExtResource("6_7wd7b")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 9
 checkBallRequirement = false
 
@@ -118,8 +119,8 @@ checkSpot = Vector2(0.293, 0.625)
 checkImage = ExtResource("6_7wd7b")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -130,8 +131,8 @@ checkSpot = Vector2(0.21, 0.693)
 checkImage = ExtResource("7_boylt")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -142,8 +143,8 @@ checkSpot = Vector2(0.638, 0.757)
 checkImage = ExtResource("7_boylt")
 checkType = 10
 totalSubchecks = 2
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", "", "", ""])
+ap_ids = Array[String](["", "", "", ""])
 checkRegionIndex = 9
 checkBallRequirement = false
 
@@ -154,8 +155,8 @@ checkSpot = Vector2(0.46, 0.505)
 checkImage = ExtResource("7_boylt")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 5
 checkBallRequirement = false
 
@@ -274,8 +275,8 @@ checkSpot = Vector2(0.616, 0.378)
 checkImage = ExtResource("7_boylt")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 7
 checkBallRequirement = false
 
@@ -286,8 +287,8 @@ checkSpot = Vector2(0.625, 0.234)
 checkImage = ExtResource("7_boylt")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 7
 checkBallRequirement = false
 
@@ -338,6 +339,30 @@ ids = Array[String]([])
 ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_ver3l"]
+script = ExtResource("1_xlb5j")
+checkName = "Swordtop Chester"
+checkSpot = Vector2(0.16, 0.524)
+checkImage = ExtResource("10_ygui2")
+checkType = 10
+totalSubchecks = 1
+ids = Array[String]([""])
+ap_ids = Array[String]([""])
+checkRegionIndex = 3
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_dmt83"]
+script = ExtResource("1_xlb5j")
+checkName = "Pool Chester"
+checkSpot = Vector2(0.625, 0.554)
+checkImage = ExtResource("10_ygui2")
+checkType = 10
+totalSubchecks = 1
+ids = Array[String]([""])
+ap_ids = Array[String]([""])
+checkRegionIndex = 7
+checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_d8wna"]
 script = ExtResource("2_57rhw")
@@ -428,6 +453,6 @@ defaultRegion = 7
 script = ExtResource("3_lwfs5")
 levelSuffix = "2"
 mapImage = ExtResource("2_uqlsu")
-levelChecks = Array[ExtResource("1_xlb5j")]([SubResource("Resource_7fuaq"), SubResource("Resource_m1g4b"), SubResource("Resource_qdmsk"), SubResource("Resource_gy64c"), SubResource("Resource_a4np2"), SubResource("Resource_kw08a"), SubResource("Resource_n4pdn"), SubResource("Resource_dw08f"), SubResource("Resource_8l3gv"), SubResource("Resource_f8ggm"), SubResource("Resource_b4qwq"), SubResource("Resource_t3g57"), SubResource("Resource_bom2y"), SubResource("Resource_ug4di"), SubResource("Resource_m0js3"), SubResource("Resource_as7c8"), SubResource("Resource_kn3ct"), SubResource("Resource_f407p"), SubResource("Resource_clqui"), SubResource("Resource_48tip"), SubResource("Resource_hui0f"), SubResource("Resource_kvr8f"), SubResource("Resource_jsjrv"), SubResource("Resource_whsy5"), SubResource("Resource_6yw5o"), SubResource("Resource_omp7o")])
+levelChecks = Array[ExtResource("1_xlb5j")]([SubResource("Resource_7fuaq"), SubResource("Resource_m1g4b"), SubResource("Resource_qdmsk"), SubResource("Resource_gy64c"), SubResource("Resource_a4np2"), SubResource("Resource_kw08a"), SubResource("Resource_n4pdn"), SubResource("Resource_dw08f"), SubResource("Resource_8l3gv"), SubResource("Resource_f8ggm"), SubResource("Resource_b4qwq"), SubResource("Resource_t3g57"), SubResource("Resource_bom2y"), SubResource("Resource_ug4di"), SubResource("Resource_m0js3"), SubResource("Resource_as7c8"), SubResource("Resource_kn3ct"), SubResource("Resource_f407p"), SubResource("Resource_clqui"), SubResource("Resource_48tip"), SubResource("Resource_hui0f"), SubResource("Resource_kvr8f"), SubResource("Resource_jsjrv"), SubResource("Resource_whsy5"), SubResource("Resource_6yw5o"), SubResource("Resource_omp7o"), SubResource("Resource_ver3l"), SubResource("Resource_dmt83")])
 levelPrerequisiteChecks = Array[ExtResource("2_57rhw")]([SubResource("Resource_d8wna"), SubResource("Resource_bas8t"), SubResource("Resource_5qlns")])
 levelRegions = Array[ExtResource("14_4qav2")]([SubResource("Resource_rosnh"), SubResource("Resource_gadk1"), SubResource("Resource_a4a4j"), SubResource("Resource_28q3x"), SubResource("Resource_4hwll"), SubResource("Resource_60wt4"), SubResource("Resource_3gohj"), SubResource("Resource_48qaj"), SubResource("Resource_076qh"), SubResource("Resource_gp61s")])

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=66 format=3 uid="uid://ceset0syauv8k"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=68 format=3 uid="uid://ceset0syauv8k"]
 
 [ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_20k85"]
 [ext_resource type="Texture2D" uid="uid://cqisfcerxsqmv" path="res://Images/Maps/FortressOfFear2.png" id="2_gun0m"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="8_s2qc8"]
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="9_mh44c"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="10_dbqcw"]
+[ext_resource type="Texture2D" uid="uid://86ms1lp4fgnx" path="res://Images/Icons/Checks/Dynamite.png" id="11_q8l65"]
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="15_g01qa"]
 [ext_resource type="Texture2D" uid="uid://ir52raor0urw" path="res://Images/Regions/FortressOfFear2/Spawn.png" id="16_b7m6h"]
 [ext_resource type="Texture2D" uid="uid://chjwrckbh6yl" path="res://Images/Regions/FortressOfFear2/Above Spawn.png" id="17_4ajt1"]
@@ -119,8 +120,8 @@ checkSpot = Vector2(0.692, 0.11)
 checkImage = ExtResource("8_s2qc8")
 checkType = 10
 totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+ids = Array[String](["", ""])
+ap_ids = Array[String](["", ""])
 checkRegionIndex = 8
 checkBallRequirement = false
 
@@ -210,7 +211,7 @@ checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_bc10e"]
 script = ExtResource("1_20k85")
-checkName = "Dynamite Garibs"
+checkName = "Samtex Garibs"
 checkSpot = Vector2(0.482, 0.285)
 checkImage = ExtResource("10_dbqcw")
 checkType = 1
@@ -328,6 +329,18 @@ ap_ids = Array[String]([])
 checkRegionIndex = 0
 checkBallRequirement = true
 
+[sub_resource type="Resource" id="Resource_0a4bv"]
+script = ExtResource("1_20k85")
+checkName = "Samtex"
+checkSpot = Vector2(0.513, 0.285)
+checkImage = ExtResource("11_q8l65")
+checkType = 10
+totalSubchecks = 1
+ids = Array[String]([""])
+ap_ids = Array[String]([""])
+checkRegionIndex = 4
+checkBallRequirement = false
+
 [sub_resource type="Resource" id="Resource_dmd3e"]
 script = ExtResource("2_niv2q")
 checkName = "Garibs Fall"
@@ -373,21 +386,21 @@ defaultRegion = 2
 
 [sub_resource type="Resource" id="Resource_h5oi4"]
 script = ExtResource("15_g01qa")
-regionName = "Dynamite"
+regionName = "Samtex Floor"
 regionImage = ExtResource("20_h2t5h")
 regionIndex = 4
 defaultRegion = 3
 
 [sub_resource type="Resource" id="Resource_jm22t"]
 script = ExtResource("15_g01qa")
-regionName = "Above Dynamite"
+regionName = "Above Samtex"
 regionImage = ExtResource("21_3i5cj")
 regionIndex = 5
 defaultRegion = 4
 
 [sub_resource type="Resource" id="Resource_whrhm"]
 script = ExtResource("15_g01qa")
-regionName = "Dynamite Pillar"
+regionName = "Samtex Pillar"
 regionImage = ExtResource("22_qhpwu")
 regionIndex = 6
 defaultRegion = 4
@@ -417,6 +430,6 @@ defaultRegion = 8
 script = ExtResource("3_2bc1r")
 levelSuffix = "2"
 mapImage = ExtResource("2_gun0m")
-levelChecks = Array[ExtResource("1_20k85")]([SubResource("Resource_l0g3l"), SubResource("Resource_6wfd0"), SubResource("Resource_4k4lp"), SubResource("Resource_q4vus"), SubResource("Resource_5b3ra"), SubResource("Resource_ngmfw"), SubResource("Resource_k4c36"), SubResource("Resource_ydi8i"), SubResource("Resource_kavcs"), SubResource("Resource_6olrb"), SubResource("Resource_mh3h0"), SubResource("Resource_61h5s"), SubResource("Resource_6m7sn"), SubResource("Resource_4uhh2"), SubResource("Resource_an0j5"), SubResource("Resource_bc10e"), SubResource("Resource_o5sgo"), SubResource("Resource_jt6ip"), SubResource("Resource_a4cqy"), SubResource("Resource_ixcsm"), SubResource("Resource_askjc"), SubResource("Resource_2j6hy"), SubResource("Resource_caqtc"), SubResource("Resource_4ns7s"), SubResource("Resource_6upki")])
+levelChecks = Array[ExtResource("1_20k85")]([SubResource("Resource_l0g3l"), SubResource("Resource_6wfd0"), SubResource("Resource_4k4lp"), SubResource("Resource_q4vus"), SubResource("Resource_5b3ra"), SubResource("Resource_ngmfw"), SubResource("Resource_k4c36"), SubResource("Resource_ydi8i"), SubResource("Resource_kavcs"), SubResource("Resource_6olrb"), SubResource("Resource_mh3h0"), SubResource("Resource_61h5s"), SubResource("Resource_6m7sn"), SubResource("Resource_4uhh2"), SubResource("Resource_an0j5"), SubResource("Resource_bc10e"), SubResource("Resource_o5sgo"), SubResource("Resource_jt6ip"), SubResource("Resource_a4cqy"), SubResource("Resource_ixcsm"), SubResource("Resource_askjc"), SubResource("Resource_2j6hy"), SubResource("Resource_caqtc"), SubResource("Resource_4ns7s"), SubResource("Resource_6upki"), SubResource("Resource_0a4bv")])
 levelPrerequisiteChecks = Array[ExtResource("2_niv2q")]([SubResource("Resource_dmd3e"), SubResource("Resource_24da8"), SubResource("Resource_t3etn")])
 levelRegions = Array[ExtResource("15_g01qa")]([SubResource("Resource_ci637"), SubResource("Resource_kqn6n"), SubResource("Resource_efg54"), SubResource("Resource_nc1ct"), SubResource("Resource_h5oi4"), SubResource("Resource_jm22t"), SubResource("Resource_whrhm"), SubResource("Resource_43awo"), SubResource("Resource_eluxg"), SubResource("Resource_3yyhc")])

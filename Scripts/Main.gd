@@ -168,22 +168,74 @@ func print_level_data(levelData : LevelData) -> void:
 
 func print_check_data():
 	var allAndHub : Array[WorldInfo]
-	allAndHub.append(hubworld)
 	allAndHub.append_array(allWorlds)
-	for worldIndex in allAndHub.size():
-		var eachWorld : WorldInfo = allAndHub[worldIndex]
+	allAndHub.append(hubworld)
+	var output : String = ""
+	var apId : int = 0
+	for eachWorld in allAndHub:
 		for eachLevel in eachWorld.levels:
-			print("\n" + eachWorld.worldName + eachLevel.levelSuffix)
-			for eachPrereq in eachLevel.levelPrerequisiteChecks:
-				print(eachPrereq.checkName + ", Level Event")
-		#	for eachCheck in eachLevel.levelChecks:
-		#		if eachCheck.checkType == CheckInfo.CheckType.LOADING_ZONE:
-		#			continue
-		#		if eachCheck.totalSubchecks == 1:
-		#			print(eachCheck.checkName + ", " + CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize())
-		#		else:
-		#			for eachSubcheck in eachCheck.totalSubchecks:
-		#				print(eachCheck.checkName.trim_suffix('s') + " " + str(eachSubcheck + 1) + ", " + CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize())
+			#Get the level name
+			var levelName : String = eachWorld.worldName + " " + eachLevel.levelSuffix
+			output += "\n\n" + levelName + "\n"
+			
+			#Catagory Lookup
+			var catagoryLookup : Dictionary = {
+				"Garib" : [],
+				"Enemy" : [],
+				"Life" : [],
+				"Tip" : [],
+				"Checkpoint" : [],
+				"Switch" : [],
+				"Goal" : [],
+				"Potion" : [],
+				"Misc" : []
+			}
+			
+			var enemyGaribs : Array[String] = []
+			
+			#Put level check info in there
+			for eachCheck in eachLevel.levelChecks:
+				if eachCheck.checkType == CheckInfo.CheckType.LOADING_ZONE:
+					continue
+				var checkType : String = CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize()
+				var enemyHasGaribs : bool = eachCheck.checkType == CheckInfo.CheckType.ENEMY && eachCheck.ap_ids.size() > eachCheck.totalSubchecks
+				if eachCheck.totalSubchecks == 1:
+					catagoryLookup[checkType].append(eachCheck.checkName)
+					if enemyHasGaribs:
+						enemyGaribs.append(eachCheck.checkName + " Garib")
+				else:
+					for eachSubcheck in eachCheck.totalSubchecks:
+						var subcheckName : String = eachCheck.checkName.trim_suffix('s') + " " + str(eachSubcheck + 1)
+						catagoryLookup[checkType].append(subcheckName)
+						if enemyHasGaribs:
+							enemyGaribs.append(eachCheck.checkName.trim_suffix('s') + " Garib " + str(eachSubcheck + 1))
+			
+			#Sort catagories
+			for eachCatagory in catagoryLookup.keys():
+				catagoryLookup[eachCatagory].sort()
+			enemyGaribs.sort()
+			catagoryLookup["Garib"].append_array(enemyGaribs)
+			
+			#For each catagory
+			for eachCatagory in catagoryLookup.keys():
+				var entries : Array[String] = []
+				entries.append_array(catagoryLookup[eachCatagory])
+				output += id_table_catagory(entries, eachCatagory, apId)
+				apId += entries.size()
+	print(output)
+	DisplayServer.clipboard_set(output)
+
+func id_table_catagory(tableEntries : Array[String], tableCatagory : String, apId : int) -> String:
+	var output : String = ""
+	for luaOffset in tableEntries.size():
+		var eachEntry : String = tableEntries[luaOffset]
+		output += it_table_entry(eachEntry, tableCatagory, apId, luaOffset)
+		apId += 1
+	return output
+
+func it_table_entry(thisCheckName : String, checkType : String, checkNumber : int, luaOffset : int) -> String:
+	var hexName : String = "0x" + ("%X" % [checkNumber])
+	return thisCheckName + ", " + checkType + ",, " + hexName + ", " + str(luaOffset) + "\n"
 
 func print_total_data():
 	var totalGaribs : int = 0
@@ -486,7 +538,6 @@ func checks_to_regions_toggled(toggled_on: bool) -> void:
 	else:
 		buttonText = "Checks"
 	checkRegionToggle.text = buttonText
-
 
 func region_ball_toggled(toggledOn: bool) -> void:
 	if lastRegion != null:

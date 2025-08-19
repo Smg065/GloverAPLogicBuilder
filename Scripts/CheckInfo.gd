@@ -9,10 +9,11 @@ enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZON
 @export var checkImage : Texture2D
 @export var checkType : CheckType
 @export var totalSubchecks : int = 1
+@export var enemyGaribs : bool
 
 @export_category("Export Info")
 @export var ids : Array[String]
-@export var ap_ids : Array[String]
+@export var apIds : PackedStringArray
 
 @export_category("Defaults")
 @export var checkRegionIndex : int
@@ -24,7 +25,7 @@ func to_save() -> Array[Dictionary]:
 	var checkData : Array[Dictionary]
 	var infoDict : Dictionary = {
 		"IDS":ids,
-		"AP_IDS":ap_ids,
+		"AP_IDS":apIds,
 		"TYPE":checkType,
 		"REGION":checkRegionIndex,
 		"NEEDS_BALL":checkBallRequirement}

@@ -23,114 +23,6 @@
 [ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="17_qv3va"]
 [ext_resource type="Texture2D" uid="uid://dxu2ohlgxiosq" path="res://Images/Regions/Hub.png" id="18_i2ja7"]
 
-[sub_resource type="Resource" id="Resource_16s27"]
-script = ExtResource("1_8w5d8")
-checkName = "Well Entry"
-checkSpot = Vector2(0.539, 0.717)
-checkImage = ExtResource("2_hi2a8")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_i16oe"]
-script = ExtResource("1_8w5d8")
-checkName = "Atlantis Hub Entry"
-checkSpot = Vector2(0.5, 0.837)
-checkImage = ExtResource("3_ytidk")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_aincb"]
-script = ExtResource("1_8w5d8")
-checkName = "Carnival Hub Entry"
-checkSpot = Vector2(0.339, 0.665)
-checkImage = ExtResource("4_0lv35")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_s1du6"]
-script = ExtResource("1_8w5d8")
-checkName = "Pirates Hub Entry"
-checkSpot = Vector2(0.666, 0.671)
-checkImage = ExtResource("5_cna54")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_oorss"]
-script = ExtResource("1_8w5d8")
-checkName = "Prehistoric Hub Entry"
-checkSpot = Vector2(0.339, 0.332)
-checkImage = ExtResource("6_ce1pv")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_vvacp"]
-script = ExtResource("1_8w5d8")
-checkName = "Fear Hub Entry"
-checkSpot = Vector2(0.666, 0.328)
-checkImage = ExtResource("7_qjg4e")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_yelf4"]
-script = ExtResource("1_8w5d8")
-checkName = "OotW Hub Entry"
-checkSpot = Vector2(0.499, 0.165)
-checkImage = ExtResource("8_5pbbw")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_7cnex"]
-script = ExtResource("1_8w5d8")
-checkName = "Castle Cave Entry"
-checkSpot = Vector2(0.5, 0.606)
-checkImage = ExtResource("9_rnw6j")
-checkType = 7
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_ca4du"]
-script = ExtResource("1_8w5d8")
-checkName = "Cheat Chicken"
-checkSpot = Vector2(0.318, 0.545)
-checkImage = ExtResource("10_h0p1f")
-checkType = 9
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = false
-
 [sub_resource type="Resource" id="Resource_ajt0r"]
 script = ExtResource("1_8w5d8")
 checkName = "Spawning Tip"
@@ -138,8 +30,9 @@ checkSpot = Vector2(0.526, 0.621)
 checkImage = ExtResource("11_1ntvg")
 checkType = 6
 totalSubchecks = 1
+enemyGaribs = false
 ids = Array[String]([""])
-ap_ids = Array[String]([""])
+apIds = PackedStringArray("0x79D")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -150,8 +43,9 @@ checkSpot = Vector2(0.509, 0.686)
 checkImage = ExtResource("11_1ntvg")
 checkType = 6
 totalSubchecks = 1
+enemyGaribs = false
 ids = Array[String]([""])
-ap_ids = Array[String]([""])
+apIds = PackedStringArray("0x79E")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -162,8 +56,126 @@ checkSpot = Vector2(0.512, 0.739)
 checkImage = ExtResource("11_1ntvg")
 checkType = 6
 totalSubchecks = 1
+enemyGaribs = false
 ids = Array[String]([""])
-ap_ids = Array[String]([""])
+apIds = PackedStringArray("0x79F")
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_ca4du"]
+script = ExtResource("1_8w5d8")
+checkName = "Cheat Chicken"
+checkSpot = Vector2(0.318, 0.545)
+checkImage = ExtResource("10_h0p1f")
+checkType = 9
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x7A0")
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_i16oe"]
+script = ExtResource("1_8w5d8")
+checkName = "Atlantis Hub Entry"
+checkSpot = Vector2(0.5, 0.837)
+checkImage = ExtResource("3_ytidk")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_aincb"]
+script = ExtResource("1_8w5d8")
+checkName = "Carnival Hub Entry"
+checkSpot = Vector2(0.339, 0.665)
+checkImage = ExtResource("4_0lv35")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_7cnex"]
+script = ExtResource("1_8w5d8")
+checkName = "Castle Cave Entry"
+checkSpot = Vector2(0.5, 0.606)
+checkImage = ExtResource("9_rnw6j")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_vvacp"]
+script = ExtResource("1_8w5d8")
+checkName = "Fear Hub Entry"
+checkSpot = Vector2(0.666, 0.328)
+checkImage = ExtResource("7_qjg4e")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_yelf4"]
+script = ExtResource("1_8w5d8")
+checkName = "OotW Hub Entry"
+checkSpot = Vector2(0.499, 0.165)
+checkImage = ExtResource("8_5pbbw")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_s1du6"]
+script = ExtResource("1_8w5d8")
+checkName = "Pirates Hub Entry"
+checkSpot = Vector2(0.666, 0.671)
+checkImage = ExtResource("5_cna54")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_oorss"]
+script = ExtResource("1_8w5d8")
+checkName = "Prehistoric Hub Entry"
+checkSpot = Vector2(0.339, 0.332)
+checkImage = ExtResource("6_ce1pv")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_16s27"]
+script = ExtResource("1_8w5d8")
+checkName = "Well Entry"
+checkSpot = Vector2(0.539, 0.717)
+checkImage = ExtResource("2_hi2a8")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -208,6 +220,6 @@ defaultRegion = 0
 script = ExtResource("2_45l0a")
 levelSuffix = "Hubworld"
 mapImage = ExtResource("2_ug4x3")
-levelChecks = Array[ExtResource("1_8w5d8")]([SubResource("Resource_16s27"), SubResource("Resource_i16oe"), SubResource("Resource_aincb"), SubResource("Resource_s1du6"), SubResource("Resource_oorss"), SubResource("Resource_vvacp"), SubResource("Resource_yelf4"), SubResource("Resource_7cnex"), SubResource("Resource_ca4du"), SubResource("Resource_ajt0r"), SubResource("Resource_f5yt4"), SubResource("Resource_46yy8")])
+levelChecks = Array[ExtResource("1_8w5d8")]([SubResource("Resource_ajt0r"), SubResource("Resource_f5yt4"), SubResource("Resource_46yy8"), SubResource("Resource_ca4du"), SubResource("Resource_i16oe"), SubResource("Resource_aincb"), SubResource("Resource_7cnex"), SubResource("Resource_vvacp"), SubResource("Resource_yelf4"), SubResource("Resource_s1du6"), SubResource("Resource_oorss"), SubResource("Resource_16s27")])
 levelPrerequisiteChecks = Array[ExtResource("9_1f58l")]([SubResource("Resource_6b7as"), SubResource("Resource_aehy4"), SubResource("Resource_ww3gg"), SubResource("Resource_tsn7w"), SubResource("Resource_7vr57"), SubResource("Resource_twh80")])
 levelRegions = Array[ExtResource("17_qv3va")]([SubResource("Resource_aavk3")])

@@ -40,220 +40,56 @@
 [ext_resource type="Texture2D" uid="uid://c6m3l61v8l03t" path="res://Images/Regions/FortressOfFear3/Spike Wall Top.png" id="34_4pi7u"]
 [ext_resource type="Texture2D" uid="uid://dubkm0o1yixjy" path="res://Images/Regions/FortressOfFear3/Castle Top.png" id="35_o4no0"]
 
-[sub_resource type="Resource" id="Resource_idwv6"]
+[sub_resource type="Resource" id="Resource_8pci1"]
 script = ExtResource("1_gpte1")
-checkName = "Goal"
-checkSpot = Vector2(0.97, 0.119)
-checkImage = ExtResource("2_l6nrh")
-checkType = 5
-totalSubchecks = 1
+checkName = "Beachball Garibs"
+checkSpot = Vector2(0.218, 0.416)
+checkImage = ExtResource("9_gnvo7")
+checkType = 1
+totalSubchecks = 4
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 19
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_p4x1n"]
-script = ExtResource("1_gpte1")
-checkName = "Ball Switch"
-checkSpot = Vector2(0.362, 0.957)
-checkImage = ExtResource("3_xh025")
-checkType = 0
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 9
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_n0kdm"]
-script = ExtResource("1_gpte1")
-checkName = "Checkpoint 2"
-checkSpot = Vector2(0.342, 0.887)
-checkImage = ExtResource("4_xwu0j")
-checkType = 3
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 3
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_hcumn"]
-script = ExtResource("1_gpte1")
-checkName = "Checkpoint 3"
-checkSpot = Vector2(0.267, 0.572)
-checkImage = ExtResource("4_xwu0j")
-checkType = 3
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 4
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_b6fwi"]
-script = ExtResource("1_gpte1")
-checkName = "Checkpoint 4"
-checkSpot = Vector2(0.539, 0.93)
-checkImage = ExtResource("4_xwu0j")
-checkType = 3
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 11
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_luvvq"]
-script = ExtResource("1_gpte1")
-checkName = "Checkpoint 5"
-checkSpot = Vector2(0.708, 0.026)
-checkImage = ExtResource("4_xwu0j")
-checkType = 3
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 17
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_ufmhl"]
-script = ExtResource("1_gpte1")
-checkName = "Beachball"
-checkSpot = Vector2(0.183, 0.396)
-checkImage = ExtResource("5_bvbil")
-checkType = 4
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x5D1", "0x5D2", "0x5D3", "0x5D4")
 checkRegionIndex = 6
 checkBallRequirement = false
 
-[sub_resource type="Resource" id="Resource_ilugb"]
+[sub_resource type="Resource" id="Resource_xokl3"]
 script = ExtResource("1_gpte1")
-checkName = "Target"
-checkSpot = Vector2(0.15, 0.791)
-checkImage = ExtResource("6_0isu0")
-checkType = 0
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 7
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_sbpf6"]
-script = ExtResource("1_gpte1")
-checkName = "Metal Jaws Life"
-checkSpot = Vector2(0.562, 0.357)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 14
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_0bgtd"]
-script = ExtResource("1_gpte1")
-checkName = "Spiketrap Life"
-checkSpot = Vector2(0.256, 0.514)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 4
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_g3ie3"]
-script = ExtResource("1_gpte1")
-checkName = "Spikewall Life"
-checkSpot = Vector2(0.798, 0.042)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 18
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 18
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_l380j"]
-script = ExtResource("1_gpte1")
-checkName = "Left Buttress Life 1"
-checkSpot = Vector2(0.893, 0.042)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 21
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_r1vm2"]
-script = ExtResource("1_gpte1")
-checkName = "Left Buttress Life 2"
-checkSpot = Vector2(0.922, 0.04)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 21
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_mnyai"]
-script = ExtResource("1_gpte1")
-checkName = "Right Buttress Life 1"
-checkSpot = Vector2(0.883, 0.181)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 21
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_kbu56"]
-script = ExtResource("1_gpte1")
-checkName = "Right Buttress Life 2"
-checkSpot = Vector2(0.921, 0.186)
-checkImage = ExtResource("7_47j5y")
-checkType = 2
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 21
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_wgh51"]
-script = ExtResource("1_gpte1")
-checkName = "Electric Wind-Up"
-checkSpot = Vector2(0.192, 0.822)
-checkImage = ExtResource("8_u11jm")
-checkType = 10
-totalSubchecks = 1
-ids = Array[String](["", ""])
-ap_ids = Array[String](["", ""])
-checkRegionIndex = 2
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_aedc8"]
-script = ExtResource("1_gpte1")
-checkName = "Stone Wind-Ups"
-checkSpot = Vector2(0.318, 0.965)
-checkImage = ExtResource("8_u11jm")
-checkType = 10
-totalSubchecks = 2
-ids = Array[String](["", "", "", ""])
-ap_ids = Array[String](["", "", "", ""])
-checkRegionIndex = 2
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_mmvw6"]
-script = ExtResource("1_gpte1")
-checkName = "L Roof Garibs"
-checkSpot = Vector2(0.557, 0.126)
+checkName = "Coffin Garibs"
+checkSpot = Vector2(0.367, 0.838)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
-totalSubchecks = 6
+totalSubchecks = 4
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 15
+apIds = PackedStringArray("0x5D5", "0x5D6", "0x5D7", "0x5D8")
+checkRegionIndex = 3
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_rpo2i"]
+script = ExtResource("1_gpte1")
+checkName = "Crumbling Garibs"
+checkSpot = Vector2(0.147, 0.627)
+checkImage = ExtResource("9_gnvo7")
+checkType = 1
+totalSubchecks = 2
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x5D9", "0x5DA")
+checkRegionIndex = 1
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_t84hq"]
+script = ExtResource("1_gpte1")
+checkName = "Electric Garibs"
+checkSpot = Vector2(0.211, 0.877)
+checkImage = ExtResource("9_gnvo7")
+checkType = 1
+totalSubchecks = 8
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x5DB", "0x5DC", "0x5DD", "0x5DE", "0x5DF", "0x5E0", "0x5E1", "0x5E2")
+checkRegionIndex = 2
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_xfqg3"]
@@ -263,9 +99,49 @@ checkSpot = Vector2(0.561, 0.477)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
 totalSubchecks = 8
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x5E3", "0x5E4", "0x5E5", "0x5E6", "0x5E7", "0x5E8", "0x5E9", "0x5EA")
 checkRegionIndex = 14
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_5e8ue"]
+script = ExtResource("1_gpte1")
+checkName = "Gate Garibs"
+checkSpot = Vector2(0.168, 0.683)
+checkImage = ExtResource("9_gnvo7")
+checkType = 1
+totalSubchecks = 2
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x5EB", "0x5EC")
+checkRegionIndex = 7
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_7wtf3"]
+script = ExtResource("1_gpte1")
+checkName = "Guillotine Garibs"
+checkSpot = Vector2(0.12, 0.764)
+checkImage = ExtResource("9_gnvo7")
+checkType = 1
+totalSubchecks = 3
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x5ED", "0x5EE", "0x5EF")
+checkRegionIndex = 1
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_mmvw6"]
+script = ExtResource("1_gpte1")
+checkName = "L Roof Garibs"
+checkSpot = Vector2(0.557, 0.126)
+checkImage = ExtResource("9_gnvo7")
+checkType = 1
+totalSubchecks = 6
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x5F0", "0x5F1", "0x5F2", "0x5F3", "0x5F4", "0x5F5")
+checkRegionIndex = 15
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_t1irn"]
@@ -275,20 +151,9 @@ checkSpot = Vector2(0.544, 0.692)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
 totalSubchecks = 3
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 12
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_vaf7j"]
-script = ExtResource("1_gpte1")
-checkName = "Right U Roof Garibs"
-checkSpot = Vector2(0.583, 0.692)
-checkImage = ExtResource("9_gnvo7")
-checkType = 1
-totalSubchecks = 3
-ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x5F6", "0x5F7", "0x5F8")
 checkRegionIndex = 12
 checkBallRequirement = false
 
@@ -299,45 +164,23 @@ checkSpot = Vector2(0.568, 0.903)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
 totalSubchecks = 5
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x5F9", "0x5FA", "0x5FB", "0x5FC", "0x5FD")
 checkRegionIndex = 11
 checkBallRequirement = false
 
-[sub_resource type="Resource" id="Resource_bcbhs"]
+[sub_resource type="Resource" id="Resource_vaf7j"]
 script = ExtResource("1_gpte1")
-checkName = "Swinging Garibs"
-checkSpot = Vector2(0.173, 0.894)
+checkName = "Right U Roof Garibs"
+checkSpot = Vector2(0.583, 0.692)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
-totalSubchecks = 4
+totalSubchecks = 3
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 9
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_5e8ue"]
-script = ExtResource("1_gpte1")
-checkName = "Gate Garibs"
-checkSpot = Vector2(0.168, 0.683)
-checkImage = ExtResource("9_gnvo7")
-checkType = 1
-totalSubchecks = 2
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 7
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_8pci1"]
-script = ExtResource("1_gpte1")
-checkName = "Beachball Garibs"
-checkSpot = Vector2(0.218, 0.416)
-checkImage = ExtResource("9_gnvo7")
-checkType = 1
-totalSubchecks = 4
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 6
+apIds = PackedStringArray("0x5FE", "0x5FF", "0x600")
+checkRegionIndex = 12
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_pn5tb"]
@@ -347,21 +190,10 @@ checkSpot = Vector2(0.291, 0.687)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
 totalSubchecks = 10
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x601", "0x602", "0x603", "0x604", "0x605", "0x606", "0x607", "0x608", "0x609", "0x60A")
 checkRegionIndex = 4
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_xokl3"]
-script = ExtResource("1_gpte1")
-checkName = "Coffin Garibs"
-checkSpot = Vector2(0.367, 0.838)
-checkImage = ExtResource("9_gnvo7")
-checkType = 1
-totalSubchecks = 4
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 3
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_hnuja"]
@@ -371,33 +203,23 @@ checkSpot = Vector2(0.304, 0.896)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
 totalSubchecks = 2
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x60B", "0x60C")
 checkRegionIndex = 2
 checkBallRequirement = false
 
-[sub_resource type="Resource" id="Resource_t84hq"]
+[sub_resource type="Resource" id="Resource_bcbhs"]
 script = ExtResource("1_gpte1")
-checkName = "Electric Garibs"
-checkSpot = Vector2(0.211, 0.877)
+checkName = "Swinging Garibs"
+checkSpot = Vector2(0.173, 0.894)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
-totalSubchecks = 8
+totalSubchecks = 4
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 2
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_rpo2i"]
-script = ExtResource("1_gpte1")
-checkName = "Crumbling Garibs"
-checkSpot = Vector2(0.147, 0.627)
-checkImage = ExtResource("9_gnvo7")
-checkType = 1
-totalSubchecks = 2
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 1
+apIds = PackedStringArray("0x60D", "0x60E", "0x60F", "0x610")
+checkRegionIndex = 9
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_eln2a"]
@@ -407,57 +229,10 @@ checkSpot = Vector2(0.147, 0.695)
 checkImage = ExtResource("9_gnvo7")
 checkType = 1
 totalSubchecks = 3
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x611", "0x612", "0x613")
 checkRegionIndex = 1
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_7wtf3"]
-script = ExtResource("1_gpte1")
-checkName = "Guillotine Garibs"
-checkSpot = Vector2(0.12, 0.764)
-checkImage = ExtResource("9_gnvo7")
-checkType = 1
-totalSubchecks = 3
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 1
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_2hdmb"]
-script = ExtResource("1_gpte1")
-checkName = "Checkpoint 1"
-checkSpot = Vector2(0.04, 0.558)
-checkImage = ExtResource("4_xwu0j")
-checkType = 3
-totalSubchecks = 1
-ids = Array[String]([])
-ap_ids = Array[String]([])
-checkRegionIndex = 0
-checkBallRequirement = true
-
-[sub_resource type="Resource" id="Resource_0yb37"]
-script = ExtResource("1_gpte1")
-checkName = "Samtex"
-checkSpot = Vector2(0.629, 0.122)
-checkImage = ExtResource("10_hy6bm")
-checkType = 10
-totalSubchecks = 1
-ids = Array[String]([""])
-ap_ids = Array[String]([""])
-checkRegionIndex = 15
-checkBallRequirement = false
-
-[sub_resource type="Resource" id="Resource_ea5gq"]
-script = ExtResource("1_gpte1")
-checkName = "End Cannonballs"
-checkSpot = Vector2(0.931, 0.116)
-checkImage = ExtResource("11_0i1bi")
-checkType = 10
-totalSubchecks = 2
-ids = Array[String](["", ""])
-ap_ids = Array[String](["", ""])
-checkRegionIndex = 19
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_s4018"]
@@ -467,9 +242,270 @@ checkSpot = Vector2(0.243, 0.905)
 checkImage = ExtResource("11_0i1bi")
 checkType = 10
 totalSubchecks = 1
+enemyGaribs = false
 ids = Array[String]([""])
-ap_ids = Array[String]([""])
+apIds = PackedStringArray("0x617")
 checkRegionIndex = 9
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_wgh51"]
+script = ExtResource("1_gpte1")
+checkName = "Electric Wind-Up"
+checkSpot = Vector2(0.192, 0.822)
+checkImage = ExtResource("8_u11jm")
+checkType = 10
+totalSubchecks = 1
+enemyGaribs = true
+ids = Array[String](["", ""])
+apIds = PackedStringArray("0x618", "0x614")
+checkRegionIndex = 2
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_ea5gq"]
+script = ExtResource("1_gpte1")
+checkName = "End Cannonballs"
+checkSpot = Vector2(0.931, 0.116)
+checkImage = ExtResource("11_0i1bi")
+checkType = 10
+totalSubchecks = 2
+enemyGaribs = false
+ids = Array[String](["", ""])
+apIds = PackedStringArray("0x619", "0x61A")
+checkRegionIndex = 19
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_0yb37"]
+script = ExtResource("1_gpte1")
+checkName = "Samtex"
+checkSpot = Vector2(0.629, 0.122)
+checkImage = ExtResource("10_hy6bm")
+checkType = 10
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([""])
+apIds = PackedStringArray("0x61B")
+checkRegionIndex = 15
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_aedc8"]
+script = ExtResource("1_gpte1")
+checkName = "Stone Wind-Ups"
+checkSpot = Vector2(0.318, 0.965)
+checkImage = ExtResource("8_u11jm")
+checkType = 10
+totalSubchecks = 2
+enemyGaribs = true
+ids = Array[String](["", "", "", ""])
+apIds = PackedStringArray("0x61C", "0x61D", "0x615", "0x616")
+checkRegionIndex = 2
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_l380j"]
+script = ExtResource("1_gpte1")
+checkName = "Left Buttress Life 1"
+checkSpot = Vector2(0.893, 0.042)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x61E")
+checkRegionIndex = 21
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_r1vm2"]
+script = ExtResource("1_gpte1")
+checkName = "Left Buttress Life 2"
+checkSpot = Vector2(0.922, 0.04)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x61F")
+checkRegionIndex = 21
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_sbpf6"]
+script = ExtResource("1_gpte1")
+checkName = "Metal Jaws Life"
+checkSpot = Vector2(0.562, 0.357)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x620")
+checkRegionIndex = 14
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_mnyai"]
+script = ExtResource("1_gpte1")
+checkName = "Right Buttress Life 1"
+checkSpot = Vector2(0.883, 0.181)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x621")
+checkRegionIndex = 21
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_kbu56"]
+script = ExtResource("1_gpte1")
+checkName = "Right Buttress Life 2"
+checkSpot = Vector2(0.921, 0.186)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x622")
+checkRegionIndex = 21
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_0bgtd"]
+script = ExtResource("1_gpte1")
+checkName = "Spiketrap Life"
+checkSpot = Vector2(0.256, 0.514)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x623")
+checkRegionIndex = 4
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_g3ie3"]
+script = ExtResource("1_gpte1")
+checkName = "Spikewall Life"
+checkSpot = Vector2(0.798, 0.042)
+checkImage = ExtResource("7_47j5y")
+checkType = 2
+totalSubchecks = 18
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x624", "0x625", "0x626", "0x627", "0x628", "0x629", "0x62A", "0x62B", "0x62C", "0x62D", "0x62E", "0x62F", "0x630", "0x631", "0x632", "0x633", "0x634", "0x635")
+checkRegionIndex = 18
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_2hdmb"]
+script = ExtResource("1_gpte1")
+checkName = "Checkpoint 1"
+checkSpot = Vector2(0.04, 0.558)
+checkImage = ExtResource("4_xwu0j")
+checkType = 3
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x636")
+checkRegionIndex = 0
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_n0kdm"]
+script = ExtResource("1_gpte1")
+checkName = "Checkpoint 2"
+checkSpot = Vector2(0.342, 0.887)
+checkImage = ExtResource("4_xwu0j")
+checkType = 3
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x637")
+checkRegionIndex = 3
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_hcumn"]
+script = ExtResource("1_gpte1")
+checkName = "Checkpoint 3"
+checkSpot = Vector2(0.267, 0.572)
+checkImage = ExtResource("4_xwu0j")
+checkType = 3
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x638")
+checkRegionIndex = 4
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_b6fwi"]
+script = ExtResource("1_gpte1")
+checkName = "Checkpoint 4"
+checkSpot = Vector2(0.539, 0.93)
+checkImage = ExtResource("4_xwu0j")
+checkType = 3
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x639")
+checkRegionIndex = 11
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_luvvq"]
+script = ExtResource("1_gpte1")
+checkName = "Checkpoint 5"
+checkSpot = Vector2(0.708, 0.026)
+checkImage = ExtResource("4_xwu0j")
+checkType = 3
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x63A")
+checkRegionIndex = 17
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_p4x1n"]
+script = ExtResource("1_gpte1")
+checkName = "Ball Switch"
+checkSpot = Vector2(0.362, 0.957)
+checkImage = ExtResource("3_xh025")
+checkType = 0
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x63B")
+checkRegionIndex = 9
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_ilugb"]
+script = ExtResource("1_gpte1")
+checkName = "Target"
+checkSpot = Vector2(0.15, 0.791)
+checkImage = ExtResource("6_0isu0")
+checkType = 0
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x63C")
+checkRegionIndex = 7
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_idwv6"]
+script = ExtResource("1_gpte1")
+checkName = "Goal"
+checkSpot = Vector2(0.97, 0.119)
+checkImage = ExtResource("2_l6nrh")
+checkType = 5
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x63D")
+checkRegionIndex = 19
+checkBallRequirement = true
+
+[sub_resource type="Resource" id="Resource_ufmhl"]
+script = ExtResource("1_gpte1")
+checkName = "Beachball"
+checkSpot = Vector2(0.183, 0.396)
+checkImage = ExtResource("5_bvbil")
+checkType = 4
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x63E")
+checkRegionIndex = 6
 checkBallRequirement = false
 
 [sub_resource type="Resource" id="Resource_q3fbi"]
@@ -640,6 +676,6 @@ defaultRegion = 20
 script = ExtResource("3_7caov")
 levelSuffix = "3"
 mapImage = ExtResource("2_4duyp")
-levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_idwv6"), SubResource("Resource_p4x1n"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_ufmhl"), SubResource("Resource_ilugb"), SubResource("Resource_sbpf6"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_wgh51"), SubResource("Resource_aedc8"), SubResource("Resource_mmvw6"), SubResource("Resource_xfqg3"), SubResource("Resource_t1irn"), SubResource("Resource_vaf7j"), SubResource("Resource_gflf4"), SubResource("Resource_bcbhs"), SubResource("Resource_5e8ue"), SubResource("Resource_8pci1"), SubResource("Resource_pn5tb"), SubResource("Resource_xokl3"), SubResource("Resource_hnuja"), SubResource("Resource_t84hq"), SubResource("Resource_rpo2i"), SubResource("Resource_eln2a"), SubResource("Resource_7wtf3"), SubResource("Resource_2hdmb"), SubResource("Resource_0yb37"), SubResource("Resource_ea5gq"), SubResource("Resource_s4018")])
+levelChecks = Array[ExtResource("1_gpte1")]([SubResource("Resource_8pci1"), SubResource("Resource_xokl3"), SubResource("Resource_rpo2i"), SubResource("Resource_t84hq"), SubResource("Resource_xfqg3"), SubResource("Resource_5e8ue"), SubResource("Resource_7wtf3"), SubResource("Resource_mmvw6"), SubResource("Resource_t1irn"), SubResource("Resource_gflf4"), SubResource("Resource_vaf7j"), SubResource("Resource_pn5tb"), SubResource("Resource_hnuja"), SubResource("Resource_bcbhs"), SubResource("Resource_eln2a"), SubResource("Resource_s4018"), SubResource("Resource_wgh51"), SubResource("Resource_ea5gq"), SubResource("Resource_0yb37"), SubResource("Resource_aedc8"), SubResource("Resource_l380j"), SubResource("Resource_r1vm2"), SubResource("Resource_sbpf6"), SubResource("Resource_mnyai"), SubResource("Resource_kbu56"), SubResource("Resource_0bgtd"), SubResource("Resource_g3ie3"), SubResource("Resource_2hdmb"), SubResource("Resource_n0kdm"), SubResource("Resource_hcumn"), SubResource("Resource_b6fwi"), SubResource("Resource_luvvq"), SubResource("Resource_p4x1n"), SubResource("Resource_ilugb"), SubResource("Resource_idwv6"), SubResource("Resource_ufmhl")])
 levelPrerequisiteChecks = Array[ExtResource("2_12k5x")]([SubResource("Resource_q3fbi"), SubResource("Resource_fvfsp")])
 levelRegions = Array[ExtResource("13_on0yf")]([SubResource("Resource_rx1ks"), SubResource("Resource_5ohju"), SubResource("Resource_30vis"), SubResource("Resource_6dfhc"), SubResource("Resource_gu1bg"), SubResource("Resource_v5p7b"), SubResource("Resource_ilkp6"), SubResource("Resource_f2h2f"), SubResource("Resource_arxrc"), SubResource("Resource_2xohn"), SubResource("Resource_bhlnx"), SubResource("Resource_koevu"), SubResource("Resource_ok607"), SubResource("Resource_gxg3r"), SubResource("Resource_wn1wb"), SubResource("Resource_h3f3j"), SubResource("Resource_gm0nd"), SubResource("Resource_e74kq"), SubResource("Resource_8xt1x"), SubResource("Resource_xw1sf"), SubResource("Resource_xnm7d"), SubResource("Resource_5nbar")])

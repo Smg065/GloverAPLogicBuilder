@@ -16,8 +16,9 @@ checkSpot = Vector2(0.752, 0.317)
 checkImage = ExtResource("2_uklro")
 checkType = 5
 totalSubchecks = 1
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x4F0")
 checkRegionIndex = 0
 checkBallRequirement = true
 

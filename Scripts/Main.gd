@@ -126,7 +126,7 @@ func print_level_data(levelData : LevelData) -> void:
 				totalMisc += eachCheck.totalSubchecks
 			CheckInfo.CheckType.ENEMY:
 				totalEnemies += eachCheck.totalSubchecks
-				var hasGaribs : bool = eachCheck.totalSubchecks > eachCheck.ap_ids.size()
+				var hasGaribs : bool = eachCheck.totalSubchecks > eachCheck.apIds.size()
 				hasGaribs = true
 				if hasGaribs:
 					totalGaribGroups += 1
@@ -171,7 +171,6 @@ func print_check_data():
 	allAndHub.append_array(allWorlds)
 	allAndHub.append(hubworld)
 	var output : String = ""
-	var apId : int = 0
 	for eachWorld in allAndHub:
 		for eachLevel in eachWorld.levels:
 			#Get the level name
@@ -190,6 +189,7 @@ func print_check_data():
 				"Potion" : [],
 				"Misc" : []
 			}
+			var apIds  : Dictionary = {}
 			
 			var enemyGaribs : Array[String] = []
 			
@@ -198,17 +198,22 @@ func print_check_data():
 				if eachCheck.checkType == CheckInfo.CheckType.LOADING_ZONE:
 					continue
 				var checkType : String = CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize()
-				var enemyHasGaribs : bool = eachCheck.checkType == CheckInfo.CheckType.ENEMY && eachCheck.ap_ids.size() > eachCheck.totalSubchecks
+				var enemyHasGaribs : bool = eachCheck.enemyGaribs
 				if eachCheck.totalSubchecks == 1:
 					catagoryLookup[checkType].append(eachCheck.checkName)
+					apIds[eachCheck.checkName] = eachCheck.apIds[0]
 					if enemyHasGaribs:
 						enemyGaribs.append(eachCheck.checkName + " Garib")
+						apIds[eachCheck.checkName + " Garib"] = eachCheck.apIds[1]
 				else:
 					for eachSubcheck in eachCheck.totalSubchecks:
 						var subcheckName : String = eachCheck.checkName.trim_suffix('s') + " " + str(eachSubcheck + 1)
 						catagoryLookup[checkType].append(subcheckName)
+						apIds[subcheckName] = eachCheck.apIds[eachSubcheck]
 						if enemyHasGaribs:
-							enemyGaribs.append(eachCheck.checkName.trim_suffix('s') + " Garib " + str(eachSubcheck + 1))
+							var enemyGaribSubcheckName : String = eachCheck.checkName.trim_suffix('s') + " Garib " + str(eachSubcheck + 1)
+							enemyGaribs.append(enemyGaribSubcheckName)
+							apIds[enemyGaribSubcheckName] = eachCheck.apIds[eachSubcheck + eachCheck.totalSubchecks]
 			
 			#Sort catagories
 			for eachCatagory in catagoryLookup.keys():
@@ -220,22 +225,19 @@ func print_check_data():
 			for eachCatagory in catagoryLookup.keys():
 				var entries : Array[String] = []
 				entries.append_array(catagoryLookup[eachCatagory])
-				output += id_table_catagory(entries, eachCatagory, apId)
-				apId += entries.size()
-	print(output)
+				output += id_table_catagory(entries, eachCatagory, apIds)
 	DisplayServer.clipboard_set(output)
 
-func id_table_catagory(tableEntries : Array[String], tableCatagory : String, apId : int) -> String:
+func id_table_catagory(tableEntries : Array[String], tableCatagory : String, apIds : Dictionary) -> String:
 	var output : String = ""
 	for luaOffset in tableEntries.size():
 		var eachEntry : String = tableEntries[luaOffset]
-		output += it_table_entry(eachEntry, tableCatagory, apId, luaOffset)
-		apId += 1
+		var eachApId : String = apIds[eachEntry]
+		output += id_table_entry(eachEntry, tableCatagory, eachApId, luaOffset)
 	return output
 
-func it_table_entry(thisCheckName : String, checkType : String, checkNumber : int, luaOffset : int) -> String:
-	var hexName : String = "0x" + ("%X" % [checkNumber])
-	return thisCheckName + ", " + checkType + ",, " + hexName + ", " + str(luaOffset) + "\n"
+func id_table_entry(thisCheckName : String, checkType : String, apId : String, luaOffset : int) -> String:
+	return thisCheckName + ", " + checkType + ",, " + apId + ", " + str(luaOffset) + "\n"
 
 func print_total_data():
 	var totalGaribs : int = 0
@@ -283,9 +285,7 @@ func print_total_data():
 						totalMisc += eachCheck.totalSubchecks
 					CheckInfo.CheckType.ENEMY:
 						totalEnemies += eachCheck.totalSubchecks
-						var hasGaribs : bool = eachCheck.totalSubchecks > eachCheck.ap_ids.size()
-						hasGaribs = true
-						if hasGaribs:
+						if eachCheck.enemyGaribs:
 							totalGaribGroups += 1
 							totalGaribs += eachCheck.totalSubchecks
 							var groupsKey : int = eachCheck.totalSubchecks
@@ -631,17 +631,17 @@ func generate_lua_garib_groups(inputLevel : LevelData):
 	for eachCheck in inputLevel.levelChecks:
 		match eachCheck.checkType:
 			CheckInfo.CheckType.GARIB:
-				garibGroups[eachCheck.checkName] = lua_garib_groups(eachCheck.ap_ids)
+				garibGroups[eachCheck.checkName] = lua_garib_groups(eachCheck.apIds)
 			CheckInfo.CheckType.ENEMY:
-				if eachCheck.totalSubchecks < eachCheck.ap_ids.size():
+				if eachCheck.totalSubchecks < eachCheck.apIds.size():
 					var idsForUse : Array[String] = []
 					var key : String = eachCheck.checkName.trim_suffix("s") + " Garibs"
-					for eachApId in eachCheck.ap_ids.size():
+					for eachApId in eachCheck.apIds.size():
 						#Ignore the enemies themselves
 						if eachApId < eachCheck.totalSubchecks:
 							continue
 						#Get the garibs the enemies have
-						idsForUse.append(eachCheck.ap_ids[eachApId])
+						idsForUse.append(eachCheck.apIds[eachApId])
 					garibGroups[key] = lua_garib_groups(idsForUse)
 	
 	var outputString : String = lua_level_name(inputLevel)
@@ -669,7 +669,7 @@ func lua_level_name(inputLevel : LevelData) -> String:
 	levelName = levelName.to_upper()
 	return "\t[\"AP_" + levelName + "_L" + inputLevel.levelSuffix + "\"] = {\n"
 
-func lua_garib_groups(apIds : Array[String]) -> Dictionary:
+func lua_garib_groups(apIds : PackedStringArray) -> Dictionary:
 	var id : String = "\"" + str(apIds[0].hex_to_int() + 10000) + "\""
 	return {
 		"id":id,
@@ -679,69 +679,75 @@ func lua_garib_groups(apIds : Array[String]) -> Dictionary:
 
 func generate_lua_table(inputLevel : LevelData):
 	var outString : String = lua_level_name(inputLevel)
-	var garibIds : Array[String]
-	var enemyGaribIds : Array[String]
-	var enemyIds : Array[String]
-	var lifeIds : Array[String]
-	var tipIds : Array[String]
-	var checkpointIds : Array[String]
-	var switchIds : Array[String]
+	var outputDict : Dictionary = {
+		"GARIBS" : PackedStringArray(),
+		"ENEMY_GARIBS" : PackedStringArray(),
+		"ENEMIES" : PackedStringArray(),
+		"LIFE" : PackedStringArray(),
+		"TIP" : PackedStringArray(),
+		"CHECKPOINT" : PackedStringArray(),
+		"SWITCH" : PackedStringArray(),
+		"POTIONS" : PackedStringArray()
+	}
 	for eachCheck in inputLevel.levelChecks:
 		match eachCheck.checkType:
 			#Garibs
 			CheckInfo.CheckType.GARIB:
-				for eachId in eachCheck.ap_ids:
-					garibIds.append(eachId)
+				for eachId in eachCheck.apIds:
+					outputDict["GARIBS"].append(eachId)
 			#Enemy garibs act seperate
 			CheckInfo.CheckType.ENEMY:
-				#Only csare about enemies that have garibs
-				if eachCheck.ap_ids.size() != eachCheck.totalSubchecks * 2:
-					continue
-				for eachIdIndex in eachCheck.ap_ids.size():
+				for eachIdIndex in eachCheck.apIds.size():
 					#The first half of APIDs are always enemies
 					if eachIdIndex < eachCheck.totalSubchecks:
 						#If there's a fronthalf, it's the garibs
-						enemyIds.append(eachCheck.ap_ids[eachIdIndex])
+						outputDict["ENEMIES"].append(eachCheck.apIds[eachIdIndex])
 					else:
 						#If there's a backhalf, it's the garibs
-						enemyGaribIds.append(eachCheck.ap_ids[eachIdIndex])
+						outputDict["ENEMY_GARIBS"].append(eachCheck.apIds[eachIdIndex])
 			#Lives
 			CheckInfo.CheckType.LIFE:
-				for eachId in eachCheck.ap_ids:
-					lifeIds.append(eachId)
+				for eachId in eachCheck.apIds:
+					outputDict["LIFE"].append(eachId)
 			#Tips
 			CheckInfo.CheckType.TIP:
-				for eachId in eachCheck.ap_ids:
-					tipIds.append(eachId)
+				for eachId in eachCheck.apIds:
+					outputDict["TIP"].append(eachId)
 			#Checkpoints
 			CheckInfo.CheckType.CHECKPOINT:
-				for eachId in eachCheck.ap_ids:
-					checkpointIds.append(eachId)
+				for eachId in eachCheck.apIds:
+					outputDict["CHECKPOINT"].append(eachId)
 			#Switches
 			CheckInfo.CheckType.SWITCH:
-				for eachId in eachCheck.ap_ids:
-					switchIds.append(eachId)
+				for eachId in eachCheck.apIds:
+					outputDict["SWITCH"].append(eachId)
+			#Potions
+			CheckInfo.CheckType.POTION:
+				for eachId in eachCheck.apIds:
+					outputDict["POTIONS"].append(eachId)
+	
+	#Sort them
+	for eachKey in outputDict.keys():
+		var sorted : Array[String]
+		sorted.assign(outputDict[eachKey])
+		sorted.sort_custom(func(a, b): return a.hex_to_int() < b.hex_to_int())
+		outputDict[eachKey] = PackedStringArray(sorted)
 	
 	#Create the table
-	if garibIds.size() > 0:
-		outString += lua_table_subsection("\"GARIBS\"", garibIds)
-	if enemyGaribIds.size() > 0:
-		outString += lua_table_subsection("\"ENEMY_GARIBS\"", enemyGaribIds, enemyIds, garibIds.size())
-	if lifeIds.size() > 0:
-		outString += lua_table_subsection("\"LIFE\"", lifeIds)
-	if tipIds.size() > 0:
-		outString += lua_table_subsection("\"TIP\"", tipIds)
-	if checkpointIds.size() > 0:
-		outString += lua_table_subsection("\"CHECKPOINT\"", checkpointIds)
-	if checkpointIds.size() > 0:
-		outString += lua_table_subsection("\"SWITCH\"", switchIds)
-	if checkpointIds.size() > 0:
-		outString += lua_table_subsection("\"ENEMIES\"", enemyIds, [], 0, true)
+	for eachKey in outputDict.keys():
+		var idsForUse : PackedStringArray = outputDict[eachKey]
+		if idsForUse.size() == 0:
+			continue
+		if eachKey != "ENEMY_GARIBS":
+			outString += lua_table_subsection("\"" + eachKey + "\"", idsForUse)
+		else:
+			outString += lua_table_subsection("\"" + eachKey + "\"", idsForUse, outputDict["GARIBS"], outputDict["GARIBS"].size())
+	
 	outString += "\t}"
 	print(outString)
 	DisplayServer.clipboard_set(outString)
 
-func lua_table_subsection(sectionName : String, ids : Array[String], objectIds : Array[String] = [], garibOffset : int = 0, finalEntry : bool = false) -> String:
+func lua_table_subsection(sectionName : String, ids : PackedStringArray, objectIds : PackedStringArray = PackedStringArray(), garibOffset : int = 0, finalEntry : bool = false) -> String:
 	var outString : String = "\t\t[" + sectionName + "] = {\n"
 	ids.sort()
 	for eachIdIndex in ids.size():

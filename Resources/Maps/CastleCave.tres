@@ -16,8 +16,9 @@ checkSpot = Vector2(0.645, 0.495)
 checkImage = ExtResource("2_mwcbr")
 checkType = 9
 totalSubchecks = 7
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray("0x7A1", "0x7A2", "0x7A3", "0x7A4", "0x7A5", "0x7A6", "0x7A7")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -28,8 +29,9 @@ checkSpot = Vector2(0.369, 0.499)
 checkImage = ExtResource("3_504uq")
 checkType = 7
 totalSubchecks = 1
+enemyGaribs = false
 ids = Array[String]([])
-ap_ids = Array[String]([])
+apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
 

@@ -17,7 +17,7 @@ checkType = 5
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x75A")
+apIds = PackedStringArray("0x754")
 checkRegionIndex = 0
 checkBallRequirement = true
 

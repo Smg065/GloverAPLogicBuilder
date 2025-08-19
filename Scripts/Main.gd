@@ -689,6 +689,7 @@ func generate_lua_table(inputLevel : LevelData):
 		"SWITCH" : PackedStringArray(),
 		"POTIONS" : PackedStringArray()
 	}
+	var enemyGaribOrigin : Dictionary = {}
 	for eachCheck in inputLevel.levelChecks:
 		match eachCheck.checkType:
 			#Garibs
@@ -700,11 +701,12 @@ func generate_lua_table(inputLevel : LevelData):
 				for eachIdIndex in eachCheck.apIds.size():
 					#The first half of APIDs are always enemies
 					if eachIdIndex < eachCheck.totalSubchecks:
-						#If there's a fronthalf, it's the garibs
+						#If there's a fronthalf, it's the enemies themselves
 						outputDict["ENEMIES"].append(eachCheck.apIds[eachIdIndex])
 					else:
 						#If there's a backhalf, it's the garibs
 						outputDict["ENEMY_GARIBS"].append(eachCheck.apIds[eachIdIndex])
+						enemyGaribOrigin[eachCheck.apIds[eachIdIndex]] = eachCheck.ids[eachIdIndex - eachCheck.totalSubchecks]
 			#Lives
 			CheckInfo.CheckType.LIFE:
 				for eachId in eachCheck.apIds:
@@ -741,13 +743,13 @@ func generate_lua_table(inputLevel : LevelData):
 		if eachKey != "ENEMY_GARIBS":
 			outString += lua_table_subsection("\"" + eachKey + "\"", idsForUse)
 		else:
-			outString += lua_table_subsection("\"" + eachKey + "\"", idsForUse, outputDict["GARIBS"], outputDict["GARIBS"].size())
+			outString += lua_table_subsection("\"" + eachKey + "\"", idsForUse, enemyGaribOrigin, outputDict["GARIBS"].size())
 	
 	outString += "\t}"
 	print(outString)
 	DisplayServer.clipboard_set(outString)
 
-func lua_table_subsection(sectionName : String, ids : PackedStringArray, objectIds : PackedStringArray = PackedStringArray(), garibOffset : int = 0, finalEntry : bool = false) -> String:
+func lua_table_subsection(sectionName : String, ids : PackedStringArray, objectIds : Dictionary = {}, garibOffset : int = 0, finalEntry : bool = false) -> String:
 	var outString : String = "\t\t[" + sectionName + "] = {\n"
 	ids.sort()
 	for eachIdIndex in ids.size():
@@ -756,7 +758,7 @@ func lua_table_subsection(sectionName : String, ids : PackedStringArray, objectI
 		var offset : int = eachIdIndex + garibOffset
 		outString += ",\n\t\t\t\t['offset'] = " + str(offset)
 		if objectIds.size() > 0:
-			outString += ",\n\t\t\t\t['object_id'] = " + objectIds[eachIdIndex]
+			outString += ",\n\t\t\t\t['object_id'] = " + objectIds[ids[eachIdIndex]]
 		outString += ",\n\t\t\t}"
 		if finalEntry && ids.size() - 1 == eachIdIndex:
 			outString += "\n"

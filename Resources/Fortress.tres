@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WorldInfo" load_steps=9 format=3 uid="uid://liuolenqmla2"]
 
 [ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_wsjji"]
-[ext_resource type="Resource" uid="uid://3qcnnkw7of0k" path="res://Resources/Maps/Hub.tres" id="2_aamwy"]
+[ext_resource type="Resource" uid="uid://dd1207junonav" path="res://Resources/Maps/FortressH.tres" id="2_32sku"]
 [ext_resource type="Resource" uid="uid://bytk75t3wslom" path="res://Resources/Maps/Fortress1.tres" id="3_qcc1e"]
 [ext_resource type="Resource" uid="uid://ceset0syauv8k" path="res://Resources/Maps/Fortress2.tres" id="4_1exis"]
 [ext_resource type="Resource" uid="uid://rowbu2jafvgu" path="res://Resources/Maps/Fortress3.tres" id="5_tbrgi"]
@@ -13,4 +13,4 @@
 script = ExtResource("8_gminn")
 worldName = "Fortress"
 worldShorthand = "FoF"
-levels = Array[ExtResource("1_wsjji")]([ExtResource("2_aamwy"), ExtResource("3_qcc1e"), ExtResource("4_1exis"), ExtResource("5_tbrgi"), ExtResource("6_q2b7g"), ExtResource("7_wt0sp")])
+levels = Array[ExtResource("1_wsjji")]([ExtResource("2_32sku"), ExtResource("3_qcc1e"), ExtResource("4_1exis"), ExtResource("5_tbrgi"), ExtResource("6_q2b7g"), ExtResource("7_wt0sp")])

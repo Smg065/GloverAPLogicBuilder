@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WorldInfo" load_steps=9 format=3 uid="uid://ci5yfojtvtvii"]
 
 [ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_hsqqh"]
-[ext_resource type="Resource" uid="uid://3qcnnkw7of0k" path="res://Resources/Maps/Hub.tres" id="2_oa1yu"]
+[ext_resource type="Resource" uid="uid://dq64qa075j1xn" path="res://Resources/Maps/PrehistoricH.tres" id="2_ixuk6"]
 [ext_resource type="Resource" uid="uid://daijp0evssotv" path="res://Resources/Maps/Prehistoric1.tres" id="3_6gc45"]
 [ext_resource type="Resource" uid="uid://cc37t7e7tmap6" path="res://Resources/Maps/Prehistoric2.tres" id="4_xjb5e"]
 [ext_resource type="Resource" uid="uid://b2tbh2fjfj0ly" path="res://Resources/Maps/Prehistoric3.tres" id="5_8i53i"]
@@ -13,4 +13,4 @@
 script = ExtResource("8_hp106")
 worldName = "Prehistoric"
 worldShorthand = "Pht"
-levels = Array[ExtResource("1_hsqqh")]([ExtResource("2_oa1yu"), ExtResource("3_6gc45"), ExtResource("4_xjb5e"), ExtResource("5_8i53i"), ExtResource("6_urc3i"), ExtResource("7_mno41")])
+levels = Array[ExtResource("1_hsqqh")]([ExtResource("2_ixuk6"), ExtResource("3_6gc45"), ExtResource("4_xjb5e"), ExtResource("5_8i53i"), ExtResource("6_urc3i"), ExtResource("7_mno41")])

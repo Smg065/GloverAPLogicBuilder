@@ -1,0 +1,167 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=32 format=3 uid="uid://b7vun33i6gpat"]
+
+[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_oescd"]
+[ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="2_hqnma"]
+[ext_resource type="Texture2D" uid="uid://drs13wbyxcupq" path="res://Images/Icons/Checks/Hub1.png" id="3_7vc70"]
+[ext_resource type="Texture2D" uid="uid://dd1jn4n356nxi" path="res://Images/Icons/Checks/Hub2.png" id="4_jcy4k"]
+[ext_resource type="Texture2D" uid="uid://igcdw6bvd78o" path="res://Images/Icons/Checks/Hub3.png" id="5_6r2pk"]
+[ext_resource type="Texture2D" uid="uid://ckq685mqaxf6s" path="res://Images/Icons/Checks/HubBonus.png" id="6_4o6bw"]
+[ext_resource type="Texture2D" uid="uid://ch1p45y0u1wk4" path="res://Images/Icons/Checks/HubBoss.png" id="7_r8hv3"]
+[ext_resource type="Texture2D" uid="uid://ke2a5a3nr7tc" path="res://Images/Icons/Checks/HubExit.png" id="8_hfpvs"]
+[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="9_56rme"]
+[ext_resource type="Texture2D" uid="uid://c4p2ph6b886ep" path="res://Images/Icons/Checks/AllGaribs.png" id="10_dxu8a"]
+[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="11_xflqi"]
+[ext_resource type="Texture2D" uid="uid://lrysg2arwrrk" path="res://Images/Regions/Wayrooms.png" id="12_mctn0"]
+[ext_resource type="Texture2D" uid="uid://dj7t1ib06k8ox" path="res://Images/Maps/Wayrooms.png" id="13_ge6kw"]
+[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="14_tbk2f"]
+
+[sub_resource type="Resource" id="Resource_b4v65"]
+script = ExtResource("1_oescd")
+checkName = "Tip"
+checkSpot = Vector2(0.665, 0.45)
+checkImage = ExtResource("2_hqnma")
+checkType = 6
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray("0x674")
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_2nw00"]
+script = ExtResource("1_oescd")
+checkName = "Entry 1"
+checkSpot = Vector2(0.325, 0.365)
+checkImage = ExtResource("3_7vc70")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_dt37r"]
+script = ExtResource("1_oescd")
+checkName = "Entry 2"
+checkSpot = Vector2(0.395, 0.23)
+checkImage = ExtResource("4_jcy4k")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_g4rv0"]
+script = ExtResource("1_oescd")
+checkName = "Entry 3"
+checkSpot = Vector2(0.5, 0.2)
+checkImage = ExtResource("5_6r2pk")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_n6vat"]
+script = ExtResource("1_oescd")
+checkName = "Entry Bonus"
+checkSpot = Vector2(0.675, 0.365)
+checkImage = ExtResource("6_4o6bw")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_r2lgg"]
+script = ExtResource("1_oescd")
+checkName = "Entry Boss"
+checkSpot = Vector2(0.605, 0.23)
+checkImage = ExtResource("7_r8hv3")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_1pwqk"]
+script = ExtResource("1_oescd")
+checkName = "Exit"
+checkSpot = Vector2(0.499, 0.826)
+checkImage = ExtResource("8_hfpvs")
+checkType = 7
+totalSubchecks = 1
+enemyGaribs = false
+ids = Array[String]([])
+apIds = PackedStringArray()
+checkRegionIndex = 0
+checkBallRequirement = false
+
+[sub_resource type="Resource" id="Resource_0e8rx"]
+script = ExtResource("9_56rme")
+checkName = "1 Star"
+checkImage = ExtResource("10_dxu8a")
+
+[sub_resource type="Resource" id="Resource_sw5fx"]
+script = ExtResource("9_56rme")
+checkName = "2 Gate"
+checkImage = ExtResource("4_jcy4k")
+
+[sub_resource type="Resource" id="Resource_wru5p"]
+script = ExtResource("9_56rme")
+checkName = "2 Star"
+checkImage = ExtResource("10_dxu8a")
+
+[sub_resource type="Resource" id="Resource_8yml5"]
+script = ExtResource("9_56rme")
+checkName = "3 Gate"
+checkImage = ExtResource("5_6r2pk")
+
+[sub_resource type="Resource" id="Resource_quoxl"]
+script = ExtResource("9_56rme")
+checkName = "3 Star"
+checkImage = ExtResource("10_dxu8a")
+
+[sub_resource type="Resource" id="Resource_8ydlw"]
+script = ExtResource("9_56rme")
+checkName = "Boss Gate"
+checkImage = ExtResource("7_r8hv3")
+
+[sub_resource type="Resource" id="Resource_f1ane"]
+script = ExtResource("9_56rme")
+checkName = "Boss Star"
+checkImage = ExtResource("10_dxu8a")
+
+[sub_resource type="Resource" id="Resource_qhsbt"]
+script = ExtResource("9_56rme")
+checkName = "Bonus Gate"
+checkImage = ExtResource("6_4o6bw")
+
+[sub_resource type="Resource" id="Resource_bgqn6"]
+script = ExtResource("9_56rme")
+checkName = "Bonus Star"
+checkImage = ExtResource("10_dxu8a")
+
+[sub_resource type="Resource" id="Resource_vdyah"]
+script = ExtResource("11_xflqi")
+regionName = "Main"
+regionImage = ExtResource("12_mctn0")
+regionIndex = 0
+defaultRegion = 0
+
+[resource]
+script = ExtResource("14_tbk2f")
+levelSuffix = "H"
+mapImage = ExtResource("13_ge6kw")
+levelChecks = Array[ExtResource("1_oescd")]([SubResource("Resource_b4v65"), SubResource("Resource_2nw00"), SubResource("Resource_dt37r"), SubResource("Resource_g4rv0"), SubResource("Resource_n6vat"), SubResource("Resource_r2lgg"), SubResource("Resource_1pwqk")])
+levelPrerequisiteChecks = Array[ExtResource("9_56rme")]([SubResource("Resource_0e8rx"), SubResource("Resource_sw5fx"), SubResource("Resource_wru5p"), SubResource("Resource_8yml5"), SubResource("Resource_quoxl"), SubResource("Resource_8ydlw"), SubResource("Resource_f1ane"), SubResource("Resource_qhsbt"), SubResource("Resource_bgqn6")])
+levelRegions = Array[ExtResource("11_xflqi")]([SubResource("Resource_vdyah")])

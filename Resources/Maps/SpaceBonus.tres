@@ -20,7 +20,7 @@ checkType = 1
 totalSubchecks = 6
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x75B", "0x75C", "0x75D", "0x75E", "0x75F", "0x760")
+apIds = PackedStringArray("0x755", "0x756", "0x757", "0x758", "0x759", "0x75A")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -33,7 +33,7 @@ checkType = 1
 totalSubchecks = 8
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x761", "0x762", "0x763", "0x764", "0x765", "0x766", "0x767", "0x768")
+apIds = PackedStringArray("0x75B", "0x75C", "0x75D", "0x75E", "0x75F", "0x760", "0x761", "0x762")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -46,7 +46,7 @@ checkType = 1
 totalSubchecks = 8
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x769", "0x76A", "0x76B", "0x76C", "0x76D", "0x76E", "0x76F", "0x770")
+apIds = PackedStringArray("0x763", "0x764", "0x765", "0x766", "0x767", "0x768", "0x769", "0x76A")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -59,7 +59,7 @@ checkType = 1
 totalSubchecks = 8
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x771", "0x772", "0x773", "0x774", "0x775", "0x776", "0x777", "0x778")
+apIds = PackedStringArray("0x76B", "0x76C", "0x76D", "0x76E", "0x76F", "0x770", "0x771", "0x772")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -72,7 +72,7 @@ checkType = 1
 totalSubchecks = 8
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x779", "0x77A", "0x77B", "0x77C", "0x77D", "0x77E", "0x77F", "0x780")
+apIds = PackedStringArray("0x773", "0x774", "0x775", "0x776", "0x777", "0x778", "0x779", "0x77A")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -85,7 +85,7 @@ checkType = 1
 totalSubchecks = 6
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x781", "0x782", "0x783", "0x784", "0x785", "0x786")
+apIds = PackedStringArray("0x77B", "0x77C", "0x77D", "0x77E", "0x77F", "0x780")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -98,7 +98,7 @@ checkType = 1
 totalSubchecks = 6
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x787", "0x788", "0x789", "0x78A", "0x78B", "0x78C")
+apIds = PackedStringArray("0x781", "0x782", "0x783", "0x784", "0x785", "0x786")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -111,7 +111,7 @@ checkType = 2
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x78D")
+apIds = PackedStringArray("0x787")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -124,7 +124,7 @@ checkType = 2
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x78E")
+apIds = PackedStringArray("0x788")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -137,7 +137,7 @@ checkType = 2
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x78F")
+apIds = PackedStringArray("0x789")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -150,7 +150,7 @@ checkType = 2
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x790")
+apIds = PackedStringArray("0x78A")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -163,7 +163,7 @@ checkType = 2
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x791")
+apIds = PackedStringArray("0x78B")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -176,7 +176,7 @@ checkType = 2
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x792")
+apIds = PackedStringArray("0x78C")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -189,7 +189,7 @@ checkType = 5
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x793")
+apIds = PackedStringArray("0x78D")
 checkRegionIndex = 0
 checkBallRequirement = true
 
@@ -202,7 +202,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x794")
+apIds = PackedStringArray("0x78E")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -215,7 +215,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x795")
+apIds = PackedStringArray("0x78F")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -228,7 +228,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x796")
+apIds = PackedStringArray("0x790")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -241,7 +241,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x797")
+apIds = PackedStringArray("0x791")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -254,7 +254,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x798")
+apIds = PackedStringArray("0x792")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -267,7 +267,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x799")
+apIds = PackedStringArray("0x793")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -280,7 +280,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x79A")
+apIds = PackedStringArray("0x794")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -293,7 +293,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x79B")
+apIds = PackedStringArray("0x795")
 checkRegionIndex = 0
 checkBallRequirement = false
 
@@ -306,7 +306,7 @@ checkType = 4
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x79C")
+apIds = PackedStringArray("0x796")
 checkRegionIndex = 0
 checkBallRequirement = false
 

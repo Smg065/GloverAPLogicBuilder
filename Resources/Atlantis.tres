@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/LevelData.gd" id="1_g0cjd"]
 [ext_resource type="Resource" uid="uid://d3ub84m13s4lj" path="res://Resources/Maps/Atlantis1.tres" id="2_5yqwx"]
+[ext_resource type="Resource" uid="uid://tq0m0g5qnth3" path="res://Resources/Maps/AtlantisH.tres" id="2_6bsba"]
 [ext_resource type="Script" path="res://Scripts/WorldInfo.gd" id="2_uxdwb"]
-[ext_resource type="Resource" uid="uid://3qcnnkw7of0k" path="res://Resources/Maps/Hub.tres" id="2_vc7on"]
 [ext_resource type="Resource" uid="uid://wivnjxn58yx2" path="res://Resources/Maps/Atlantis2.tres" id="4_gnp30"]
 [ext_resource type="Resource" uid="uid://syrdeyqmfxd4" path="res://Resources/Maps/Atlantis3.tres" id="5_j3p37"]
 [ext_resource type="Resource" uid="uid://y0glcln4g6vy" path="res://Resources/Maps/AtlantisBoss.tres" id="6_nqapb"]
@@ -13,4 +13,4 @@
 script = ExtResource("2_uxdwb")
 worldName = "Atlantis"
 worldShorthand = "Atl"
-levels = Array[ExtResource("1_g0cjd")]([ExtResource("2_vc7on"), ExtResource("2_5yqwx"), ExtResource("4_gnp30"), ExtResource("5_j3p37"), ExtResource("6_nqapb"), ExtResource("7_15od6")])
+levels = Array[ExtResource("1_g0cjd")]([ExtResource("2_6bsba"), ExtResource("2_5yqwx"), ExtResource("4_gnp30"), ExtResource("5_j3p37"), ExtResource("6_nqapb"), ExtResource("7_15od6")])

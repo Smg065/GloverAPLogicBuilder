@@ -15,6 +15,7 @@ offset_right = 16.0
 offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/icon_disabled_color = Color(0.75, 0.75, 0.75, 0.72549)
 icon = ExtResource("1_0k2di")
 icon_alignment = 1
 expand_icon = true

@@ -27,6 +27,7 @@ ids = Array[String]([])
 apIds = PackedStringArray("0x000")
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_2nw00"]
 script = ExtResource("1_jna6q")
@@ -40,6 +41,7 @@ ids = Array[String]([])
 apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_dt37r"]
 script = ExtResource("1_jna6q")
@@ -53,6 +55,7 @@ ids = Array[String]([])
 apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_g4rv0"]
 script = ExtResource("1_jna6q")
@@ -66,6 +69,7 @@ ids = Array[String]([])
 apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_n6vat"]
 script = ExtResource("1_jna6q")
@@ -79,6 +83,7 @@ ids = Array[String]([])
 apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_r2lgg"]
 script = ExtResource("1_jna6q")
@@ -92,6 +97,7 @@ ids = Array[String]([])
 apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_1pwqk"]
 script = ExtResource("1_jna6q")
@@ -105,6 +111,7 @@ ids = Array[String]([])
 apIds = PackedStringArray()
 checkRegionIndex = 0
 checkBallRequirement = false
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_0e8rx"]
 script = ExtResource("9_o166k")

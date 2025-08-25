@@ -18,6 +18,7 @@ enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZON
 @export_category("Defaults")
 @export var checkRegionIndex : int
 @export var checkBallRequirement : bool
+@export var lockButton : bool
 
 var allMethods : Array[MethodData]
 

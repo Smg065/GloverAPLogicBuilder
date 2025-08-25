@@ -73,8 +73,9 @@ func _process(_delta: float) -> void:
 		generate_lua_table(debugLevelData)
 	if Input.is_action_just_pressed("Lua Garib Groups"):
 		generate_lua_garib_groups(debugLevelData)
-	if Input.is_action_just_pressed("Event Rules"):
-		generate_level_event_methods()
+	if Input.is_action_just_pressed("Level C Switch Case"):
+		generate_rom_id_pairings(debugLevelData)
+		#generate_level_event_methods()
 
 func copy_mouse_info() -> void:
 	var newCoord : String = str(mouse_pos_to_map_spot())
@@ -662,12 +663,17 @@ func generate_lua_garib_groups(inputLevel : LevelData):
 	print(outputString)
 	DisplayServer.clipboard_set(outputString)
 
-func lua_level_name(inputLevel : LevelData) -> String:
+func lua_level_name(inputLevel : LevelData, padding : bool = true) -> String:
 	var levelName : String = inputLevel.resource_path.split("/")[inputLevel.resource_path.split("/").size() - 1]
 	levelName = levelName.trim_suffix(".tres")
 	levelName = levelName.left(-1)
 	levelName = levelName.to_upper()
-	return "\t[\"AP_" + levelName + "_L" + inputLevel.levelSuffix + "\"] = {\n"
+	var prefixString = ""
+	var sufixString = ""
+	if padding:
+		prefixString = "\t[\""
+		sufixString = "\"] = {\n"
+	return prefixString + "AP_" + levelName + "_L" + inputLevel.levelSuffix + sufixString
 
 func lua_garib_groups(apIds : PackedStringArray) -> Dictionary:
 	var id : String = "\"" + str(apIds[0].hex_to_int() + 10000) + "\""
@@ -770,6 +776,50 @@ func lua_table_subsection(sectionName : String, ids : PackedStringArray, objectI
 	else:
 		outString += ",\n"
 	return outString
+
+func generate_rom_id_pairings(inputLevel : LevelData):
+	var output : String = ""
+	var lastMatchingType : CheckInfo.CheckType = CheckInfo.CheckType.MISC
+	var luaOffset = 0
+	var worldName : String = "WORLD_NAME" #lua_level_name(inputLevel, false)
+	var worldAddress = "\t\t\tap_memory.pc.worlds[" + worldName + "]."
+	for eachCheck in inputLevel.levelChecks:
+		output += "\t\t//" + eachCheck.checkName + "\n"
+		var checkType : String = "CHECKTYPE"
+		if lastMatchingType != eachCheck.checkType:
+			luaOffset = 0
+			lastMatchingType = eachCheck.checkType
+		match eachCheck.checkType:
+			CheckInfo.CheckType.GARIB:
+				checkType = "garibs"
+			CheckInfo.CheckType.LIFE:
+				checkType = "life_checks"
+			CheckInfo.CheckType.TIP:
+				checkType = "tip_checks"
+			CheckInfo.CheckType.CHECKPOINT:
+				checkType = "checkpoint_checks"
+			CheckInfo.CheckType.SWITCH:
+				checkType = "switch_checks"
+			CheckInfo.CheckType.ENEMY:
+				checkType = "enemy_checks"
+			CheckInfo.CheckType.POTION:
+				checkType = "potion_checks"
+			CheckInfo.CheckType.GOAL:
+				continue
+			CheckInfo.CheckType.LOADING_ZONE:
+				continue
+		var checkTypeOutput = checkType + "["
+		for eachSubcheck in eachCheck.totalSubchecks:
+			var eachId = eachCheck.ids[eachSubcheck]
+			var memoryAddress : String = worldAddress + checkTypeOutput
+			output += "\t\tcase " + eachId + ":\n"
+			output += memoryAddress + str(luaOffset) + "].ptr = ptr;\n"
+			if eachCheck.checkType == CheckInfo.CheckType.GARIB:
+				output += memoryAddress + str(luaOffset) + "].object_id = item_id;\n"
+			luaOffset += 1
+			output += "\t\t\treturn;\n"
+	print(output)
+	DisplayServer.clipboard_set(output)
 
 func generate_level_event_methods():
 	var worldsAndHub : Array[WorldInfo]

@@ -17,6 +17,9 @@ func build_from(newCheckInfo : CheckInfo, newMain : Main) -> void:
 	anchor_right = checkInfo.checkSpot.x
 	anchor_top = checkInfo.checkSpot.y
 	anchor_bottom = checkInfo.checkSpot.y
+	disabled = newCheckInfo.lockButton
+	if disabled:
+		tooltip_text += " (Disabled)"
 
 func pressed():
 	main.select_check(checkInfo)

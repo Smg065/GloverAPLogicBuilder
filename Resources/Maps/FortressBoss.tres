@@ -18,9 +18,10 @@ checkType = 5
 totalSubchecks = 1
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x639")
+apIds = PackedStringArray("0x63A")
 checkRegionIndex = 0
 checkBallRequirement = true
+lockButton = false
 
 [sub_resource type="Resource" id="Resource_x3kao"]
 script = ExtResource("4_ktqd1")

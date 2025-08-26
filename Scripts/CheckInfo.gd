@@ -1,7 +1,7 @@
 extends Resource
 class_name CheckInfo
 
-enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZONE, REGION, MISC, ENEMY}
+enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZONE, REGION, MISC, ENEMY, BUG}
 
 @export_category("Information")
 @export var checkName : String

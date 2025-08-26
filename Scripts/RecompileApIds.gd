@@ -34,7 +34,10 @@ func _run():
 			
 			#Put level check info in there
 			for eachCheck in eachLevel.levelChecks:
-				catagoryLookup[eachCheck.checkType].append(eachCheck)
+				var toLookup : CheckInfo.CheckType = eachCheck.checkType
+				if toLookup == CheckInfo.CheckType.BUG:
+					toLookup = CheckInfo.CheckType.ENEMY
+				catagoryLookup[toLookup].append(eachCheck)
 			
 			#Sort catagories
 			for eachCatagory in catagoryLookup.keys():

@@ -199,6 +199,8 @@ func print_check_data():
 				if eachCheck.checkType == CheckInfo.CheckType.LOADING_ZONE:
 					continue
 				var checkType : String = CheckInfo.CheckType.keys()[eachCheck.checkType].capitalize()
+				if checkType == "Bug":
+					checkType = "Enemy"
 				var enemyHasGaribs : bool = eachCheck.enemyGaribs
 				if eachCheck.totalSubchecks == 1:
 					catagoryLookup[checkType].append(eachCheck.checkName)
@@ -664,8 +666,11 @@ func generate_lua_garib_groups(inputLevel : LevelData):
 	DisplayServer.clipboard_set(outputString)
 
 func lua_level_name(inputLevel : LevelData, padding : bool = true) -> String:
-	var levelName : String = inputLevel.resource_path.split("/")[inputLevel.resource_path.split("/").size() - 1]
+	var levelName : String
+	levelName = inputLevel.resource_path.split("/")[inputLevel.resource_path.split("/").size() - 1]
 	levelName = levelName.trim_suffix(".tres")
+	levelName = levelName.trim_suffix("onus")
+	levelName = levelName.trim_suffix("oss")
 	levelName = levelName.left(-1)
 	levelName = levelName.to_upper()
 	var prefixString = ""
@@ -673,7 +678,12 @@ func lua_level_name(inputLevel : LevelData, padding : bool = true) -> String:
 	if padding:
 		prefixString = "\t[\""
 		sufixString = "\"] = {\n"
-	return prefixString + "AP_" + levelName + "_L" + inputLevel.levelSuffix + sufixString
+	var levelIndicator = "L" + inputLevel.levelSuffix
+	if inputLevel.levelSuffix == "!":
+		levelIndicator = "BOSS"
+	elif inputLevel.levelSuffix == "?":
+		levelIndicator = "BONUS"
+	return prefixString + "AP_" + levelName + "_" + levelIndicator + sufixString
 
 func lua_garib_groups(apIds : PackedStringArray) -> Dictionary:
 	var id : String = "\"" + str(apIds[0].hex_to_int() + 10000) + "\""
@@ -713,6 +723,10 @@ func generate_lua_table(inputLevel : LevelData):
 						#If there's a backhalf, it's the garibs
 						outputDict["ENEMY_GARIBS"].append(eachCheck.apIds[eachIdIndex])
 						enemyGaribOrigin[eachCheck.apIds[eachIdIndex]] = eachCheck.ids[eachIdIndex - eachCheck.totalSubchecks]
+			#Bugs are just enemies that never have garibs
+			CheckInfo.CheckType.BUG:
+				for eachId in eachCheck.apIds:
+					outputDict["ENEMIES"].append(eachId)
 			#Lives
 			CheckInfo.CheckType.LIFE:
 				for eachId in eachCheck.apIds:

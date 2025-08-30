@@ -705,6 +705,8 @@ func generate_lua_table(inputLevel : LevelData):
 		"SWITCH" : PackedStringArray(),
 		"POTIONS" : PackedStringArray()
 	}
+	@warning_ignore("unused_variable")
+	var goal_ap_id : String = ""
 	var enemyGaribOrigin : Dictionary = {}
 	for eachCheck in inputLevel.levelChecks:
 		match eachCheck.checkType:
@@ -722,7 +724,7 @@ func generate_lua_table(inputLevel : LevelData):
 					else:
 						#If there's a backhalf, it's the garibs
 						outputDict["ENEMY_GARIBS"].append(eachCheck.apIds[eachIdIndex])
-						enemyGaribOrigin[eachCheck.apIds[eachIdIndex]] = eachCheck.ids[eachIdIndex - eachCheck.totalSubchecks]
+						enemyGaribOrigin[eachCheck.apIds[eachIdIndex]] = eachCheck.apIds[eachIdIndex - eachCheck.totalSubchecks]
 			#Bugs are just enemies that never have garibs
 			CheckInfo.CheckType.BUG:
 				for eachId in eachCheck.apIds:
@@ -747,6 +749,9 @@ func generate_lua_table(inputLevel : LevelData):
 			CheckInfo.CheckType.POTION:
 				for eachId in eachCheck.apIds:
 					outputDict["POTIONS"].append(eachId)
+			#Goal
+			CheckInfo.CheckType.GOAL:
+				goal_ap_id = eachCheck.apIds[0]
 	
 	#Sort them
 	for eachKey in outputDict.keys():
@@ -755,6 +760,9 @@ func generate_lua_table(inputLevel : LevelData):
 		sorted.sort_custom(func(a, b): return a.hex_to_int() < b.hex_to_int())
 		outputDict[eachKey] = PackedStringArray(sorted)
 	
+	#Create a pre-table entry for the Goal APID
+	if goal_ap_id != "":
+		outString += "\t\t[\"" + "GOAL" + "\"] = \"" + str(goal_ap_id.hex_to_int()) + "\",\n"
 	#Create the table
 	for eachKey in outputDict.keys():
 		var idsForUse : PackedStringArray = outputDict[eachKey]

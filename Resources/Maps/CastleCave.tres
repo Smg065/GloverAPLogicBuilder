@@ -18,10 +18,10 @@ checkType = 9
 totalSubchecks = 7
 enemyGaribs = false
 ids = Array[String]([])
-apIds = PackedStringArray("0x79F", "0x7A0", "0x7A1", "0x7A2", "0x7A3", "0x7A4", "0x7A5")
+apIds = PackedStringArray("0x795", "0x796", "0x797", "0x798", "0x799", "0x79A", "0x79B")
 checkRegionIndex = 0
 checkBallRequirement = false
-lockButton = false
+lockButton = true
 
 [sub_resource type="Resource" id="Resource_eg8ci"]
 script = ExtResource("1_84t78")

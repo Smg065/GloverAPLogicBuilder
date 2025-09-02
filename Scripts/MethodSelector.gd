@@ -41,7 +41,6 @@ func update_method_move(moveIndex : int, isAdd : bool):
 	checkInfo.allMethods[selId].setMove(moveIndex, isAdd)
 
 func update_method_prereq(checkButton : PrerequisiteCheckButton, isAdd : bool):
-	print(isAdd)
 	if !check_info_exists():
 		checkButton.button_pressed = false
 		return

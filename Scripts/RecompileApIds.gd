@@ -94,7 +94,6 @@ func update_check_info(checkInfo : CheckInfo, apIdOffset : int):
 	newApIds.append_array(checkInfo.apIds)
 	#Assign it
 	checkInfo.apIds = newApIds
-	print(checkInfo.checkName + ", " + str(newApIds))
 	ResourceSaver.save(checkInfo)
 
 

@@ -78,10 +78,10 @@ static func compare_from_dictionary(methodA : Dictionary, methodB : Dictionary) 
 	methodTrickPriority = offset_compare(methodA["trickDifficulty"], methodB["trickDifficulty"])
 	
 	#Simpler strats should be kept in logic over more complicated ones
-	var aMoves : Array[int] = required_to_array(methodA, "mv")
-	var bMoves : Array[int] = required_to_array(methodB, "mv")
-	var aChecks : Array[String] = required_to_array(methodA, "ck")
-	var bChecks : Array[String] = required_to_array(methodB, "ck")
+	var aMoves = required_to_array(methodA, "mv")
+	var bMoves = required_to_array(methodB, "mv")
+	var aChecks = required_to_array(methodA, "ck")
+	var bChecks = required_to_array(methodB, "ck")
 	aMoves.sort()
 	bMoves.sort()
 	aChecks.sort()
@@ -131,7 +131,7 @@ static func compare_from_dictionary(methodA : Dictionary, methodB : Dictionary) 
 		return CompareInfo.KEEP_BOTH
 
 #Check if every element in the smaller list is in the bigger one
-static func can_compress(smallerMoves : Array[int], smallerChecks : Array[String], biggerMoves : Array[int], biggerChecks : Array[String]) -> bool:
+static func can_compress(smallerMoves, smallerChecks, biggerMoves, biggerChecks) -> bool:
 	for eachMove in smallerMoves:
 		if !biggerMoves.has(eachMove):
 			return false

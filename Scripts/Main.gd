@@ -455,65 +455,18 @@ func save_from_path(savePath : String) -> void:
 	path.store_string(JSON.stringify(gameData, "\t"))
 	path.close()
 
-func combine_glapls(glaplA : Array[Dictionary], glaplB : Array[Dictionary]) -> Array[Dictionary]:
-	var outGlapl : Array[Dictionary]
-	for eachWorld in glaplA.size():
-		var worldDictionary : Dictionary
-		for eachLevel in glaplA[eachWorld].keys():
-			var combinedChecks : Dictionary
-			var aChecks : Dictionary = glaplA[eachWorld][eachLevel]
-			var bChecks : Dictionary = glaplB[eachWorld][eachLevel]
-			for eachA in aChecks.keys():
-				if bChecks.keys().has(eachA):
-					combinedChecks[eachA] = combine_methods(aChecks[eachA], bChecks[eachA])
-				else:
-					combinedChecks[eachA] = aChecks[eachA]
-			for eachB in bChecks.keys():
-				if !aChecks.keys().has(eachB):
-					combinedChecks[eachB] = bChecks[eachB]
-			worldDictionary[eachLevel] = combinedChecks
-		outGlapl.append(worldDictionary)
-	return outGlapl
-
-func combine_methods(aMethods : Array[Dictionary], bMethods : Array[Dictionary]) -> Array[Dictionary]:
-	var combinedMethods : Array[Dictionary]
-	var invalidAMethods : Array[bool]
-	var invalidBMethods : Array[bool]
-	#Figure out which checks become invalid
-	invalidAMethods.resize(aMethods.size())
-	invalidBMethods.resize(bMethods.size())
-	for eachB in bMethods.size():
-		for eachA in aMethods.size():
-			if invalidAMethods[eachA] || invalidBMethods[eachB]:
-				continue
-			match MethodData.compare_from_dictionary(aMethods[eachA], bMethods[eachB]):
-				MethodData.CompareInfo.KEEP_A:
-					invalidBMethods[eachB] = true
-				MethodData.CompareInfo.KEEP_B:
-					invalidAMethods[eachA] = true
-				MethodData.CompareInfo.KEEP_BOTH:
-					continue
-	#Add all valid A methods
-	for eachMethod in aMethods.size():
-		if !invalidAMethods[eachMethod]:
-			combinedMethods.append(aMethods[eachMethod])
-	#Add all valid B methods
-	for eachMethod in bMethods.size():
-		if !invalidBMethods[eachMethod]:
-			combinedMethods.append(bMethods[eachMethod])
-	
-	return combinedMethods
-
 func load_from_paths(loadPaths : PackedStringArray) -> void:
 	#Load all the paths into an array
-	var gameData : Array[Dictionary] = load_from_path(loadPaths[0])
-	for eachPath in range(1, loadPaths.size()):
-		gameData = combine_glapls(gameData, load_from_path(loadPaths[eachPath]))
+	var gameData
+	if loadPaths.size() > 0:
+		gameData = LogicJsonCombiner.combine_jsons(self, loadPaths)
+	else:
+		gameData = load_from_path(loadPaths[0])
 	apply_glapl(gameData)
 
 func web_data_loaded(gameData : Array) -> void:
 	var jsonOutput : Array = JSON.parse_string(gameData[0])
-	var glaplData : Array[Dictionary]
+	var glaplData : Array
 	for eachDictionary in jsonOutput:
 		glaplData.append(eachDictionary)
 	apply_glapl(glaplData)
@@ -527,7 +480,7 @@ func load_from_path(loadPath : String) -> Array[Dictionary]:
 	path.close()
 	return gameData
 
-func apply_glapl(gameData : Array[Dictionary]):
+func apply_glapl(gameData : Array):
 	for eachWorld in allWorlds.size():
 		allWorlds[eachWorld].to_load(gameData[eachWorld])
 	hubworld.to_load(gameData[allWorlds.size()])
@@ -832,7 +785,11 @@ func generate_rom_id_pairings(inputLevel : LevelData):
 				continue
 		var checkTypeOutput = checkType + "["
 		for eachSubcheck in eachCheck.totalSubchecks:
-			var eachId = eachCheck.ids[eachSubcheck]
+			var eachId
+			if eachCheck.ids.size() <= eachSubcheck:
+				eachId = "!!ID MISSING!!"
+			else:
+				eachId = eachCheck.ids[eachSubcheck]
 			var memoryAddress : String = worldAddress + checkTypeOutput
 			output += "\t\tcase " + eachId + ":\n"
 			output += memoryAddress + str(luaOffset) + "].ptr = ptr;\n"

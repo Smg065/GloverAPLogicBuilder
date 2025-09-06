@@ -35,11 +35,16 @@ var lastRegion : RegionInfo
 
 @export_category("File Info")
 @export var saveFile : FileDialog
+@export var saveLookupMerge : FileDialog
 @export var openFiles : FileDialog
+@export var openLandscape : FileDialog
+@export var openMemdump : FileDialog
 
 var isMainWorld : bool
 var debugLevelData : LevelData
 var web_data_callback : JavaScriptObject = null
+var xmlLoadPaths : PackedStringArray
+var hexMemLoadPaths : PackedStringArray
 
 func _ready() -> void:
 	web_setup()
@@ -75,6 +80,8 @@ func _process(_delta: float) -> void:
 		generate_lua_garib_groups(debugLevelData)
 	if Input.is_action_just_pressed("Level C Switch Case"):
 		generate_rom_id_pairings(debugLevelData)
+	if Input.is_action_just_pressed("ReadXML"):
+		landscape_load_window()
 		#generate_level_event_methods()
 
 func copy_mouse_info() -> void:
@@ -433,6 +440,12 @@ func web_save() -> void:
 	#Thank you to Kehom's Forge for making this work
 	JavaScriptBridge.download_buffer(jsonBytes, "logic.json","text/plain")
 
+func landscape_load_window() -> void:
+	if is_not_web():
+		openLandscape.show()
+	#else:
+	#	JavaScriptBridge.eval("loadData()")
+
 func load_press() -> void:
 	if is_not_web():
 		openFiles.show()
@@ -484,6 +497,30 @@ func apply_glapl(gameData : Array):
 	for eachWorld in allWorlds.size():
 		allWorlds[eachWorld].to_load(gameData[eachWorld])
 	hubworld.to_load(gameData[allWorlds.size()])
+
+func open_landscape_xml(loadPaths : PackedStringArray):
+	xmlLoadPaths = loadPaths
+	openMemdump.show()
+
+func open_memdump(loadPaths : PackedStringArray):
+	hexMemLoadPaths = loadPaths
+	saveLookupMerge.show()
+
+func save_xml_memdump_merge(saveFolder : String):
+	for mergeIndex in xmlLoadPaths.size():
+		var xmlLoadPath : String = xmlLoadPaths[mergeIndex]
+		var hexLoadPath : String = hexMemLoadPaths[mergeIndex]
+		var mergeData : String = LandscapeXML.landscape_memdump_combiner(xmlLoadPath, hexLoadPath)
+		var savePath : String = saveFolder + "\\"
+		var splitXmlPath = xmlLoadPath.rsplit('\\', false, 1)
+		var splitHexPath = hexLoadPath.rsplit('\\', false, 1)
+		var xmlFilename = splitXmlPath[1].trim_suffix(".xml")
+		var hexFilename = splitHexPath[1].trim_suffix(".txt")
+		print(xmlFilename + " combinding with " + hexFilename)
+		savePath += xmlFilename + ".glhexml"
+		var path = FileAccess.open(savePath, FileAccess.WRITE)
+		path.store_string(mergeData)
+		path.close()
 
 func checks_to_regions_toggled(toggled_on: bool) -> void:
 	checkContainer.visible = !toggled_on
@@ -761,10 +798,13 @@ func generate_rom_id_pairings(inputLevel : LevelData):
 	for eachCheck in inputLevel.levelChecks:
 		output += "\t\t//" + eachCheck.checkName + "\n"
 		var checkType : String = "CHECKTYPE"
-		if lastMatchingType != eachCheck.checkType:
+		var checkTypeEnum = eachCheck.checkType
+		if checkTypeEnum == CheckInfo.CheckType.BUG:
+			checkTypeEnum = CheckInfo.CheckType.ENEMY
+		if lastMatchingType != checkTypeEnum:
 			luaOffset = 0
-			lastMatchingType = eachCheck.checkType
-		match eachCheck.checkType:
+			lastMatchingType = checkTypeEnum
+		match checkTypeEnum:
 			CheckInfo.CheckType.GARIB:
 				checkType = "garibs"
 			CheckInfo.CheckType.LIFE:

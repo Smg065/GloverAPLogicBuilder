@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Glover AP Logic Builder"
 config/description="A program built to help make an Archipelago apworld for Glover (N64)."
-config/version="0.7.0"
+config/version="0.8.0"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0.0588235, 0.133333, 0.301961, 1)
@@ -80,6 +80,11 @@ Coord={
 ViewIDs={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+ReadXML={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
 ]
 }
 

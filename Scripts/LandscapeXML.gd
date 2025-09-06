@@ -94,6 +94,12 @@ static func landscape_memdump_combiner(xmlPath : String, memdumpPath : String) -
 							var coord : Vector3  = xml_coord(parser)
 							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 							loadedOrder.append("Switch (Ball) " + nextLine.id + " at " + str(coord))
+						"target.":
+							#Ball Buttons
+							next_valid_node(parser, "PlatPathPoint")
+							var coord : Vector3  = xml_coord(parser)
+							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
+							loadedOrder.append("Target " + nextLine.id + " at " + str(coord))
 						_:
 							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 							loadedOrder.append("Platform " + nextLine.id + " is " + modelName)

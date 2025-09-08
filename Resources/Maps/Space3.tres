@@ -419,7 +419,7 @@ ids = Array[String](["0x123"])
 apIds = PackedStringArray("0x74A")
 checkRegionIndex = 13
 checkBallRequirement = false
-lockButton = false
+lockButton = true
 
 [sub_resource type="Resource" id="Resource_np1b1"]
 script = ExtResource("1_ecbe2")

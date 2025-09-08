@@ -12,12 +12,12 @@ const LINE_ENEMY = MemoryHexLine.LINE_TYPE.ENEMY
 
 class MemoryHexLine:
 	enum LINE_TYPE {ERROR, POWERUP, MR_TIP, GARIB, CHECKPOINT, PUZZLECOND, PLATFORM, ENEMY}
-	var address : int = -1
+	var address : String = "??????"
 	var type : LINE_TYPE = LINE_TYPE.ERROR
 	var id : String = "0xXXXX"
 	static func from_string(incomingLine : String) -> MemoryHexLine:
 		var output : MemoryHexLine = MemoryHexLine.new()
-		output.address = int(incomingLine.substr(2, 6))
+		output.address = incomingLine.substr(2, 6)
 		match incomingLine.substr(8, 4):
 			"0100":
 				output.type = LINE_TYPE.POWERUP
@@ -43,8 +43,8 @@ static func landscape_memdump_combiner(xmlPath : String, memdumpPath : String) -
 	var hexLines : Array[MemoryHexLine] = memdump_parser(memdumpFile.get_as_text())
 	var loadedOrder : Array[String] = []
 	#Grab the start construction IDs
-	loadedOrder.append("Start Instruction 1: " + str(next_hex(hexLines, loadedOrder, LINE_PUZZLECOND).address))
-	loadedOrder.append("Start Instruction 2: " + str(next_hex(hexLines, loadedOrder, LINE_PUZZLECOND).address))
+	loadedOrder.append("Start Instruction 1: " + next_hex(hexLines, loadedOrder, LINE_PUZZLECOND).address)
+	loadedOrder.append("Start Instruction 2: " + next_hex(hexLines, loadedOrder, LINE_PUZZLECOND).address)
 	var lastCheckpointCoord : String = "ERROR; NO PREFIXED PORTAL GRAPHIC"
 	#The XML data goes here
 	while parser.read() != ERR_FILE_EOF:
@@ -84,28 +84,45 @@ static func landscape_memdump_combiner(xmlPath : String, memdumpPath : String) -
 							loadedOrder.append("Portal Graphic " + nextLine.id)
 						"glovebu":
 							#Glover Switches
-							next_valid_node(parser, "PlatPathPoint")
+							next_valid_node_array(parser, ["PlatPathPoint", "PlatSetInitialPos"])
 							var coord : Vector3  = xml_coord(parser)
 							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 							loadedOrder.append("Switch (Glover) " + nextLine.id + " at " + str(coord))
 						"ballbut":
 							#Ball Buttons
-							next_valid_node(parser, "PlatPathPoint")
+							next_valid_node_array(parser, ["PlatPathPoint", "PlatSetInitialPos"])
 							var coord : Vector3  = xml_coord(parser)
 							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 							loadedOrder.append("Switch (Ball) " + nextLine.id + " at " + str(coord))
 						"target.":
 							#Ball Buttons
-							next_valid_node(parser, "PlatPathPoint")
+							next_valid_node_array(parser, ["PlatPathPoint", "PlatSetInitialPos"])
 							var coord : Vector3  = xml_coord(parser)
 							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 							loadedOrder.append("Target " + nextLine.id + " at " + str(coord))
+						"plasma.":
+							#The Monolith Buttons
+							next_valid_node(parser, "PlatSetInitialPos")
+							var coord : Vector3  = xml_coord(parser)
+							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
+							next_valid_node(parser, "PlatSetTag")
+							var monolithTag : String  = parser.get_named_attribute_value("tag")
+							loadedOrder.append("Monolith " + nextLine.id + " at " + str(coord) + " has tag " + monolithTag)
+						"swtchgl":
+							#Red switches in OoTW3
+							next_valid_node_array(parser, ["PlatPathPoint", "PlatSetInitialPos"])
+							var coord : Vector3  = xml_coord(parser)
+							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
+							loadedOrder.append("Red Glover Switch " + nextLine.id + " at " + str(coord))
 						_:
 							nextLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 							loadedOrder.append("Platform " + nextLine.id + " is " + modelName)
 				"PlatCheckpoint":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_CHECKPOINT)
 					loadedOrder.append("Checkpoint " + nextLine.id + lastCheckpointCoord)
+				#The flag to see when a ball stops touching
+				"PuzzleCondBallChangedTouchingPlatform":
+					loadedOrder[loadedOrder.size() - 1] += " seeking ball interaction with " + parser.get_named_attribute_value("plat_tag")
 				"NullPlatform":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_PLATFORM)
 					loadedOrder.append("Null Platform " + nextLine.id)
@@ -151,13 +168,13 @@ static func landscape_memdump_combiner(xmlPath : String, memdumpPath : String) -
 					loadedOrder.append("Powerup " + nextLine.id + " is " + powerupName + " at " + str(coord))
 				"PuzzleCond":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_PUZZLECOND)
-					loadedOrder.append("Puzzle Condition " + nextLine.id + " is " + parser.get_named_attribute_value("cond_type"))
+					loadedOrder.append("Puzzle Condition " + nextLine.id + " is " + parser.get_named_attribute_value("cond_type") + " at address " + nextLine.address)
 				"PlatDestructible":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_PUZZLECOND)
-					loadedOrder.append("Destructable Flag " + nextLine.id)
+					loadedOrder.append("Destructable Flag " + nextLine.id + " has address " + nextLine.address)
 				"PlatPush0x5b":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_PUZZLECOND)
-					loadedOrder.append("Pushable Flag " + nextLine.id)
+					loadedOrder.append("Pushable Flag " + nextLine.id + " has address " + nextLine.address)
 				"PlatSpike":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_PUZZLECOND)
 					loadedOrder.append("Spikes Flag " + nextLine.id)
@@ -166,7 +183,7 @@ static func landscape_memdump_combiner(xmlPath : String, memdumpPath : String) -
 				#	loadedOrder.append("Magnet Flag " + nextLine.id)
 	#Lost hexlines
 	for eachRemaining in hexLines:
-		loadedOrder.append(MemoryHexLine.LINE_TYPE.keys()[eachRemaining.type] + " " + str(eachRemaining.id) + " Leftover")
+		loadedOrder.append(MemoryHexLine.LINE_TYPE.keys()[eachRemaining.type] + " " + eachRemaining.id + " Leftover")
 	#Output it
 	var outputMerge : String = ""
 	for eachEntry in loadedOrder:
@@ -215,6 +232,13 @@ static func next_valid_node(parser : XMLParser, keyword : String):
 		if parser.get_node_type() == XMLParser.NODE_ELEMENT:
 			if parser.get_node_name() == keyword:
 				return parser
+
+static func next_valid_node_array(parser : XMLParser, keywords : Array[String]):
+	while parser.read() != ERR_FILE_EOF:
+		if parser.get_node_type() == XMLParser.NODE_ELEMENT:
+			if keywords.has(parser.get_node_name()):
+				return parser
+
 
 static func xml_coord(parser : XMLParser) -> Vector3:
 	return Vector3(float(parser.get_named_attribute_value("x")), float(parser.get_named_attribute_value("y")), float(parser.get_named_attribute_value("z")))

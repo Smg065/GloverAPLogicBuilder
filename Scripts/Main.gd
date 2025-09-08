@@ -198,6 +198,7 @@ func print_check_data():
 				"Misc" : []
 			}
 			var apIds  : Dictionary = {}
+			var ids  : Dictionary = {}
 			
 			var enemyGaribs : Array[String] = []
 			
@@ -212,42 +213,53 @@ func print_check_data():
 				if eachCheck.totalSubchecks == 1:
 					catagoryLookup[checkType].append(eachCheck.checkName)
 					apIds[eachCheck.checkName] = eachCheck.apIds[0]
+					if eachCheck.ids.size() > 0:
+						ids[eachCheck.checkName] = eachCheck.ids[0]
 					if enemyHasGaribs:
 						enemyGaribs.append(eachCheck.checkName + " Garib")
 						apIds[eachCheck.checkName + " Garib"] = eachCheck.apIds[1]
+						if eachCheck.ids.size() > 1:
+							ids[eachCheck.checkName + " Garib"] = eachCheck.ids[1]
 				else:
 					for eachSubcheck in eachCheck.totalSubchecks:
 						var subcheckName : String = eachCheck.checkName.trim_suffix('s') + " " + str(eachSubcheck + 1)
 						catagoryLookup[checkType].append(subcheckName)
 						apIds[subcheckName] = eachCheck.apIds[eachSubcheck]
+						if eachCheck.ids.size() > eachSubcheck:
+							ids[subcheckName] = eachCheck.ids[eachSubcheck]
 						if enemyHasGaribs:
 							var enemyGaribSubcheckName : String = eachCheck.checkName.trim_suffix('s') + " Garib " + str(eachSubcheck + 1)
 							enemyGaribs.append(enemyGaribSubcheckName)
 							apIds[enemyGaribSubcheckName] = eachCheck.apIds[eachSubcheck + eachCheck.totalSubchecks]
+							if eachCheck.ids.size() > eachSubcheck + eachCheck.totalSubchecks:
+								ids[enemyGaribSubcheckName] = eachCheck.ids[eachSubcheck + eachCheck.totalSubchecks]
 			
-			#Sort catagories
+			#Sort catagories alphabetically
 			for eachCatagory in catagoryLookup.keys():
-				catagoryLookup[eachCatagory].sort()
-			enemyGaribs.sort()
+				catagoryLookup[eachCatagory].sort_custom(func(a, b): return a.naturalnocasecmp_to(b) < 0)
+			enemyGaribs.sort_custom(func(a, b): return a.naturalnocasecmp_to(b) < 0)
 			catagoryLookup["Garib"].append_array(enemyGaribs)
 			
 			#For each catagory
 			for eachCatagory in catagoryLookup.keys():
 				var entries : Array[String] = []
 				entries.append_array(catagoryLookup[eachCatagory])
-				output += id_table_catagory(entries, eachCatagory, apIds)
+				output += id_table_catagory(entries, eachCatagory, ids, apIds)
 	DisplayServer.clipboard_set(output)
 
-func id_table_catagory(tableEntries : Array[String], tableCatagory : String, apIds : Dictionary) -> String:
+func id_table_catagory(tableEntries : Array[String], tableCatagory : String, ids : Dictionary, apIds : Dictionary) -> String:
 	var output : String = ""
 	for luaOffset in tableEntries.size():
 		var eachEntry : String = tableEntries[luaOffset]
 		var eachApId : String = apIds[eachEntry]
-		output += id_table_entry(eachEntry, tableCatagory, eachApId, luaOffset)
+		var eachId : String = ""
+		if ids.has(eachEntry):
+			eachId = ids[eachEntry]
+		output += id_table_entry(eachEntry, tableCatagory, eachId, eachApId)
 	return output
 
-func id_table_entry(thisCheckName : String, checkType : String, apId : String, luaOffset : int) -> String:
-	return thisCheckName + ", " + checkType + ",, " + apId + ", " + str(luaOffset) + "\n"
+func id_table_entry(thisCheckName : String, checkType : String, id : String, apId : String) -> String:
+	return thisCheckName + ", " + checkType + ", " + id + ", " + apId + "\n"
 
 func print_total_data():
 	var totalGaribs : int = 0

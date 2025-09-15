@@ -1,17 +1,18 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=72 format=3 uid="uid://daijp0evssotv"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=74 format=3 uid="uid://daijp0evssotv"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_xvkcx"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cumx6"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_xvkcx"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cumx6"]
 [ext_resource type="Texture2D" uid="uid://b1bfo2g0qvm4x" path="res://Images/Maps/Prehistoric1.png" id="2_kjl5c"]
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="2_yegxb"]
 [ext_resource type="Texture2D" uid="uid://cn1xr08tljle" path="res://Images/Icons/Checks/Checkpoint.png" id="3_5fpjm"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_ko2x7"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="3_ko2x7"]
 [ext_resource type="Texture2D" uid="uid://bk825vce05jyf" path="res://Images/Icons/Checks/Ph1Iciciles.png" id="3_sxep1"]
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="4_6y8h7"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="5_cfct8"]
 [ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="6_8hn6t"]
+[ext_resource type="Texture2D" uid="uid://du1ae4cq0ycqj" path="res://Images/Icons/Checks/Icicles.png" id="7_an5uf"]
 [ext_resource type="Texture2D" uid="uid://bou42km3es6a0" path="res://Images/Icons/Checks/Dino.png" id="7_und52"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="9_ekl7e"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="9_ekl7e"]
 [ext_resource type="Texture2D" uid="uid://dxwdugvs1epy3" path="res://Images/Regions/Prehistoric1/Spawn.png" id="10_cqssx"]
 [ext_resource type="Texture2D" uid="uid://cagwnaxyhfcuq" path="res://Images/Regions/Prehistoric1/Ball Ledge.png" id="11_jvfvx"]
 [ext_resource type="Texture2D" uid="uid://csky7jfkml6ui" path="res://Images/Regions/Prehistoric1/Post Icicles.png" id="12_650vy"]
@@ -35,12 +36,9 @@ checkSpot = Vector2(0.719, 0.609)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 12
-enemyGaribs = false
 ids = Array[String](["0xDE", "0xDF", "0xE0", "0xE1", "0xD6", "0xDB", "0xDC", "0xDA", "0xD9", "0xD8", "0xD7", "0xDD"])
 apIds = PackedStringArray("0x3CA", "0x3CB", "0x3CC", "0x3CD", "0x3CE", "0x3CF", "0x3D0", "0x3D1", "0x3D2", "0x3D3", "0x3D4", "0x3D5")
 checkRegionIndex = 13
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_tbcr5"]
 script = ExtResource("1_xvkcx")
@@ -49,12 +47,9 @@ checkSpot = Vector2(0.341, 0.585)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 8
-enemyGaribs = false
 ids = Array[String](["0xFA", "0xFF", "0xFD", "0xFC", "0xFB", "0xFE", "0x100", "0x101"])
 apIds = PackedStringArray("0x3D6", "0x3D7", "0x3D8", "0x3D9", "0x3DA", "0x3DB", "0x3DC", "0x3DD")
 checkRegionIndex = 4
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_o4k0y"]
 script = ExtResource("1_xvkcx")
@@ -63,12 +58,9 @@ checkSpot = Vector2(0.335, 0.689)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
-enemyGaribs = false
 ids = Array[String](["0x10F", "0x111", "0x110"])
 apIds = PackedStringArray("0x3DE", "0x3DF", "0x3E0")
 checkRegionIndex = 6
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_eav70"]
 script = ExtResource("1_xvkcx")
@@ -77,12 +69,9 @@ checkSpot = Vector2(0.737, 0.687)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 6
-enemyGaribs = false
 ids = Array[String](["0x4B", "0x50", "0x4F", "0x4E", "0x4D", "0x4C"])
 apIds = PackedStringArray("0x3E1", "0x3E2", "0x3E3", "0x3E4", "0x3E5", "0x3E6")
 checkRegionIndex = 12
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_j8hgq"]
 script = ExtResource("1_xvkcx")
@@ -91,12 +80,9 @@ checkSpot = Vector2(0.761, 0.754)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
-enemyGaribs = false
 ids = Array[String](["0x3D", "0x3E"])
 apIds = PackedStringArray("0x3E7", "0x3E8")
 checkRegionIndex = 14
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_qsnx6"]
 script = ExtResource("1_xvkcx")
@@ -105,12 +91,9 @@ checkSpot = Vector2(0.494, 0.26)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
-enemyGaribs = false
 ids = Array[String](["0x107", "0x109", "0x108"])
 apIds = PackedStringArray("0x3E9", "0x3EA", "0x3EB")
 checkRegionIndex = 1
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_10yeg"]
 script = ExtResource("1_xvkcx")
@@ -119,12 +102,9 @@ checkSpot = Vector2(0.795, 0.732)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
-enemyGaribs = false
 ids = Array[String](["0x3A", "0x3B"])
 apIds = PackedStringArray("0x3EC", "0x3ED")
 checkRegionIndex = 14
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_37ri1"]
 script = ExtResource("1_xvkcx")
@@ -133,12 +113,9 @@ checkSpot = Vector2(0.25, 0.93)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
-enemyGaribs = false
 ids = Array[String](["0x103", "0x105", "0x104"])
 apIds = PackedStringArray("0x3EE", "0x3EF", "0x3F0")
 checkRegionIndex = 9
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_peqet"]
 script = ExtResource("1_xvkcx")
@@ -147,12 +124,9 @@ checkSpot = Vector2(0.654, 0.828)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 8
-enemyGaribs = false
 ids = Array[String](["0x29", "0x2A", "0x2E", "0x2F", "0x30", "0x31", "0x32", "0x28"])
 apIds = PackedStringArray("0x3F1", "0x3F2", "0x3F3", "0x3F4", "0x3F5", "0x3F6", "0x3F7", "0x3F8")
 checkRegionIndex = 12
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_3yn8d"]
 script = ExtResource("1_xvkcx")
@@ -161,12 +135,9 @@ checkSpot = Vector2(0.327, 0.94)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 8
-enemyGaribs = false
 ids = Array[String](["0xF0", "0xEE", "0xED", "0xEC", "0xEF", "0xF1", "0xF2", "0xEB"])
 apIds = PackedStringArray("0x3F9", "0x3FA", "0x3FB", "0x3FC", "0x3FD", "0x3FE", "0x3FF", "0x400")
 checkRegionIndex = 10
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_h08bb"]
 script = ExtResource("1_xvkcx")
@@ -175,12 +146,9 @@ checkSpot = Vector2(0.451, 0.249)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
-enemyGaribs = false
 ids = Array[String](["0x10B", "0x10D", "0x10C"])
 apIds = PackedStringArray("0x401", "0x402", "0x403")
 checkRegionIndex = 3
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_22338"]
 script = ExtResource("1_xvkcx")
@@ -189,12 +157,9 @@ checkSpot = Vector2(0.424, 0.397)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
-enemyGaribs = false
 ids = Array[String](["0x25", "0x26"])
 apIds = PackedStringArray("0x404", "0x405")
 checkRegionIndex = 2
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_f57pq"]
 script = ExtResource("1_xvkcx")
@@ -203,12 +168,9 @@ checkSpot = Vector2(0.42, 0.625)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
-enemyGaribs = false
 ids = Array[String](["0xE3", "0xE4", "0xE5"])
 apIds = PackedStringArray("0x406", "0x407", "0x408")
 checkRegionIndex = 5
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_siftd"]
 script = ExtResource("1_xvkcx")
@@ -217,12 +179,9 @@ checkSpot = Vector2(0.372, 0.714)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
-enemyGaribs = false
 ids = Array[String](["0x38", "0x37"])
 apIds = PackedStringArray("0x409", "0x40A")
 checkRegionIndex = 7
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_x8dpt"]
 script = ExtResource("1_xvkcx")
@@ -231,12 +190,9 @@ checkSpot = Vector2(0.358, 0.481)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 3
-enemyGaribs = false
 ids = Array[String](["0xE7", "0xE9", "0xE8"])
 apIds = PackedStringArray("0x40B", "0x40C", "0x40D")
 checkRegionIndex = 5
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_mkm7j"]
 script = ExtResource("1_xvkcx")
@@ -245,12 +201,9 @@ checkSpot = Vector2(0.392, 0.541)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 5
-enemyGaribs = false
 ids = Array[String](["0xF4", "0xF6", "0xF5", "0xF8", "0xF7"])
 apIds = PackedStringArray("0x40E", "0x40F", "0x410", "0x411", "0x412")
 checkRegionIndex = 2
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_sxt35"]
 script = ExtResource("1_xvkcx")
@@ -259,12 +212,9 @@ checkSpot = Vector2(0.525, 0.93)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 4
-enemyGaribs = false
 ids = Array[String](["0xD0", "0xD1", "0xD4", "0xCF"])
 apIds = PackedStringArray("0x413", "0x414", "0x415", "0x416")
 checkRegionIndex = 12
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_dkw88"]
 script = ExtResource("1_xvkcx")
@@ -273,12 +223,9 @@ checkSpot = Vector2(0.334, 0.738)
 checkImage = ExtResource("5_cfct8")
 checkType = 1
 totalSubchecks = 2
-enemyGaribs = false
 ids = Array[String](["0x34", "0x35"])
 apIds = PackedStringArray("0x417", "0x418")
 checkRegionIndex = 7
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_lr6on"]
 script = ExtResource("1_xvkcx")
@@ -286,12 +233,9 @@ checkName = "Raptor"
 checkSpot = Vector2(0.699, 0.705)
 checkImage = ExtResource("7_und52")
 checkType = 10
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x14C"])
 apIds = PackedStringArray("0x41A")
 checkRegionIndex = 12
-checkBallRequirement = false
 lockButton = true
 
 [sub_resource type="Resource" id="Resource_4h5sg"]
@@ -300,13 +244,9 @@ checkName = "Wind-Up"
 checkSpot = Vector2(0.417, 0.255)
 checkImage = ExtResource("2_yegxb")
 checkType = 10
-totalSubchecks = 1
 enemyGaribs = true
 ids = Array[String](["0x162", "0x162"])
 apIds = PackedStringArray("0x41B", "0x419")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_vu20c"]
 script = ExtResource("1_xvkcx")
@@ -314,13 +254,9 @@ checkName = "Alcove Life 1"
 checkSpot = Vector2(0.719, 0.548)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x45"])
 apIds = PackedStringArray("0x41C")
 checkRegionIndex = 13
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_jmsko"]
 script = ExtResource("1_xvkcx")
@@ -328,13 +264,9 @@ checkName = "Alcove Life 2"
 checkSpot = Vector2(0.717, 0.481)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x47"])
 apIds = PackedStringArray("0x41D")
 checkRegionIndex = 13
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_asinf"]
 script = ExtResource("1_xvkcx")
@@ -342,13 +274,9 @@ checkName = "Ice Cave Life"
 checkSpot = Vector2(0.368, 0.943)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x49"])
 apIds = PackedStringArray("0x41E")
 checkRegionIndex = 10
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_3ts2b"]
 script = ExtResource("1_xvkcx")
@@ -356,13 +284,8 @@ checkName = "Ice Face Life"
 checkSpot = Vector2(0.419, 0.314)
 checkImage = ExtResource("4_6y8h7")
 checkType = 2
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x43"])
 apIds = PackedStringArray("0x41F")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_64wnq"]
 script = ExtResource("1_xvkcx")
@@ -370,13 +293,9 @@ checkName = "Checkpoint 1"
 checkSpot = Vector2(0.453, 0.112)
 checkImage = ExtResource("3_5fpjm")
 checkType = 3
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x25"])
 apIds = PackedStringArray("0x420")
-checkRegionIndex = 0
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_x4y6v"]
 script = ExtResource("1_xvkcx")
@@ -384,13 +303,10 @@ checkName = "Checkpoint 2"
 checkSpot = Vector2(0.248, 0.862)
 checkImage = ExtResource("3_5fpjm")
 checkType = 3
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0xB0"])
 apIds = PackedStringArray("0x421")
 checkRegionIndex = 9
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_b5bu7"]
 script = ExtResource("1_xvkcx")
@@ -398,13 +314,20 @@ checkName = "Checkpoint 3"
 checkSpot = Vector2(0.525, 0.863)
 checkImage = ExtResource("3_5fpjm")
 checkType = 3
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0xB7"])
 apIds = PackedStringArray("0x422")
 checkRegionIndex = 12
 checkBallRequirement = true
-lockButton = false
+
+[sub_resource type="Resource" id="Resource_jhxjv"]
+script = ExtResource("1_xvkcx")
+checkName = "Icicles"
+checkSpot = Vector2(0.454, 0.194)
+checkImage = ExtResource("7_an5uf")
+ids = Array[String](["???"])
+apIds = PackedStringArray("0x423")
+checkBallRequirement = true
+metadata/_custom_type_script = "uid://dfshf1u5mmcgh"
 
 [sub_resource type="Resource" id="Resource_bpjxn"]
 script = ExtResource("1_xvkcx")
@@ -412,13 +335,9 @@ checkName = "Goal"
 checkSpot = Vector2(0.833, 0.715)
 checkImage = ExtResource("6_8hn6t")
 checkType = 5
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray("0x423")
+apIds = PackedStringArray("0x424")
 checkRegionIndex = 14
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_yolc8"]
 script = ExtResource("2_cumx6")
@@ -429,22 +348,18 @@ checkImage = ExtResource("3_sxep1")
 script = ExtResource("9_ekl7e")
 regionName = "Spawn"
 regionImage = ExtResource("10_cqssx")
-regionIndex = 0
-defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_3xhts"]
 script = ExtResource("9_ekl7e")
 regionName = "Ball Ledge"
 regionImage = ExtResource("11_jvfvx")
 regionIndex = 1
-defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_hwue0"]
 script = ExtResource("9_ekl7e")
 regionName = "Post Icicles"
 regionImage = ExtResource("12_650vy")
 regionIndex = 2
-defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_vypvi"]
 script = ExtResource("9_ekl7e")
@@ -534,6 +449,6 @@ defaultRegion = 12
 script = ExtResource("3_ko2x7")
 levelSuffix = "1"
 mapImage = ExtResource("2_kjl5c")
-levelChecks = Array[ExtResource("1_xvkcx")]([SubResource("Resource_3cg77"), SubResource("Resource_tbcr5"), SubResource("Resource_o4k0y"), SubResource("Resource_eav70"), SubResource("Resource_j8hgq"), SubResource("Resource_qsnx6"), SubResource("Resource_10yeg"), SubResource("Resource_37ri1"), SubResource("Resource_peqet"), SubResource("Resource_3yn8d"), SubResource("Resource_h08bb"), SubResource("Resource_22338"), SubResource("Resource_f57pq"), SubResource("Resource_siftd"), SubResource("Resource_x8dpt"), SubResource("Resource_mkm7j"), SubResource("Resource_sxt35"), SubResource("Resource_dkw88"), SubResource("Resource_lr6on"), SubResource("Resource_4h5sg"), SubResource("Resource_vu20c"), SubResource("Resource_jmsko"), SubResource("Resource_asinf"), SubResource("Resource_3ts2b"), SubResource("Resource_64wnq"), SubResource("Resource_x4y6v"), SubResource("Resource_b5bu7"), SubResource("Resource_bpjxn")])
+levelChecks = Array[ExtResource("1_xvkcx")]([SubResource("Resource_3cg77"), SubResource("Resource_tbcr5"), SubResource("Resource_o4k0y"), SubResource("Resource_eav70"), SubResource("Resource_j8hgq"), SubResource("Resource_qsnx6"), SubResource("Resource_10yeg"), SubResource("Resource_37ri1"), SubResource("Resource_peqet"), SubResource("Resource_3yn8d"), SubResource("Resource_h08bb"), SubResource("Resource_22338"), SubResource("Resource_f57pq"), SubResource("Resource_siftd"), SubResource("Resource_x8dpt"), SubResource("Resource_mkm7j"), SubResource("Resource_sxt35"), SubResource("Resource_dkw88"), SubResource("Resource_lr6on"), SubResource("Resource_4h5sg"), SubResource("Resource_vu20c"), SubResource("Resource_jmsko"), SubResource("Resource_asinf"), SubResource("Resource_3ts2b"), SubResource("Resource_64wnq"), SubResource("Resource_x4y6v"), SubResource("Resource_b5bu7"), SubResource("Resource_jhxjv"), SubResource("Resource_bpjxn")])
 levelPrerequisiteChecks = Array[ExtResource("2_cumx6")]([SubResource("Resource_yolc8")])
 levelRegions = Array[ExtResource("9_ekl7e")]([SubResource("Resource_0b5q1"), SubResource("Resource_3xhts"), SubResource("Resource_hwue0"), SubResource("Resource_vypvi"), SubResource("Resource_cheu0"), SubResource("Resource_kea5h"), SubResource("Resource_be2je"), SubResource("Resource_3y40p"), SubResource("Resource_t1pyx"), SubResource("Resource_bcian"), SubResource("Resource_k1bmq"), SubResource("Resource_11oqn"), SubResource("Resource_yvv04"), SubResource("Resource_6vqkr"), SubResource("Resource_8jkmp")])

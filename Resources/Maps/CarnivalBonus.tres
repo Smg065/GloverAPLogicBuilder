@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="LevelData" load_steps=16 format=3 uid="uid://svvo2kkplxu1"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_ocxdj"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_ocxdj"]
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="2_fver1"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_lil5k"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_lil5k"]
 [ext_resource type="Texture2D" uid="uid://cq1ctvurlkmkj" path="res://Images/Maps/CarnivalBonus.png" id="2_rcmcu"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_43t5x"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="3_43t5x"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="3_o4tp2"]
 [ext_resource type="Texture2D" uid="uid://dwbqjjqink8pj" path="res://Images/Icons/Checks/Goal.png" id="4_55rkc"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="6_8ps3e"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="6_8ps3e"]
 [ext_resource type="Texture2D" uid="uid://c53jfr7ve7c3o" path="res://Images/Regions/CarnivalBonus.png" id="7_kk5m6"]
 
 [sub_resource type="Resource" id="Resource_akdur"]
@@ -17,12 +17,8 @@ checkSpot = Vector2(0.493, 0.329)
 checkImage = ExtResource("3_o4tp2")
 checkType = 1
 totalSubchecks = 12
-enemyGaribs = false
 ids = Array[String](["0x1BF", "0x1BE", "0x1BD", "0x1BC", "0x1BB", "0x1BA", "0x1B9", "0x1B8", "0x1B7", "0x1B6", "0x1C1", "0x1C0"])
 apIds = PackedStringArray("0x25A", "0x25B", "0x25C", "0x25D", "0x25E", "0x25F", "0x260", "0x261", "0x262", "0x263", "0x264", "0x265")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_fhua3"]
 script = ExtResource("1_ocxdj")
@@ -31,12 +27,8 @@ checkSpot = Vector2(0.493, 0.252)
 checkImage = ExtResource("3_o4tp2")
 checkType = 1
 totalSubchecks = 8
-enemyGaribs = false
 ids = Array[String](["0x1B2", "0x1B0", "0x1AF", "0x1AE", "0x1AD", "0x1AB", "0x1B4", "0x1B3"])
 apIds = PackedStringArray("0x266", "0x267", "0x268", "0x269", "0x26A", "0x26B", "0x26C", "0x26D")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_v6aa4"]
 script = ExtResource("1_ocxdj")
@@ -44,13 +36,8 @@ checkName = "Life 1"
 checkSpot = Vector2(0.587, 0.359)
 checkImage = ExtResource("2_fver1")
 checkType = 2
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x1AC"])
 apIds = PackedStringArray("0x26E")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_pe3w6"]
 script = ExtResource("1_ocxdj")
@@ -58,13 +45,8 @@ checkName = "Life 2"
 checkSpot = Vector2(0.392, 0.603)
 checkImage = ExtResource("2_fver1")
 checkType = 2
-totalSubchecks = 1
-enemyGaribs = false
 ids = Array[String](["0x1B1"])
 apIds = PackedStringArray("0x26F")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_skr10"]
 script = ExtResource("1_ocxdj")
@@ -72,25 +54,17 @@ checkName = "Goal"
 checkSpot = Vector2(0.49, 0.48)
 checkImage = ExtResource("4_55rkc")
 checkType = 5
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
 apIds = PackedStringArray("0x270")
-checkRegionIndex = 0
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_gbck8"]
 script = ExtResource("6_8ps3e")
 regionName = "Main"
 regionImage = ExtResource("7_kk5m6")
-regionIndex = 0
-defaultRegion = 0
 
 [resource]
 script = ExtResource("3_43t5x")
 levelSuffix = "?"
 mapImage = ExtResource("2_rcmcu")
 levelChecks = Array[ExtResource("1_ocxdj")]([SubResource("Resource_akdur"), SubResource("Resource_fhua3"), SubResource("Resource_v6aa4"), SubResource("Resource_pe3w6"), SubResource("Resource_skr10")])
-levelPrerequisiteChecks = Array[ExtResource("2_lil5k")]([])
 levelRegions = Array[ExtResource("6_8ps3e")]([SubResource("Resource_gbck8")])

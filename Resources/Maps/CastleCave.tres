@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3 uid="uid://8nxvni6s5imx"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_84t78"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cfux2"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_84t78"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cfux2"]
 [ext_resource type="Texture2D" uid="uid://tjcen42fqcco" path="res://Images/Maps/CastleCave.png" id="2_h1dx4"]
 [ext_resource type="Texture2D" uid="uid://chldiy8ku7gio" path="res://Images/Icons/Crystal.png" id="2_mwcbr"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="2_wqwdq"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="2_wqwdq"]
 [ext_resource type="Texture2D" uid="uid://l0xqtppw0382" path="res://Images/Icons/Checks/CaveExit.png" id="3_504uq"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="5_kefdq"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="5_kefdq"]
 [ext_resource type="Texture2D" uid="uid://b5xitf5aep5jq" path="res://Images/Regions/CastleCave.png" id="6_g7akg"]
 
 [sub_resource type="Resource" id="Resource_jutd0"]
@@ -16,11 +16,7 @@ checkSpot = Vector2(0.645, 0.495)
 checkImage = ExtResource("2_mwcbr")
 checkType = 9
 totalSubchecks = 7
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray("0x794", "0x795", "0x796", "0x797", "0x798", "0x799", "0x79A")
-checkRegionIndex = 0
-checkBallRequirement = false
+apIds = PackedStringArray("0x79A", "0x79B", "0x79C", "0x79D", "0x79E", "0x79F", "0x7A0")
 lockButton = true
 
 [sub_resource type="Resource" id="Resource_eg8ci"]
@@ -29,25 +25,14 @@ checkName = "Cave Exit"
 checkSpot = Vector2(0.369, 0.499)
 checkImage = ExtResource("3_504uq")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_sawnc"]
 script = ExtResource("5_kefdq")
 regionName = "Main"
 regionImage = ExtResource("6_g7akg")
-regionIndex = 0
-defaultRegion = 0
 
 [resource]
 script = ExtResource("2_wqwdq")
-levelSuffix = ""
 mapImage = ExtResource("2_h1dx4")
 levelChecks = Array[ExtResource("1_84t78")]([SubResource("Resource_jutd0"), SubResource("Resource_eg8ci")])
-levelPrerequisiteChecks = Array[ExtResource("2_cfux2")]([])
 levelRegions = Array[ExtResource("5_kefdq")]([SubResource("Resource_sawnc")])

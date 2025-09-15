@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="LevelData" load_steps=10 format=3 uid="uid://bl7444gl1od71"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_85be2"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_85be2"]
 [ext_resource type="Texture2D" uid="uid://ulylk25eku6s" path="res://Images/Icons/Checks/BossPlatform.png" id="2_d0e1a"]
 [ext_resource type="Texture2D" uid="uid://bucdnlq7samx8" path="res://Images/Maps/OutOfThisWorldBoss.png" id="2_ro2gn"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_i5ksl"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_tbxc8"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="4_6qqo6"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="3_i5ksl"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_tbxc8"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="4_6qqo6"]
 [ext_resource type="Texture2D" uid="uid://bwui28su1r7fc" path="res://Images/Regions/OutOfThisWorldBoss.png" id="5_3efb5"]
 
 [sub_resource type="Resource" id="Resource_7pq24"]
@@ -14,25 +14,17 @@ checkName = "Boss"
 checkSpot = Vector2(0.5, 0.5)
 checkImage = ExtResource("2_d0e1a")
 checkType = 5
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray("0x74D")
-checkRegionIndex = 0
+apIds = PackedStringArray("0x753")
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_fam0b"]
 script = ExtResource("4_6qqo6")
 regionName = "Main"
 regionImage = ExtResource("5_3efb5")
-regionIndex = 0
-defaultRegion = 0
 
 [resource]
 script = ExtResource("3_i5ksl")
 levelSuffix = "!"
 mapImage = ExtResource("2_ro2gn")
 levelChecks = Array[ExtResource("1_85be2")]([SubResource("Resource_7pq24")])
-levelPrerequisiteChecks = Array[ExtResource("3_tbxc8")]([])
 levelRegions = Array[ExtResource("4_6qqo6")]([SubResource("Resource_fam0b")])

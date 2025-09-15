@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3 uid="uid://ograwtwmh0m2"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_7huu1"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_7huu1"]
 [ext_resource type="Texture2D" uid="uid://dd0nvw2oy6wh8" path="res://Images/Maps/PrehistoricBoss.png" id="2_h5v3b"]
 [ext_resource type="Texture2D" uid="uid://ulylk25eku6s" path="res://Images/Icons/Checks/BossPlatform.png" id="2_uklro"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_2hrxr"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_axl5p"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="4_3sadd"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="3_2hrxr"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_axl5p"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="4_3sadd"]
 [ext_resource type="Texture2D" uid="uid://bbsgfefh6r6sd" path="res://Images/Regions/PrehistoricBoss/PrehistoricBoss.png" id="5_3qr4k"]
 [ext_resource type="Texture2D" uid="uid://dfkweq8epudbx" path="res://Images/Regions/PrehistoricBoss/Swag.png" id="6_w15xg"]
 
@@ -15,32 +15,23 @@ checkName = "Boss"
 checkSpot = Vector2(0.752, 0.317)
 checkImage = ExtResource("2_uklro")
 checkType = 5
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray("0x4F0")
-checkRegionIndex = 0
+apIds = PackedStringArray("0x4F2")
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_lei3p"]
 script = ExtResource("4_3sadd")
 regionName = "Main"
 regionImage = ExtResource("5_3qr4k")
-regionIndex = 0
-defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_exjr2"]
 script = ExtResource("4_3sadd")
 regionName = "Swag"
 regionImage = ExtResource("6_w15xg")
 regionIndex = 1
-defaultRegion = 0
 
 [resource]
 script = ExtResource("3_2hrxr")
 levelSuffix = "!"
 mapImage = ExtResource("2_h5v3b")
 levelChecks = Array[ExtResource("1_7huu1")]([SubResource("Resource_vnhfe")])
-levelPrerequisiteChecks = Array[ExtResource("3_axl5p")]([])
 levelRegions = Array[ExtResource("4_3sadd")]([SubResource("Resource_lei3p"), SubResource("Resource_exjr2")])

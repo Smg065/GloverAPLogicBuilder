@@ -96,6 +96,5 @@ func update_check_info(checkInfo : CheckInfo, apIdOffset : int):
 	checkInfo.apIds = newApIds
 	ResourceSaver.save(checkInfo)
 
-
 func id_to_hex(checkNumber : int):
 	return "0x" + ("%03X" % [checkNumber])

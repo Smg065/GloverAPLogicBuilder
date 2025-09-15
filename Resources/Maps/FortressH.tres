@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LevelData" load_steps=32 format=3 uid="uid://dd1207junonav"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_pcbay"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_pcbay"]
 [ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="2_yvft2"]
 [ext_resource type="Texture2D" uid="uid://drs13wbyxcupq" path="res://Images/Icons/Checks/Hub1.png" id="3_ffmdf"]
 [ext_resource type="Texture2D" uid="uid://dd1jn4n356nxi" path="res://Images/Icons/Checks/Hub2.png" id="4_ni7s5"]
@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://ckq685mqaxf6s" path="res://Images/Icons/Checks/HubBonus.png" id="6_2g8h2"]
 [ext_resource type="Texture2D" uid="uid://ch1p45y0u1wk4" path="res://Images/Icons/Checks/HubBoss.png" id="7_ojhvo"]
 [ext_resource type="Texture2D" uid="uid://ke2a5a3nr7tc" path="res://Images/Icons/Checks/HubExit.png" id="8_oh34j"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="9_yy2sp"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="9_yy2sp"]
 [ext_resource type="Texture2D" uid="uid://c4p2ph6b886ep" path="res://Images/Icons/Checks/AllGaribs.png" id="10_pc51s"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="11_56ba1"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="11_56ba1"]
 [ext_resource type="Texture2D" uid="uid://lrysg2arwrrk" path="res://Images/Regions/Wayrooms.png" id="12_wjxco"]
 [ext_resource type="Texture2D" uid="uid://dj7t1ib06k8ox" path="res://Images/Maps/Wayrooms.png" id="13_t846n"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="14_ihqf6"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="14_ihqf6"]
 
 [sub_resource type="Resource" id="Resource_yqioq"]
 script = ExtResource("1_pcbay")
@@ -21,13 +21,7 @@ checkName = "Tip"
 checkSpot = Vector2(0.665, 0.45)
 checkImage = ExtResource("2_yvft2")
 checkType = 6
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray("0x532")
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
+apIds = PackedStringArray("0x534")
 
 [sub_resource type="Resource" id="Resource_2nw00"]
 script = ExtResource("1_pcbay")
@@ -35,13 +29,6 @@ checkName = "Entry 1"
 checkSpot = Vector2(0.325, 0.365)
 checkImage = ExtResource("3_ffmdf")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_dt37r"]
 script = ExtResource("1_pcbay")
@@ -49,13 +36,6 @@ checkName = "Entry 2"
 checkSpot = Vector2(0.395, 0.23)
 checkImage = ExtResource("4_ni7s5")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_g4rv0"]
 script = ExtResource("1_pcbay")
@@ -63,13 +43,6 @@ checkName = "Entry 3"
 checkSpot = Vector2(0.5, 0.2)
 checkImage = ExtResource("5_4e3hv")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_n6vat"]
 script = ExtResource("1_pcbay")
@@ -77,13 +50,6 @@ checkName = "Entry Bonus"
 checkSpot = Vector2(0.675, 0.365)
 checkImage = ExtResource("6_2g8h2")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_r2lgg"]
 script = ExtResource("1_pcbay")
@@ -91,13 +57,6 @@ checkName = "Entry Boss"
 checkSpot = Vector2(0.605, 0.23)
 checkImage = ExtResource("7_ojhvo")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_1pwqk"]
 script = ExtResource("1_pcbay")
@@ -105,13 +64,6 @@ checkName = "Exit"
 checkSpot = Vector2(0.499, 0.826)
 checkImage = ExtResource("8_oh34j")
 checkType = 7
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray()
-checkRegionIndex = 0
-checkBallRequirement = false
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_0e8rx"]
 script = ExtResource("9_yy2sp")
@@ -162,8 +114,6 @@ checkImage = ExtResource("10_pc51s")
 script = ExtResource("11_56ba1")
 regionName = "Main"
 regionImage = ExtResource("12_wjxco")
-regionIndex = 0
-defaultRegion = 0
 
 [resource]
 script = ExtResource("14_ihqf6")

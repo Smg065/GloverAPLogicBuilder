@@ -67,7 +67,9 @@ static func landscape_memdump_combiner(xmlPath : String, memdumpPath : String) -
 					else:
 						nextLine = next_hex(hexLines, loadedOrder, LINE_ENEMY)
 					var coord : Vector3 = xml_coord(parser)
-					loadedOrder.append("Enemy " + nextLine.id + " named " + enemyName + " at " + str(coord))
+					var outputString = "Enemy " + nextLine.id + " named " + enemyName + " at " + str(coord) + " address "
+					outputString += nextLine.address + " (%X" % (nextLine.address.hex_to_int() + 56) + " Dropoff)"
+					loadedOrder.append(outputString)
 				"MrTip":
 					var nextLine : MemoryHexLine = next_hex(hexLines, loadedOrder, LINE_MR_TIP)
 					var coord : Vector3 = xml_coord(parser)

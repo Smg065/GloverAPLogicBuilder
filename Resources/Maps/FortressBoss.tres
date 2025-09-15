@@ -1,13 +1,35 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3 uid="uid://bfhhlbc645dgu"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=16 format=3 uid="uid://bfhhlbc645dgu"]
 
-[ext_resource type="Script" path="res://Scripts/CheckInfo.gd" id="1_0cguh"]
+[ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_0cguh"]
 [ext_resource type="Texture2D" uid="uid://ulylk25eku6s" path="res://Images/Icons/Checks/BossPlatform.png" id="2_lk0tn"]
 [ext_resource type="Texture2D" uid="uid://dga41746outnq" path="res://Images/Maps/FortressOfFearBoss.png" id="2_rjt42"]
-[ext_resource type="Script" path="res://Scripts/LevelData.gd" id="3_40j6r"]
-[ext_resource type="Script" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_jefq2"]
-[ext_resource type="Script" path="res://Scripts/RegionInfo.gd" id="4_ktqd1"]
+[ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="3_40j6r"]
+[ext_resource type="Texture2D" uid="uid://ck3i5niuagc2h" path="res://Images/Icons/Checks/GloverSwitch.png" id="3_i7fvc"]
+[ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_jefq2"]
+[ext_resource type="Texture2D" uid="uid://dxlmcxqftwiwo" path="res://Images/Icons/Checks/BallSwitch.png" id="4_3yiga"]
+[ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="4_ktqd1"]
 [ext_resource type="Texture2D" uid="uid://dpihxdjwai0xe" path="res://Images/Regions/FortressOfFearBoss/FortressOfFearBoss.png" id="5_isosm"]
 [ext_resource type="Texture2D" uid="uid://ca253367ep3yb" path="res://Images/Regions/FortressOfFearBoss/Upstairs.png" id="6_wtul3"]
+
+[sub_resource type="Resource" id="Resource_6b0iw"]
+script = ExtResource("1_0cguh")
+checkName = "Ball Switch"
+checkSpot = Vector2(0.439, 0.208)
+checkImage = ExtResource("4_3yiga")
+ids = Array[String](["0x90"])
+apIds = PackedStringArray("0x634")
+checkRegionIndex = 1
+checkBallRequirement = true
+lockButton = true
+
+[sub_resource type="Resource" id="Resource_hxvcm"]
+script = ExtResource("1_0cguh")
+checkName = "Glover Switch"
+checkSpot = Vector2(0.462, 0.359)
+checkImage = ExtResource("3_i7fvc")
+ids = Array[String](["0x96"])
+apIds = PackedStringArray("0x635")
+lockButton = true
 
 [sub_resource type="Resource" id="Resource_7xoph"]
 script = ExtResource("1_0cguh")
@@ -15,32 +37,23 @@ checkName = "Boss"
 checkSpot = Vector2(0.5, 0.5)
 checkImage = ExtResource("2_lk0tn")
 checkType = 5
-totalSubchecks = 1
-enemyGaribs = false
-ids = Array[String]([])
-apIds = PackedStringArray("0x630")
-checkRegionIndex = 0
+apIds = PackedStringArray("0x636")
 checkBallRequirement = true
-lockButton = false
 
 [sub_resource type="Resource" id="Resource_x3kao"]
 script = ExtResource("4_ktqd1")
 regionName = "Floor"
 regionImage = ExtResource("5_isosm")
-regionIndex = 0
-defaultRegion = 0
 
 [sub_resource type="Resource" id="Resource_np3vc"]
 script = ExtResource("4_ktqd1")
 regionName = "Ledges"
 regionImage = ExtResource("6_wtul3")
 regionIndex = 1
-defaultRegion = 0
 
 [resource]
 script = ExtResource("3_40j6r")
 levelSuffix = "!"
 mapImage = ExtResource("2_rjt42")
-levelChecks = Array[ExtResource("1_0cguh")]([SubResource("Resource_7xoph")])
-levelPrerequisiteChecks = Array[ExtResource("3_jefq2")]([])
+levelChecks = Array[ExtResource("1_0cguh")]([SubResource("Resource_6b0iw"), SubResource("Resource_hxvcm"), SubResource("Resource_7xoph")])
 levelRegions = Array[ExtResource("4_ktqd1")]([SubResource("Resource_x3kao"), SubResource("Resource_np3vc")])

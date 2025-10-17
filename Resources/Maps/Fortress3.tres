@@ -575,8 +575,8 @@ defaultRegion = 18
 script = ExtResource("13_on0yf")
 regionName = "Spike Wall Top"
 regionImage = ExtResource("34_4pi7u")
-regionIndex = 18
-defaultRegion = 20
+regionIndex = 20
+defaultRegion = 18
 
 [sub_resource type="Resource" id="Resource_5nbar"]
 script = ExtResource("13_on0yf")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=104 format=3 uid="uid://bytk75t3wslom"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=106 format=3 uid="uid://bytk75t3wslom"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_tkrmx"]
 [ext_resource type="Texture2D" uid="uid://c851h8vug25ty" path="res://Images/Maps/FortressOfFear1.png" id="2_00m8h"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="19_ersnj"]
 [ext_resource type="Texture2D" uid="uid://d3qk6ipe4woev" path="res://Images/Regions/FortressOfFear1/Spawn.png" id="20_mtswt"]
 [ext_resource type="Texture2D" uid="uid://cyrtf5hemo682" path="res://Images/Regions/FortressOfFear1/Ball Location.png" id="21_h5ixp"]
+[ext_resource type="Texture2D" uid="uid://dgubj8m62gnn1" path="res://Images/Icons/Checks/CoffinLightning.png" id="22_44xab"]
 [ext_resource type="Texture2D" uid="uid://dg2ifnwjdtu0i" path="res://Images/Regions/FortressOfFear1/Electric Peak.png" id="22_gyg1x"]
 [ext_resource type="Texture2D" uid="uid://q2tcjs7oj7uo" path="res://Images/Regions/FortressOfFear1/Tower.png" id="23_5hqka"]
 [ext_resource type="Texture2D" uid="uid://56kfo3godaq8" path="res://Images/Regions/FortressOfFear1/Dropdown.png" id="23_jifvm"]
@@ -467,6 +468,12 @@ script = ExtResource("2_beywn")
 checkName = "Doorway Key 2"
 checkImage = ExtResource("4_1lgw2")
 
+[sub_resource type="Resource" id="Resource_83n38"]
+script = ExtResource("2_beywn")
+checkName = "Coffin Lightning"
+checkImage = ExtResource("22_44xab")
+metadata/_custom_type_script = "uid://c334xb2l04wlb"
+
 [sub_resource type="Resource" id="Resource_cdssr"]
 script = ExtResource("2_beywn")
 checkName = "Drawbridge"
@@ -589,5 +596,5 @@ script = ExtResource("3_3d1cq")
 levelSuffix = "1"
 mapImage = ExtResource("2_00m8h")
 levelChecks = Array[ExtResource("1_tkrmx")]([SubResource("Resource_8du0s"), SubResource("Resource_u1kxj"), SubResource("Resource_bi6xn"), SubResource("Resource_ik235"), SubResource("Resource_lhlsh"), SubResource("Resource_bm3ue"), SubResource("Resource_3ug6s"), SubResource("Resource_oab8c"), SubResource("Resource_q15s8"), SubResource("Resource_qc7nc"), SubResource("Resource_2k41c"), SubResource("Resource_316bn"), SubResource("Resource_hvmy1"), SubResource("Resource_anpyg"), SubResource("Resource_xoi6e"), SubResource("Resource_lexog"), SubResource("Resource_qrn35"), SubResource("Resource_5w2fx"), SubResource("Resource_p21dx"), SubResource("Resource_x2stk"), SubResource("Resource_8xgae"), SubResource("Resource_so40y"), SubResource("Resource_s0e7y"), SubResource("Resource_7x0ng"), SubResource("Resource_e3tl1"), SubResource("Resource_vy3o6"), SubResource("Resource_kwa6p"), SubResource("Resource_bpeca"), SubResource("Resource_4nmsh"), SubResource("Resource_sywhd"), SubResource("Resource_mngex"), SubResource("Resource_3eau1"), SubResource("Resource_mxkar"), SubResource("Resource_hqapk"), SubResource("Resource_tyfbu"), SubResource("Resource_rydbb"), SubResource("Resource_6pr2j"), SubResource("Resource_qrk6x"), SubResource("Resource_clo7c"), SubResource("Resource_mvae8")])
-levelPrerequisiteChecks = Array[ExtResource("2_beywn")]([SubResource("Resource_45g64"), SubResource("Resource_pc5s2"), SubResource("Resource_6pbq6"), SubResource("Resource_cdssr")])
+levelPrerequisiteChecks = Array[ExtResource("2_beywn")]([SubResource("Resource_45g64"), SubResource("Resource_pc5s2"), SubResource("Resource_6pbq6"), SubResource("Resource_83n38"), SubResource("Resource_cdssr")])
 levelRegions = Array[ExtResource("19_ersnj")]([SubResource("Resource_0qneg"), SubResource("Resource_xn1ys"), SubResource("Resource_d1okt"), SubResource("Resource_kk6jy"), SubResource("Resource_rtp6o"), SubResource("Resource_uwu4n"), SubResource("Resource_mn1ky"), SubResource("Resource_xii52"), SubResource("Resource_xup8v"), SubResource("Resource_253va"), SubResource("Resource_kdvss"), SubResource("Resource_yjcqy"), SubResource("Resource_p3r0t"), SubResource("Resource_nr0pt"), SubResource("Resource_cgrmk"), SubResource("Resource_8hkc2"), SubResource("Resource_e8j75")])

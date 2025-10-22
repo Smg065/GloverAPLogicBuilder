@@ -236,7 +236,6 @@ checkType = 10
 ids = Array[String](["0x14C"])
 apIds = PackedStringArray("0x41A")
 checkRegionIndex = 12
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_4h5sg"]
 script = ExtResource("1_xvkcx")

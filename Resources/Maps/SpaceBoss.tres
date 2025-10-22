@@ -14,7 +14,7 @@ checkName = "Boss"
 checkSpot = Vector2(0.5, 0.5)
 checkImage = ExtResource("2_d0e1a")
 checkType = 5
-apIds = PackedStringArray("0x753")
+apIds = PackedStringArray("0x755")
 checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_fam0b"]

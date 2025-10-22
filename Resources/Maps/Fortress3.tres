@@ -214,7 +214,6 @@ checkType = 10
 ids = Array[String](["0x1B9"])
 apIds = PackedStringArray("0x61D")
 checkRegionIndex = 9
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_wgh51"]
 script = ExtResource("1_gpte1")
@@ -237,7 +236,6 @@ totalSubchecks = 2
 ids = Array[String](["0x1D9", "0x1E2"])
 apIds = PackedStringArray("0x61F", "0x620")
 checkRegionIndex = 19
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_0yb37"]
 script = ExtResource("1_gpte1")

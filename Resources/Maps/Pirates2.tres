@@ -180,7 +180,6 @@ checkType = 10
 ids = Array[String](["0x150"])
 apIds = PackedStringArray("0x315")
 checkRegionIndex = 7
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_dw08f"]
 script = ExtResource("1_xlb5j")
@@ -211,7 +210,6 @@ checkType = 10
 ids = Array[String](["0x198"])
 apIds = PackedStringArray("0x318")
 checkRegionIndex = 3
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_hui0f"]
 script = ExtResource("1_xlb5j")

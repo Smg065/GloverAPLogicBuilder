@@ -16,7 +16,7 @@ checkSpot = Vector2(0.645, 0.495)
 checkImage = ExtResource("2_mwcbr")
 checkType = 9
 totalSubchecks = 7
-apIds = PackedStringArray("0x79A", "0x79B", "0x79C", "0x79D", "0x79E", "0x79F", "0x7A0")
+apIds = PackedStringArray("0x79C", "0x79D", "0x79E", "0x79F", "0x7A0", "0x7A1", "0x7A2")
 lockButton = true
 
 [sub_resource type="Resource" id="Resource_eg8ci"]

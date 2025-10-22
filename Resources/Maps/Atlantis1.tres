@@ -178,7 +178,6 @@ checkImage = ExtResource("12_e07bo")
 checkType = 10
 ids = Array[String](["0xDC"])
 apIds = PackedStringArray("0x036")
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_iv26r"]
 script = ExtResource("1_ytcoe")

@@ -247,7 +247,6 @@ totalSubchecks = 3
 ids = Array[String](["0x19A", "0x193", "0x1A3"])
 apIds = PackedStringArray("0x374", "0x375", "0x376")
 checkRegionIndex = 14
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_rqvtg"]
 script = ExtResource("1_oq1yt")
@@ -269,7 +268,6 @@ checkType = 10
 ids = Array[String](["0x1AC"])
 apIds = PackedStringArray("0x378")
 checkRegionIndex = 16
-lockButton = true
 
 [sub_resource type="Resource" id="Resource_su4ol"]
 script = ExtResource("1_oq1yt")

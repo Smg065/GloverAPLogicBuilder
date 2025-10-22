@@ -460,12 +460,12 @@ checkImage = ExtResource("3_7e3pq")
 
 [sub_resource type="Resource" id="Resource_pc5s2"]
 script = ExtResource("2_beywn")
-checkName = "Doorway Key 1"
+checkName = "Progressive Doorway 1"
 checkImage = ExtResource("4_1lgw2")
 
 [sub_resource type="Resource" id="Resource_6pbq6"]
 script = ExtResource("2_beywn")
-checkName = "Doorway Key 2"
+checkName = "Progressive Doorway 2"
 checkImage = ExtResource("4_1lgw2")
 
 [sub_resource type="Resource" id="Resource_83n38"]

@@ -157,6 +157,7 @@ checkName = "Throwbot"
 checkSpot = Vector2(0.341, 0.136)
 checkImage = ExtResource("9_gshqt")
 checkType = 10
+ids = Array[String](["0x1C6"])
 apIds = PackedStringArray("0x6EC")
 checkRegionIndex = 4
 metadata/_custom_type_script = "uid://dfshf1u5mmcgh"

@@ -213,6 +213,7 @@ checkName = "Opec"
 checkSpot = Vector2(0.516, 0.421)
 checkImage = ExtResource("14_g2n85")
 checkType = 10
+ids = Array[String](["0x263"])
 apIds = PackedStringArray("0x746")
 checkRegionIndex = 16
 metadata/_custom_type_script = "uid://dfshf1u5mmcgh"

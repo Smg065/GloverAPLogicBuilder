@@ -328,12 +328,12 @@ checkImage = ExtResource("3_pfm8m")
 
 [sub_resource type="Resource" id="Resource_24da8"]
 script = ExtResource("2_niv2q")
-checkName = "Checkpoint Gate 1"
+checkName = "Progressive Gate 1"
 checkImage = ExtResource("4_y3bir")
 
 [sub_resource type="Resource" id="Resource_2ekwj"]
 script = ExtResource("2_niv2q")
-checkName = "Checkpoint Gate 2"
+checkName = "Progressive Gate 2"
 checkImage = ExtResource("16_v2egu")
 metadata/_custom_type_script = "uid://c334xb2l04wlb"
 

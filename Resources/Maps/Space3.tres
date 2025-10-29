@@ -52,7 +52,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 9
 ids = Array[String](["0xA7", "0xAF", "0xAE", "0xAB", "0xA8", "0xA9", "0xAA", "0xAD", "0xAC"])
-apIds = PackedStringArray("0x6F4", "0x6F5", "0x6F6", "0x6F7", "0x6F8", "0x6F9", "0x6FA", "0x6FB", "0x6FC")
+apIds = PackedStringArray("0x6F5", "0x6F6", "0x6F7", "0x6F8", "0x6F9", "0x6FA", "0x6FB", "0x6FC", "0x6FD")
 checkRegionIndex = 11
 
 [sub_resource type="Resource" id="Resource_r405b"]
@@ -63,7 +63,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 3
 ids = Array[String](["0xB1", "0xB3", "0xB2"])
-apIds = PackedStringArray("0x6FD", "0x6FE", "0x6FF")
+apIds = PackedStringArray("0x6FE", "0x6FF", "0x700")
 checkRegionIndex = 5
 
 [sub_resource type="Resource" id="Resource_u23kr"]
@@ -74,7 +74,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 4
 ids = Array[String](["0x4A", "0x43", "0x48", "0x4F"])
-apIds = PackedStringArray("0x700", "0x701", "0x702", "0x703")
+apIds = PackedStringArray("0x701", "0x702", "0x703", "0x704")
 checkRegionIndex = 17
 
 [sub_resource type="Resource" id="Resource_1imk7"]
@@ -85,7 +85,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 6
 ids = Array[String](["0x36", "0x31", "0x35", "0x37", "0x30", "0x38"])
-apIds = PackedStringArray("0x704", "0x705", "0x706", "0x707", "0x708", "0x709")
+apIds = PackedStringArray("0x705", "0x706", "0x707", "0x708", "0x709", "0x70A")
 checkRegionIndex = 18
 
 [sub_resource type="Resource" id="Resource_u3ids"]
@@ -96,7 +96,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 4
 ids = Array[String](["0x4C", "0x45", "0x44", "0x4B"])
-apIds = PackedStringArray("0x70A", "0x70B", "0x70C", "0x70D")
+apIds = PackedStringArray("0x70B", "0x70C", "0x70D", "0x70E")
 checkRegionIndex = 17
 
 [sub_resource type="Resource" id="Resource_0ywrd"]
@@ -107,7 +107,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x82", "0x86", "0x85", "0x84", "0x83"])
-apIds = PackedStringArray("0x70E", "0x70F", "0x710", "0x711", "0x712")
+apIds = PackedStringArray("0x70F", "0x710", "0x711", "0x712", "0x713")
 checkRegionIndex = 3
 
 [sub_resource type="Resource" id="Resource_jtbij"]
@@ -118,7 +118,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 4
 ids = Array[String](["0x47", "0x4E", "0x4D", "0x46"])
-apIds = PackedStringArray("0x713", "0x714", "0x715", "0x716")
+apIds = PackedStringArray("0x714", "0x715", "0x716", "0x717")
 checkRegionIndex = 17
 
 [sub_resource type="Resource" id="Resource_5dc81"]
@@ -129,7 +129,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 12
 ids = Array[String](["0xB9", "0xBD", "0xB5", "0xC0", "0xBC", "0xB8", "0xB7", "0xBB", "0xBF", "0xBE", "0xBA", "0xB6"])
-apIds = PackedStringArray("0x717", "0x718", "0x719", "0x71A", "0x71B", "0x71C", "0x71D", "0x71E", "0x71F", "0x720", "0x721", "0x722")
+apIds = PackedStringArray("0x718", "0x719", "0x71A", "0x71B", "0x71C", "0x71D", "0x71E", "0x71F", "0x720", "0x721", "0x722", "0x723")
 checkRegionIndex = 8
 
 [sub_resource type="Resource" id="Resource_8ujpv"]
@@ -140,7 +140,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 7
 ids = Array[String](["0xC2", "0xC4", "0xC3", "0xC6", "0xC9", "0xC8", "0xC7"])
-apIds = PackedStringArray("0x723", "0x724", "0x725", "0x726", "0x727", "0x728", "0x729")
+apIds = PackedStringArray("0x724", "0x725", "0x726", "0x727", "0x728", "0x729", "0x72A")
 checkRegionIndex = 2
 
 [sub_resource type="Resource" id="Resource_k7mel"]
@@ -151,7 +151,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x88", "0x8C", "0x8B", "0x8A", "0x89"])
-apIds = PackedStringArray("0x72A", "0x72B", "0x72C", "0x72D", "0x72E")
+apIds = PackedStringArray("0x72B", "0x72C", "0x72D", "0x72E", "0x72F")
 checkRegionIndex = 3
 
 [sub_resource type="Resource" id="Resource_wm81g"]
@@ -162,7 +162,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 7
 ids = Array[String](["0x9B", "0x9E", "0x9D", "0x9C", "0x97", "0x99", "0x98"])
-apIds = PackedStringArray("0x72F", "0x730", "0x731", "0x732", "0x733", "0x734", "0x735")
+apIds = PackedStringArray("0x730", "0x731", "0x732", "0x733", "0x734", "0x735", "0x736")
 checkRegionIndex = 17
 
 [sub_resource type="Resource" id="Resource_lral0"]
@@ -173,7 +173,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 6
 ids = Array[String](["0xA0", "0xA5", "0xA4", "0xA3", "0xA2", "0xA1"])
-apIds = PackedStringArray("0x736", "0x737", "0x738", "0x739", "0x73A", "0x73B")
+apIds = PackedStringArray("0x737", "0x738", "0x739", "0x73A", "0x73B", "0x73C")
 checkRegionIndex = 17
 
 [sub_resource type="Resource" id="Resource_p4y7g"]
@@ -184,7 +184,7 @@ checkImage = ExtResource("9_qni5d")
 checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x40", "0x3F", "0x3E", "0x3D", "0x3C", "0x3B", "0x3A", "0x41"])
-apIds = PackedStringArray("0x73C", "0x73D", "0x73E", "0x73F", "0x740", "0x741", "0x742", "0x743")
+apIds = PackedStringArray("0x73D", "0x73E", "0x73F", "0x740", "0x741", "0x742", "0x743", "0x744")
 checkRegionIndex = 14
 
 [sub_resource type="Resource" id="Resource_5ojs5"]
@@ -194,7 +194,7 @@ checkSpot = Vector2(0.276, 0.225)
 checkImage = ExtResource("12_omyu3")
 checkType = 10
 ids = Array[String](["0x194"])
-apIds = PackedStringArray("0x744")
+apIds = PackedStringArray("0x745")
 checkRegionIndex = 1
 
 [sub_resource type="Resource" id="Resource_tpp2t"]
@@ -204,7 +204,7 @@ checkSpot = Vector2(0.516, 0.554)
 checkImage = ExtResource("12_omyu3")
 checkType = 10
 ids = Array[String](["0x222"])
-apIds = PackedStringArray("0x745")
+apIds = PackedStringArray("0x746")
 checkRegionIndex = 15
 
 [sub_resource type="Resource" id="Resource_ectwb"]
@@ -214,7 +214,7 @@ checkSpot = Vector2(0.516, 0.421)
 checkImage = ExtResource("14_g2n85")
 checkType = 10
 ids = Array[String](["0x263"])
-apIds = PackedStringArray("0x746")
+apIds = PackedStringArray("0x747")
 checkRegionIndex = 16
 metadata/_custom_type_script = "uid://dfshf1u5mmcgh"
 
@@ -225,7 +225,7 @@ checkSpot = Vector2(0.309, 0.333)
 checkImage = ExtResource("11_tr5wc")
 checkType = 10
 ids = Array[String](["0x259"])
-apIds = PackedStringArray("0x747")
+apIds = PackedStringArray("0x748")
 
 [sub_resource type="Resource" id="Resource_eatte"]
 script = ExtResource("1_ecbe2")
@@ -234,7 +234,7 @@ checkSpot = Vector2(0.357, 0.009)
 checkImage = ExtResource("7_ie31f")
 checkType = 2
 ids = Array[String](["0x27"])
-apIds = PackedStringArray("0x748")
+apIds = PackedStringArray("0x749")
 checkRegionIndex = 8
 
 [sub_resource type="Resource" id="Resource_s7q3r"]
@@ -244,7 +244,7 @@ checkSpot = Vector2(0.276, 0.442)
 checkImage = ExtResource("3_xpga5")
 checkType = 3
 ids = Array[String](["0x27"])
-apIds = PackedStringArray("0x749")
+apIds = PackedStringArray("0x74A")
 checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_0y177"]
@@ -254,7 +254,7 @@ checkSpot = Vector2(0.276, 0.168)
 checkImage = ExtResource("3_xpga5")
 checkType = 3
 ids = Array[String](["0x1CC"])
-apIds = PackedStringArray("0x74A")
+apIds = PackedStringArray("0x74B")
 checkRegionIndex = 2
 checkBallRequirement = true
 
@@ -265,7 +265,7 @@ checkSpot = Vector2(0.401, 0.751)
 checkImage = ExtResource("3_xpga5")
 checkType = 3
 ids = Array[String](["0x1D2"])
-apIds = PackedStringArray("0x74B")
+apIds = PackedStringArray("0x74C")
 checkRegionIndex = 12
 checkBallRequirement = true
 
@@ -276,7 +276,7 @@ checkSpot = Vector2(0.673, 0.413)
 checkImage = ExtResource("3_xpga5")
 checkType = 3
 ids = Array[String](["0x1D5"])
-apIds = PackedStringArray("0x74C")
+apIds = PackedStringArray("0x74D")
 checkRegionIndex = 17
 checkBallRequirement = true
 
@@ -286,7 +286,7 @@ checkName = "Above Fan Red Switch"
 checkSpot = Vector2(0.438, 0.88)
 checkImage = ExtResource("5_vp6q2")
 ids = Array[String](["0x128"])
-apIds = PackedStringArray("0x74D")
+apIds = PackedStringArray("0x74E")
 checkRegionIndex = 10
 
 [sub_resource type="Resource" id="Resource_oa12t"]
@@ -295,7 +295,7 @@ checkName = "Ball Switch"
 checkSpot = Vector2(0.544, 0.382)
 checkImage = ExtResource("6_72sgr")
 ids = Array[String](["0x182"])
-apIds = PackedStringArray("0x74E")
+apIds = PackedStringArray("0x74F")
 checkRegionIndex = 16
 checkBallRequirement = true
 
@@ -305,7 +305,7 @@ checkName = "Conveyor Glover Switch"
 checkSpot = Vector2(0.439, 0.316)
 checkImage = ExtResource("4_yujah")
 ids = Array[String](["0x188"])
-apIds = PackedStringArray("0x74F")
+apIds = PackedStringArray("0x750")
 checkRegionIndex = 6
 
 [sub_resource type="Resource" id="Resource_v0hm2"]
@@ -314,7 +314,7 @@ checkName = "Duel Switch"
 checkSpot = Vector2(0.279, 0.298)
 checkImage = ExtResource("13_7lqiq")
 ids = Array[String]([""])
-apIds = PackedStringArray("0x750")
+apIds = PackedStringArray("0x751")
 
 [sub_resource type="Resource" id="Resource_ifae3"]
 script = ExtResource("1_ecbe2")
@@ -322,7 +322,7 @@ checkName = "Magnet Ball Switch"
 checkSpot = Vector2(0.51, 0.647)
 checkImage = ExtResource("10_hunxc")
 ids = Array[String](["0x18A"])
-apIds = PackedStringArray("0x751")
+apIds = PackedStringArray("0x752")
 checkRegionIndex = 12
 checkBallRequirement = true
 
@@ -332,7 +332,7 @@ checkName = "Red Magnet Switch"
 checkSpot = Vector2(0.398, 0.647)
 checkImage = ExtResource("5_vp6q2")
 ids = Array[String](["0x123"])
-apIds = PackedStringArray("0x752")
+apIds = PackedStringArray("0x753")
 checkRegionIndex = 13
 lockButton = true
 
@@ -342,7 +342,7 @@ checkName = "Goal"
 checkSpot = Vector2(0.877, 0.41)
 checkImage = ExtResource("2_cq5l7")
 checkType = 5
-apIds = PackedStringArray("0x753")
+apIds = PackedStringArray("0x754")
 checkRegionIndex = 19
 checkBallRequirement = true
 
@@ -353,7 +353,7 @@ checkSpot = Vector2(0.377, 0.606)
 checkImage = ExtResource("8_f0oyc")
 checkType = 4
 ids = Array[String](["0x268"])
-apIds = PackedStringArray("0x754")
+apIds = PackedStringArray("0x755")
 checkRegionIndex = 13
 
 [sub_resource type="Resource" id="Resource_7seok"]

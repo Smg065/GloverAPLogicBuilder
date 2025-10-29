@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=83 format=3 uid="uid://cdn5rshl5dthh"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=85 format=3 uid="uid://cdn5rshl5dthh"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_dnb08"]
 [ext_resource type="Texture2D" uid="uid://gf2gnhg3eaml" path="res://Images/Maps/OutOfThisWorld1.png" id="2_py8ls"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="6_lm7hi"]
 [ext_resource type="Texture2D" uid="uid://iitdordw4u85" path="res://Images/Icons/Checks/Ootw1GooPlatforms.png" id="6_ti2t7"]
 [ext_resource type="Texture2D" uid="uid://bliuy2nyvdk1s" path="res://Images/Icons/Checks/Ootw1Ufo.png" id="7_83uod"]
+[ext_resource type="Texture2D" uid="uid://cogq4dj1n38yk" path="res://Images/Icons/Checks/AlienBlock.png" id="7_jehaj"]
 [ext_resource type="Texture2D" uid="uid://baemat5ejsqxe" path="res://Images/Icons/Checks/Garib.png" id="7_xw0b1"]
 [ext_resource type="Texture2D" uid="uid://q2rkqm2qwxr3" path="res://Images/Icons/Checks/Ootw1Missile.png" id="8_ll5c4"]
 [ext_resource type="Texture2D" uid="uid://8o8xch68b1c" path="res://Images/Icons/Checks/WindUp.png" id="8_pyd0c"]
@@ -229,13 +230,24 @@ apIds = PackedStringArray("0x6AD")
 checkRegionIndex = 9
 checkBallRequirement = true
 
+[sub_resource type="Resource" id="Resource_y54i1"]
+script = ExtResource("1_dnb08")
+checkName = "Alien Block"
+checkSpot = Vector2(0.699, 0.805)
+checkImage = ExtResource("7_jehaj")
+ids = Array[String](["0x20E"])
+apIds = PackedStringArray("0x6AE")
+checkRegionIndex = 3
+lockButton = true
+metadata/_custom_type_script = "uid://dfshf1u5mmcgh"
+
 [sub_resource type="Resource" id="Resource_ekrfa"]
 script = ExtResource("1_dnb08")
 checkName = "Cliff Glover Switch"
 checkSpot = Vector2(0.628, 0.329)
 checkImage = ExtResource("4_12pwa")
 ids = Array[String](["0x14E"])
-apIds = PackedStringArray("0x6AE")
+apIds = PackedStringArray("0x6AF")
 checkRegionIndex = 11
 
 [sub_resource type="Resource" id="Resource_sald3"]
@@ -244,7 +256,7 @@ checkName = "Hazard Stripe Ball Switch"
 checkSpot = Vector2(0.227, 0.677)
 checkImage = ExtResource("5_kgm7y")
 ids = Array[String](["0x1DD"])
-apIds = PackedStringArray("0x6AF")
+apIds = PackedStringArray("0x6B0")
 checkRegionIndex = 12
 checkBallRequirement = true
 
@@ -254,7 +266,7 @@ checkName = "Sign Glover Switch"
 checkSpot = Vector2(0.51, 0.419)
 checkImage = ExtResource("4_12pwa")
 ids = Array[String](["0x154"])
-apIds = PackedStringArray("0x6B0")
+apIds = PackedStringArray("0x6B1")
 
 [sub_resource type="Resource" id="Resource_yj86l"]
 script = ExtResource("1_dnb08")
@@ -262,7 +274,7 @@ checkName = "Stone Pillar Ball Switch"
 checkSpot = Vector2(0.476, 0.487)
 checkImage = ExtResource("5_kgm7y")
 ids = Array[String](["0x142"])
-apIds = PackedStringArray("0x6B1")
+apIds = PackedStringArray("0x6B2")
 checkRegionIndex = 9
 checkBallRequirement = true
 
@@ -272,7 +284,7 @@ checkName = "UFO Glover Switch"
 checkSpot = Vector2(0.72, 0.351)
 checkImage = ExtResource("4_12pwa")
 ids = Array[String](["0x169"])
-apIds = PackedStringArray("0x6B2")
+apIds = PackedStringArray("0x6B3")
 checkRegionIndex = 14
 
 [sub_resource type="Resource" id="Resource_jq3o6"]
@@ -281,7 +293,7 @@ checkName = "Goal"
 checkSpot = Vector2(0.486, 0.798)
 checkImage = ExtResource("2_xejw4")
 checkType = 5
-apIds = PackedStringArray("0x6B3")
+apIds = PackedStringArray("0x6B4")
 checkRegionIndex = 15
 checkBallRequirement = true
 
@@ -426,6 +438,6 @@ regionIndex = 15
 script = ExtResource("3_0fg73")
 levelSuffix = "1"
 mapImage = ExtResource("2_py8ls")
-levelChecks = Array[ExtResource("1_dnb08")]([SubResource("Resource_v8v18"), SubResource("Resource_gd0jr"), SubResource("Resource_m4uir"), SubResource("Resource_twcuh"), SubResource("Resource_1rtru"), SubResource("Resource_e5b0h"), SubResource("Resource_mav0i"), SubResource("Resource_5hxsc"), SubResource("Resource_fho5n"), SubResource("Resource_5uy83"), SubResource("Resource_nib8y"), SubResource("Resource_m3anh"), SubResource("Resource_w2sqb"), SubResource("Resource_m1003"), SubResource("Resource_8s4mm"), SubResource("Resource_cvmus"), SubResource("Resource_52uhj"), SubResource("Resource_traql"), SubResource("Resource_nu3ri"), SubResource("Resource_ekrfa"), SubResource("Resource_sald3"), SubResource("Resource_j1s1r"), SubResource("Resource_yj86l"), SubResource("Resource_7kvwb"), SubResource("Resource_jq3o6")])
+levelChecks = Array[ExtResource("1_dnb08")]([SubResource("Resource_v8v18"), SubResource("Resource_gd0jr"), SubResource("Resource_m4uir"), SubResource("Resource_twcuh"), SubResource("Resource_1rtru"), SubResource("Resource_e5b0h"), SubResource("Resource_mav0i"), SubResource("Resource_5hxsc"), SubResource("Resource_fho5n"), SubResource("Resource_5uy83"), SubResource("Resource_nib8y"), SubResource("Resource_m3anh"), SubResource("Resource_w2sqb"), SubResource("Resource_m1003"), SubResource("Resource_8s4mm"), SubResource("Resource_cvmus"), SubResource("Resource_52uhj"), SubResource("Resource_traql"), SubResource("Resource_nu3ri"), SubResource("Resource_y54i1"), SubResource("Resource_ekrfa"), SubResource("Resource_sald3"), SubResource("Resource_j1s1r"), SubResource("Resource_yj86l"), SubResource("Resource_7kvwb"), SubResource("Resource_jq3o6")])
 levelPrerequisiteChecks = Array[ExtResource("2_w8xrx")]([SubResource("Resource_f8xrl"), SubResource("Resource_g3pj7"), SubResource("Resource_whp3p"), SubResource("Resource_px7yd"), SubResource("Resource_5sgpm"), SubResource("Resource_yq2yr")])
 levelRegions = Array[ExtResource("16_w60mi")]([SubResource("Resource_03slq"), SubResource("Resource_0l2af"), SubResource("Resource_elfst"), SubResource("Resource_5rfrm"), SubResource("Resource_5x0ef"), SubResource("Resource_hngir"), SubResource("Resource_f1ewd"), SubResource("Resource_qa4e6"), SubResource("Resource_pmxra"), SubResource("Resource_o4ein"), SubResource("Resource_anyvw"), SubResource("Resource_nx1ag"), SubResource("Resource_40h22"), SubResource("Resource_indw1"), SubResource("Resource_30w4k"), SubResource("Resource_rb5jy")])

@@ -19,7 +19,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 6
 ids = Array[String](["0x59", "0x58", "0x5D", "0x5C", "0x5B", "0x5A"])
-apIds = PackedStringArray("0x756", "0x757", "0x758", "0x759", "0x75A", "0x75B")
+apIds = PackedStringArray("0x757", "0x758", "0x759", "0x75A", "0x75B", "0x75C")
 
 [sub_resource type="Resource" id="Resource_fbi5k"]
 script = ExtResource("1_dknps")
@@ -29,7 +29,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x3D", "0x44", "0x43", "0x42", "0x41", "0x40", "0x3F", "0x3E"])
-apIds = PackedStringArray("0x75C", "0x75D", "0x75E", "0x75F", "0x760", "0x761", "0x762", "0x763")
+apIds = PackedStringArray("0x75D", "0x75E", "0x75F", "0x760", "0x761", "0x762", "0x763", "0x764")
 
 [sub_resource type="Resource" id="Resource_6rcpe"]
 script = ExtResource("1_dknps")
@@ -39,7 +39,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x34", "0x3B", "0x3A", "0x39", "0x38", "0x37", "0x36", "0x35"])
-apIds = PackedStringArray("0x764", "0x765", "0x766", "0x767", "0x768", "0x769", "0x76A", "0x76B")
+apIds = PackedStringArray("0x765", "0x766", "0x767", "0x768", "0x769", "0x76A", "0x76B", "0x76C")
 
 [sub_resource type="Resource" id="Resource_jq5f0"]
 script = ExtResource("1_dknps")
@@ -49,7 +49,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x46", "0x4D", "0x4C", "0x4B", "0x4A", "0x49", "0x48", "0x47"])
-apIds = PackedStringArray("0x76C", "0x76D", "0x76E", "0x76F", "0x770", "0x771", "0x772", "0x773")
+apIds = PackedStringArray("0x76D", "0x76E", "0x76F", "0x770", "0x771", "0x772", "0x773", "0x774")
 
 [sub_resource type="Resource" id="Resource_rrag5"]
 script = ExtResource("1_dknps")
@@ -59,7 +59,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x4F", "0x50", "0x51", "0x52", "0x53", "0x54", "0x55", "0x56"])
-apIds = PackedStringArray("0x774", "0x775", "0x776", "0x777", "0x778", "0x779", "0x77A", "0x77B")
+apIds = PackedStringArray("0x775", "0x776", "0x777", "0x778", "0x779", "0x77A", "0x77B", "0x77C")
 
 [sub_resource type="Resource" id="Resource_87f5s"]
 script = ExtResource("1_dknps")
@@ -69,7 +69,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 6
 ids = Array[String](["0x60", "0x5F", "0x64", "0x63", "0x62", "0x61"])
-apIds = PackedStringArray("0x77C", "0x77D", "0x77E", "0x77F", "0x780", "0x781")
+apIds = PackedStringArray("0x77D", "0x77E", "0x77F", "0x780", "0x781", "0x782")
 
 [sub_resource type="Resource" id="Resource_5f7g6"]
 script = ExtResource("1_dknps")
@@ -79,7 +79,7 @@ checkImage = ExtResource("3_xkmxf")
 checkType = 1
 totalSubchecks = 6
 ids = Array[String](["0x66", "0x67", "0x68", "0x69", "0x6A", "0x6B"])
-apIds = PackedStringArray("0x782", "0x783", "0x784", "0x785", "0x786", "0x787")
+apIds = PackedStringArray("0x783", "0x784", "0x785", "0x786", "0x787", "0x788")
 
 [sub_resource type="Resource" id="Resource_srwhw"]
 script = ExtResource("1_dknps")
@@ -88,7 +88,7 @@ checkSpot = Vector2(0.505, 0.255)
 checkImage = ExtResource("5_vwvcq")
 checkType = 2
 ids = Array[String](["0x30"])
-apIds = PackedStringArray("0x788")
+apIds = PackedStringArray("0x789")
 
 [sub_resource type="Resource" id="Resource_sfgr8"]
 script = ExtResource("1_dknps")
@@ -97,7 +97,7 @@ checkSpot = Vector2(0.395, 0.381)
 checkImage = ExtResource("5_vwvcq")
 checkType = 2
 ids = Array[String](["0x29"])
-apIds = PackedStringArray("0x789")
+apIds = PackedStringArray("0x78A")
 
 [sub_resource type="Resource" id="Resource_b655k"]
 script = ExtResource("1_dknps")
@@ -106,7 +106,7 @@ checkSpot = Vector2(0.615, 0.402)
 checkImage = ExtResource("5_vwvcq")
 checkType = 2
 ids = Array[String](["0x2E"])
-apIds = PackedStringArray("0x78A")
+apIds = PackedStringArray("0x78B")
 
 [sub_resource type="Resource" id="Resource_03mqp"]
 script = ExtResource("1_dknps")
@@ -115,7 +115,7 @@ checkSpot = Vector2(0.413, 0.551)
 checkImage = ExtResource("5_vwvcq")
 checkType = 2
 ids = Array[String](["0x27"])
-apIds = PackedStringArray("0x78B")
+apIds = PackedStringArray("0x78C")
 
 [sub_resource type="Resource" id="Resource_aygic"]
 script = ExtResource("1_dknps")
@@ -124,7 +124,7 @@ checkSpot = Vector2(0.593, 0.591)
 checkImage = ExtResource("5_vwvcq")
 checkType = 2
 ids = Array[String](["0x25"])
-apIds = PackedStringArray("0x78C")
+apIds = PackedStringArray("0x78D")
 
 [sub_resource type="Resource" id="Resource_u4tov"]
 script = ExtResource("1_dknps")
@@ -133,7 +133,7 @@ checkSpot = Vector2(0.504, 0.701)
 checkImage = ExtResource("5_vwvcq")
 checkType = 2
 ids = Array[String](["0x32"])
-apIds = PackedStringArray("0x78D")
+apIds = PackedStringArray("0x78E")
 
 [sub_resource type="Resource" id="Resource_78ewe"]
 script = ExtResource("1_dknps")
@@ -141,7 +141,7 @@ checkName = "Goal"
 checkSpot = Vector2(0.695, 0.493)
 checkImage = ExtResource("2_us68b")
 checkType = 5
-apIds = PackedStringArray("0x78E")
+apIds = PackedStringArray("0x78F")
 checkBallRequirement = true
 
 [sub_resource type="Resource" id="Resource_tfxah"]
@@ -151,7 +151,7 @@ checkSpot = Vector2(0.458, 0.325)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xDC"])
-apIds = PackedStringArray("0x78F")
+apIds = PackedStringArray("0x790")
 
 [sub_resource type="Resource" id="Resource_pos5e"]
 script = ExtResource("1_dknps")
@@ -160,7 +160,7 @@ checkSpot = Vector2(0.552, 0.329)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xD9"])
-apIds = PackedStringArray("0x790")
+apIds = PackedStringArray("0x791")
 
 [sub_resource type="Resource" id="Resource_bfi0p"]
 script = ExtResource("1_dknps")
@@ -169,7 +169,7 @@ checkSpot = Vector2(0.458, 0.538)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xE2"])
-apIds = PackedStringArray("0x791")
+apIds = PackedStringArray("0x792")
 
 [sub_resource type="Resource" id="Resource_8b5u1"]
 script = ExtResource("1_dknps")
@@ -178,7 +178,7 @@ checkSpot = Vector2(0.552, 0.538)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xDF"])
-apIds = PackedStringArray("0x792")
+apIds = PackedStringArray("0x793")
 
 [sub_resource type="Resource" id="Resource_ljpe4"]
 script = ExtResource("1_dknps")
@@ -187,7 +187,7 @@ checkSpot = Vector2(0.506, 0.381)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xD0"])
-apIds = PackedStringArray("0x793")
+apIds = PackedStringArray("0x794")
 
 [sub_resource type="Resource" id="Resource_um35r"]
 script = ExtResource("1_dknps")
@@ -196,7 +196,7 @@ checkSpot = Vector2(0.455, 0.49)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xD3"])
-apIds = PackedStringArray("0x794")
+apIds = PackedStringArray("0x795")
 
 [sub_resource type="Resource" id="Resource_blr0j"]
 script = ExtResource("1_dknps")
@@ -205,7 +205,7 @@ checkSpot = Vector2(0.558, 0.49)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xD6"])
-apIds = PackedStringArray("0x795")
+apIds = PackedStringArray("0x796")
 
 [sub_resource type="Resource" id="Resource_yw0vy"]
 script = ExtResource("1_dknps")
@@ -214,7 +214,7 @@ checkSpot = Vector2(0.507, 0.593)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xCD"])
-apIds = PackedStringArray("0x796")
+apIds = PackedStringArray("0x797")
 
 [sub_resource type="Resource" id="Resource_m47bf"]
 script = ExtResource("1_dknps")
@@ -223,7 +223,7 @@ checkSpot = Vector2(0.314, 0.493)
 checkImage = ExtResource("4_suu6q")
 checkType = 4
 ids = Array[String](["0xCA"])
-apIds = PackedStringArray("0x797")
+apIds = PackedStringArray("0x798")
 
 [sub_resource type="Resource" id="Resource_8usop"]
 script = ExtResource("7_hyjcg")

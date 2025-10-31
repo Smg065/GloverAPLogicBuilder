@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=42 format=3 uid="uid://djoftmhnsrxjv"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=38 format=3 uid="uid://djoftmhnsrxjv"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_8w5d8"]
 [ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="2_45l0a"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bdggbxduob24b" path="res://Images/Icons/Checks/CastleCaveEntry.png" id="9_rnw6j"]
 [ext_resource type="Texture2D" uid="uid://c17s7jgof72up" path="res://Images/Icons/Checks/CheatChicken.png" id="10_h0p1f"]
 [ext_resource type="Texture2D" uid="uid://dndi541kckx6" path="res://Images/Icons/Checks/HbAtlantisGate.png" id="10_igu2v"]
-[ext_resource type="Texture2D" uid="uid://cayocdh3602ip" path="res://Images/Icons/Checks/MrTip.png" id="11_1ntvg"]
 [ext_resource type="Texture2D" uid="uid://cqd5jmg1kdutl" path="res://Images/Icons/Checks/HbCarnivalGate.png" id="11_xwifl"]
 [ext_resource type="Texture2D" uid="uid://38yo132rgxug" path="res://Images/Icons/Checks/HbPiratesCoveGate.png" id="12_8dcoj"]
 [ext_resource type="Texture2D" uid="uid://djk0f1nq4es7" path="res://Images/Icons/Checks/HbPrehistoricGate.png" id="13_4osm4"]
@@ -23,40 +22,13 @@
 [ext_resource type="Script" uid="uid://q8ajv3yuia35" path="res://Scripts/RegionInfo.gd" id="17_qv3va"]
 [ext_resource type="Texture2D" uid="uid://dxu2ohlgxiosq" path="res://Images/Regions/Hub.png" id="18_i2ja7"]
 
-[sub_resource type="Resource" id="Resource_ajt0r"]
-script = ExtResource("1_8w5d8")
-checkName = "Spawning Tip"
-checkSpot = Vector2(0.526, 0.621)
-checkImage = ExtResource("11_1ntvg")
-checkType = 6
-ids = Array[String]([""])
-apIds = PackedStringArray("0x799")
-
-[sub_resource type="Resource" id="Resource_f5yt4"]
-script = ExtResource("1_8w5d8")
-checkName = "Well Tip 1"
-checkSpot = Vector2(0.509, 0.686)
-checkImage = ExtResource("11_1ntvg")
-checkType = 6
-ids = Array[String]([""])
-apIds = PackedStringArray("0x79A")
-
-[sub_resource type="Resource" id="Resource_46yy8"]
-script = ExtResource("1_8w5d8")
-checkName = "Well Tip 2"
-checkSpot = Vector2(0.512, 0.739)
-checkImage = ExtResource("11_1ntvg")
-checkType = 6
-ids = Array[String]([""])
-apIds = PackedStringArray("0x79B")
-
 [sub_resource type="Resource" id="Resource_ca4du"]
 script = ExtResource("1_8w5d8")
 checkName = "Cheat Chicken"
 checkSpot = Vector2(0.318, 0.545)
 checkImage = ExtResource("10_h0p1f")
 checkType = 9
-apIds = PackedStringArray("0x79C")
+apIds = PackedStringArray("0x799")
 
 [sub_resource type="Resource" id="Resource_i16oe"]
 script = ExtResource("1_8w5d8")
@@ -153,6 +125,6 @@ regionImage = ExtResource("18_i2ja7")
 script = ExtResource("2_45l0a")
 levelSuffix = "Hubworld"
 mapImage = ExtResource("2_ug4x3")
-levelChecks = Array[ExtResource("1_8w5d8")]([SubResource("Resource_ajt0r"), SubResource("Resource_f5yt4"), SubResource("Resource_46yy8"), SubResource("Resource_ca4du"), SubResource("Resource_i16oe"), SubResource("Resource_aincb"), SubResource("Resource_7cnex"), SubResource("Resource_vvacp"), SubResource("Resource_yelf4"), SubResource("Resource_s1du6"), SubResource("Resource_oorss"), SubResource("Resource_16s27")])
+levelChecks = Array[ExtResource("1_8w5d8")]([SubResource("Resource_ca4du"), SubResource("Resource_i16oe"), SubResource("Resource_aincb"), SubResource("Resource_7cnex"), SubResource("Resource_vvacp"), SubResource("Resource_yelf4"), SubResource("Resource_s1du6"), SubResource("Resource_oorss"), SubResource("Resource_16s27")])
 levelPrerequisiteChecks = Array[ExtResource("9_1f58l")]([SubResource("Resource_6b7as"), SubResource("Resource_aehy4"), SubResource("Resource_ww3gg"), SubResource("Resource_tsn7w"), SubResource("Resource_7vr57"), SubResource("Resource_twh80")])
 levelRegions = Array[ExtResource("17_qv3va")]([SubResource("Resource_aavk3")])

@@ -304,7 +304,7 @@ script = ExtResource("1_ecbe2")
 checkName = "Conveyor Glover Switch"
 checkSpot = Vector2(0.439, 0.316)
 checkImage = ExtResource("4_yujah")
-ids = Array[String](["0x188"])
+ids = Array[String](["0x18A"])
 apIds = PackedStringArray("0x750")
 checkRegionIndex = 6
 
@@ -321,7 +321,7 @@ script = ExtResource("1_ecbe2")
 checkName = "Magnet Ball Switch"
 checkSpot = Vector2(0.51, 0.647)
 checkImage = ExtResource("10_hunxc")
-ids = Array[String](["0x18A"])
+ids = Array[String](["0x188"])
 apIds = PackedStringArray("0x752")
 checkRegionIndex = 12
 checkBallRequirement = true

@@ -21,6 +21,7 @@ checkName = "Tip"
 checkSpot = Vector2(0.665, 0.45)
 checkImage = ExtResource("2_fau83")
 checkType = 6
+ids = Array[String](["0x76"])
 apIds = PackedStringArray("0x271")
 
 [sub_resource type="Resource" id="Resource_2nw00"]

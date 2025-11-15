@@ -22,7 +22,7 @@ checkSpot = Vector2(0.665, 0.45)
 checkImage = ExtResource("2_2wab2")
 checkType = 6
 ids = Array[String](["0x76"])
-apIds = PackedStringArray("0x000")
+apIds = PackedStringArray("0x7B4")
 
 [sub_resource type="Resource" id="Resource_2nw00"]
 script = ExtResource("1_jna6q")

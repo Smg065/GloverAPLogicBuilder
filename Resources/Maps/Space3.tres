@@ -213,7 +213,7 @@ checkName = "Opec"
 checkSpot = Vector2(0.516, 0.421)
 checkImage = ExtResource("14_g2n85")
 checkType = 10
-ids = Array[String](["0x259"])
+ids = Array[String](["0x263"])
 apIds = PackedStringArray("0x747")
 checkRegionIndex = 16
 lockButton = true
@@ -225,7 +225,7 @@ checkName = "Sucker"
 checkSpot = Vector2(0.309, 0.333)
 checkImage = ExtResource("11_tr5wc")
 checkType = 10
-ids = Array[String](["0x263"])
+ids = Array[String](["0x259"])
 apIds = PackedStringArray("0x748")
 
 [sub_resource type="Resource" id="Resource_eatte"]

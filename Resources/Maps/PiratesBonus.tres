@@ -269,3 +269,4 @@ levelSuffix = "?"
 mapImage = ExtResource("2_y6f1h")
 levelChecks = Array[ExtResource("1_2h2o8")]([SubResource("Resource_5vq1q"), SubResource("Resource_4hwpd"), SubResource("Resource_s4isc"), SubResource("Resource_8p1rr"), SubResource("Resource_433yx"), SubResource("Resource_8o1j1"), SubResource("Resource_cpnqo"), SubResource("Resource_2n3vq"), SubResource("Resource_jh425"), SubResource("Resource_bpx31"), SubResource("Resource_v3imr"), SubResource("Resource_xln05"), SubResource("Resource_7vio6"), SubResource("Resource_qg0eb"), SubResource("Resource_164bs"), SubResource("Resource_tg3cc"), SubResource("Resource_b1pn3"), SubResource("Resource_yv1m7"), SubResource("Resource_wa2in"), SubResource("Resource_n562v"), SubResource("Resource_nbiky"), SubResource("Resource_4t8ri")])
 levelRegions = Array[ExtResource("6_mt2wo")]([SubResource("Resource_hs32v"), SubResource("Resource_t71fh"), SubResource("Resource_bv5bx")])
+checkpointRegions = Array[int]([0])

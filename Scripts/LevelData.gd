@@ -6,6 +6,8 @@ class_name LevelData
 @export var levelChecks : Array[CheckInfo]
 @export var levelPrerequisiteChecks : Array[PrerequisiteCheckInfo]
 @export var levelRegions : Array[RegionInfo]
+@export var checkpointRegions : Array[int]
+@export var ballOrigin : int
 
 func setup() -> void:
 	for eachRegion in levelRegions:

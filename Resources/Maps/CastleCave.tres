@@ -33,6 +33,8 @@ regionImage = ExtResource("6_g7akg")
 
 [resource]
 script = ExtResource("2_wqwdq")
+levelSuffix = "Castle Cave"
 mapImage = ExtResource("2_h1dx4")
 levelChecks = Array[ExtResource("1_84t78")]([SubResource("Resource_jutd0"), SubResource("Resource_eg8ci")])
 levelRegions = Array[ExtResource("5_kefdq")]([SubResource("Resource_sawnc")])
+checkpointRegions = Array[int]([0])

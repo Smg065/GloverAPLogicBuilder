@@ -83,6 +83,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ReadXML"):
 		landscape_load_window()
 		#generate_level_event_methods()
+	if Input.is_action_just_pressed("Poptracker Generate"):
+		DisplayServer.clipboard_set(JSON.stringify(PopTrackerBuilder.construct(self), "\t"))
 
 func copy_mouse_info() -> void:
 	var newCoord : String = str(mouse_pos_to_map_spot())

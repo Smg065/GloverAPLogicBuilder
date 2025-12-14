@@ -68,3 +68,4 @@ levelSuffix = "?"
 mapImage = ExtResource("2_rcmcu")
 levelChecks = Array[ExtResource("1_ocxdj")]([SubResource("Resource_akdur"), SubResource("Resource_fhua3"), SubResource("Resource_v6aa4"), SubResource("Resource_pe3w6"), SubResource("Resource_skr10")])
 levelRegions = Array[ExtResource("6_8ps3e")]([SubResource("Resource_gbck8")])
+checkpointRegions = Array[int]([0])

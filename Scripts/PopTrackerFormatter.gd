@@ -135,31 +135,67 @@ static func construct(main : Main) -> Array:
 				for eachLocation in allLocations:
 					if !allLocations[eachLocation].methods.has(regionName):
 						continue
+					if !levelData.children[regionIndex].has("children"):
+						levelData.children[regionIndex].children = []
 					var accessRules : PackedStringArray = allLocations[eachLocation].methods[regionName]
-					var addTo : String
 					var newInfo : Dictionary
+					var visRules : Array = []
 					match allLocations[eachLocation].checkInfo.checkType:
 						CheckInfo.CheckType.REGION:
-							addTo = "children"
 							newInfo = build_location(eachLocation, accessRules)
 						CheckInfo.CheckType.LOADING_ZONE:
-							addTo = "children"
 							newInfo = build_location(eachLocation, accessRules)
+						CheckInfo.CheckType.ENEMY:
+							visRules = ["enemy_checks"]
+						CheckInfo.CheckType.CHECKPOINT:
+							visRules = ["checkpoint_checks"]
+						CheckInfo.CheckType.SWITCH:
+							visRules = ["switch_checks"]
+						CheckInfo.CheckType.BUG:
+							visRules = ["insect_checks"]
+						CheckInfo.CheckType.TIP:
+							visRules = ["tip_checks"]
 						_:
-							addTo = "sections"
 							newInfo = build_location(eachLocation, accessRules, allLocations[eachLocation].checkInfo)
 							if MAP_TABLE.has(levelData.name):
 								var mapInfo = MAP_TABLE[levelData.name]
-								if !levelData.children[regionIndex].has("map_locations"):
-									levelData.children[regionIndex]["map_locations"] = []
-								levelData.children[regionIndex].map_locations.append({
+								if !newInfo.has("map_locations"):
+									newInfo.map_locations = []
+								newInfo.map_locations.append({
 									"map" : mapInfo[0],
 									"x" : int(allLocations[eachLocation].checkInfo.checkSpot.x * mapInfo[1].x),
 									"y" : int(allLocations[eachLocation].checkInfo.checkSpot.y * mapInfo[1].y),
 								})
-					if !levelData.children[regionIndex].has(addTo):
-						levelData.children[regionIndex][addTo] = []
-					levelData.children[regionIndex][addTo].append(newInfo)
+								if visRules.size() > 0:
+									if !newInfo.has("visibility_rules"):
+										newInfo.visibility_rules = []
+									newInfo.visibility_rules.append_array(visRules)
+								if !newInfo.has("sections"):
+									newInfo.sections = []
+								if allLocations[eachLocation].checkInfo.checkType != CheckInfo.CheckType.GARIB:
+									if allLocations[eachLocation].checkInfo.totalSubchecks > 1:
+										for eachSection in allLocations[eachLocation].checkInfo.apIds.size():
+											newInfo.sections.append({"name" : eachLocation + " " + str(eachSection + 1)})
+									else:
+										newInfo.sections.append({"name" : eachLocation})
+								else:
+									#Garib Groups VS Garibsanity
+									for eachSection in allLocations[eachLocation].checkInfo.apIds.size():
+										newInfo.sections.append({"name" : eachLocation + " " + str(eachSection + 1),
+										"visibility_rules" : ["garibsanity"]})
+									newInfo.sections.append({"name" : eachLocation,
+										"visibility_rules" : ["garib_groups"]})
+					levelData.children[regionIndex].children.append(newInfo)
+			
+			#If it's not a numbered level, get the checkpoint for free
+			var level_prefix = levelData.name.to_lower().replace(" ", "_")
+			if !eachLevel.levelSuffix.is_valid_int():
+				levelData["hosted_item"] = level_prefix + "_cp_1"
+			
+			#Level randomization
+			if eachLevel.levelSuffix != "Hubworld":
+				levelData["access_rules"] = [level_prefix]
+			
 			worldData.children.append(levelData)
 		output.append(worldData)
 	return output

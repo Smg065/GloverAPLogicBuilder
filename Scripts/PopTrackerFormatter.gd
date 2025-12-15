@@ -38,6 +38,34 @@ const MOVE_LOOKUP = [
     "$not_bowling_or_crystal"
 ]
 
+const MAP_TABLE = {
+	"Atl1" : ["a1", Vector2i(1492, 910)],
+	"Atl2" : ["a2", Vector2i(1616, 583)],
+	"Atl3" : ["a3", Vector2i(1041, 1002)],
+	"Atl?" : ["ab", Vector2i(1743, 175)],
+	"Crn1" : ["c1", Vector2i(875, 1006)],
+	"Crn2" : ["c2", Vector2i(1122, 1040)],
+	"Crn3" : ["c3", Vector2i(883, 958)],
+	"FoF1" : ["f1", Vector2i(1599, 631)],
+	"FoF2" : ["f2", Vector2i(1544, 985)],
+	"FoF3" : ["f3", Vector2i(947, 947)],
+	"FoF?" : ["fb", Vector2i(926, 926)],
+	"Prt1" : ["p1", Vector2i(1444, 1000)],
+	"Prt2" : ["p2", Vector2i(1900, 1010)],
+	"Prt3" : ["p3", Vector2i(1808, 730)],
+	"Prt?" : ["pb", Vector2i(360, 1000)],
+	"Pht1" : ["pr1", Vector2i(1215, 1058)],
+	"Pht2" : ["pr2", Vector2i(1870, 525)],
+	"Pht3" : ["pr3", Vector2i(1177, 944)],
+	"Pht?" : ["prb", Vector2i(1815, 146)],
+	"Otw1" : ["s1", Vector2i(1920, 850)],
+	"Otw2" : ["s2", Vector2i(1665, 972)],
+	"Otw3" : ["s3", Vector2i(1264, 1035)],
+	"Otw?" : ["sb", Vector2i(1920, 1080)],
+	"Hubworld" : ["hub", Vector2i(934, 977)],
+	"Tutorial" : ["well", Vector2i(1655, 249)]
+}
+
 static func construct(main : Main) -> Array:
 	var output := []
 	var allWorlds : Array[WorldInfo] = [main.hubworld]
@@ -107,22 +135,31 @@ static func construct(main : Main) -> Array:
 				for eachLocation in allLocations:
 					if !allLocations[eachLocation].methods.has(regionName):
 						continue
-					if !levelData.children[regionIndex].has("sections"):
-						levelData.children[regionIndex]["sections"] = []
 					var accessRules : PackedStringArray = allLocations[eachLocation].methods[regionName]
+					var addTo : String
+					var newInfo : Dictionary
 					match allLocations[eachLocation].checkInfo.checkType:
 						CheckInfo.CheckType.REGION:
-							levelData.children[regionIndex].sections.append(
-								build_location(eachLocation, accessRules)
-							)
+							addTo = "children"
+							newInfo = build_location(eachLocation, accessRules)
 						CheckInfo.CheckType.LOADING_ZONE:
-							levelData.children[regionIndex].sections.append(
-								build_location(eachLocation, accessRules)
-							)
+							addTo = "children"
+							newInfo = build_location(eachLocation, accessRules)
 						_:
-							levelData.children[regionIndex].sections.append(
-								build_location(eachLocation, accessRules, allLocations[eachLocation].checkInfo.apIds.size())
-							)
+							addTo = "sections"
+							newInfo = build_location(eachLocation, accessRules, allLocations[eachLocation].checkInfo)
+							if MAP_TABLE.has(levelData.name):
+								var mapInfo = MAP_TABLE[levelData.name]
+								if !levelData.children[regionIndex].has("map_locations"):
+									levelData.children[regionIndex]["map_locations"] = []
+								levelData.children[regionIndex].map_locations.append({
+									"map" : mapInfo[0],
+									"x" : int(allLocations[eachLocation].checkInfo.checkSpot.x * mapInfo[1].x),
+									"y" : int(allLocations[eachLocation].checkInfo.checkSpot.y * mapInfo[1].y),
+								})
+					if !levelData.children[regionIndex].has(addTo):
+						levelData.children[regionIndex][addTo] = []
+					levelData.children[regionIndex][addTo].append(newInfo)
 			worldData.children.append(levelData)
 		output.append(worldData)
 	return output
@@ -136,12 +173,15 @@ static func build_region(inName : String, accessRules : Array[String]) -> Dictio
 	}
 
 ##Creates a location
-static func build_location(inName : String, accessRules : PackedStringArray, inCount : int = 0) -> Dictionary:
+static func build_location(inName : String, accessRules : PackedStringArray, checkInfo : CheckInfo = null) -> Dictionary:
 	var output = {
 		"name" : inName
 	}
-	if inCount > 0:
-		output["item_count"] = inCount
+	if checkInfo != null:
+		output["item_count"] = checkInfo.apIds.size()
+		var imageFilepath = "images/items/" + checkInfo.checkImage.resource_path.get_file().trim_suffix(".png").to_snake_case()
+		output["chest_unopened_img"] = imageFilepath + ".png"
+		output["chest_opened_img"] = imageFilepath + "_gray.png"
 	accessRules.erase("")
 	if accessRules.size() > 0:
 		output["access_rules"] = accessRules

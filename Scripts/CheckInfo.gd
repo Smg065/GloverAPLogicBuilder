@@ -20,6 +20,9 @@ enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZON
 @export var checkBallRequirement : bool
 @export var lockButton : bool
 
+@export_category("Poptracker")
+@export var poptrackerSpot : Vector2i
+
 var allMethods : Array[MethodData]
 
 func to_save() -> Array[Dictionary]:
@@ -43,3 +46,11 @@ func to_load(checkData : Array) -> void:
 		var newMethod : MethodData = MethodData.new()
 		newMethod.to_load(checkData[eachMethod + 1])
 		allMethods.append(newMethod)
+
+func get_pop_spot(mapScale : Vector2i) -> Vector2i:
+	if poptrackerSpot != Vector2i.ZERO:
+		return poptrackerSpot
+	var output : Vector2i = Vector2i.ZERO
+	output.x = int(checkSpot.x * mapScale.x)
+	output.y = int(checkSpot.y * mapScale.y)
+	return output

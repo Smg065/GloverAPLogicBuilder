@@ -35,7 +35,7 @@ const MOVE_LOOKUP = [
 	"grab",
 	"$ball_up",
 	"power_ball",
-    "$not_bowling_or_crystal"
+    "$not CorB"
 ]
 
 const MAP_TABLE = {
@@ -82,6 +82,7 @@ static func construct(main : Main) -> Array:
 			levelData.children = []
 			var prefix := (eachWorld.worldShorthand + eachLevel.levelSuffix).to_lower()
 			var allLocations : Dictionary
+			var allGaribs : Array[Dictionary]
 			#First pass to discover all locations
 			for eachCheck in eachLevel.levelChecks:
 				var accessRules := methods_to_access_rules(prefix, eachLevel.levelRegions, eachCheck.allMethods)
@@ -107,25 +108,20 @@ static func construct(main : Main) -> Array:
 							#Levels that spawn without the ball will put you in the ballless region
 							fromSpawnNoBallAccess.append(checkpointName)
 							#AND they'll require you to get to any region with the ball once to access the ball checkpoints
-							fromSpawnBallAccess.append("%s, @%s" % [checkpointName, levelData.name.to_lower() + "_ball"])
-				#Access locations to the regions are added here
-				allLocations["%s_ball_access" % regionName] = create_abstract_location(ballRegionMethod, eachRegion.ballCheck)
-				allLocations["%s_access" % regionName] = create_abstract_location(noBallRegionMethod, eachRegion.defaultCheck)
-				#You can drop the ball
-				allLocations["%s_access" % regionName].methods["%s_ball" % regionName] = PackedStringArray([""])
-				
+							fromSpawnBallAccess.append("%s, %s" % [checkpointName, levelData.name.to_lower() + "_ball"])
 				#Now create a child that represents the region
 				levelData.children.append_array(
-					[build_region(regionName, fromSpawnNoBallAccess),
-					build_region(regionName + "_ball", fromSpawnBallAccess)]
+					[build_region(regionName, fromSpawnNoBallAccess, noBallRegionMethod),
+					build_region(regionName + "_ball", fromSpawnBallAccess, ballRegionMethod, true)]
 				)
 			
 			#Where you get the ball from in no ball start levels
 			if !spawnWithBall:
-				var ballRegionName : String = levelData.name.to_lower().replace(" ", "_") + "_" + eachLevel.levelRegions[eachLevel.ballOrigin].regionName.to_snake_case()
+				var formatedLevelName = levelData.name.to_lower().replace(" ", "_")
+				var ballRegionName : String = formatedLevelName + "_" + eachLevel.levelRegions[eachLevel.ballOrigin].regionName.to_snake_case()
 				levelData.children.append({
-					"name" : levelData.name.to_lower().replace(" ", "_") + "_ball",
-					"access_rules" : "@" + ballRegionName
+					"name" : formatedLevelName + "_ball",
+					"access_rules" : ballRegionName
 				})
 			
 			#Second pass to put access locations at each region
@@ -137,14 +133,16 @@ static func construct(main : Main) -> Array:
 						continue
 					if !levelData.children[regionIndex].has("children"):
 						levelData.children[regionIndex].children = []
+					var checkInfo : CheckInfo = allLocations[eachLocation].checkInfo
 					var accessRules : PackedStringArray = allLocations[eachLocation].methods[regionName]
-					var newInfo : Dictionary
 					var visRules : Array = []
-					match allLocations[eachLocation].checkInfo.checkType:
-						CheckInfo.CheckType.REGION:
-							newInfo = build_location(eachLocation, accessRules)
+					match checkInfo.checkType:
 						CheckInfo.CheckType.LOADING_ZONE:
-							newInfo = build_location(eachLocation, accessRules)
+							var newInfo : Array = []
+							var loadingLocation = build_location(eachWorld.worldName + " " + eachLocation, accessRules)
+							loadingLocation["visibility_rules"] = ["entrance_randomization"]
+							newInfo.append(loadingLocation)
+							levelData.children[regionIndex].children.append(newInfo)
 						CheckInfo.CheckType.ENEMY:
 							visRules = ["enemy_checks"]
 						CheckInfo.CheckType.CHECKPOINT:
@@ -155,42 +153,24 @@ static func construct(main : Main) -> Array:
 							visRules = ["insect_checks"]
 						CheckInfo.CheckType.TIP:
 							visRules = ["tip_checks"]
-						_:
-							newInfo = build_location(eachLocation, accessRules, allLocations[eachLocation].checkInfo)
-							if MAP_TABLE.has(levelData.name):
-								var mapInfo = MAP_TABLE[levelData.name]
-								if !newInfo.has("map_locations"):
-									newInfo.map_locations = []
-								newInfo.map_locations.append({
-									"map" : mapInfo[0],
-									"x" : int(allLocations[eachLocation].checkInfo.checkSpot.x * mapInfo[1].x),
-									"y" : int(allLocations[eachLocation].checkInfo.checkSpot.y * mapInfo[1].y),
-								})
-								if visRules.size() > 0:
-									if !newInfo.has("visibility_rules"):
-										newInfo.visibility_rules = []
-									newInfo.visibility_rules.append_array(visRules)
-								if !newInfo.has("sections"):
-									newInfo.sections = []
-								if allLocations[eachLocation].checkInfo.checkType != CheckInfo.CheckType.GARIB:
-									if allLocations[eachLocation].checkInfo.totalSubchecks > 1:
-										for eachSection in allLocations[eachLocation].checkInfo.apIds.size():
-											newInfo.sections.append({"name" : eachLocation + " " + str(eachSection + 1)})
-									else:
-										newInfo.sections.append({"name" : eachLocation})
-								else:
-									#Garib Groups VS Garibsanity
-									for eachSection in allLocations[eachLocation].checkInfo.apIds.size():
-										newInfo.sections.append({"name" : eachLocation + " " + str(eachSection + 1),
-										"visibility_rules" : ["garibsanity"]})
-									newInfo.sections.append({"name" : eachLocation,
-										"visibility_rules" : ["garib_groups"]})
-					levelData.children[regionIndex].children.append(newInfo)
-			
+					#Loading zones don't use the same mapping build logic
+					if checkInfo.checkType != CheckInfo.CheckType.LOADING_ZONE:
+						var outInfo = build_visual_locations(levelData.name, eachLocation, checkInfo, accessRules, visRules)
+						for allInfo in outInfo:
+							match allInfo:
+								"base_check", "garib_group":
+									levelData.children[regionIndex].children.append(outInfo[allInfo])
+								"garibsanity":
+									levelData.children[regionIndex].children.append_array(outInfo[allInfo])
+									allGaribs.append_array(outInfo[allInfo])
 			#If it's not a numbered level, get the checkpoint for free
 			var level_prefix = levelData.name.to_lower().replace(" ", "_")
 			if !eachLevel.levelSuffix.is_valid_int():
 				levelData["hosted_item"] = level_prefix + "_cp_1"
+			if allGaribs.size() > 1:
+				levelData.children.append({
+					"name" : level_prefix + "_all_garibs"
+				})
 			
 			#Level randomization
 			if eachLevel.levelSuffix != "Hubworld":
@@ -200,13 +180,93 @@ static func construct(main : Main) -> Array:
 		output.append(worldData)
 	return output
 
+##Build out the new info to append to the location
+static func build_visual_locations(levelName : String, locationName : String, checkInfo : CheckInfo, accessRules : Array[String], visRules : Array) -> Dictionary:
+	var output = {}
+	if MAP_TABLE.has(levelName):
+		var mapInfo := [accessRules, checkInfo, levelName, visRules]
+		#Create sections and subchecks
+		if checkInfo.checkType != CheckInfo.CheckType.GARIB:
+			var baseInfo := build_location_with_map_info(locationName, mapInfo)
+			if checkInfo.totalSubchecks > 1:
+				for eachSection in checkInfo.totalSubchecks:
+					baseInfo.sections.append({"name" : locationName + " " + str(eachSection + 1)})
+			else:
+				baseInfo.sections.append({"name" : ""})
+			output["base_check"] = baseInfo
+		#Create garib info
+		if checkInfo.checkType == CheckInfo.CheckType.GARIB or (checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks < checkInfo.apIds.size()):
+			var garibGroup : Dictionary
+			var garibSuffix = ""
+			if checkInfo.checkType == CheckInfo.CheckType.ENEMY:
+				garibSuffix = " Garib"
+			#Garib Groups VS Garibsanity
+			if checkInfo.totalSubchecks > 1:
+				var groupName : String = locationName + garibSuffix + "s"
+				garibGroup = build_location_with_map_info(groupName, mapInfo)
+				garibGroup.sections.append({"name" : groupName,
+					"visibility_rules" : ["garib_groups"]})
+				var garibsanity : Array = []
+				for eachSection in checkInfo.totalSubchecks:
+					var singleGaribName : String = locationName + garibSuffix + " " + str(eachSection + 1)
+					var singleGarib := build_location_with_map_info(singleGaribName, mapInfo)
+					garibGroup.sections.append({"name" : singleGaribName,
+					"visibility_rules" : ["garibsanity,garibsanity_group"]})
+					singleGarib.sections.append({"name" : singleGaribName,
+					"visibility_rules" : ["garibsanity,garibsanity_single"]})
+					garibsanity.append(singleGarib)
+				output["garib_group"] = garibGroup
+				output["garibsanity"] = garibsanity
+			else:
+				garibGroup = build_location_with_map_info(locationName, mapInfo)
+				garibGroup.sections.append({"name" : locationName + garibSuffix,
+					"visibility_rules" : ["garib_groups", "garibsanity"]})
+				output["garibsanity"] = [garibGroup]
+	else:
+		output["base_check"] = build_location(locationName, accessRules, checkInfo)
+	return output
+
+##
+static func create_garibs(garibName : String, garibCount : int):
+	var newInfo : Dictionary = {"sections" = []}
+	#Garib Groups VS Garibsanity
+	for eachSection in garibCount:
+		newInfo.sections.append({"name" : garibName + " " + str(eachSection + 1),
+		"visibility_rules" : ["garibsanity"]})
+	newInfo.sections.append({"name" : garibName + "s",
+		"visibility_rules" : ["garib_groups"]})
+	return newInfo
+
+##Create a map placement
+static func create_map_placement(mapName : String, inCheck : CheckInfo, shape : String = "") -> Dictionary:
+	var mapInfo = MAP_TABLE[mapName]
+	var popSpot = inCheck.get_pop_spot(mapInfo[1])
+	var output = {
+			"map" : mapInfo[0],
+			"x" : popSpot.x,
+			"y" : popSpot.y,
+		}
+	if shape != "":
+		output["shape"] = shape
+	return output
+
 ##Creates a region
-static func build_region(inName : String, accessRules : Array[String]) -> Dictionary:
-	accessRules.append("@%s_access" % inName)
-	return {
-		"name" : inName,
-		"access_rules" : accessRules
+static func build_region(inName : String, accessRules : Array[String], regionTravels : Dictionary[String, PackedStringArray], ballRegion : bool = false) -> Dictionary:
+	var output = {
+		"name" : inName
 	}
+	
+	if !ballRegion:
+		accessRules.append("@%s_ball"%inName)
+	for eachOrigin in regionTravels:
+		if eachOrigin == inName:
+			continue
+		for eachMethod in regionTravels[eachOrigin]:
+			var newRule = "@%s"%",".join([eachOrigin, eachMethod]).trim_suffix(",")
+			accessRules.append(newRule)
+	if accessRules.size() > 0:
+		output["access_rules"] = accessRules
+	return output
 
 ##Creates a location
 static func build_location(inName : String, accessRules : PackedStringArray, checkInfo : CheckInfo = null) -> Dictionary:
@@ -221,6 +281,19 @@ static func build_location(inName : String, accessRules : PackedStringArray, che
 	accessRules.erase("")
 	if accessRules.size() > 0:
 		output["access_rules"] = accessRules
+	return output
+
+##Setup map info for a location
+static func build_location_with_map_info(inName : String, mapInfo : Array) -> Dictionary:
+	var accessRules : PackedStringArray = mapInfo[0]
+	var checkInfo : CheckInfo = mapInfo[1]
+	var levelName : String = mapInfo[2]
+	var visRules : Array = mapInfo[3]
+	var output := build_location(inName, accessRules, checkInfo)
+	output.map_locations = [create_map_placement(levelName, checkInfo)]
+	if visRules.size() > 0:
+		output.visibility_rules = visRules
+	output.sections = []
 	return output
 
 ##Creates a location

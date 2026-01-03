@@ -82,7 +82,6 @@ static func construct(main : Main) -> Array:
 			levelData.children = []
 			var prefix := (eachWorld.worldShorthand + eachLevel.levelSuffix).to_lower()
 			var allLocations : Dictionary
-			var allGaribs : Array[Dictionary]
 			#First pass to discover all locations
 			for eachCheck in eachLevel.levelChecks:
 				var accessRules := methods_to_access_rules(prefix, eachLevel.levelRegions, eachCheck.allMethods)
@@ -144,33 +143,23 @@ static func construct(main : Main) -> Array:
 							newInfo.append(loadingLocation)
 							levelData.children[regionIndex].children.append(newInfo)
 						CheckInfo.CheckType.ENEMY:
-							visRules = ["enemy_checks"]
+							visRules = ["enemy_checks", "enemy_checks_on"]
 						CheckInfo.CheckType.CHECKPOINT:
-							visRules = ["checkpoint_checks"]
+							visRules = ["checkpoint_checks", "checkpoint_checks_on"]
 						CheckInfo.CheckType.SWITCH:
-							visRules = ["switch_checks"]
+							visRules = ["switch_checks", "switch_checks_on"]
 						CheckInfo.CheckType.BUG:
-							visRules = ["insect_checks"]
+							visRules = ["insect_checks", "insect_checks_on"]
 						CheckInfo.CheckType.TIP:
-							visRules = ["tip_checks"]
+							visRules = ["tip_checks", "tip_checks_on"]
 					#Loading zones don't use the same mapping build logic
 					if checkInfo.checkType != CheckInfo.CheckType.LOADING_ZONE:
-						var outInfo = build_visual_locations(levelData.name, eachLocation, checkInfo, accessRules, visRules)
-						for allInfo in outInfo:
-							match allInfo:
-								"base_check", "garib_group":
-									levelData.children[regionIndex].children.append(outInfo[allInfo])
-								"garibsanity":
-									levelData.children[regionIndex].children.append_array(outInfo[allInfo])
-									allGaribs.append_array(outInfo[allInfo])
+						var newInfo = build_visual_locations(levelData.name, eachLocation, checkInfo, accessRules, visRules)
+						levelData.children[regionIndex].children.append(newInfo)
 			#If it's not a numbered level, get the checkpoint for free
 			var level_prefix = levelData.name.to_lower().replace(" ", "_")
 			if !eachLevel.levelSuffix.is_valid_int():
 				levelData["hosted_item"] = level_prefix + "_cp_1"
-			if allGaribs.size() > 1:
-				levelData.children.append({
-					"name" : level_prefix + "_all_garibs"
-				})
 			
 			#Level randomization
 			if eachLevel.levelSuffix != "Hubworld":
@@ -182,60 +171,51 @@ static func construct(main : Main) -> Array:
 
 ##Build out the new info to append to the location
 static func build_visual_locations(levelName : String, locationName : String, checkInfo : CheckInfo, accessRules : Array[String], visRules : Array) -> Dictionary:
-	var output = {}
 	if MAP_TABLE.has(levelName):
-		var mapInfo := [accessRules, checkInfo, levelName, visRules]
+		var mapInfo := [accessRules, checkInfo, levelName]
+		var baseInfo := build_location_with_map_info(locationName, mapInfo)
 		#Create sections and subchecks
 		if checkInfo.checkType != CheckInfo.CheckType.GARIB:
-			var baseInfo := build_location_with_map_info(locationName, mapInfo)
 			if checkInfo.totalSubchecks > 1:
 				for eachSection in checkInfo.totalSubchecks:
-					baseInfo.sections.append({"name" : locationName + " " + str(eachSection + 1)})
+					baseInfo.sections.append(
+						{"name" : locationName + " " + str(eachSection + 1),
+						"visibility_rules" : visRules})
 			else:
-				baseInfo.sections.append({"name" : ""})
-			output["base_check"] = baseInfo
+				baseInfo.sections.append({"name" : "",
+					"visibility_rules" : visRules})
 		#Create garib info
 		if checkInfo.checkType == CheckInfo.CheckType.GARIB or (checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks < checkInfo.apIds.size()):
-			var garibGroup : Dictionary
-			var garibSuffix = ""
+			var garibName = locationName
 			if checkInfo.checkType == CheckInfo.CheckType.ENEMY:
-				garibSuffix = " Garib"
-			#Garib Groups VS Garibsanity
-			if checkInfo.totalSubchecks > 1:
-				var groupName : String = locationName + garibSuffix + "s"
-				garibGroup = build_location_with_map_info(groupName, mapInfo)
-				garibGroup.sections.append({"name" : groupName,
-					"visibility_rules" : ["garib_groups"]})
-				var garibsanity : Array = []
-				for eachSection in checkInfo.totalSubchecks:
-					var singleGaribName : String = locationName + garibSuffix + " " + str(eachSection + 1)
-					var singleGarib := build_location_with_map_info(singleGaribName, mapInfo)
-					garibGroup.sections.append({"name" : singleGaribName,
-					"visibility_rules" : ["garibsanity,garibsanity_group"]})
-					singleGarib.sections.append({"name" : singleGaribName,
-					"visibility_rules" : ["garibsanity,garibsanity_single"]})
-					garibsanity.append(singleGarib)
-				output["garib_group"] = garibGroup
-				output["garibsanity"] = garibsanity
+				garibName += " Garib"
 			else:
-				garibGroup = build_location_with_map_info(locationName, mapInfo)
-				garibGroup.sections.append({"name" : locationName + garibSuffix,
-					"visibility_rules" : ["garib_groups", "garibsanity"]})
-				output["garibsanity"] = [garibGroup]
+				garibName = garibName.trim_suffix("s")
+			baseInfo.sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks))
+		return baseInfo
 	else:
-		output["base_check"] = build_location(locationName, accessRules, checkInfo)
-	return output
+		return build_location(locationName, accessRules, checkInfo)
 
-##
-static func create_garibs(garibName : String, garibCount : int):
-	var newInfo : Dictionary = {"sections" = []}
+##Garibsanity under group node
+static func create_garib_sections(garibName : String, garibCount : int):
+	var sections : Array = []
 	#Garib Groups VS Garibsanity
-	for eachSection in garibCount:
-		newInfo.sections.append({"name" : garibName + " " + str(eachSection + 1),
-		"visibility_rules" : ["garibsanity"]})
-	newInfo.sections.append({"name" : garibName + "s",
-		"visibility_rules" : ["garib_groups"]})
-	return newInfo
+	if garibCount > 1:
+		for eachSection in garibCount:
+			var eachEntry = {"name" : garibName + " " + str(eachSection + 1),
+			"visibility_rules" : ["garib_logic_garibsanity", "garib_logic"]}
+			eachEntry.merge(section_icons("garib", CheckInfo.CheckType.GARIB))
+			sections.append(eachEntry)
+		var groupEntry = {"name" : "",
+			"visibility_rules" : ["garib_logic_garib_groups"]}
+		groupEntry.merge(section_icons("group", CheckInfo.CheckType.GARIB))
+		sections.append(groupEntry)
+	else:
+		var garibEntry = {"name" : "",
+		"visibility_rules" : ["garib_logic_garibsanity", "garib_logic_garib_groups", "garib_logic"]}
+		garibEntry.merge(section_icons("garib", CheckInfo.CheckType.GARIB))
+		sections.append(garibEntry)
+	return sections
 
 ##Create a map placement
 static func create_map_placement(mapName : String, inCheck : CheckInfo, shape : String = "") -> Dictionary:
@@ -274,25 +254,34 @@ static func build_location(inName : String, accessRules : PackedStringArray, che
 		"name" : inName
 	}
 	if checkInfo != null:
-		output["item_count"] = checkInfo.apIds.size()
-		var imageFilepath = "images/items/" + checkInfo.checkImage.resource_path.get_file().trim_suffix(".png").to_snake_case()
-		output["chest_unopened_img"] = imageFilepath + ".png"
-		output["chest_opened_img"] = imageFilepath + "_gray.png"
+		var imageName = checkInfo.checkImage.resource_path.get_file().trim_suffix(".png")
+		output.merge(section_icons(imageName, checkInfo.checkType))
 	accessRules.erase("")
 	if accessRules.size() > 0:
 		output["access_rules"] = accessRules
 	return output
+
+##Create icons for
+static func section_icons(sectionName : String, checkType : CheckInfo.CheckType = CheckInfo.CheckType.MISC) -> Dictionary:
+	var subfolder := "items/"
+	match checkType:
+		CheckInfo.CheckType.ENEMY:
+			subfolder = "enemies/"
+		CheckInfo.CheckType.BUG:
+			subfolder = "enemies/"
+	var imageFilepath = "images/" + subfolder + sectionName
+	return {
+		"chest_unopened_img" : imageFilepath + ".png",
+		"chest_opened_img" : imageFilepath + "_gray.png"
+	}
 
 ##Setup map info for a location
 static func build_location_with_map_info(inName : String, mapInfo : Array) -> Dictionary:
 	var accessRules : PackedStringArray = mapInfo[0]
 	var checkInfo : CheckInfo = mapInfo[1]
 	var levelName : String = mapInfo[2]
-	var visRules : Array = mapInfo[3]
 	var output := build_location(inName, accessRules, checkInfo)
 	output.map_locations = [create_map_placement(levelName, checkInfo)]
-	if visRules.size() > 0:
-		output.visibility_rules = visRules
 	output.sections = []
 	return output
 

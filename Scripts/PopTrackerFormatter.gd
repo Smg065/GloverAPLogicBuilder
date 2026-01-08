@@ -191,13 +191,16 @@ static func build_visual_locations(levelName : String, locationName : String, ch
 				garibName += " Garib"
 			else:
 				garibName = garibName.trim_suffix("s")
-			baseInfo.sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks))
+			var singleFallback : String = ""
+			if checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks == 1:
+				singleFallback = "Garib"
+			baseInfo.sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks, singleFallback))
 		return baseInfo
 	else:
 		return build_location(locationName, accessRules, checkInfo)
 
 ##Garibsanity under group node
-static func create_garib_sections(garibName : String, garibCount : int):
+static func create_garib_sections(garibName : String, garibCount : int, singleFallback : String = ""):
 	var sections : Array = []
 	#Garib Groups VS Garibsanity
 	if garibCount > 1:
@@ -211,7 +214,7 @@ static func create_garib_sections(garibName : String, garibCount : int):
 		groupEntry.merge(section_icons("group", CheckInfo.CheckType.GARIB))
 		sections.append(groupEntry)
 	else:
-		var garibEntry = {"name" : "",
+		var garibEntry = {"name" : singleFallback,
 		"visibility_rules" : ["garib_logic_garibsanity", "garib_logic_garib_groups", "garib_logic"]}
 		garibEntry.merge(section_icons("garib", CheckInfo.CheckType.GARIB))
 		sections.append(garibEntry)

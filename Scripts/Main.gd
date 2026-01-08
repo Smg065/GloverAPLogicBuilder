@@ -39,6 +39,7 @@ var lastRegion : RegionInfo
 @export var openFiles : FileDialog
 @export var openLandscape : FileDialog
 @export var openMemdump : FileDialog
+@export var poptrackerFile : FileDialog
 
 var isMainWorld : bool
 var debugLevelData : LevelData
@@ -83,8 +84,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ReadXML"):
 		landscape_load_window()
 		#generate_level_event_methods()
-	if Input.is_action_just_pressed("Poptracker Generate"):
-		DisplayServer.clipboard_set(JSON.stringify(PopTrackerBuilder.construct(self), "\t"))
 
 func copy_mouse_info() -> void:
 	var newCoord : String = str(mouse_pos_to_map_spot())
@@ -453,6 +452,12 @@ func web_save() -> void:
 	var jsonBytes : PackedByteArray = jsonString.to_ascii_buffer()
 	#Thank you to Kehom's Forge for making this work
 	JavaScriptBridge.download_buffer(jsonBytes, "logic.json","text/plain")
+
+func web_poptracker() -> void:
+	var jsonString : String = JSON.stringify(PopTrackerBuilder.construct(self), "\t")
+	var jsonBytes : PackedByteArray = jsonString.to_ascii_buffer()
+	#Thank you to Kehom's Forge for making this work x2
+	JavaScriptBridge.download_buffer(jsonBytes, "locations.jsonc","text/plain")
 
 func landscape_load_window() -> void:
 	if is_not_web():
@@ -881,3 +886,14 @@ func generate_level_event_methods():
 func to_python_enum(inString : String) -> String:
 	#inString = inString.to_upper().replace(' ', '_')
 	return inString
+
+func poptracker_pressed() -> void:
+	if is_not_web():
+		poptrackerFile.show()
+	else:
+		web_poptracker()
+
+func poptracker_export_path(popPath: String) -> void:
+	var path = FileAccess.open(popPath, FileAccess.WRITE)
+	path.store_string(JSON.stringify(PopTrackerBuilder.construct(self), "\t"))
+	path.close()

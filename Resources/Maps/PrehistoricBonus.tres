@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=22 format=3 uid="uid://8leqygxsskbx"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://8leqygxsskbx"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_0rxe8"]
 [ext_resource type="Texture2D" uid="uid://dhefke4w2wyk" path="res://Images/Maps/PrehistoricBonus.png" id="2_2388b"]
@@ -19,6 +19,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String](["0x7B", "0x4C", "0x6D", "0x4B", "0x81", "0x4A", "0x6C", "0x49", "0x79", "0x48"])
 apIds = PackedStringArray("0x4F3", "0x4F4", "0x4F5", "0x4F6", "0x4F7", "0x4F8", "0x4F9", "0x4FA", "0x4FB", "0x4FC")
+poptrackerSpot = Vector2i(700, 85)
 
 [sub_resource type="Resource" id="Resource_l5n62"]
 script = ExtResource("1_0rxe8")
@@ -29,6 +30,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String](["0x7F", "0x6B", "0x47", "0x83", "0x46", "0x6A", "0x45", "0x85", "0x44", "0x69"])
 apIds = PackedStringArray("0x4FD", "0x4FE", "0x4FF", "0x500", "0x501", "0x502", "0x503", "0x504", "0x505", "0x506")
+poptrackerSpot = Vector2i(860, 90)
 
 [sub_resource type="Resource" id="Resource_w0v63"]
 script = ExtResource("1_0rxe8")
@@ -39,6 +41,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String](["0x55", "0x63", "0x56", "0x62", "0x57", "0x61", "0x58", "0x60", "0x3B", "0x71"])
 apIds = PackedStringArray("0x507", "0x508", "0x509", "0x50A", "0x50B", "0x50C", "0x50D", "0x50E", "0x50F", "0x510")
+poptrackerSpot = Vector2i(1455, 25)
 
 [sub_resource type="Resource" id="Resource_n6qlo"]
 script = ExtResource("1_0rxe8")
@@ -49,6 +52,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String](["0x43", "0x7D", "0x42", "0x51", "0x68", "0x41", "0x77", "0x3C", "0x67", "0x52"])
 apIds = PackedStringArray("0x511", "0x512", "0x513", "0x514", "0x515", "0x516", "0x517", "0x518", "0x519", "0x51A")
+poptrackerSpot = Vector2i(1190, 30)
 
 [sub_resource type="Resource" id="Resource_kicmt"]
 script = ExtResource("1_0rxe8")
@@ -59,6 +63,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String](["0x3D", "0x66", "0x40", "0x75", "0x3F", "0x65", "0x3E", "0x64", "0x54", "0x73"])
 apIds = PackedStringArray("0x51B", "0x51C", "0x51D", "0x51E", "0x51F", "0x520", "0x521", "0x522", "0x523", "0x524")
+poptrackerSpot = Vector2i(1370, 35)
 
 [sub_resource type="Resource" id="Resource_geer0"]
 script = ExtResource("1_0rxe8")
@@ -69,6 +74,7 @@ checkType = 1
 totalSubchecks = 10
 ids = Array[String](["0x5F", "0x87", "0x50", "0x53", "0x6F", "0x4F", "0x89", "0x4E", "0x6E", "0x4D"])
 apIds = PackedStringArray("0x525", "0x526", "0x527", "0x528", "0x529", "0x52A", "0x52B", "0x52C", "0x52D", "0x52E")
+poptrackerSpot = Vector2i(450, 60)
 
 [sub_resource type="Resource" id="Resource_i6iyd"]
 script = ExtResource("1_0rxe8")
@@ -78,6 +84,7 @@ checkImage = ExtResource("4_sfqp8")
 checkType = 2
 ids = Array[String](["0x5D"])
 apIds = PackedStringArray("0x52F")
+poptrackerSpot = Vector2i(625, 25)
 
 [sub_resource type="Resource" id="Resource_700jl"]
 script = ExtResource("1_0rxe8")
@@ -87,6 +94,7 @@ checkImage = ExtResource("4_sfqp8")
 checkType = 2
 ids = Array[String](["0x5C"])
 apIds = PackedStringArray("0x530")
+poptrackerSpot = Vector2i(860, 25)
 
 [sub_resource type="Resource" id="Resource_wyqc2"]
 script = ExtResource("1_0rxe8")
@@ -96,6 +104,7 @@ checkImage = ExtResource("4_sfqp8")
 checkType = 2
 ids = Array[String](["0x5B"])
 apIds = PackedStringArray("0x531")
+poptrackerSpot = Vector2i(1415, 115)
 
 [sub_resource type="Resource" id="Resource_0vkvg"]
 script = ExtResource("1_0rxe8")
@@ -105,6 +114,7 @@ checkImage = ExtResource("4_sfqp8")
 checkType = 2
 ids = Array[String](["0x5A"])
 apIds = PackedStringArray("0x532")
+poptrackerSpot = Vector2i(300, 45)
 
 [sub_resource type="Resource" id="Resource_ps2ue"]
 script = ExtResource("1_0rxe8")
@@ -114,6 +124,7 @@ checkImage = ExtResource("2_fic8w")
 checkType = 5
 apIds = PackedStringArray("0x533")
 checkBallRequirement = true
+poptrackerSpot = Vector2i(1600, 70)
 
 [sub_resource type="Resource" id="Resource_jd10t"]
 script = ExtResource("6_whkq0")

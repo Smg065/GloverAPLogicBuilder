@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3 uid="uid://8nxvni6s5imx"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://8nxvni6s5imx"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_84t78"]
 [ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_cfux2"]

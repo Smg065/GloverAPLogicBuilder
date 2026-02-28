@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=12 format=3 uid="uid://ograwtwmh0m2"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://ograwtwmh0m2"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_7huu1"]
 [ext_resource type="Texture2D" uid="uid://dd0nvw2oy6wh8" path="res://Images/Maps/PrehistoricBoss.png" id="2_h5v3b"]

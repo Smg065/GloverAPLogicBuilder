@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=23 format=3 uid="uid://cug5j2g5t5i52"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cug5j2g5t5i52"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_vdcud"]
 [ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="2_avae0"]
@@ -21,6 +21,7 @@ checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x43", "0x47", "0x46", "0x45", "0x44"])
 apIds = PackedStringArray("0x0FC", "0x0FD", "0x0FE", "0x0FF", "0x100")
+poptrackerSpot = Vector2i(175, 25)
 
 [sub_resource type="Resource" id="Resource_t7rwj"]
 script = ExtResource("1_vdcud")
@@ -31,6 +32,7 @@ checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x3D", "0x41", "0x40", "0x3F", "0x3E"])
 apIds = PackedStringArray("0x101", "0x102", "0x103", "0x104", "0x105")
+poptrackerSpot = Vector2i(420, 100)
 
 [sub_resource type="Resource" id="Resource_535jh"]
 script = ExtResource("1_vdcud")
@@ -41,6 +43,7 @@ checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x35", "0x39", "0x38", "0x37", "0x36"])
 apIds = PackedStringArray("0x106", "0x107", "0x108", "0x109", "0x10A")
+poptrackerSpot = Vector2i(675, 25)
 
 [sub_resource type="Resource" id="Resource_k4c71"]
 script = ExtResource("1_vdcud")
@@ -51,6 +54,7 @@ checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x2F", "0x33", "0x32", "0x31", "0x30"])
 apIds = PackedStringArray("0x10B", "0x10C", "0x10D", "0x10E", "0x10F")
+poptrackerSpot = Vector2i(975, 120)
 
 [sub_resource type="Resource" id="Resource_qasfi"]
 script = ExtResource("1_vdcud")
@@ -61,6 +65,7 @@ checkType = 1
 totalSubchecks = 5
 ids = Array[String](["0x26", "0x2A", "0x29", "0x28", "0x27"])
 apIds = PackedStringArray("0x110", "0x111", "0x112", "0x113", "0x114")
+poptrackerSpot = Vector2i(1390, 50)
 
 [sub_resource type="Resource" id="Resource_n4kp7"]
 script = ExtResource("1_vdcud")
@@ -70,6 +75,7 @@ checkImage = ExtResource("5_b20es")
 checkType = 11
 ids = Array[String](["0x116"])
 apIds = PackedStringArray("0x115")
+poptrackerSpot = Vector2i(377, 72)
 
 [sub_resource type="Resource" id="Resource_l1n4l"]
 script = ExtResource("1_vdcud")
@@ -79,6 +85,7 @@ checkImage = ExtResource("6_7nxuk")
 checkType = 11
 ids = Array[String](["0x11B"])
 apIds = PackedStringArray("0x116")
+poptrackerSpot = Vector2i(647, 72)
 
 [sub_resource type="Resource" id="Resource_3nejb"]
 script = ExtResource("1_vdcud")
@@ -88,6 +95,7 @@ checkImage = ExtResource("6_7nxuk")
 checkType = 11
 ids = Array[String](["0x121"])
 apIds = PackedStringArray("0x117")
+poptrackerSpot = Vector2i(1022, 72)
 
 [sub_resource type="Resource" id="Resource_2djcq"]
 script = ExtResource("1_vdcud")
@@ -97,6 +105,7 @@ checkImage = ExtResource("4_b52p8")
 checkType = 2
 ids = Array[String](["0x3B"])
 apIds = PackedStringArray("0x118")
+poptrackerSpot = Vector2i(1337, 72)
 
 [sub_resource type="Resource" id="Resource_0f6ij"]
 script = ExtResource("1_vdcud")
@@ -105,6 +114,7 @@ checkSpot = Vector2(0.71, 0.579)
 checkImage = ExtResource("3_h082f")
 checkType = 5
 apIds = PackedStringArray("0x119")
+poptrackerSpot = Vector2i(1290, 155)
 
 [sub_resource type="Resource" id="Resource_qb66g"]
 script = ExtResource("6_gtvrv")

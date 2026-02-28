@@ -66,6 +66,15 @@ const MAP_TABLE = {
 	"Tutorial" : ["well", Vector2i(1655, 249)]
 }
 
+const HUBWORLD_GATES_TABLE = {
+	"Hubworld Atlantis Gate" : "@Ball Turn-In 1",
+	"Hubworld Carnival Gate" : "@Ball Turn-In 2",
+	"Hubworld Pirate's Cove Gate" : "@Ball Turn-In 2",
+	"Hubworld Prehistoric Gate" : "@Ball Turn-In 4",
+	"Hubworld Fortress of Fear Gate" : "@Ball Turn-In 4",
+	"Hubworld Out of This World Gate" : "@Ball Turn-In 6",
+}
+
 static func construct(main : Main) -> Array:
 	var output := []
 	var allWorlds : Array[WorldInfo] = [main.hubworld]
@@ -80,12 +89,7 @@ static func construct(main : Main) -> Array:
 			var levelData := {}
 			levelData.name = eachWorld.worldShorthand + eachLevel.levelSuffix
 			levelData.children = []
-			var prefix := (eachWorld.worldShorthand + eachLevel.levelSuffix).to_lower()
-			var allLocations : Dictionary
-			#First pass to discover all locations
-			for eachCheck in eachLevel.levelChecks:
-				var accessRules := methods_to_access_rules(prefix, eachLevel.levelRegions, eachCheck.allMethods)
-				allLocations[eachCheck.checkName] = create_abstract_location(accessRules, eachCheck)
+			var prefix := eachWorld.worldShorthand + eachLevel.levelSuffix
 			#First pass to discover all regions
 			for eachRegion in eachLevel.levelRegions:
 				var regionName : String = levelData.name.to_lower().replace(" ", "_") + "_" + eachRegion.regionName.to_snake_case()
@@ -95,11 +99,11 @@ static func construct(main : Main) -> Array:
 				var fromSpawnBallAccess : Array[String] = []
 				var fromSpawnNoBallAccess : Array[String] = []
 				#Default for most
-				if eachWorld.worldName != "Hubworld":
+				if eachLevel.checkpointRegions.size() > 1:
 					for checkpointNumber in eachLevel.checkpointRegions.size():
 						if eachLevel.checkpointRegions[checkpointNumber] != eachRegion.regionIndex:
 							continue
-						var checkpointName = levelData.name.to_lower() + "_cp_" + str(checkpointNumber + 1)
+						var checkpointName = levelData.name + " Checkpoint " + str(checkpointNumber + 1)
 						if spawnWithBall:
 							#Levels that spawn with the ball don't need ball contact spawn logic
 							fromSpawnBallAccess.append(checkpointName)
@@ -107,12 +111,15 @@ static func construct(main : Main) -> Array:
 							#Levels that spawn without the ball will put you in the ballless region
 							fromSpawnNoBallAccess.append(checkpointName)
 							#AND they'll require you to get to any region with the ball once to access the ball checkpoints
-							fromSpawnBallAccess.append("%s, %s" % [checkpointName, levelData.name.to_lower() + "_ball"])
+							fromSpawnBallAccess.append("%s, %s" % [checkpointName, "@%s_ball" % levelData.name.to_lower()])
 				#Now create a child that represents the region
-				levelData.children.append_array(
-					[build_region(regionName, fromSpawnNoBallAccess, noBallRegionMethod),
-					build_region(regionName + "_ball", fromSpawnBallAccess, ballRegionMethod, true)]
-				)
+				var validRegions := []
+				var noballRegion := build_region("reg_" + regionName, fromSpawnNoBallAccess, noBallRegionMethod)
+				var ballRegion := build_region("reg_" + regionName + "_ball", fromSpawnBallAccess, ballRegionMethod, true)
+				if "access_rules" in ballRegion:
+					validRegions.append(ballRegion)
+				validRegions.append(noballRegion)
+				levelData.children.append_array(validRegions)
 			
 			#Where you get the ball from in no ball start levels
 			if !spawnWithBall:
@@ -123,81 +130,96 @@ static func construct(main : Main) -> Array:
 					"access_rules" : ballRegionName
 				})
 			
-			#Second pass to put access locations at each region
-			for regionIndex in levelData.children.size():
-				var eachRegion = levelData.children[regionIndex]
-				var regionName : String = eachRegion.name
-				for eachLocation in allLocations:
-					if !allLocations[eachLocation].methods.has(regionName):
-						continue
-					if !levelData.children[regionIndex].has("children"):
-						levelData.children[regionIndex].children = []
-					var checkInfo : CheckInfo = allLocations[eachLocation].checkInfo
-					var accessRules : PackedStringArray = allLocations[eachLocation].methods[regionName]
-					var visRules : Array = []
-					match checkInfo.checkType:
-						CheckInfo.CheckType.LOADING_ZONE:
-							var newInfo : Array = []
-							var loadingLocation = build_location(eachWorld.worldName + " " + eachLocation, accessRules)
-							loadingLocation["visibility_rules"] = ["entrance_randomization"]
-							newInfo.append(loadingLocation)
-							levelData.children[regionIndex].children.append(newInfo)
-						CheckInfo.CheckType.ENEMY:
-							visRules = ["enemy_checks", "enemy_checks_on"]
-						CheckInfo.CheckType.CHECKPOINT:
-							visRules = ["checkpoint_checks", "checkpoint_checks_on"]
-						CheckInfo.CheckType.SWITCH:
-							visRules = ["switch_checks", "switch_checks_on"]
-						CheckInfo.CheckType.BUG:
-							visRules = ["insect_checks", "insect_checks_on"]
-						CheckInfo.CheckType.TIP:
-							visRules = ["tip_checks", "tip_checks_on"]
-					#Loading zones don't use the same mapping build logic
-					if checkInfo.checkType != CheckInfo.CheckType.LOADING_ZONE:
-						var newInfo = build_visual_locations(levelData.name, eachLocation, checkInfo, accessRules, visRules)
-						levelData.children[regionIndex].children.append(newInfo)
-			#If it's not a numbered level, get the checkpoint for free
-			var level_prefix = levelData.name.to_lower().replace(" ", "_")
-			if !eachLevel.levelSuffix.is_valid_int():
-				levelData["hosted_item"] = level_prefix + "_cp_1"
-			
+			#Second pass to put locations in the collection
+			for eachCheck in eachLevel.levelChecks:
+				var accessRules := methods_to_access_rules(prefix, eachLevel.levelRegions, eachCheck.allMethods)
+				var visRules = []
+				var locationName : String = eachCheck.checkName
+				if eachCheck.allMethods.size() == 0 and eachWorld.worldName != "Hubworld":
+					continue
+				match eachCheck.checkType:
+					CheckInfo.CheckType.LOADING_ZONE:
+						var loadingLocation = build_location(locationName, accessRules)
+						if eachWorld.worldName != "Hubworld":
+							loadingLocation["name"] =  " ".join([eachWorld.worldName, loadingLocation["name"]])
+							loadingLocation["access_rules"].append("Open Levels")
+						levelData.children.append(loadingLocation)
+					CheckInfo.CheckType.ENEMY:
+						visRules = ["enemy_checks", "enemy_checks_on"]
+					CheckInfo.CheckType.CHECKPOINT:
+						visRules = ["checkpoint_checks", "checkpoint_checks_on"]
+					CheckInfo.CheckType.SWITCH:
+						visRules = ["switch_checks", "switch_checks_on"]
+					CheckInfo.CheckType.BUG:
+						visRules = ["insect_checks", "insect_checks_on"]
+					CheckInfo.CheckType.TIP:
+						visRules = ["tip_checks", "tip_checks_on"]
+				#Loading zones don't use the same mapping build logic
+				if eachCheck.checkType != CheckInfo.CheckType.LOADING_ZONE:
+					var newInfo = build_sectioned_locations(locationName, eachCheck, accessRules, visRules)
+					levelData.children.append(newInfo)
 			#Level randomization
-			if eachLevel.levelSuffix != "Hubworld":
-				levelData["access_rules"] = [level_prefix]
+			var level_prefix = levelData.name.to_lower().replace(" ", "_")
+			if eachWorld.worldName != "Hubworld":
+				if eachLevel.levelSuffix != "H":
+					levelData["access_rules"] = [level_prefix]
+				else:
+					var loadingZoneName : String = eachWorld.worldName
+					match loadingZoneName:
+						"Fortress":
+							loadingZoneName = "Fear"
+						"Out of This World":
+							loadingZoneName = "OotW"
+					levelData["access_rules"] = ["@%s Hub Entry"%loadingZoneName]
 			
 			worldData.children.append(levelData)
 		output.append(worldData)
+	#Ball turn-in logic
+	for eachEntry in range(1, 7):
+		output[0].children[1].children[2].sections[eachEntry].access_rules = ["$hub%s"%(eachEntry)]
+	#Hubworld loading zones
+	for eachEntry in output[0].children[0].children.size():
+		if not "access_rules" in output[0].children[0].children[eachEntry]:
+			continue
+		var extraRules := PackedStringArray()
+		for eachRule in output[0].children[0].children[eachEntry].access_rules.size():
+			for eachReplace in HUBWORLD_GATES_TABLE:
+				var originalRule : String = output[0].children[0].children[eachEntry].access_rules[eachRule]
+				if originalRule.contains(eachReplace):
+					extraRules.append(originalRule.replace(eachReplace, "Open Worlds"))
+					output[0].children[0].children[eachEntry].access_rules[eachRule] = originalRule.replace(eachReplace, HUBWORLD_GATES_TABLE[eachReplace])
+		output[0].children[0].children[eachEntry].access_rules.append_array(extraRules)
 	return output
 
 ##Build out the new info to append to the location
-static func build_visual_locations(levelName : String, locationName : String, checkInfo : CheckInfo, accessRules : Array[String], visRules : Array) -> Dictionary:
-	if MAP_TABLE.has(levelName):
-		var mapInfo := [accessRules, checkInfo, levelName]
-		var baseInfo := build_location_with_map_info(locationName, mapInfo)
-		#Create sections and subchecks
-		if checkInfo.checkType != CheckInfo.CheckType.GARIB:
-			if checkInfo.totalSubchecks > 1:
-				for eachSection in checkInfo.totalSubchecks:
-					baseInfo.sections.append(
-						{"name" : locationName + " " + str(eachSection + 1),
-						"visibility_rules" : visRules})
-			else:
-				baseInfo.sections.append({"name" : "",
-					"visibility_rules" : visRules})
-		#Create garib info
-		if checkInfo.checkType == CheckInfo.CheckType.GARIB or (checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks < checkInfo.apIds.size()):
-			var garibName = locationName
-			if checkInfo.checkType == CheckInfo.CheckType.ENEMY:
-				garibName += " Garib"
-			else:
-				garibName = garibName.trim_suffix("s")
-			var singleFallback : String = ""
-			if checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks == 1:
-				singleFallback = "Garib"
-			baseInfo.sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks, singleFallback))
-		return baseInfo
-	else:
-		return build_location(locationName, accessRules, checkInfo)
+static func build_sectioned_locations(locationName : String, checkInfo : CheckInfo, accessRules : Array[String], visRules : Array) -> Dictionary:
+	var baseInfo := build_location(locationName, accessRules, checkInfo)
+	baseInfo.sections = []
+	#Create sections and subchecks
+	if checkInfo.checkType != CheckInfo.CheckType.GARIB:
+		if checkInfo.totalSubchecks > 1:
+			for eachSection in checkInfo.totalSubchecks:
+				var newSection = {"name" : locationName + " " + str(eachSection + 1)}
+				if visRules.size() > 0:
+					newSection["visibility_rules"] = visRules
+				baseInfo.sections.append(newSection)
+		else:
+			var newSection = {"name" : ""}
+			if visRules.size() > 0:
+				newSection["visibility_rules"] = visRules
+			baseInfo.sections.append(newSection)
+	#Create garib info
+	if checkInfo.checkType == CheckInfo.CheckType.GARIB or (checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks < checkInfo.apIds.size()):
+		var garibName = locationName
+		if checkInfo.checkType == CheckInfo.CheckType.ENEMY:
+			garibName += " Garib"
+		else:
+			garibName = garibName.trim_suffix("s")
+		var singleFallback : String = ""
+		if checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks == 1:
+			singleFallback = "Garib"
+		baseInfo.sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks, singleFallback))
+	return baseInfo
 
 ##Garibsanity under group node
 static func create_garib_sections(garibName : String, garibCount : int, singleFallback : String = ""):
@@ -234,19 +256,21 @@ static func create_map_placement(mapName : String, inCheck : CheckInfo, shape : 
 	return output
 
 ##Creates a region
-static func build_region(inName : String, accessRules : Array[String], regionTravels : Dictionary[String, PackedStringArray], ballRegion : bool = false) -> Dictionary:
+static func build_region(inName : String, accessRules : Array[String], regionTravels : PackedStringArray, ballRegion : bool = false) -> Dictionary:
 	var output = {
 		"name" : inName
 	}
-	
 	if !ballRegion:
 		accessRules.append("@%s_ball"%inName)
-	for eachOrigin in regionTravels:
-		if eachOrigin == inName:
-			continue
-		for eachMethod in regionTravels[eachOrigin]:
-			var newRule = "@%s"%",".join([eachOrigin, eachMethod]).trim_suffix(",")
-			accessRules.append(newRule)
+	
+	#Remove self-ref rules
+	for eachTravel in regionTravels.size():
+		regionTravels[eachTravel] = regionTravels[eachTravel].replace("@" + inName, "")
+		regionTravels[eachTravel] = regionTravels[eachTravel].replace(",,", ",")
+	while regionTravels.erase(""):
+		continue
+	
+	accessRules.append_array(regionTravels)
 	if accessRules.size() > 0:
 		output["access_rules"] = accessRules
 	return output
@@ -258,6 +282,8 @@ static func build_location(inName : String, accessRules : PackedStringArray, che
 	}
 	if checkInfo != null:
 		var imageName = checkInfo.checkImage.resource_path.get_file().trim_suffix(".png")
+		if imageName.to_lower().ends_with("target"):
+			imageName = "target"
 		output.merge(section_icons(imageName, checkInfo.checkType))
 	accessRules.erase("")
 	if accessRules.size() > 0:
@@ -279,35 +305,25 @@ static func section_icons(sectionName : String, checkType : CheckInfo.CheckType 
 	}
 
 ##Setup map info for a location
-static func build_location_with_map_info(inName : String, mapInfo : Array) -> Dictionary:
-	var accessRules : PackedStringArray = mapInfo[0]
-	var checkInfo : CheckInfo = mapInfo[1]
-	var levelName : String = mapInfo[2]
+static func build_location_with_map_info(inName : String, checkInfo : CheckInfo, levelName : String, accessRules : PackedStringArray = PackedStringArray()) -> Dictionary:
 	var output := build_location(inName, accessRules, checkInfo)
 	output.map_locations = [create_map_placement(levelName, checkInfo)]
 	output.sections = []
 	return output
 
-##Creates a location
-static func create_abstract_location(inMethods : Dictionary[String, PackedStringArray], checkInfo : CheckInfo) -> Dictionary:
-	var output = {}
-	output.methods = inMethods
-	output.checkInfo = checkInfo
-	return output
-
 ##Constructs an dictionary of regions that lead to access rules
-static func methods_to_access_rules(prefix : String, regions : Array[RegionInfo], inMethods : Array[MethodData]) -> Dictionary[String, PackedStringArray]:
-	var output : Dictionary[String, PackedStringArray]
+static func methods_to_access_rules(prefix : String, regions : Array[RegionInfo], inMethods : Array[MethodData]) -> PackedStringArray:
+	var output : PackedStringArray = PackedStringArray()
 	for eachMethod in inMethods:
 		var methodEntries : PackedStringArray
 		#Easy and hard rules
 		match eachMethod.trickDifficulty:
 			MethodData.TrickDifficulty.EASY:
-				methodEntries.append("[$easy]")
+				methodEntries.append("[easy]")
 			MethodData.TrickDifficulty.HARD:
-				methodEntries.append("[$hard]")
+				methodEntries.append("[hard]")
 		for eachCheck in eachMethod.requiredChecks:
-			methodEntries.append("%s_%s" % [prefix.to_lower(), eachCheck.to_snake_case()])
+			methodEntries.append("%s %s" % [prefix, eachCheck])
 		for eachMove in eachMethod.requiredMoves:
 			methodEntries.append(MOVE_LOOKUP[eachMove])
 		#Not bowling or crystal is a combined funciton
@@ -318,12 +334,34 @@ static func methods_to_access_rules(prefix : String, regions : Array[RegionInfo]
 		#You need double jump to jump
 		if methodEntries.has("double_jump") and !methodEntries.has("jump"):
 			methodEntries.append("jump")
-		var accessMethod := ",".join(methodEntries)
 		var ballSuffix := ""
 		if eachMethod.ballRequirement:
 			ballSuffix = "_ball"
-		var accessRegion := prefix + "_" + regions[eachMethod.regionIndex].regionName.to_snake_case() + ballSuffix
-		if !output.has(accessRegion):
-			output[accessRegion] = PackedStringArray()
-		output[accessRegion].append(accessMethod)
+		var accessRegion := "@reg_%s_%s%s" % [prefix.to_lower(), regions[eachMethod.regionIndex].regionName.to_snake_case(), ballSuffix]
+		methodEntries.append(accessRegion)
+		var accessMethod := ",".join(methodEntries)
+		output.append(accessMethod)
+	return output
+
+
+##
+static func get_all_map_locations(main : Main) -> Dictionary:
+	var output = {"children" : []}
+	for eachWorld in main.allWorlds:
+		var worldInfo = {"name" : eachWorld.worldName,
+		"children" : []}
+		for eachLevel in eachWorld.levels:
+			var mapName := eachWorld.worldShorthand + eachLevel.levelSuffix
+			if !mapName in MAP_TABLE:
+				continue
+			var levelInfo = {"name" : eachWorld.worldName + " " + eachLevel.levelSuffix,
+			"children" : []}
+			for eachCheck in eachLevel.levelChecks:
+				var mapCheck := {"name":eachCheck.checkName,
+					"sections" : {
+						"ref" : "/".join([eachWorld.worldName, mapName, eachCheck.checkName])},
+					"map_locations":create_map_placement(mapName, eachCheck)}
+				levelInfo.children.append(mapCheck)
+			worldInfo["children"].append(levelInfo)
+		output["children"].append(worldInfo)
 	return output

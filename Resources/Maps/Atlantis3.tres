@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=88 format=3 uid="uid://syrdeyqmfxd4"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://syrdeyqmfxd4"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_eu7vr"]
 [ext_resource type="Texture2D" uid="uid://cb87yy5ymgdfj" path="res://Images/Maps/Atlantis3.png" id="2_1gmfm"]
@@ -45,6 +45,7 @@ checkType = 1
 totalSubchecks = 3
 ids = Array[String](["0x9B", "0x9D", "0x9C"])
 apIds = PackedStringArray("0x08F", "0x090", "0x091")
+poptrackerSpot = Vector2i(210, 935)
 
 [sub_resource type="Resource" id="Resource_5cpib"]
 script = ExtResource("1_eu7vr")
@@ -56,6 +57,7 @@ totalSubchecks = 6
 ids = Array[String](["0x12C", "0x12D", "0x12E", "0x12F", "0x130", "0x12B"])
 apIds = PackedStringArray("0x092", "0x093", "0x094", "0x095", "0x096", "0x097")
 checkRegionIndex = 6
+poptrackerSpot = Vector2i(400, 845)
 
 [sub_resource type="Resource" id="Resource_bhxt4"]
 script = ExtResource("1_eu7vr")
@@ -67,6 +69,8 @@ totalSubchecks = 5
 ids = Array[String](["0x87", "0x8D", "0x8C", "0x89", "0x88"])
 apIds = PackedStringArray("0x098", "0x099", "0x09A", "0x09B", "0x09C")
 checkRegionIndex = 14
+poptrackerSpot = Vector2i(440, 300)
+poptrackerGroupName = "Cave"
 
 [sub_resource type="Resource" id="Resource_5wkyb"]
 script = ExtResource("1_eu7vr")
@@ -78,6 +82,7 @@ totalSubchecks = 8
 ids = Array[String](["0x2C", "0x36", "0x31", "0x2D", "0x35", "0x2F", "0x30", "0x2E"])
 apIds = PackedStringArray("0x09D", "0x09E", "0x09F", "0x0A0", "0x0A1", "0x0A2", "0x0A3", "0x0A4")
 checkRegionIndex = 15
+poptrackerSpot = Vector2i(745, 555)
 
 [sub_resource type="Resource" id="Resource_73ocj"]
 script = ExtResource("1_eu7vr")
@@ -89,6 +94,7 @@ totalSubchecks = 8
 ids = Array[String](["0xEF", "0xF6", "0xF5", "0xF4", "0xF3", "0xF2", "0xF1", "0xF0"])
 apIds = PackedStringArray("0x0A5", "0x0A6", "0x0A7", "0x0A8", "0x0A9", "0x0AA", "0x0AB", "0x0AC")
 checkRegionIndex = 12
+poptrackerSpot = Vector2i(580, 130)
 
 [sub_resource type="Resource" id="Resource_a3yiq"]
 script = ExtResource("1_eu7vr")
@@ -99,6 +105,7 @@ checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x122", "0x127", "0x125", "0x124", "0x123", "0x126", "0x128", "0x129"])
 apIds = PackedStringArray("0x0AD", "0x0AE", "0x0AF", "0x0B0", "0x0B1", "0x0B2", "0x0B3", "0x0B4")
+poptrackerSpot = Vector2i(133, 737)
 
 [sub_resource type="Resource" id="Resource_a6leg"]
 script = ExtResource("1_eu7vr")
@@ -110,6 +117,7 @@ totalSubchecks = 4
 ids = Array[String](["0x114", "0x112", "0x110", "0x10E"])
 apIds = PackedStringArray("0x0B5", "0x0B6", "0x0B7", "0x0B8")
 checkRegionIndex = 1
+poptrackerSpot = Vector2i(280, 810)
 
 [sub_resource type="Resource" id="Resource_qfxt0"]
 script = ExtResource("1_eu7vr")
@@ -121,6 +129,7 @@ totalSubchecks = 9
 ids = Array[String](["0x119", "0x11C", "0x11F", "0x120", "0x11D", "0x11A", "0x11B", "0x11E", "0x118"])
 apIds = PackedStringArray("0x0B9", "0x0BA", "0x0BB", "0x0BC", "0x0BD", "0x0BE", "0x0BF", "0x0C0", "0x0C1")
 checkRegionIndex = 11
+poptrackerSpot = Vector2i(520, 200)
 
 [sub_resource type="Resource" id="Resource_kdug6"]
 script = ExtResource("1_eu7vr")
@@ -131,6 +140,7 @@ checkType = 1
 totalSubchecks = 4
 ids = Array[String](["0x82", "0x85", "0x84", "0x83"])
 apIds = PackedStringArray("0x0C2", "0x0C3", "0x0C4", "0x0C5")
+poptrackerSpot = Vector2i(375, 575)
 
 [sub_resource type="Resource" id="Resource_ir5bj"]
 script = ExtResource("1_eu7vr")
@@ -142,6 +152,7 @@ totalSubchecks = 5
 ids = Array[String](["0x10C", "0x10A", "0x108", "0x106", "0x104"])
 apIds = PackedStringArray("0x0C6", "0x0C7", "0x0C8", "0x0C9", "0x0CA")
 checkRegionIndex = 2
+poptrackerSpot = Vector2i(295, 670)
 
 [sub_resource type="Resource" id="Resource_kwiye"]
 script = ExtResource("1_eu7vr")
@@ -152,6 +163,8 @@ checkType = 1
 totalSubchecks = 4
 ids = Array[String](["0xE3", "0xE8", "0xE4", "0xE9"])
 apIds = PackedStringArray("0x0CB", "0x0CC", "0x0CD", "0x0CE")
+poptrackerSpot = Vector2i(255, 960)
+poptrackerGroupName = "Under Waterfall"
 
 [sub_resource type="Resource" id="Resource_k6jca"]
 script = ExtResource("1_eu7vr")
@@ -163,6 +176,7 @@ totalSubchecks = 5
 ids = Array[String](["0x9F", "0xA3", "0xA2", "0xA1", "0xA0"])
 apIds = PackedStringArray("0x0CF", "0x0D0", "0x0D1", "0x0D2", "0x0D3")
 checkRegionIndex = 10
+poptrackerSpot = Vector2i(295, 320)
 
 [sub_resource type="Resource" id="Resource_eu8hq"]
 script = ExtResource("1_eu7vr")
@@ -175,6 +189,8 @@ enemyGaribs = true
 ids = Array[String](["0x20D", "0x21D", "0x20D", "0x21D"])
 apIds = PackedStringArray("0x0DF", "0x0E0", "0x0D4", "0x0D5")
 checkRegionIndex = 14
+poptrackerSpot = Vector2i(440, 300)
+poptrackerGroupName = "Cave"
 
 [sub_resource type="Resource" id="Resource_0ghto"]
 script = ExtResource("1_eu7vr")
@@ -185,6 +201,7 @@ checkType = 10
 enemyGaribs = true
 ids = Array[String](["0x238", "0x238"])
 apIds = PackedStringArray("0x0E1", "0x0D6")
+poptrackerSpot = Vector2i(460, 985)
 
 [sub_resource type="Resource" id="Resource_4d24g"]
 script = ExtResource("1_eu7vr")
@@ -196,6 +213,7 @@ totalSubchecks = 2
 ids = Array[String](["0x019B", "0x0187"])
 apIds = PackedStringArray("0x0E2", "0x0E3")
 checkRegionIndex = 11
+poptrackerSpot = Vector2i(480, 200)
 
 [sub_resource type="Resource" id="Resource_3kihh"]
 script = ExtResource("1_eu7vr")
@@ -205,6 +223,7 @@ checkImage = ExtResource("11_wcx6b")
 checkType = 10
 ids = Array[String](["0x22D"])
 apIds = PackedStringArray("0x0E4")
+poptrackerSpot = Vector2i(800, 200)
 
 [sub_resource type="Resource" id="Resource_ld4ba"]
 script = ExtResource("1_eu7vr")
@@ -216,6 +235,7 @@ enemyGaribs = true
 ids = Array[String](["0x290", "0x290"])
 apIds = PackedStringArray("0x0E5", "0x0D7")
 checkRegionIndex = 1
+poptrackerSpot = Vector2i(300, 775)
 
 [sub_resource type="Resource" id="Resource_vnc06"]
 script = ExtResource("1_eu7vr")
@@ -228,6 +248,7 @@ enemyGaribs = true
 ids = Array[String](["0x1AF", "0x1DA", "0x1BA", "0x1CA", "0x1AF", "0x1DA", "0x1BA", "0x1CA"])
 apIds = PackedStringArray("0x0E6", "0x0E7", "0x0E8", "0x0E9", "0x0D8", "0x0D9", "0x0DA", "0x0DB")
 checkRegionIndex = 3
+poptrackerSpot = Vector2i(30, 805)
 
 [sub_resource type="Resource" id="Resource_wh7aa"]
 script = ExtResource("1_eu7vr")
@@ -240,6 +261,7 @@ enemyGaribs = true
 ids = Array[String](["0x248", "0x258", "0x268", "0x248", "0x258", "0x268"])
 apIds = PackedStringArray("0x0EA", "0x0EB", "0x0EC", "0x0DC", "0x0DD", "0x0DE")
 checkRegionIndex = 10
+poptrackerSpot = Vector2i(295, 365)
 
 [sub_resource type="Resource" id="Resource_prbke"]
 script = ExtResource("1_eu7vr")
@@ -250,6 +272,8 @@ checkType = 2
 ids = Array[String](["0xA5"])
 apIds = PackedStringArray("0x0ED")
 checkRegionIndex = 14
+poptrackerSpot = Vector2i(440, 300)
+poptrackerGroupName = "Cave"
 
 [sub_resource type="Resource" id="Resource_8rujv"]
 script = ExtResource("1_eu7vr")
@@ -260,6 +284,7 @@ checkType = 2
 ids = Array[String](["0x116"])
 apIds = PackedStringArray("0x0EE")
 checkRegionIndex = 9
+poptrackerSpot = Vector2i(335, 520)
 
 [sub_resource type="Resource" id="Resource_tbtte"]
 script = ExtResource("1_eu7vr")
@@ -270,6 +295,7 @@ checkType = 2
 ids = Array[String](["0x6B"])
 apIds = PackedStringArray("0x0EF")
 checkRegionIndex = 15
+poptrackerSpot = Vector2i(730, 610)
 
 [sub_resource type="Resource" id="Resource_q4ads"]
 script = ExtResource("1_eu7vr")
@@ -280,6 +306,7 @@ checkType = 2
 ids = Array[String](["0x5F"])
 apIds = PackedStringArray("0x0F0")
 checkRegionIndex = 15
+poptrackerSpot = Vector2i(780, 610)
 
 [sub_resource type="Resource" id="Resource_ya5uo"]
 script = ExtResource("1_eu7vr")
@@ -289,6 +316,8 @@ checkImage = ExtResource("4_rupug")
 checkType = 2
 ids = Array[String](["0x99"])
 apIds = PackedStringArray("0x0F1")
+poptrackerSpot = Vector2i(255, 960)
+poptrackerGroupName = "Under Waterfall"
 
 [sub_resource type="Resource" id="Resource_r31av"]
 script = ExtResource("1_eu7vr")
@@ -299,6 +328,7 @@ checkType = 3
 ids = Array[String](["0x2C"])
 apIds = PackedStringArray("0x0F2")
 checkBallRequirement = true
+poptrackerSpot = Vector2i(207, 840)
 
 [sub_resource type="Resource" id="Resource_d3pv5"]
 script = ExtResource("1_eu7vr")
@@ -310,6 +340,7 @@ ids = Array[String](["0x41"])
 apIds = PackedStringArray("0x0F3")
 checkRegionIndex = 3
 checkBallRequirement = true
+poptrackerSpot = Vector2i(295, 610)
 
 [sub_resource type="Resource" id="Resource_1eii8"]
 script = ExtResource("1_eu7vr")
@@ -321,6 +352,7 @@ ids = Array[String](["0x48"])
 apIds = PackedStringArray("0x0F4")
 checkRegionIndex = 10
 checkBallRequirement = true
+poptrackerSpot = Vector2i(295, 475)
 
 [sub_resource type="Resource" id="Resource_bjypw"]
 script = ExtResource("1_eu7vr")
@@ -331,6 +363,7 @@ ids = Array[String](["0x0204"])
 apIds = PackedStringArray("0x0F5")
 checkRegionIndex = 13
 checkBallRequirement = true
+poptrackerSpot = Vector2i(420, 265)
 
 [sub_resource type="Resource" id="Resource_16yk8"]
 script = ExtResource("1_eu7vr")
@@ -351,6 +384,7 @@ ids = Array[String](["0x01EA"])
 apIds = PackedStringArray("0x0F7")
 checkRegionIndex = 7
 checkBallRequirement = true
+poptrackerSpot = Vector2i(145, 925)
 
 [sub_resource type="Resource" id="Resource_cmcmu"]
 script = ExtResource("1_eu7vr")
@@ -361,6 +395,7 @@ checkType = 5
 apIds = PackedStringArray("0x0F8")
 checkRegionIndex = 16
 checkBallRequirement = true
+poptrackerSpot = Vector2i(970, 95)
 
 [sub_resource type="Resource" id="Resource_g8iip"]
 script = ExtResource("1_eu7vr")
@@ -371,6 +406,7 @@ checkType = 4
 ids = Array[String](["0x1E7"])
 apIds = PackedStringArray("0x0F9")
 checkRegionIndex = 3
+poptrackerSpot = Vector2i(30, 865)
 
 [sub_resource type="Resource" id="Resource_it540"]
 script = ExtResource("1_eu7vr")
@@ -381,6 +417,7 @@ checkType = 4
 ids = Array[String](["0x28A"])
 apIds = PackedStringArray("0x0FA")
 checkRegionIndex = 15
+poptrackerSpot = Vector2i(800, 555)
 
 [sub_resource type="Resource" id="Resource_a8gb0"]
 script = ExtResource("5_ee4sh")

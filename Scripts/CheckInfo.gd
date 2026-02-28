@@ -21,10 +21,7 @@ enum CheckType { SWITCH, GARIB, LIFE, CHECKPOINT, POTION, GOAL, TIP, LOADING_ZON
 @export var lockButton : bool
 
 @export_category("Poptracker")
-##The coordinates of the group. If negative, uses coord given by another entry
-@export var poptrackerSpot : Vector2i = -Vector2i.ONE
-##Name of the group it's part of. If empty, defaults to expected name
-@export var poptrackerGroupName : String = ""
+@export var poptrackerSpot : Vector2i
 
 var allMethods : Array[MethodData]
 

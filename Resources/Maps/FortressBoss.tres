@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bfhhlbc645dgu"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=16 format=3 uid="uid://bfhhlbc645dgu"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_0cguh"]
 [ext_resource type="Texture2D" uid="uid://ulylk25eku6s" path="res://Images/Icons/Checks/BossPlatform.png" id="2_lk0tn"]

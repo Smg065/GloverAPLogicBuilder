@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://svvo2kkplxu1"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=16 format=3 uid="uid://svvo2kkplxu1"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_ocxdj"]
 [ext_resource type="Texture2D" uid="uid://boqghu4q6ss1a" path="res://Images/Icons/Checks/Life.png" id="2_fver1"]
@@ -19,7 +19,6 @@ checkType = 1
 totalSubchecks = 12
 ids = Array[String](["0x1BF", "0x1BE", "0x1BD", "0x1BC", "0x1BB", "0x1BA", "0x1B9", "0x1B8", "0x1B7", "0x1B6", "0x1C1", "0x1C0"])
 apIds = PackedStringArray("0x25A", "0x25B", "0x25C", "0x25D", "0x25E", "0x25F", "0x260", "0x261", "0x262", "0x263", "0x264", "0x265")
-poptrackerSpot = Vector2i(470, 305)
 
 [sub_resource type="Resource" id="Resource_fhua3"]
 script = ExtResource("1_ocxdj")
@@ -30,7 +29,6 @@ checkType = 1
 totalSubchecks = 8
 ids = Array[String](["0x1B2", "0x1B0", "0x1AF", "0x1AE", "0x1AD", "0x1AB", "0x1B4", "0x1B3"])
 apIds = PackedStringArray("0x266", "0x267", "0x268", "0x269", "0x26A", "0x26B", "0x26C", "0x26D")
-poptrackerSpot = Vector2i(390, 205)
 
 [sub_resource type="Resource" id="Resource_v6aa4"]
 script = ExtResource("1_ocxdj")
@@ -40,7 +38,6 @@ checkImage = ExtResource("2_fver1")
 checkType = 2
 ids = Array[String](["0x1AC"])
 apIds = PackedStringArray("0x26E")
-poptrackerSpot = Vector2i(275, 310)
 
 [sub_resource type="Resource" id="Resource_pe3w6"]
 script = ExtResource("1_ocxdj")
@@ -50,7 +47,6 @@ checkImage = ExtResource("2_fver1")
 checkType = 2
 ids = Array[String](["0x1B1"])
 apIds = PackedStringArray("0x26F")
-poptrackerSpot = Vector2i(680, 605)
 
 [sub_resource type="Resource" id="Resource_skr10"]
 script = ExtResource("1_ocxdj")
@@ -60,7 +56,6 @@ checkImage = ExtResource("4_55rkc")
 checkType = 5
 apIds = PackedStringArray("0x270")
 checkBallRequirement = true
-poptrackerSpot = Vector2i(475, 460)
 
 [sub_resource type="Resource" id="Resource_gbck8"]
 script = ExtResource("6_8ps3e")

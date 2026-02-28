@@ -84,8 +84,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ReadXML"):
 		landscape_load_window()
 		#generate_level_event_methods()
-	if Input.is_action_just_pressed("Poptracker Generate"):
-		DisplayServer.clipboard_set(JSON.stringify(PopTrackerBuilder.get_all_map_locations(self), "\t", false))
 
 func copy_mouse_info() -> void:
 	var newCoord : String = str(mouse_pos_to_map_spot())
@@ -456,7 +454,7 @@ func web_save() -> void:
 	JavaScriptBridge.download_buffer(jsonBytes, "logic.json","text/plain")
 
 func web_poptracker() -> void:
-	var jsonString : String = JSON.stringify(PopTrackerBuilder.construct(self), "\t", false)
+	var jsonString : String = JSON.stringify(PopTrackerBuilder.construct(self), "\t")
 	var jsonBytes : PackedByteArray = jsonString.to_ascii_buffer()
 	#Thank you to Kehom's Forge for making this work x2
 	JavaScriptBridge.download_buffer(jsonBytes, "locations.jsonc","text/plain")
@@ -897,5 +895,5 @@ func poptracker_pressed() -> void:
 
 func poptracker_export_path(popPath: String) -> void:
 	var path = FileAccess.open(popPath, FileAccess.WRITE)
-	path.store_string(JSON.stringify(PopTrackerBuilder.construct(self), "\t", false))
+	path.store_string(JSON.stringify(PopTrackerBuilder.construct(self), "\t"))
 	path.close()

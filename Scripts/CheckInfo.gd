@@ -51,7 +51,7 @@ func to_load(checkData : Array) -> void:
 		allMethods.append(newMethod)
 
 func get_pop_spot(mapScale : Vector2i) -> Vector2i:
-	if poptrackerSpot != -Vector2i.ONE:
+	if poptrackerSpot != Vector2i.ZERO:
 		return poptrackerSpot
 	var output : Vector2i = Vector2i.ZERO
 	output.x = int(checkSpot.x * mapScale.x)

@@ -90,7 +90,7 @@ static func construct(main : Main) -> Array:
 			levelData.name = eachWorld.worldShorthand + eachLevel.levelSuffix
 			levelData.children = []
 			var prefix := eachWorld.worldShorthand + eachLevel.levelSuffix
-			#Discover all regions
+			#First pass to discover all regions
 			for eachRegion in eachLevel.levelRegions:
 				var regionName : String = levelData.name.to_lower().replace(" ", "_") + "_" + eachRegion.regionName.to_snake_case()
 				var ballRegionMethod := methods_to_access_rules(prefix, eachLevel.levelRegions, eachRegion.ballCheck.allMethods)
@@ -130,28 +130,34 @@ static func construct(main : Main) -> Array:
 					"access_rules" : ballRegionName
 				})
 			
-			#Create region groups based on locations
-			var poptrackerBundles : Dictionary[String, Array]
-			for eachCheck in eachLevel.levelChecks:
-				var nameToUse = eachCheck.checkName
-				if eachCheck.poptrackerGroupName != "":
-					nameToUse = eachCheck.poptrackerGroupName
-				if !nameToUse in poptrackerBundles:
-					poptrackerBundles[nameToUse] = []
-				poptrackerBundles[nameToUse].append(eachCheck)
-			
 			#Second pass to put locations in the collection
-			for eachBundle in poptrackerBundles:
-				var locationName = eachBundle
-				#Loading zones
-				if poptrackerBundles[eachBundle][0].checkType == CheckInfo.CheckType.LOADING_ZONE:
-					if eachWorld.worldName != "Hubworld":
-						locationName = " ".join([eachWorld.worldName, eachBundle])
-				var sectionData = []
-				for eachCheck in poptrackerBundles[eachBundle]:
-					sectionData.append_array(build_section_visibility(prefix, eachWorld, eachLevel, eachCheck))
-				levelData.children.append(build_location_with_map_info(locationName, sectionData, poptrackerBundles[eachBundle][0], eachWorld.worldShorthand + eachLevel.levelSuffix))
-
+			for eachCheck in eachLevel.levelChecks:
+				var accessRules := methods_to_access_rules(prefix, eachLevel.levelRegions, eachCheck.allMethods)
+				var visRules = []
+				var locationName : String = eachCheck.checkName
+				if eachCheck.allMethods.size() == 0 and eachWorld.worldName != "Hubworld":
+					continue
+				match eachCheck.checkType:
+					CheckInfo.CheckType.LOADING_ZONE:
+						var loadingLocation = build_location(locationName, accessRules)
+						if eachWorld.worldName != "Hubworld":
+							loadingLocation["name"] =  " ".join([eachWorld.worldName, loadingLocation["name"]])
+							loadingLocation["access_rules"].append("Open Levels")
+						levelData.children.append(loadingLocation)
+					CheckInfo.CheckType.ENEMY:
+						visRules = ["enemy_checks", "enemy_checks_on"]
+					CheckInfo.CheckType.CHECKPOINT:
+						visRules = ["checkpoint_checks", "checkpoint_checks_on"]
+					CheckInfo.CheckType.SWITCH:
+						visRules = ["switch_checks", "switch_checks_on"]
+					CheckInfo.CheckType.BUG:
+						visRules = ["insect_checks", "insect_checks_on"]
+					CheckInfo.CheckType.TIP:
+						visRules = ["tip_checks", "tip_checks_on"]
+				#Loading zones don't use the same mapping build logic
+				if eachCheck.checkType != CheckInfo.CheckType.LOADING_ZONE:
+					var newInfo = build_sectioned_locations(locationName, eachCheck, accessRules, visRules)
+					levelData.children.append(newInfo)
 			#Level randomization
 			var level_prefix = levelData.name.to_lower().replace(" ", "_")
 			if eachWorld.worldName != "Hubworld":
@@ -170,7 +176,7 @@ static func construct(main : Main) -> Array:
 		output.append(worldData)
 	#Ball turn-in logic
 	for eachEntry in range(1, 7):
-		output[0].children[1].children[1].sections[eachEntry].access_rules = ["$hub%s"%(eachEntry)]
+		output[0].children[1].children[2].sections[eachEntry].access_rules = ["$hub%s"%(eachEntry)]
 	#Hubworld loading zones
 	for eachEntry in output[0].children[0].children.size():
 		if not "access_rules" in output[0].children[0].children[eachEntry]:
@@ -185,59 +191,26 @@ static func construct(main : Main) -> Array:
 		output[0].children[0].children[eachEntry].access_rules.append_array(extraRules)
 	return output
 
-##Build sections to be merged into a location on the PopTracker
-static func build_section_visibility(prefix, eachWorld, eachLevel, eachCheck) -> Array:
-	var accessRules := methods_to_access_rules(prefix, eachLevel.levelRegions, eachCheck.allMethods)
-	accessRules.erase("")
-	var visRules = []
-	var checkName : String = eachCheck.checkName
-	if eachCheck.allMethods.size() == 0 and eachWorld.worldName != "Hubworld":
-		return []
-	match eachCheck.checkType:
-		CheckInfo.CheckType.LOADING_ZONE:
-			if eachWorld.worldName != "Hubworld":
-				accessRules.append("Open Levels")
-		CheckInfo.CheckType.ENEMY:
-			visRules = ["enemy_checks", "enemy_checks_on"]
-		CheckInfo.CheckType.CHECKPOINT:
-			visRules = ["checkpoint_checks", "checkpoint_checks_on"]
-		CheckInfo.CheckType.SWITCH:
-			visRules = ["switch_checks", "switch_checks_on"]
-		CheckInfo.CheckType.BUG:
-			visRules = ["insect_checks", "insect_checks_on"]
-		CheckInfo.CheckType.TIP:
-			visRules = ["tip_checks", "tip_checks_on"]
-	#Loading zones don't use the same mapping build logic
-	if eachCheck.checkType != CheckInfo.CheckType.LOADING_ZONE:
-		var newInfo = build_sections(checkName, eachCheck, accessRules, visRules)
-		return newInfo
-	return []
-
 ##Build out the new info to append to the location
-static func build_sections(checkName : String, checkInfo : CheckInfo, accessRules : Array[String], visRules : Array) -> Array:
-	var sections = []
+static func build_sectioned_locations(locationName : String, checkInfo : CheckInfo, accessRules : Array[String], visRules : Array) -> Dictionary:
+	var baseInfo := build_location(locationName, accessRules, checkInfo)
+	baseInfo.sections = []
 	#Create sections and subchecks
 	if checkInfo.checkType != CheckInfo.CheckType.GARIB:
 		if checkInfo.totalSubchecks > 1:
 			for eachSection in checkInfo.totalSubchecks:
-				var newSection = {"name" : checkName + " " + str(eachSection + 1)}
+				var newSection = {"name" : locationName + " " + str(eachSection + 1)}
 				if visRules.size() > 0:
 					newSection["visibility_rules"] = visRules
-				if accessRules.is_empty():
-					newSection["access_rules"] = accessRules
-				newSection.merge(section_icons("goal", checkInfo.checkType))
-				sections.append(newSection)
+				baseInfo.sections.append(newSection)
 		else:
-			var newSection := {"name" : checkName}
+			var newSection = {"name" : ""}
 			if visRules.size() > 0:
 				newSection["visibility_rules"] = visRules
-			if accessRules.is_empty():
-				newSection["access_rules"] = accessRules
-			newSection.merge(section_icons("goal", checkInfo.checkType))
-			sections.append(newSection)
+			baseInfo.sections.append(newSection)
 	#Create garib info
 	if checkInfo.checkType == CheckInfo.CheckType.GARIB or (checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks < checkInfo.apIds.size()):
-		var garibName = checkName
+		var garibName = locationName
 		if checkInfo.checkType == CheckInfo.CheckType.ENEMY:
 			garibName += " Garib"
 		else:
@@ -245,32 +218,26 @@ static func build_sections(checkName : String, checkInfo : CheckInfo, accessRule
 		var singleFallback : String = ""
 		if checkInfo.checkType == CheckInfo.CheckType.ENEMY and checkInfo.totalSubchecks == 1:
 			singleFallback = "Garib"
-		sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks, accessRules, singleFallback))
-	return sections
+		baseInfo.sections.append_array(create_garib_sections(garibName, checkInfo.totalSubchecks, singleFallback))
+	return baseInfo
 
 ##Garibsanity under group node
-static func create_garib_sections(garibName : String, garibCount : int, accessRules, singleFallback : String = ""):
+static func create_garib_sections(garibName : String, garibCount : int, singleFallback : String = ""):
 	var sections : Array = []
 	#Garib Groups VS Garibsanity
 	if garibCount > 1:
 		for eachSection in garibCount:
 			var eachEntry = {"name" : garibName + " " + str(eachSection + 1),
-			"visibility_rules" : ["garib_logic_garibsanity", "garib_logic"],}
-			if accessRules.is_empty():
-				eachEntry["access_rules"] = accessRules
+			"visibility_rules" : ["garib_logic_garibsanity", "garib_logic"]}
 			eachEntry.merge(section_icons("garib", CheckInfo.CheckType.GARIB))
 			sections.append(eachEntry)
 		var groupEntry = {"name" : "",
 			"visibility_rules" : ["garib_logic_garib_groups"]}
-		if accessRules.is_empty():
-			groupEntry["access_rules"] = accessRules
 		groupEntry.merge(section_icons("group", CheckInfo.CheckType.GARIB))
 		sections.append(groupEntry)
 	else:
 		var garibEntry = {"name" : singleFallback,
 		"visibility_rules" : ["garib_logic_garibsanity", "garib_logic_garib_groups", "garib_logic"]}
-		if accessRules.is_empty():
-			garibEntry["access_rules"] = accessRules
 		garibEntry.merge(section_icons("garib", CheckInfo.CheckType.GARIB))
 		sections.append(garibEntry)
 	return sections
@@ -304,18 +271,26 @@ static func build_region(inName : String, accessRules : Array[String], regionTra
 		continue
 	
 	accessRules.append_array(regionTravels)
-	if accessRules.is_empty():
+	if accessRules.size() > 0:
 		output["access_rules"] = accessRules
 	return output
 
 ##Creates a location
-static func build_location(inName : String, sections : Array) -> Dictionary:
-	return {
-		"name" : inName,
-		"sections" : sections
+static func build_location(inName : String, accessRules : PackedStringArray, checkInfo : CheckInfo = null) -> Dictionary:
+	var output = {
+		"name" : inName
 	}
+	if checkInfo != null:
+		var imageName = checkInfo.checkImage.resource_path.get_file().trim_suffix(".png")
+		if imageName.to_lower().ends_with("target"):
+			imageName = "target"
+		output.merge(section_icons(imageName, checkInfo.checkType))
+	accessRules.erase("")
+	if accessRules.size() > 0:
+		output["access_rules"] = accessRules
+	return output
 
-##Create icons for sections
+##Create icons for
 static func section_icons(sectionName : String, checkType : CheckInfo.CheckType = CheckInfo.CheckType.MISC) -> Dictionary:
 	var subfolder := "items/"
 	match checkType:
@@ -330,10 +305,10 @@ static func section_icons(sectionName : String, checkType : CheckInfo.CheckType 
 	}
 
 ##Setup map info for a location
-static func build_location_with_map_info(inName : String, sections : Array, checkInfo : CheckInfo, levelName : String) -> Dictionary:
-	var output := build_location(inName, sections)
-	if levelName in MAP_TABLE:
-		output.map_locations = [create_map_placement(levelName, checkInfo)]
+static func build_location_with_map_info(inName : String, checkInfo : CheckInfo, levelName : String, accessRules : PackedStringArray = PackedStringArray()) -> Dictionary:
+	var output := build_location(inName, accessRules, checkInfo)
+	output.map_locations = [create_map_placement(levelName, checkInfo)]
+	output.sections = []
 	return output
 
 ##Constructs an dictionary of regions that lead to access rules

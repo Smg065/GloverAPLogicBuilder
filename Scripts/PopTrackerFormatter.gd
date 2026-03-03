@@ -67,13 +67,15 @@ const MAP_TABLE = {
 }
 
 const HUBWORLD_GATES_TABLE = {
-	"Hubworld Atlantis Gate" : "@Ball Turn-In 1",
-	"Hubworld Carnival Gate" : "@Ball Turn-In 2",
-	"Hubworld Pirate's Cove Gate" : "@Ball Turn-In 2",
-	"Hubworld Prehistoric Gate" : "@Ball Turn-In 4",
-	"Hubworld Fortress of Fear Gate" : "@Ball Turn-In 4",
-	"Hubworld Out of This World Gate" : "@Ball Turn-In 6",
+	"Hubworld Atlantis Gate" : "@Ball Turn-In/Ball Turn-In 2",
+	"Hubworld Carnival Gate" : "@Ball Turn-In/Ball Turn-In 3",
+	"Hubworld Pirate's Cove Gate" : "@Ball Turn-In/Ball Turn-In 3",
+	"Hubworld Prehistoric Gate" : "@Ball Turn-In/Ball Turn-In 5",
+	"Hubworld Fortress of Fear Gate" : "@Ball Turn-In/Ball Turn-In 5",
+	"Hubworld Out of This World Gate" : "@Ball Turn-In/Ball Turn-In 7"
 }
+
+const HOSTED_BOSS = ["ERR", "atlboss_g", "crnboss_g", "prtboss_g", "phtboss_g", "fofboss_g", "otwboss_g"]
 
 static func construct(main : Main) -> Array:
 	var output := []
@@ -142,7 +144,9 @@ static func construct(main : Main) -> Array:
 						var loadingLocation = build_location(locationName, accessRules)
 						if eachWorld.worldName != "Hubworld":
 							loadingLocation["name"] =  " ".join([eachWorld.worldName, loadingLocation["name"]])
-							loadingLocation["access_rules"].append("Open Levels")
+							loadingLocation["access_rules"].append("open_level_on")
+							loadingLocation["sections"] = [{}]
+						loadingLocation.merge(section_icons(eachCheck.checkName.to_snake_case()))
 						levelData.children.append(loadingLocation)
 					CheckInfo.CheckType.ENEMY:
 						visRules = ["enemy_checks", "enemy_checks_on"]
@@ -177,6 +181,24 @@ static func construct(main : Main) -> Array:
 	#Ball turn-in logic
 	for eachEntry in range(1, 7):
 		output[0].children[1].children[2].sections[eachEntry].access_rules = ["$hub%s"%(eachEntry)]
+	
+	#Injects
+	#Well Entry
+	output[0].children[2].children[1].access_rules.append("@Well Entry")
+	#Remove access rule for free entry from a menu
+	for eachFreeEntry in 7:
+		output[eachFreeEntry].children[0].children[0].erase("access_rules")
+	#Castle cave access fixes
+	output[0].children[1].children[0].erase("access_rules")
+	output[0].children[1].children[1].erase("access_rules")
+	output[0].children[1].children[3].erase("access_rules")
+	#Hosted items for bosses
+	for eachHostedBoss in range(1, 7):
+		output[eachHostedBoss].children[4].children[-1].sections = [{
+			"hosted_item": HOSTED_BOSS[eachHostedBoss],
+			"name":""
+			}]
+	
 	#Hubworld loading zones
 	for eachEntry in output[0].children[0].children.size():
 		if not "access_rules" in output[0].children[0].children[eachEntry]:
@@ -186,7 +208,7 @@ static func construct(main : Main) -> Array:
 			for eachReplace in HUBWORLD_GATES_TABLE:
 				var originalRule : String = output[0].children[0].children[eachEntry].access_rules[eachRule]
 				if originalRule.contains(eachReplace):
-					extraRules.append(originalRule.replace(eachReplace, "Open Worlds"))
+					extraRules.append(originalRule.replace(eachReplace, "open_world_on"))
 					output[0].children[0].children[eachEntry].access_rules[eachRule] = originalRule.replace(eachReplace, HUBWORLD_GATES_TABLE[eachReplace])
 		output[0].children[0].children[eachEntry].access_rules.append_array(extraRules)
 	return output
@@ -298,6 +320,9 @@ static func section_icons(sectionName : String, checkType : CheckInfo.CheckType 
 			subfolder = "enemies/"
 		CheckInfo.CheckType.BUG:
 			subfolder = "enemies/"
+		CheckInfo.CheckType.GOAL:
+			if sectionName != "Goss":
+				subfolder = "bosses/"
 	var imageFilepath = "images/" + subfolder + sectionName
 	return {
 		"chest_unopened_img" : imageFilepath + ".png",

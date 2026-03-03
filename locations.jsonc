@@ -6,10 +6,7 @@
 				"name": "Hubworld",
 				"children": [
 					{
-						"name": "reg_hubworld_main",
-						"access_rules": [
-							"@reg_hubworld_main_ball"
-						]
+						"name": "reg_hubworld_main"
 					},
 					{
 						"name": "Cheat Chicken",
@@ -27,85 +24,77 @@
 					{
 						"name": "Atlantis Hub Entry",
 						"access_rules": [
-							"@Ball Turn-In 1,@reg_hubworld_main",
-							"Open Worlds,@reg_hubworld_main"
+							"@Ball Turn-In/Ball Turn-In 2,@reg_hubworld_main",
+							"open_world_on,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/atlantis_hub_entry.png",
+						"chest_opened_img": "images/items/atlantis_hub_entry_gray.png"
 					},
 					{
 						"name": "Carnival Hub Entry",
 						"access_rules": [
-							"@Ball Turn-In 2,@reg_hubworld_main",
+							"@Ball Turn-In/Ball Turn-In 3,@reg_hubworld_main",
 							"[hard],cartwheel,@reg_hubworld_main",
-							"Open Worlds,@reg_hubworld_main"
+							"open_world_on,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/carnival_hub_entry.png",
+						"chest_opened_img": "images/items/carnival_hub_entry_gray.png"
 					},
 					{
 						"name": "Castle Cave Entry",
 						"access_rules": [
 							"@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/castle_cave_entry.png",
+						"chest_opened_img": "images/items/castle_cave_entry_gray.png"
 					},
 					{
 						"name": "Fear Hub Entry",
 						"access_rules": [
-							"@Ball Turn-In 4,@reg_hubworld_main",
+							"@Ball Turn-In/Ball Turn-In 5,@reg_hubworld_main",
 							"[hard],@reg_hubworld_main",
-							"Open Worlds,@reg_hubworld_main"
+							"open_world_on,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/fear_hub_entry.png",
+						"chest_opened_img": "images/items/fear_hub_entry_gray.png"
 					},
 					{
 						"name": "OotW Hub Entry",
 						"access_rules": [
-							"@Ball Turn-In 6,@reg_hubworld_main",
+							"@Ball Turn-In/Ball Turn-In 7,@reg_hubworld_main",
 							"[hard],slam,jump,@reg_hubworld_main",
-							"Open Worlds,@reg_hubworld_main"
+							"open_world_on,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/oot_w_hub_entry.png",
+						"chest_opened_img": "images/items/oot_w_hub_entry_gray.png"
 					},
 					{
 						"name": "Pirates Hub Entry",
 						"access_rules": [
-							"@Ball Turn-In 2,@reg_hubworld_main",
+							"@Ball Turn-In/Ball Turn-In 3,@reg_hubworld_main",
 							"[hard],@reg_hubworld_main",
-							"Open Worlds,@reg_hubworld_main"
+							"open_world_on,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/pirates_hub_entry.png",
+						"chest_opened_img": "images/items/pirates_hub_entry_gray.png"
 					},
 					{
 						"name": "Prehistoric Hub Entry",
 						"access_rules": [
-							"@Ball Turn-In 4,@reg_hubworld_main",
+							"@Ball Turn-In/Ball Turn-In 5,@reg_hubworld_main",
 							"[hard],slam,jump,@reg_hubworld_main",
-							"Open Worlds,@reg_hubworld_main"
+							"open_world_on,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/prehistoric_hub_entry.png",
+						"chest_opened_img": "images/items/prehistoric_hub_entry_gray.png"
 					},
 					{
 						"name": "Well Entry",
 						"access_rules": [
 							"jump,@reg_hubworld_main"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/well_entry.png",
+						"chest_opened_img": "images/items/well_entry_gray.png"
 					}
 				]
 			},
@@ -113,17 +102,10 @@
 				"name": "Castle Cave",
 				"children": [
 					{
-						"name": "reg_castle_cave_main_ball",
-						"access_rules": [
-							"@reg_castle cave_main_ball"
-						]
+						"name": "reg_castle_cave_main_ball"
 					},
 					{
-						"name": "reg_castle_cave_main",
-						"access_rules": [
-							"@reg_castle_cave_main_ball",
-							"@reg_castle cave_main"
-						]
+						"name": "reg_castle_cave_main"
 					},
 					{
 						"name": "Ball Turn-In",
@@ -173,12 +155,8 @@
 					},
 					{
 						"name": "Cave Exit",
-						"access_rules": [
-							"@reg_castle cave_main"
-						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"chest_unopened_img": "images/items/cave_exit.png",
+						"chest_opened_img": "images/items/cave_exit_gray.png"
 					}
 				]
 			},
@@ -195,7 +173,8 @@
 						"name": "reg_training_start",
 						"access_rules": [
 							"@reg_training_start_ball",
-							"@reg_training_stairs"
+							"@reg_training_stairs",
+							"@Well Entry"
 						]
 					},
 					{
@@ -608,8 +587,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"Training Stairs,$not_crystal,throw,jump,@reg_training_end_stairs_ball",
 							"Training Stairs,ball toss,jump,@reg_training_end_stairs_ball",
@@ -633,10 +612,7 @@
 				"name": "AtlH",
 				"children": [
 					{
-						"name": "reg_atlh_main",
-						"access_rules": [
-							"@reg_atlh_main_ball"
-						]
+						"name": "reg_atlh_main"
 					},
 					{
 						"name": "Tip",
@@ -659,11 +635,15 @@
 						"name": "Atlantis Entry 1",
 						"access_rules": [
 							"@reg_atlh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_1.png",
+						"chest_opened_img": "images/items/entry_1_gray.png"
 					},
 					{
 						"name": "Atlantis Entry 2",
@@ -672,11 +652,15 @@
 							"[easy],AtlH 2 Star,jump,@reg_atlh_main",
 							"[easy],AtlH 3 Star,jump,@reg_atlh_main",
 							"[easy],AtlH 1 Star,jump,@reg_atlh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_2.png",
+						"chest_opened_img": "images/items/entry_2_gray.png"
 					},
 					{
 						"name": "Atlantis Entry 3",
@@ -685,11 +669,15 @@
 							"[easy],AtlH 3 Star,jump,@reg_atlh_main",
 							"[easy],AtlH 2 Star,jump,@reg_atlh_main",
 							"[easy],AtlH Boss Star,jump,@reg_atlh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_3.png",
+						"chest_opened_img": "images/items/entry_3_gray.png"
 					},
 					{
 						"name": "Atlantis Entry Bonus",
@@ -697,11 +685,15 @@
 							"AtlH Bonus Gate,@reg_atlh_main",
 							"[easy],AtlH Bonus Star,jump,@reg_atlh_main",
 							"[easy],AtlH Boss Star,jump,@reg_atlh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_bonus.png",
+						"chest_opened_img": "images/items/entry_bonus_gray.png"
 					},
 					{
 						"name": "Atlantis Entry Boss",
@@ -710,21 +702,29 @@
 							"[easy],AtlH Boss Star,jump,@reg_atlh_main",
 							"[easy],AtlH 3 Star,jump,@reg_atlh_main",
 							"[easy],AtlH Bonus Star,jump,@reg_atlh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_boss.png",
+						"chest_opened_img": "images/items/entry_boss_gray.png"
 					},
 					{
 						"name": "Atlantis Exit",
 						"access_rules": [
 							"@reg_atlh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/exit.png",
+						"chest_opened_img": "images/items/exit_gray.png"
 					}
 				],
 				"access_rules": [
@@ -1738,8 +1738,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"Atl1 Gate,@reg_atl1_end_ball"
 						],
@@ -2871,8 +2871,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"Atl2 Gate,strength,push,@reg_atl2_end_ball",
 							"[easy],Atl2 Gate,@reg_atl2_end_ball",
@@ -4430,8 +4430,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_atl3_whale_ball"
 						],
@@ -4483,8 +4483,8 @@
 					},
 					{
 						"name": "Boss",
-						"chest_unopened_img": "images/items/BossPlatform.png",
-						"chest_opened_img": "images/items/BossPlatform_gray.png",
+						"chest_unopened_img": "images/bosses/fish_stack.png",
+						"chest_opened_img": "images/bosses/fish_stack_gray.png",
 						"access_rules": [
 							"slap,bowling ball,slam,jump,@reg_atl!_main_ball",
 							"bowling ball,ball toss,slam,jump,@reg_atl!_main_ball",
@@ -4494,6 +4494,7 @@
 						],
 						"sections": [
 							{
+								"hosted_item": "atlboss_g",
 								"name": ""
 							}
 						]
@@ -4893,8 +4894,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_atl?_main"
 						],
@@ -4918,10 +4919,7 @@
 				"name": "CrnH",
 				"children": [
 					{
-						"name": "reg_crnh_main",
-						"access_rules": [
-							"@reg_crnh_main_ball"
-						]
+						"name": "reg_crnh_main"
 					},
 					{
 						"name": "Tip",
@@ -4944,11 +4942,15 @@
 						"name": "Carnival Entry 1",
 						"access_rules": [
 							"@reg_crnh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_1.png",
+						"chest_opened_img": "images/items/entry_1_gray.png"
 					},
 					{
 						"name": "Carnival Entry 2",
@@ -4957,11 +4959,15 @@
 							"[easy],CrnH 2 Star,jump,@reg_crnh_main",
 							"[easy],CrnH 1 Star,jump,@reg_crnh_main",
 							"[easy],CrnH 3 Star,jump,@reg_crnh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_2.png",
+						"chest_opened_img": "images/items/entry_2_gray.png"
 					},
 					{
 						"name": "Carnival Entry 3",
@@ -4970,11 +4976,15 @@
 							"[easy],CrnH 3 Star,jump,@reg_crnh_main",
 							"[easy],CrnH 2 Star,jump,@reg_crnh_main",
 							"[easy],CrnH Boss Star,jump,@reg_crnh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_3.png",
+						"chest_opened_img": "images/items/entry_3_gray.png"
 					},
 					{
 						"name": "Carnival Entry Bonus",
@@ -4982,11 +4992,15 @@
 							"CrnH Bonus Gate,@reg_crnh_main",
 							"[easy],CrnH Bonus Star,jump,@reg_crnh_main",
 							"[easy],CrnH Boss Star,jump,@reg_crnh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_bonus.png",
+						"chest_opened_img": "images/items/entry_bonus_gray.png"
 					},
 					{
 						"name": "Carnival Entry Boss",
@@ -4995,21 +5009,29 @@
 							"[easy],CrnH Boss Star,jump,@reg_crnh_main",
 							"[easy],CrnH 3 Star,jump,@reg_crnh_main",
 							"[easy],CrnH Bonus Star,jump,@reg_crnh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_boss.png",
+						"chest_opened_img": "images/items/entry_boss_gray.png"
 					},
 					{
 						"name": "Carnival Exit",
 						"access_rules": [
 							"@reg_crnh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/exit.png",
+						"chest_opened_img": "images/items/exit_gray.png"
 					}
 				],
 				"access_rules": [
@@ -6444,8 +6466,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"Crn1 Rocket 3,@reg_crn1_fairground_ball"
 						],
@@ -8014,8 +8036,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_crn2_slide_ball"
 						],
@@ -9707,8 +9729,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_crn3_tumble_ball"
 						],
@@ -9762,8 +9784,8 @@
 					},
 					{
 						"name": "Boss",
-						"chest_unopened_img": "images/items/BossPlatform.png",
-						"chest_opened_img": "images/items/BossPlatform_gray.png",
+						"chest_unopened_img": "images/bosses/clown.png",
+						"chest_opened_img": "images/bosses/clown_gray.png",
 						"access_rules": [
 							"throw,dribble,$not_bowling,@reg_crn!_main_ball",
 							"dribble,rubber ball,@reg_crn!_main_ball",
@@ -9772,6 +9794,7 @@
 						],
 						"sections": [
 							{
+								"hosted_item": "crnboss_g",
 								"name": ""
 							}
 						]
@@ -10034,8 +10057,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_crn?_main_ball"
 						],
@@ -10059,10 +10082,7 @@
 				"name": "PrtH",
 				"children": [
 					{
-						"name": "reg_prth_main",
-						"access_rules": [
-							"@reg_prth_main_ball"
-						]
+						"name": "reg_prth_main"
 					},
 					{
 						"name": "Tip",
@@ -10085,11 +10105,15 @@
 						"name": "Pirates Entry 1",
 						"access_rules": [
 							"@reg_prth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_1.png",
+						"chest_opened_img": "images/items/entry_1_gray.png"
 					},
 					{
 						"name": "Pirates Entry 2",
@@ -10098,11 +10122,15 @@
 							"[easy],PrtH 2 Star,jump,@reg_prth_main",
 							"[easy],PrtH 1 Star,jump,@reg_prth_main",
 							"[easy],PrtH 3 Star,jump,@reg_prth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_2.png",
+						"chest_opened_img": "images/items/entry_2_gray.png"
 					},
 					{
 						"name": "Pirates Entry 3",
@@ -10111,11 +10139,15 @@
 							"[easy],PrtH 3 Star,jump,@reg_prth_main",
 							"[easy],PrtH 2 Star,jump,@reg_prth_main",
 							"[easy],PrtH Boss Star,jump,@reg_prth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_3.png",
+						"chest_opened_img": "images/items/entry_3_gray.png"
 					},
 					{
 						"name": "Pirates Entry Bonus",
@@ -10123,11 +10155,15 @@
 							"PrtH Bonus Gate,@reg_prth_main",
 							"[easy],PrtH Bonus Star,jump,@reg_prth_main",
 							"[easy],PrtH Boss Star,jump,@reg_prth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_bonus.png",
+						"chest_opened_img": "images/items/entry_bonus_gray.png"
 					},
 					{
 						"name": "Pirates Entry Boss",
@@ -10136,21 +10172,29 @@
 							"[easy],PrtH Boss Star,jump,@reg_prth_main",
 							"[easy],PrtH 3 Star,jump,@reg_prth_main",
 							"[easy],PrtH Bonus Star,jump,@reg_prth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_boss.png",
+						"chest_opened_img": "images/items/entry_boss_gray.png"
 					},
 					{
 						"name": "Pirates Exit",
 						"access_rules": [
 							"@reg_prth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/exit.png",
+						"chest_opened_img": "images/items/exit_gray.png"
 					}
 				],
 				"access_rules": [
@@ -11531,20 +11575,6 @@
 						]
 					},
 					{
-						"name": "Trapped Lighthosue Life",
-						"chest_unopened_img": "images/items/Life.png",
-						"chest_opened_img": "images/items/Life_gray.png",
-						"access_rules": [
-							"[hard],rubber ball,dribble,bowling ball,l piston,@reg_prt1_watchtower",
-							"[hard],rubber ball,dribble,jump,bowling ball,@reg_prt1_watchtower"
-						],
-						"sections": [
-							{
-								"name": ""
-							}
-						]
-					},
-					{
 						"name": "Tip",
 						"chest_unopened_img": "images/items/MrTip.png",
 						"chest_opened_img": "images/items/MrTip_gray.png",
@@ -11754,8 +11784,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_prt1_goal_ship_ball"
 						],
@@ -11901,7 +11931,8 @@
 							"dribble,power_ball,@reg_prt2_poolside_ball",
 							"slap,jump,@reg_prt2_poolside_ball",
 							"throw,$not_crystal,jump,@reg_prt2_poolside_ball",
-							"ball toss,jump,$not_crystal,@reg_prt2_poolside_ball"
+							"ball toss,jump,$not_crystal,@reg_prt2_poolside_ball",
+							"[easy],@reg_prt2_poolside_ball"
 						]
 					},
 					{
@@ -12055,7 +12086,7 @@
 						"chest_unopened_img": "images/items/Garib.png",
 						"chest_opened_img": "images/items/Garib_gray.png",
 						"access_rules": [
-							"@reg_prt2_poolside"
+							"@reg_prt2_glover_switch_platform"
 						],
 						"sections": [
 							{
@@ -12953,8 +12984,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"Prt2 Gate,@reg_prt2_end_platforms_ball"
 						],
@@ -14515,8 +14546,7 @@
 						"chest_unopened_img": "images/enemies/Lobster.png",
 						"chest_opened_img": "images/enemies/Lobster_gray.png",
 						"access_rules": [
-							"Prt3 Trampoline,slam,jump,@reg_prt3_under_bridge_trampoline",
-							"Prt3 Trampoline,@reg_prt3_under_bridge_trampoline"
+							"Prt3 Trampoline,slam,jump,@reg_prt3_under_bridge_trampoline"
 						],
 						"sections": [
 							{
@@ -14767,8 +14797,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_prt3_end_walkway_ball"
 						],
@@ -14820,8 +14850,8 @@
 					},
 					{
 						"name": "Boss",
-						"chest_unopened_img": "images/items/BossPlatform.png",
-						"chest_opened_img": "images/items/BossPlatform_gray.png",
+						"chest_unopened_img": "images/bosses/monkey.png",
+						"chest_opened_img": "images/bosses/monkey_gray.png",
 						"access_rules": [
 							"dribble,rubber ball,@reg_prt!_main_ball",
 							"dribble,power_ball,@reg_prt!_main_ball",
@@ -14830,6 +14860,7 @@
 						],
 						"sections": [
 							{
+								"hosted_item": "prtboss_g",
 								"name": ""
 							}
 						]
@@ -15693,8 +15724,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"$floats,@reg_prt?_top_ball"
 						],
@@ -15718,10 +15749,7 @@
 				"name": "PhtH",
 				"children": [
 					{
-						"name": "reg_phth_main",
-						"access_rules": [
-							"@reg_phth_main_ball"
-						]
+						"name": "reg_phth_main"
 					},
 					{
 						"name": "Tip",
@@ -15744,11 +15772,15 @@
 						"name": "Prehistoric Entry 1",
 						"access_rules": [
 							"@reg_phth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_1.png",
+						"chest_opened_img": "images/items/entry_1_gray.png"
 					},
 					{
 						"name": "Prehistoric Entry 2",
@@ -15757,11 +15789,15 @@
 							"[easy],PhtH 2 Star,jump,@reg_phth_main",
 							"[easy],PhtH 1 Star,jump,@reg_phth_main",
 							"[easy],PhtH 3 Star,jump,@reg_phth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_2.png",
+						"chest_opened_img": "images/items/entry_2_gray.png"
 					},
 					{
 						"name": "Prehistoric Entry 3",
@@ -15770,11 +15806,15 @@
 							"[easy],PhtH 3 Star,jump,@reg_phth_main",
 							"[easy],PhtH 2 Star,jump,@reg_phth_main",
 							"[easy],PhtH Boss Star,jump,@reg_phth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_3.png",
+						"chest_opened_img": "images/items/entry_3_gray.png"
 					},
 					{
 						"name": "Prehistoric Entry Bonus",
@@ -15782,11 +15822,15 @@
 							"PhtH Bonus Gate,@reg_phth_main",
 							"[easy],PhtH Bonus Star,jump,@reg_phth_main",
 							"[easy],PhtH Boss Star,jump,@reg_phth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_bonus.png",
+						"chest_opened_img": "images/items/entry_bonus_gray.png"
 					},
 					{
 						"name": "Prehistoric Entry Boss",
@@ -15795,21 +15839,29 @@
 							"[easy],PhtH Boss Star,jump,@reg_phth_main",
 							"[easy],PhtH 3 Star,jump,@reg_phth_main",
 							"[easy],PhtH Bonus Star,jump,@reg_phth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_boss.png",
+						"chest_opened_img": "images/items/entry_boss_gray.png"
 					},
 					{
 						"name": "Prehistoric Exit",
 						"access_rules": [
 							"@reg_phth_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/exit.png",
+						"chest_opened_img": "images/items/exit_gray.png"
 					}
 				],
 				"access_rules": [
@@ -17264,8 +17316,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_pht1_end_ball"
 						],
@@ -19082,8 +19134,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_pht2_end_ball"
 						],
@@ -20580,8 +20632,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_pht3_end_ball"
 						],
@@ -20666,13 +20718,14 @@
 					},
 					{
 						"name": "Boss",
-						"chest_unopened_img": "images/items/BossPlatform.png",
-						"chest_opened_img": "images/items/BossPlatform_gray.png",
+						"chest_unopened_img": "images/bosses/dino.png",
+						"chest_opened_img": "images/bosses/dino_gray.png",
 						"access_rules": [
 							"bowling ball,@reg_pht!_main_ball"
 						],
 						"sections": [
 							{
+								"hosted_item": "phtboss_g",
 								"name": ""
 							}
 						]
@@ -21383,8 +21436,8 @@
 						"chest_unopened_img": "images/items/Life.png",
 						"chest_opened_img": "images/items/Life_gray.png",
 						"access_rules": [
-							"dribble,@reg_pht?_main",
-							"[easy],@reg_pht?_main"
+							"dribble,@reg_pht?_main_ball",
+							"[easy],@reg_pht?_main_ball"
 						],
 						"sections": [
 							{
@@ -21394,8 +21447,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_pht?_main_ball"
 						],
@@ -21419,10 +21472,7 @@
 				"name": "FoFH",
 				"children": [
 					{
-						"name": "reg_fofh_main",
-						"access_rules": [
-							"@reg_fofh_main_ball"
-						]
+						"name": "reg_fofh_main"
 					},
 					{
 						"name": "Tip",
@@ -21445,11 +21495,15 @@
 						"name": "Fortress Entry 1",
 						"access_rules": [
 							"@reg_fofh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_1.png",
+						"chest_opened_img": "images/items/entry_1_gray.png"
 					},
 					{
 						"name": "Fortress Entry 2",
@@ -21458,11 +21512,15 @@
 							"[easy],FoFH 2 Star,jump,@reg_fofh_main",
 							"[easy],FoFH 1 Star,jump,@reg_fofh_main",
 							"[easy],FoFH 3 Star,jump,@reg_fofh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_2.png",
+						"chest_opened_img": "images/items/entry_2_gray.png"
 					},
 					{
 						"name": "Fortress Entry 3",
@@ -21471,11 +21529,15 @@
 							"[easy],FoFH 3 Star,jump,@reg_fofh_main",
 							"[easy],FoFH 2 Star,jump,@reg_fofh_main",
 							"[easy],FoFH Boss Star,jump,@reg_fofh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_3.png",
+						"chest_opened_img": "images/items/entry_3_gray.png"
 					},
 					{
 						"name": "Fortress Entry Bonus",
@@ -21483,11 +21545,15 @@
 							"FoFH Bonus Gate,@reg_fofh_main",
 							"[easy],FoFH Bonus Star,jump,@reg_fofh_main",
 							"[easy],FoFH Boss Star,jump,@reg_fofh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_bonus.png",
+						"chest_opened_img": "images/items/entry_bonus_gray.png"
 					},
 					{
 						"name": "Fortress Entry Boss",
@@ -21496,21 +21562,29 @@
 							"[easy],FoFH Boss Star,jump,@reg_fofh_main",
 							"[easy],FoFH 3 Star,jump,@reg_fofh_main",
 							"[easy],FoFH Bonus Star,jump,@reg_fofh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_boss.png",
+						"chest_opened_img": "images/items/entry_boss_gray.png"
 					},
 					{
 						"name": "Fortress Exit",
 						"access_rules": [
 							"@reg_fofh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/exit.png",
+						"chest_opened_img": "images/items/exit_gray.png"
 					}
 				],
 				"access_rules": [
@@ -21784,8 +21858,9 @@
 						"name": "reg_fof1_end_ball",
 						"access_rules": [
 							"FoF1 Drawbridge,$ball_up,$not_crystal,jump,@reg_fof1_copper_edge_ball",
-							"$ball_up,$not_crystal,cartwheel,@reg_fof1_copper_edge_ball",
-							"dribble,$not_crystal,@reg_fof1_copper_edge_ball"
+							"FoF1 Drawbridge,$ball_up,$not_crystal,cartwheel,@reg_fof1_copper_edge_ball",
+							"FoF1 Drawbridge,dribble,$not_crystal,@reg_fof1_copper_edge_ball",
+							"[easy],fly,@reg_fof1_dirt_hill_ball"
 						]
 					},
 					{
@@ -22892,8 +22967,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_fof1_end_ball"
 						],
@@ -24142,8 +24217,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"FoF2 Mummy Gate,@reg_fof2_end_ball"
 						],
@@ -25693,8 +25768,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_fof3_end_ball"
 						],
@@ -25757,13 +25832,14 @@
 					},
 					{
 						"name": "Boss",
-						"chest_unopened_img": "images/items/BossPlatform.png",
-						"chest_opened_img": "images/items/BossPlatform_gray.png",
+						"chest_unopened_img": "images/bosses/franky.png",
+						"chest_opened_img": "images/bosses/franky_gray.png",
 						"access_rules": [
 							"@reg_fof!_ledges_ball"
 						],
 						"sections": [
 							{
+								"hosted_item": "fofboss_g",
 								"name": ""
 							}
 						]
@@ -26481,8 +26557,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_fof?_main_ball"
 						],
@@ -26506,10 +26582,7 @@
 				"name": "OtwH",
 				"children": [
 					{
-						"name": "reg_otwh_main",
-						"access_rules": [
-							"@reg_otwh_main_ball"
-						]
+						"name": "reg_otwh_main"
 					},
 					{
 						"name": "Tip",
@@ -26532,11 +26605,15 @@
 						"name": "Out of This World Entry 1",
 						"access_rules": [
 							"@reg_otwh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_1.png",
+						"chest_opened_img": "images/items/entry_1_gray.png"
 					},
 					{
 						"name": "Out of This World Entry 2",
@@ -26545,11 +26622,15 @@
 							"[easy],OtwH 2 Star,jump,@reg_otwh_main",
 							"[easy],OtwH 1 Star,jump,@reg_otwh_main",
 							"[easy],OtwH 3 Star,jump,@reg_otwh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_2.png",
+						"chest_opened_img": "images/items/entry_2_gray.png"
 					},
 					{
 						"name": "Out of This World Entry 3",
@@ -26558,11 +26639,15 @@
 							"[easy],OtwH 3 Star,jump,@reg_otwh_main",
 							"[easy],OtwH 2 Star,jump,@reg_otwh_main",
 							"[easy],OtwH Boss Star,jump,@reg_otwh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_3.png",
+						"chest_opened_img": "images/items/entry_3_gray.png"
 					},
 					{
 						"name": "Out of This World Entry Bonus",
@@ -26570,11 +26655,15 @@
 							"OtwH Bonus Gate,@reg_otwh_main",
 							"[easy],OtwH Bonus Star,jump,@reg_otwh_main",
 							"[easy],OtwH Boss Star,jump,@reg_otwh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_bonus.png",
+						"chest_opened_img": "images/items/entry_bonus_gray.png"
 					},
 					{
 						"name": "Out of This World Entry Boss",
@@ -26583,21 +26672,29 @@
 							"[easy],OtwH Boss Star,jump,@reg_otwh_main",
 							"[easy],OtwH 3 Star,jump,@reg_otwh_main",
 							"[easy],OtwH Bonus Star,jump,@reg_otwh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/entry_boss.png",
+						"chest_opened_img": "images/items/entry_boss_gray.png"
 					},
 					{
 						"name": "Out of This World Exit",
 						"access_rules": [
 							"@reg_otwh_main",
-							"Open Levels"
+							"open_level_on"
 						],
-						"visibility_rules": [
-							"entrance_randomization"
-						]
+						"sections": [
+							{
+
+							}
+						],
+						"chest_unopened_img": "images/items/exit.png",
+						"chest_opened_img": "images/items/exit_gray.png"
 					}
 				],
 				"access_rules": [
@@ -27724,8 +27821,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_otw1_end_ball"
 						],
@@ -28764,8 +28861,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_otw2_end_ball"
 						],
@@ -29111,7 +29208,7 @@
 					{
 						"name": "reg_otw3_end_ball",
 						"access_rules": [
-							"slap,bowling ball,@reg_otw3_lights_gate_ball"
+							"slap,bowling ball,@reg_otw3_final_walkway_ball"
 						]
 					},
 					{
@@ -30294,8 +30391,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"@reg_otw3_end_ball"
 						],
@@ -30334,13 +30431,14 @@
 					},
 					{
 						"name": "Boss",
-						"chest_unopened_img": "images/items/BossPlatform.png",
-						"chest_opened_img": "images/items/BossPlatform_gray.png",
+						"chest_unopened_img": "images/bosses/crossstitch.png",
+						"chest_opened_img": "images/bosses/crossstitch_gray.png",
 						"access_rules": [
 							"@reg_otw!_main_ball"
 						],
 						"sections": [
 							{
+								"hosted_item": "otwboss_g",
 								"name": ""
 							}
 						]
@@ -30436,7 +30534,8 @@
 						"chest_unopened_img": "images/items/Garib.png",
 						"chest_opened_img": "images/items/Garib_gray.png",
 						"access_rules": [
-							"fly,@reg_otw?_main"
+							"fly,@reg_otw?_main",
+							"[easy],dribble,power_ball,@reg_otw?_main_ball"
 						],
 						"sections": [
 							{
@@ -30616,7 +30715,8 @@
 						"chest_unopened_img": "images/items/Garib.png",
 						"chest_opened_img": "images/items/Garib_gray.png",
 						"access_rules": [
-							"fly,@reg_otw?_main"
+							"fly,@reg_otw?_main",
+							"[easy],dribble,power_ball,@reg_otw?_main_ball"
 						],
 						"sections": [
 							{
@@ -31015,8 +31115,8 @@
 					},
 					{
 						"name": "Goal",
-						"chest_unopened_img": "images/items/Goal.png",
-						"chest_opened_img": "images/items/Goal_gray.png",
+						"chest_unopened_img": "images/bosses/Goal.png",
+						"chest_opened_img": "images/bosses/Goal_gray.png",
 						"access_rules": [
 							"fly,@reg_otw?_main_ball"
 						],

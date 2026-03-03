@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cdmjf0fw11sli"]
 
 [ext_resource type="Script" uid="uid://dfshf1u5mmcgh" path="res://Scripts/CheckInfo.gd" id="1_43qnl"]
-[ext_resource type="Texture2D" uid="uid://ulylk25eku6s" path="res://Images/Icons/Checks/BossPlatform.png" id="2_f82yl"]
+[ext_resource type="Texture2D" uid="uid://dlt1gqlta53n2" path="res://Images/Icons/Checks/bosses/clown.png" id="2_nit46"]
 [ext_resource type="Texture2D" uid="uid://dgdtihkrkvnpu" path="res://Images/Maps/CarnivalBoss.png" id="2_rdqwp"]
 [ext_resource type="Script" uid="uid://c334xb2l04wlb" path="res://Scripts/PrerequisiteCheckInfo.gd" id="3_781sc"]
 [ext_resource type="Script" uid="uid://c7oebhmv2ddv6" path="res://Scripts/LevelData.gd" id="3_ni1i7"]
@@ -12,7 +12,7 @@
 script = ExtResource("1_43qnl")
 checkName = "Boss"
 checkSpot = Vector2(0.5, 0.5)
-checkImage = ExtResource("2_f82yl")
+checkImage = ExtResource("2_nit46")
 checkType = 5
 apIds = PackedStringArray("0x259")
 checkBallRequirement = true

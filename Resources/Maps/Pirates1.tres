@@ -345,7 +345,7 @@ poptrackerSpot = Vector2i(890, 710)
 
 [sub_resource type="Resource" id="Resource_2c2b5"]
 script = ExtResource("1_ux8nm")
-checkName = "Trapped Lighthosue Life"
+checkName = "Trapped Lighthouse Life"
 checkSpot = Vector2(0.521, 0.792)
 checkImage = ExtResource("8_t2af7")
 checkType = 2
